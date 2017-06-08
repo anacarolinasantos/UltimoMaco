@@ -96,6 +96,8 @@
 		BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppConfigurations.storyboard; sourceTree = "<group>"; };
 		BDC32F751EE9C585003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HealthInformation.storyboard; sourceTree = "<group>"; };
 		BDC32F7A1EE9C754003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProgress.storyboard; sourceTree = "<group>"; };
+		BDC32F7C1EE9FA7B003E65AB /* MiniChallenge3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniChallenge3.entitlements; sourceTree = "<group>"; };
+		BDC32F7D1EE9FAC1003E65AB /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		BDC32F111EE9B8E6003E65AB /* MiniChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32F7C1EE9FA7B003E65AB /* MiniChallenge3.entitlements */,
 				BDC32F491EE9BD9F003E65AB /* Other files */,
 				BDC32F431EE9BC7F003E65AB /* Swift Files */,
 				BDC32F461EE9BD57003E65AB /* Controllers */,
@@ -245,6 +248,7 @@
 		BDC32F521EE9BF2D003E65AB /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32F7D1EE9FAC1003E65AB /* Widget.entitlements */,
 				BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */,
 				BDC32F551EE9BF2D003E65AB /* MainInterface.storyboard */,
 				BDC32F581EE9BF2D003E65AB /* Info.plist */,
@@ -341,6 +345,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = VLLH384AC4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BDC32F251EE9B8E6003E65AB = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -358,6 +367,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = VLLH384AC4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -631,6 +645,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -645,6 +660,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -715,6 +731,7 @@
 		BDC32F5D1EE9BF2D003E65AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -728,6 +745,7 @@
 		BDC32F5E1EE9BF2D003E65AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
