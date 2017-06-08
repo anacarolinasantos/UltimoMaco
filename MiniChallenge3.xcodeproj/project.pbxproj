@@ -27,7 +27,7 @@
 		BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */; };
 		BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */; };
 		BDC32F761EE9C585003E65AB /* HealthInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */; };
-		BDC32F781EE9C59F003E65AB /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */; };
+		BDC32F7B1EE9C754003E65AB /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F791EE9C754003E65AB /* PersonalProgress.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		BDC32F701EE9C54E003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProfile.storyboard; sourceTree = "<group>"; };
 		BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppConfigurations.storyboard; sourceTree = "<group>"; };
 		BDC32F751EE9C585003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HealthInformation.storyboard; sourceTree = "<group>"; };
-		BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalProgress.storyboard; sourceTree = "<group>"; };
+		BDC32F7A1EE9C754003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProgress.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 			children = (
 				BDC32F1E1EE9B8E6003E65AB /* LaunchScreen.storyboard */,
 				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
-				BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */,
+				BDC32F791EE9C754003E65AB /* PersonalProgress.storyboard */,
 				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
 				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
 				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
@@ -394,7 +394,7 @@
 				BDC32F671EE9C234003E65AB /* FagerstromForm.storyboard in Resources */,
 				BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */,
 				BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */,
-				BDC32F781EE9C59F003E65AB /* PersonalProgress.storyboard in Resources */,
+				BDC32F7B1EE9C754003E65AB /* PersonalProgress.storyboard in Resources */,
 				BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */,
 				BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */,
 			);
@@ -520,6 +520,14 @@
 				BDC32F751EE9C585003E65AB /* Base */,
 			);
 			name = HealthInformation.storyboard;
+			sourceTree = "<group>";
+		};
+		BDC32F791EE9C754003E65AB /* PersonalProgress.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC32F7A1EE9C754003E65AB /* Base */,
+			);
+			name = PersonalProgress.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
