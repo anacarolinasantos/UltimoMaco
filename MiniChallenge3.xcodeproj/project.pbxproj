@@ -15,6 +15,19 @@
 		BDC32F201EE9B8E6003E65AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F1E1EE9B8E6003E65AB /* LaunchScreen.storyboard */; };
 		BDC32F2B1EE9B8E6003E65AB /* MiniChallenge3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F2A1EE9B8E6003E65AB /* MiniChallenge3Tests.swift */; };
 		BDC32F361EE9B8E6003E65AB /* MiniChallenge3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F351EE9B8E6003E65AB /* MiniChallenge3UITests.swift */; };
+		BDC32F451EE9BCD5003E65AB /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F441EE9BCD5003E65AB /* DatabaseController.swift */; };
+		BDC32F511EE9BF2D003E65AB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC32F501EE9BF2D003E65AB /* NotificationCenter.framework */; };
+		BDC32F541EE9BF2D003E65AB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */; };
+		BDC32F571EE9BF2D003E65AB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F551EE9BF2D003E65AB /* MainInterface.storyboard */; };
+		BDC32F5B1EE9BF2D003E65AB /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDC32F4E1EE9BF2D003E65AB /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BDC32F611EE9C11E003E65AB /* InitialPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */; };
+		BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */; };
+		BDC32F671EE9C234003E65AB /* FagerstromForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */; };
+		BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */; };
+		BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */; };
+		BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */; };
+		BDC32F761EE9C585003E65AB /* HealthInformation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */; };
+		BDC32F781EE9C59F003E65AB /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +45,28 @@
 			remoteGlobalIDString = BDC32F0E1EE9B8E6003E65AB;
 			remoteInfo = MiniChallenge3;
 		};
+		BDC32F591EE9BF2D003E65AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDC32F071EE9B8E6003E65AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDC32F4D1EE9BF2D003E65AB;
+			remoteInfo = Widget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDC32F5F1EE9BF2D003E65AB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BDC32F5B1EE9BF2D003E65AB /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BDC32F0F1EE9B8E6003E65AB /* MiniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +83,19 @@
 		BDC32F311EE9B8E6003E65AB /* MiniChallenge3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F351EE9B8E6003E65AB /* MiniChallenge3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge3UITests.swift; sourceTree = "<group>"; };
 		BDC32F371EE9B8E6003E65AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC32F441EE9BCD5003E65AB /* DatabaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		BDC32F4E1EE9BF2D003E65AB /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC32F501EE9BF2D003E65AB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BDC32F561EE9BF2D003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BDC32F581EE9BF2D003E65AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialPageViewController.storyboard; sourceTree = "<group>"; };
+		BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalMotivations.storyboard; sourceTree = "<group>"; };
+		BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FagerstromForm.storyboard; sourceTree = "<group>"; };
+		BDC32F701EE9C54E003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProfile.storyboard; sourceTree = "<group>"; };
+		BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppConfigurations.storyboard; sourceTree = "<group>"; };
+		BDC32F751EE9C585003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HealthInformation.storyboard; sourceTree = "<group>"; };
+		BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalProgress.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +120,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC32F4B1EE9BF2D003E65AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC32F511EE9BF2D003E65AB /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +137,8 @@
 				BDC32F111EE9B8E6003E65AB /* MiniChallenge3 */,
 				BDC32F291EE9B8E6003E65AB /* MiniChallenge3Tests */,
 				BDC32F341EE9B8E6003E65AB /* MiniChallenge3UITests */,
+				BDC32F521EE9BF2D003E65AB /* Widget */,
+				BDC32F4F1EE9BF2D003E65AB /* Frameworks */,
 				BDC32F101EE9B8E6003E65AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +149,7 @@
 				BDC32F0F1EE9B8E6003E65AB /* MiniChallenge3.app */,
 				BDC32F261EE9B8E6003E65AB /* MiniChallenge3Tests.xctest */,
 				BDC32F311EE9B8E6003E65AB /* MiniChallenge3UITests.xctest */,
+				BDC32F4E1EE9BF2D003E65AB /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +157,11 @@
 		BDC32F111EE9B8E6003E65AB /* MiniChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
-				BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */,
-				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
-				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
-				BDC32F1C1EE9B8E6003E65AB /* Assets.xcassets */,
-				BDC32F1E1EE9B8E6003E65AB /* LaunchScreen.storyboard */,
-				BDC32F211EE9B8E6003E65AB /* Info.plist */,
-				BDC32F191EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld */,
+				BDC32F491EE9BD9F003E65AB /* Other files */,
+				BDC32F431EE9BC7F003E65AB /* Swift Files */,
+				BDC32F461EE9BD57003E65AB /* Controllers */,
+				BDC32F481EE9BD94003E65AB /* Storyboards */,
+				BDC32F471EE9BD6C003E65AB /* Database Files */,
 			);
 			path = MiniChallenge3;
 			sourceTree = "<group>";
@@ -128,6 +184,74 @@
 			path = MiniChallenge3UITests;
 			sourceTree = "<group>";
 		};
+		BDC32F431EE9BC7F003E65AB /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */,
+				BDC32F441EE9BCD5003E65AB /* DatabaseController.swift */,
+			);
+			name = "Swift Files";
+			sourceTree = "<group>";
+		};
+		BDC32F461EE9BD57003E65AB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BDC32F471EE9BD6C003E65AB /* Database Files */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F191EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld */,
+			);
+			name = "Database Files";
+			sourceTree = "<group>";
+		};
+		BDC32F481EE9BD94003E65AB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F1E1EE9B8E6003E65AB /* LaunchScreen.storyboard */,
+				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
+				BDC32F771EE9C59F003E65AB /* PersonalProgress.storyboard */,
+				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
+				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
+				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
+				BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */,
+				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
+				BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BDC32F491EE9BD9F003E65AB /* Other files */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F1C1EE9B8E6003E65AB /* Assets.xcassets */,
+				BDC32F211EE9B8E6003E65AB /* Info.plist */,
+			);
+			name = "Other files";
+			sourceTree = "<group>";
+		};
+		BDC32F4F1EE9BF2D003E65AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F501EE9BF2D003E65AB /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BDC32F521EE9BF2D003E65AB /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */,
+				BDC32F551EE9BF2D003E65AB /* MainInterface.storyboard */,
+				BDC32F581EE9BF2D003E65AB /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +262,12 @@
 				BDC32F0B1EE9B8E6003E65AB /* Sources */,
 				BDC32F0C1EE9B8E6003E65AB /* Frameworks */,
 				BDC32F0D1EE9B8E6003E65AB /* Resources */,
+				BDC32F5F1EE9BF2D003E65AB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BDC32F5A1EE9BF2D003E65AB /* PBXTargetDependency */,
 			);
 			name = MiniChallenge3;
 			productName = MiniChallenge3;
@@ -184,6 +310,23 @@
 			productReference = BDC32F311EE9B8E6003E65AB /* MiniChallenge3UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BDC32F4D1EE9BF2D003E65AB /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDC32F5C1EE9BF2D003E65AB /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				BDC32F4A1EE9BF2D003E65AB /* Sources */,
+				BDC32F4B1EE9BF2D003E65AB /* Frameworks */,
+				BDC32F4C1EE9BF2D003E65AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = BDC32F4E1EE9BF2D003E65AB /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -211,6 +354,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = BDC32F0E1EE9B8E6003E65AB;
 					};
+					BDC32F4D1EE9BF2D003E65AB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VLLH384AC4;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = BDC32F0A1EE9B8E6003E65AB /* Build configuration list for PBXProject "MiniChallenge3" */;
@@ -229,6 +377,7 @@
 				BDC32F0E1EE9B8E6003E65AB /* MiniChallenge3 */,
 				BDC32F251EE9B8E6003E65AB /* MiniChallenge3Tests */,
 				BDC32F301EE9B8E6003E65AB /* MiniChallenge3UITests */,
+				BDC32F4D1EE9BF2D003E65AB /* Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -239,8 +388,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC32F201EE9B8E6003E65AB /* LaunchScreen.storyboard in Resources */,
+				BDC32F761EE9C585003E65AB /* HealthInformation.storyboard in Resources */,
+				BDC32F611EE9C11E003E65AB /* InitialPageViewController.storyboard in Resources */,
 				BDC32F1D1EE9B8E6003E65AB /* Assets.xcassets in Resources */,
+				BDC32F671EE9C234003E65AB /* FagerstromForm.storyboard in Resources */,
+				BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */,
+				BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */,
+				BDC32F781EE9C59F003E65AB /* PersonalProgress.storyboard in Resources */,
 				BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */,
+				BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +414,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC32F4C1EE9BF2D003E65AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC32F571EE9BF2D003E65AB /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,7 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC32F451EE9BCD5003E65AB /* DatabaseController.swift in Sources */,
 				BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */,
+				BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */,
 				BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
 			);
@@ -287,6 +453,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDC32F4A1EE9BF2D003E65AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDC32F541EE9BF2D003E65AB /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -299,6 +473,11 @@
 			isa = PBXTargetDependency;
 			target = BDC32F0E1EE9B8E6003E65AB /* MiniChallenge3 */;
 			targetProxy = BDC32F321EE9B8E6003E65AB /* PBXContainerItemProxy */;
+		};
+		BDC32F5A1EE9BF2D003E65AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDC32F4D1EE9BF2D003E65AB /* Widget */;
+			targetProxy = BDC32F591EE9BF2D003E65AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -317,6 +496,30 @@
 				BDC32F1F1EE9B8E6003E65AB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BDC32F551EE9BF2D003E65AB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC32F561EE9BF2D003E65AB /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC32F701EE9C54E003E65AB /* Base */,
+			);
+			name = PersonalProfile.storyboard;
+			sourceTree = "<group>";
+		};
+		BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDC32F751EE9C585003E65AB /* Base */,
+			);
+			name = HealthInformation.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -418,6 +621,7 @@
 		BDC32F3B1EE9B8E6003E65AB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
@@ -431,6 +635,7 @@
 		BDC32F3C1EE9B8E6003E65AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
@@ -499,6 +704,32 @@
 			};
 			name = Release;
 		};
+		BDC32F5D1EE9BF2D003E65AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BDC32F5E1EE9BF2D003E65AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -518,6 +749,7 @@
 				BDC32F3C1EE9B8E6003E65AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC32F3D1EE9B8E6003E65AB /* Build configuration list for PBXNativeTarget "MiniChallenge3Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,12 +758,22 @@
 				BDC32F3F1EE9B8E6003E65AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC32F401EE9B8E6003E65AB /* Build configuration list for PBXNativeTarget "MiniChallenge3UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDC32F411EE9B8E6003E65AB /* Debug */,
 				BDC32F421EE9B8E6003E65AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDC32F5C1EE9BF2D003E65AB /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDC32F5D1EE9BF2D003E65AB /* Debug */,
+				BDC32F5E1EE9BF2D003E65AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

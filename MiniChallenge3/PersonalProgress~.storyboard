@@ -9,6 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="D7x-bS-MBY">
+            <objects>
+                <viewController id="nV4-0c-NHK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ml1-wA-rIX"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0u-1w-ett"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ua0-W8-kOA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cZD-GE-D6p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlV-Lo-UJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="378"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bnt-wv-Hhk">
             <objects>
@@ -21,7 +40,7 @@
                     <connections>
                         <segue destination="giC-rL-ljj" kind="relationship" relationship="viewControllers" id="Z0U-5s-seG"/>
                         <segue destination="wBE-xA-Ypb" kind="relationship" relationship="viewControllers" id="XGX-bh-eWP"/>
-                        <segue destination="hY3-zI-aap" kind="relationship" relationship="viewControllers" id="7DF-Sb-TBF"/>
+                        <segue destination="nV4-0c-NHK" kind="relationship" relationship="viewControllers" id="7DF-Sb-TBF"/>
                         <segue destination="qRG-50-U4e" kind="relationship" relationship="viewControllers" id="LBo-Je-hf1"/>
                     </connections>
                 </tabBarController>
@@ -58,16 +77,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ip2-br-EAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="466" y="1026"/>
-        </scene>
-        <!--PersonalProgress-->
-        <scene sceneID="B6Z-UP-qbY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PersonalProgress" id="hY3-zI-aap" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cmJ-o1-HEy"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BFd-EI-Kdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-68" y="378"/>
         </scene>
     </scenes>
 </document>
