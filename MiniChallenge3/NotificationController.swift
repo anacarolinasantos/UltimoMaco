@@ -9,7 +9,7 @@
 import Foundation
 import UserNotifications
 
-public class NotificationControler{
+public class NotificationController{
     
     public static let center = UNUserNotificationCenter.current()
     
