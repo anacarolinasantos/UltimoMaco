@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             return true
         }
-        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() :
+        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "FagerstromFormPageViewController", bundle: nil).instantiateInitialViewController() :
                                                            UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = viewControllerDirected
