@@ -18,4 +18,11 @@ class FagerstromPage3: PageModelViewController{
     
     //MARK: - Actions
     
+    @IBAction func yesTap(_ sender: Any) {
+        //TODO: send 1 point to database
+    }
+    
+    @IBAction func noTap(_ sender: Any) {
+        //TODO: send 0 point to database
+    }
 }

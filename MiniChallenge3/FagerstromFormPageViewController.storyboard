@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page1-->
         <scene sceneID="Mre-el-Iqm">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom1" id="ohs-VI-Rr0" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom1" id="ohs-VI-Rr0" customClass="FagerstromPage1" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U5s-S9-0BW"/>
                         <viewControllerLayoutGuide type="bottom" id="Db4-Zr-ay5"/>
@@ -25,13 +25,47 @@
                                 <rect key="frame" x="137" y="119" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
-                                <rect key="frame" x="96" y="239" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
+                                <rect key="frame" x="96" y="239" width="182" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Quanto tempo depois 
+de acordar você fuma o primeiro cigarro?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
+                                <rect key="frame" x="120" y="356" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="mais de 60 minutos"/>
+                                <connections>
+                                    <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
+                                <rect key="frame" x="111" y="401" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="entre 30 e 60 minutos"/>
+                                <connections>
+                                    <action selector="between30And60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="fdC-9u-rfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
+                                <rect key="frame" x="116" y="449" width="143" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="entre 5 e 30 minutos"/>
+                                <connections>
+                                    <action selector="between5And30Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="CyS-y7-Ehw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
+                                <rect key="frame" x="118" y="497" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="menos de 5 minutos"/>
+                                <connections>
+                                    <action selector="lessThan5Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="675-1g-cHh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -40,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="-1956" y="1003.4482758620691"/>
         </scene>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page2-->
         <scene sceneID="tt6-Yx-Nsr">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom2" id="ttw-RD-jLd" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom2" id="ttw-RD-jLd" customClass="FagerstromPage2" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T3k-BO-MDi"/>
                         <viewControllerLayoutGuide type="bottom" id="0V7-ih-1vo"/>
@@ -53,16 +87,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-7Q-pEa">
-                                <rect key="frame" x="140" y="104" width="100" height="100"/>
+                                <rect key="frame" x="140" y="119" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
-                                <rect key="frame" x="99" y="224" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
+                                <rect key="frame" x="-45" y="239" width="470" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Você tem dificuldade de
+ ficar sem fumar em
+ locais proibidos?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-Ev-5lX">
+                                <rect key="frame" x="175" y="365" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIM"/>
+                                <connections>
+                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="aiX-3A-6gN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-ms-De0">
+                                <rect key="frame" x="174" y="427" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NÃO"/>
+                                <connections>
+                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="czg-St-uiY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -71,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="-1164" y="1003.4482758620691"/>
         </scene>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page3-->
         <scene sceneID="dJc-DU-G5a">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom3" id="en5-sc-JW3" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom3" id="en5-sc-JW3" customClass="FagerstromPage3" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PpU-hx-A65"/>
                         <viewControllerLayoutGuide type="bottom" id="dFx-mn-Oc7"/>
@@ -84,28 +137,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n33-7U-qNS">
-                                <rect key="frame" x="137" y="114" width="100" height="100"/>
+                                <rect key="frame" x="137" y="119" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
-                                <rect key="frame" x="96" y="234" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
+                                <rect key="frame" x="96" y="239" width="182" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">O primeiro cigarro da 
+manhã é o que traz 
+mais satisfação?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8A-Df-Wiz">
+                                <rect key="frame" x="172" y="365" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIM"/>
+                                <connections>
+                                    <action selector="yesTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="Dx7-Hf-wsc"/>
+                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="lZK-Iw-abY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
+                                <rect key="frame" x="171" y="425" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NÃO"/>
+                                <connections>
+                                    <action selector="noTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="S0I-rm-lLp"/>
+                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="XA0-io-XLk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyP-wI-aMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-348" y="1004"/>
+            <point key="canvasLocation" x="-348" y="1003.4482758620691"/>
         </scene>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page4-->
         <scene sceneID="gSn-l3-MK8">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom4" id="4i0-oN-5Io" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom4" id="4i0-oN-5Io" customClass="FagerstromPage4" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HxQ-8M-kmP"/>
                         <viewControllerLayoutGuide type="bottom" id="Cgl-Ou-F7V"/>
@@ -115,16 +189,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-56-Wc6">
-                                <rect key="frame" x="215" y="119" width="100" height="100"/>
+                                <rect key="frame" x="137" y="119" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-S4-uja">
-                                <rect key="frame" x="174" y="453" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-S4-uja">
+                                <rect key="frame" x="96" y="239" width="182" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Você fuma mais nas 
+primeiras horas do dia?</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-K4-cwa">
+                                <rect key="frame" x="172" y="365" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIM"/>
+                                <connections>
+                                    <action selector="yesTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="lVQ-z8-QaT"/>
+                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="uie-sA-bzJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
+                                <rect key="frame" x="171" y="427" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NÃO"/>
+                                <connections>
+                                    <action selector="noTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="iO5-Lj-BRR"/>
+                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="o3S-G8-PRK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -133,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="476" y="1003.4482758620691"/>
         </scene>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page5-->
         <scene sceneID="1Q5-Ub-Gr8">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom5" id="1jp-Qd-vql" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom5" id="1jp-Qd-vql" customClass="FagerstromPage5" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gdi-xq-nMW"/>
                         <viewControllerLayoutGuide type="bottom" id="igD-6I-ZBl"/>
@@ -146,16 +240,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-dQ-Gnb">
-                                <rect key="frame" x="215" y="119" width="100" height="100"/>
+                                <rect key="frame" x="137" y="119" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-FN-R7c">
-                                <rect key="frame" x="174" y="453" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma mesmo doente?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-FN-R7c">
+                                <rect key="frame" x="96" y="239" width="182" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-2J-4cB">
+                                <rect key="frame" x="172" y="365" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIM"/>
+                                <connections>
+                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="1gw-5q-bgO"/>
+                                    <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="xKE-fu-SuL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
+                                <rect key="frame" x="171" y="427" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NÃO"/>
+                                <connections>
+                                    <action selector="noTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="Gp6-qQ-FeG"/>
+                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="Mbp-c2-jdv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -164,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1273" y="1005"/>
         </scene>
-        <!--Page Model View Controller-->
+        <!--Fagerstrom Page6-->
         <scene sceneID="SaV-f8-O18">
             <objects>
-                <viewController storyboardIdentifier="Fargerstrom6" modalTransitionStyle="flipHorizontal" id="Zzj-FK-hTo" customClass="PageModelViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fargerstrom6" modalTransitionStyle="flipHorizontal" id="Zzj-FK-hTo" customClass="FagerstromPage6" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IIL-kN-7xV"/>
                         <viewControllerLayoutGuide type="bottom" id="qwW-j6-Bbr"/>
@@ -176,12 +288,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INp-e8-wts">
-                                <rect key="frame" x="137" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma quantos cigarro por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-LZ-eAC">
-                                <rect key="frame" x="96" y="220" width="182" height="59"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-LZ-eAC">
+                                <rect key="frame" x="96" y="126" width="182" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
