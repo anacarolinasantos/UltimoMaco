@@ -18,6 +18,8 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     
     var isAbleToContinue = true
     
+    var userInfo: [Any] = []
+    
     //MARK: - ViewController Life Cicle
     
     override func viewDidLoad() {

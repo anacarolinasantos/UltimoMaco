@@ -13,7 +13,7 @@ public class NotificationController{
     
     public static let center = UNUserNotificationCenter.current()
     
-    private static func validateAuthorization() -> Bool{
+    public static func validateAuthorization() -> Bool{
         
         var statusOfValidation = true
         
