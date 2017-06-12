@@ -15,11 +15,15 @@ public class PersonalProgressViewController: UIViewController {
     @IBOutlet weak var chart: LineChart!
     @IBOutlet weak var cigarettesNumberLabel: UILabel!
     @IBOutlet weak var stepperOutlet: UIStepper!
+    @IBOutlet weak var today: UILabel!
+
     
     //MARK: Atributes
     var todayCigarettesNumber:Int = 0
     let appGroupName:String = "group.br.minichallenge.3"
     var synchronize = Timer()
+    var chartData: LineChartData!
+    var todayIndex: Int = 0
     
     //MARK: ViewController Life Cicle
     
@@ -27,8 +31,7 @@ public class PersonalProgressViewController: UIViewController {
         super.viewDidLoad()
         
         // -- SETUP
-        // Chart datasource
-        let test = LineChartData(points: [ChartPoint(Date(), 21),
+        chartData = LineChartData(points: [ChartPoint(Date(), 21),
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 1, to: Date())!, 20),
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 2, to: Date())!, 17),
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 3, to: Date())!, 19),
@@ -50,7 +53,7 @@ public class PersonalProgressViewController: UIViewController {
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 19, to: Date())!, 5),
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 20, to: Date())!, 3),
                                           ChartPoint(Calendar.current.date(byAdding: .day, value: 21, to: Date())!, 0)])
-        chart.pointData = test
+        chart.pointData = chartData
         
         //Update main atributes
         updateCigarettesNumber()
@@ -60,6 +63,9 @@ public class PersonalProgressViewController: UIViewController {
                                       selector: #selector(self.updateCigarettesNumber),
                                       userInfo: nil,
                                       repeats: true)
+        
+        today.text = chartData.points.last?.getFormattedDate()
+        todayIndex = chartData.points.count-1
         
     }
     
@@ -96,6 +102,8 @@ public class PersonalProgressViewController: UIViewController {
         todayCigarettesNumber = Int(sender.value)
         setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
+        chart.pointData?.points[todayIndex].cigarettes = Int(sender.value)
+        updateChart()
     }
     
     func alteraUltimoCampo(_ cigarettNumber: Int){
@@ -112,7 +120,17 @@ public class PersonalProgressViewController: UIViewController {
     }
     
     public func updateChart(){
-        
+        chart.subviews.forEach { $0.removeFromSuperview() }
+        chart.setNeedsDisplay()
+    }
+    
+    @IBAction func yesterday(_ sender: Any) {
+        todayIndex -= 1
+        today.text = chartData.points[todayIndex].getFormattedDate()
+    }
+    @IBAction func tomorrow(_ sender: Any) {
+        todayIndex += 1
+        today.text = chartData.points[todayIndex].getFormattedDate()
     }
 }
 
