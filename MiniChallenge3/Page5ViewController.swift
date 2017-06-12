@@ -1,4 +1,4 @@
-//
+
 //  Page5ViewController.swift
 //  MiniChallenge3
 //
@@ -13,6 +13,8 @@ class Page5ViewController: PageModelViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var mainView: UIView!
     
     //MARK: - Atributes
     
@@ -29,9 +31,8 @@ class Page5ViewController: PageModelViewController {
     @IBAction func startUsingApp(_ sender: Any) {
         //TODO: capture date, and finish storyboard
         
-        if let vcs = pageController?.viewControllers {
+        if let vcs = (pageController as? InitialPageViewController)?.allViewControllers {
             
-            //Get values from page views
             let name = (vcs[0] as! Page1ViewController).nameTextField.text
             let img = (vcs[0] as! Page1ViewController).userPhoto.image
             let cigsDaily = (vcs[1] as! Page2ViewController).cigaretteNumber
@@ -39,10 +40,12 @@ class Page5ViewController: PageModelViewController {
             let weeksStop = (vcs[3] as! Page4ViewController).selectedWeeks
             let remiderTime = self.datePicker.date
             
-            //Instantiate and
             let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: DatabaseController.persistentContainer.viewContext) as! User
             user.name = name
-            user.imageAsMedia(image: img!)
+            if let i = img {
+                user.imageAsMedia(image: i)
+            }
+            
             user.enableReminder = true
             user.achievementNotifier = true
             user.reminderTime = remiderTime as NSDate
@@ -50,7 +53,10 @@ class Page5ViewController: PageModelViewController {
             for i in 1...((weeksStop! * 7) + 1) {
                 let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                 cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
+                cigEntry.cigaretteNumber = -1
             }
+            
+            DatabaseController.saveContext()
             
             do {
                 let firstEntry = (try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()))[0] as! CigaretteEntry
@@ -61,10 +67,12 @@ class Page5ViewController: PageModelViewController {
             
             DatabaseController.saveContext()
             
-            let setViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
+            UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
+            UserDefaults.standard.set(cigsDaily! / 20 * cigsYears!, forKey: "smokingLoad")
             UserDefaults.standard.synchronize()
-            self.present(setViewController!, animated: true, completion: nil)
+            
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+            self.present(vc!, animated: true, completion: nil)
         }
     }
     

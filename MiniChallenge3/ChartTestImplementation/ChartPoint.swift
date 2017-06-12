@@ -27,7 +27,6 @@ class ChartPoint {
         var date = dateFormatter.string(from: self.day as Date)
         let index = date.index(date.startIndex, offsetBy: 5)
         date = date.substring(to: index)
-        print(date)
         return date
     }
 

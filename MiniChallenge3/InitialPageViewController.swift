@@ -18,6 +18,8 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     
     var isAbleToContinue = true
     
+    var userInfo: [Any] = []
+    
     //MARK: - ViewController Life Cicle
     
     override func viewDidLoad() {
@@ -90,7 +92,7 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return allViewControllers.count - 1 
+        return allViewControllers.count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {

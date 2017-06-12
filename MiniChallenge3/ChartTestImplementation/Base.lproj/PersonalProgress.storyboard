@@ -41,6 +41,29 @@
                                     <action selector="stepperTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="qrR-2a-xJB"/>
                                 </connections>
                             </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mno-7B-y9e">
+                                <rect key="frame" x="46" y="549" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ontem"/>
+                                <connections>
+                                    <action selector="yesterday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yde-lm-Rds"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHM-WI-HJh">
+                                <rect key="frame" x="279" y="549" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Amanhã"/>
+                                <connections>
+                                    <action selector="tomorrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cpd-HP-wiB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gp-FO-51z">
+                                <rect key="frame" x="148" y="554" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -54,6 +77,7 @@
                         <outlet property="chart" destination="5C9-Re-Wse" id="EIn-Um-FNa"/>
                         <outlet property="cigarettesNumberLabel" destination="1dz-83-VSQ" id="Bqv-Z5-C5Y"/>
                         <outlet property="stepperOutlet" destination="cNd-EU-PdA" id="OVK-um-GEn"/>
+                        <outlet property="today" destination="1Gp-FO-51z" id="7Np-ef-C62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

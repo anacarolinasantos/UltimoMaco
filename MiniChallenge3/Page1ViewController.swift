@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     
@@ -20,13 +21,11 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     //MARK: - ViewController Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // -- SETUP
         picker.delegate = self
         self.hideKeyboardWhenTappedAround()
         nameTextField.delegate = self
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPickerPhoto))
-        picker.view.addGestureRecognizer(tap)
+        userPhoto.isUserInteractionEnabled = true
     }
     
     //MARK: - UITextFieldDelegate
@@ -40,9 +39,35 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     override func shouldContinueToNextViewController() -> Bool {
         return (nameTextField.text?.isValid())!
     }
+    
 }
 
 extension Page1ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBAction func didChangePhoto(_ sender: Any) {
+        if PHPhotoLibrary.authorizationStatus() == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ handler in
+                if handler == .authorized {
+                    self.showPickerPhoto()
+                } else if handler == .denied {
+                    self.alertAuth()
+                }
+            })
+        } else if PHPhotoLibrary.authorizationStatus() == .authorized {
+            self.showPickerPhoto()
+        }  else if PHPhotoLibrary.authorizationStatus() == .denied {
+            self.alertAuth()
+        }
+    }
+    
+    func alertAuth() {
+        let alert = UIAlertController(title: "Mude a permissão de acesso ao rolo de câmera nas configurações para poder alterar sua foto de perfil",
+                                      message: nil,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Ok", comment: "default"), style: .default)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
     
     func showPickerPhoto() {
         picker.allowsEditing = false
@@ -52,23 +77,10 @@ extension Page1ViewController: UIImagePickerControllerDelegate, UINavigationCont
         present(picker,animated: true, completion: nil)
     }
     
-    func noCamera(){
-        let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(
-            title: NSLocalizedString("Ok", comment: "default"),
-            style:.default,
-            handler: nil)
-        alertVC.addAction(okAction)
-        present(alertVC, animated: true, completion: nil)
-    }
-    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-            userPhoto.image = image
-        } else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userPhoto.layer.cornerRadius = userPhoto.frame.size.width / 2
+            userPhoto.clipsToBounds = true
             userPhoto.image = image
         }
         dismiss(animated: true)

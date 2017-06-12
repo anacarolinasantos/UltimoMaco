@@ -20,7 +20,8 @@ class LineChart: UIView {
     }
     
     func scale(unitX: Int, unitY: Int) -> CGPoint {
-        let y = CGFloat(unitY) * (bounds.height * 0.9) * 0.95 / CGFloat((pointData?.maxCigarettes)!)
+
+        let y = CGFloat(unitY) * (bounds.height * 0.9) * 0.95 / CGFloat((pointData?.getMaxCigarettes())!)
         return CGPoint(x: (CGFloat(unitX) * ((bounds.width) - (bounds.height * 0.075))  * 0.95 / (CGFloat(pointData!.totalDays)) + (bounds.height * 0.075)),
                        y: ((bounds.height * 0.9) - y))
     }
@@ -52,7 +53,6 @@ class LineChart: UIView {
         let xStep = pointData.points.count/6
         for i in stride(from: xStep-1, to: (pointData.points).count, by: xStep) {
             let p = (pointData.points[i])
-            print(p.getDay())
             var point = scale(unitX: i, unitY: p.cigarettes)
             point.y = bounds.height - (bounds.height * 0.1)
             point.x = point.x - (p.getDay() / 10 > 0 ? 10.2 : 5)
@@ -73,8 +73,8 @@ class LineChart: UIView {
         let font = UIFont(name: "Helvetica", size: fontSize)
         
         //Y labels
-        let yStep = pointData.maxCigarettes/4
-        for i in stride(from: yStep, through: pointData.maxCigarettes, by: yStep) {
+        let yStep = pointData.getMaxCigarettes()/4
+        for i in stride(from: yStep, through: pointData.getMaxCigarettes(), by: yStep) {
             var point = scale(unitX: 0, unitY: i)
             point.x = point.x - 35
             point.y = point.y - (fontSize / 2)
@@ -95,7 +95,7 @@ class LineChart: UIView {
         let firstPoint = pointData.points[0]
         context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{
-            let cigarretsOfToday = -(Int(Double(pointData.maxCigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.maxCigarettes
+            let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
             let point = scale(unitX: i, unitY: cigarretsOfToday)
             context.addLine(to: point)
             context.move(to: point)
@@ -143,7 +143,7 @@ class LineChart: UIView {
         
         //Draws the circles
         for i in 1...pointData.totalDays {
-            let cigarretsOfToday = -(Int(Double(pointData.maxCigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.maxCigarettes
+            let cigarretsOfToday = -(Int(Double(pointData.getMaxCigarettes())/Double(pointData.totalDays) * Double(i))) + pointData.getMaxCigarettes()
             let p = (pointData.points[i])
             let point = scale(unitX: i, unitY: p.cigarettes)
             if p.cigarettes > 0 {
@@ -169,4 +169,5 @@ class LineChart: UIView {
             }
         }
     }
+
 }
