@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Page5ViewController: PageModelViewController {
     
@@ -23,6 +24,13 @@ class Page5ViewController: PageModelViewController {
         datePicker.datePickerMode = .time
     }
     
-    //TODO: capture date, and finish storyboard
+    @IBAction func startUsingApp(_ sender: Any) {
+        //TODO: capture date, and finish storyboard
+        
+        let setViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
+        UserDefaults.standard.synchronize()
+        self.present(setViewController!, animated: true, completion: nil)
+    }
     
 }

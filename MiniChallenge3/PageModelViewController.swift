@@ -11,5 +11,11 @@ import UIKit
 class PageModelViewController: UIViewController {
     
     var index: Int? = nil
+    
+    var pageViewController: UIPageViewController? 
+    
+    public func shouldContinueToNextViewController() -> Bool {
+        return true
+    }
 
 }

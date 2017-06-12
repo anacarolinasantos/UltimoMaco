@@ -8,58 +8,57 @@
 
 import UIKit
 
-class InitialPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class InitialPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     //MARK: - Atributes
-    let pagesCount:Int = 5
+    
+    var allViewControllers: [PageModelViewController] = []
+    
+    var timer = Timer()
+    
+    var isAbleToContinue = true
     
     //MARK: - ViewController Life Cicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for i in 1...5 {
+            allViewControllers.append(storyboard?.instantiateViewController(withIdentifier: "Page\(i)") as! PageModelViewController)
+            allViewControllers[i - 1].index = i - 1
+            allViewControllers[i - 1].pageViewController = self
+        }
+        
         // -- SETUP
         self.dataSource = self
+        self.delegate = self
         
         let startingViewController: PageModelViewController = self.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         self.providesPresentationContextTransitionStyle = true
-        self.setViewControllers([startingViewController], direction: .forward, animated: false, completion: {done in })
+        self.setViewControllers([startingViewController], direction: .forward, animated: false, completion: {done in})
+        
+        timer = .scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.verify), userInfo: nil, repeats: true)
         
     }
     
+    func verify() {
+        if !isAbleToContinue {
+            self.dataSource = nil
+            self.dataSource = self
+        }
+        isAbleToContinue = true
+    }
+        
     // ViewController 'get' method
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> PageModelViewController? {
-        
-        switch index {
-        case 0:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Page1") as! PageModelViewController
-            pageController.index = 0
-            return pageController
-        case 1:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Page2") as! PageModelViewController
-            pageController.index = 1
-            return pageController
-        case 2:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Page3") as! PageModelViewController
-            pageController.index = 2
-            return pageController
-        case 3:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Page4") as! PageModelViewController
-            pageController.index = 3
-            return pageController
-        case 4:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Page5") as! PageModelViewController
-            pageController.index = 4
-            return pageController
-        default:
-            return nil
-        }
-        
+        return allViewControllers[index]
     }
     
     //MARK: - UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        isAbleToContinue = false
+
         if var index = (viewController as! PageModelViewController).index {
             if (index == 0) {
                 return nil
@@ -71,23 +70,30 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if var index = (viewController as! PageModelViewController).index {
-            if (index == 5) {
+        let currentViewController = (viewController as! PageModelViewController)
+        
+        if !currentViewController.shouldContinueToNextViewController() {
+            isAbleToContinue = false
+            return nil
+        }
+        if var index = currentViewController.index {
+            if (index == 4) {
                 return nil
             }
             index += 1
             return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         }
         return self.viewControllerAtIndex(0, storyboard: viewController.storyboard!)
-
+        
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pagesCount
+        return allViewControllers.count - 1 
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
+    
 
 }

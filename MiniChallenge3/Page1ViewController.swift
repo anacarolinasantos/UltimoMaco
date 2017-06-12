@@ -13,8 +13,6 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     
-    //MARK: - Atributes
-    var name: String?
     
     //MARK: - ViewController Life Cicle
     override func viewDidLoad() {
@@ -29,11 +27,11 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     
     // Dismiss keyboard, and capture text when return is pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        //TODO: Add text validation, and animation .shake to entry fail
-        name = nameTextField.text
         textField.resignFirstResponder()
         return true
     }
     
+    override func shouldContinueToNextViewController() -> Bool {
+        return (nameTextField.text?.isValid())!
+    }
 }
