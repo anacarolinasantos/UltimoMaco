@@ -16,23 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        guard let isFirstTimeInApp = UserDefaults.standard.object(forKey: "isFirstTimeInApp") as? Bool else {
-//            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
-//            
-//            if let viewControllerDirected = UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() {
-//                self.window = UIWindow(frame: UIScreen.main.bounds)
-//                self.window?.rootViewController = viewControllerDirected
-//                self.window?.makeKeyAndVisible()
-//            }
-//            return true
-//        }
-//        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() :
-//                                                           UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = viewControllerDirected
-//            self.window?.makeKeyAndVisible()
-//        }
-//        
+        guard let isFirstTimeInApp = UserDefaults.standard.object(forKey: "isFirstTimeInApp") as? Bool else {
+            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
+            
+            if let viewControllerDirected = UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() {
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = viewControllerDirected
+                self.window?.makeKeyAndVisible()
+            }
+            return true
+        }
+        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() :
+                                                           UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = viewControllerDirected
+            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 
@@ -48,6 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        if let view = (self.window?.rootViewController as? UITabBarController)?.selectedViewController as? PersonalProgressViewController{
+            print("oi")
+        }
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

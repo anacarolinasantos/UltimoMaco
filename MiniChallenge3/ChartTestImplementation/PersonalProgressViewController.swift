@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
-class PersonalProgressViewController: UIViewController {
+public class PersonalProgressViewController: UIViewController {
 
     //MARK: Outlets
     @IBOutlet weak var chart: LineChart!
     @IBOutlet weak var cigarettesNumberLabel: UILabel!
-
     @IBOutlet weak var stepperOutlet: UIStepper!
     
     //MARK: Atributes
@@ -23,7 +23,7 @@ class PersonalProgressViewController: UIViewController {
     
     //MARK: ViewController Life Cicle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         // -- SETUP
@@ -96,6 +96,23 @@ class PersonalProgressViewController: UIViewController {
         todayCigarettesNumber = Int(sender.value)
         setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
+    }
+    
+    func alteraUltimoCampo(_ cigarettNumber: Int){
+        //Pega todas as entradas
+        var entries: [CigaretteEntry] = []
+        do {
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CiggareteEntry"))
+        } catch _ as NSError {
+            print("Error")
+        }
+        print(entries.count)
+        DatabaseController.saveContext()
+
+    }
+    
+    public func updateChart(){
+        
     }
 }
 
