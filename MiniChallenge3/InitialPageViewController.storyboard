@@ -61,6 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="Gp7-or-Ti5" id="CgK-ih-Acv"/>
+                        <outlet property="userPhoto" destination="nyX-Y7-bim" id="vS3-ZP-Fsd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iF4-II-ech" userLabel="First Responder" sceneMemberID="firstResponder"/>
