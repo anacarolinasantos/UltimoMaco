@@ -14,6 +14,8 @@ class Page5ViewController: PageModelViewController {
     //MARK: - Outlets
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var mainView: UIView!
+    
     //MARK: - Atributes
     
     var pageController: UIPageViewController?
@@ -51,6 +53,7 @@ class Page5ViewController: PageModelViewController {
             for i in 1...((weeksStop! * 7) + 1) {
                 let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                 cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
+                cigEntry.cigaretteNumber = -1
             }
             
             DatabaseController.saveContext()
@@ -64,7 +67,7 @@ class Page5ViewController: PageModelViewController {
             
             DatabaseController.saveContext()
             
-            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
+            UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
             UserDefaults.standard.set(cigsDaily! / 20 * cigsYears!, forKey: "smokingLoad")
             UserDefaults.standard.synchronize()
             

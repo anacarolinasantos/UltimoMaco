@@ -92,7 +92,7 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return allViewControllers.count - 1 
+        return allViewControllers.count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
