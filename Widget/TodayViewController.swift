@@ -10,16 +10,28 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
+    //MARK: Outlets
+    @IBOutlet weak var cigarettesNumberLabel: UILabel!
+    @IBOutlet weak var stepperOutlet: UIStepper!
+    
+    //MARK: Atributes
+    var todayCigarettesNumber:Int = 0
+    let appGroupName:String = "group.br.minichallenge.3"
+    
+    
+    //MARK: ViewController Life Cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        
+        // -- SETUP
+        todayCigarettesNumber = getTodayCigarettesNumberFromNSUserDefaults()
+        stepperOutlet.value = Double(todayCigarettesNumber)
+        cigarettesNumberLabel.text = String(todayCigarettesNumber)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    //MARK: Widget
     
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
@@ -29,6 +41,33 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
         
         completionHandler(NCUpdateResult.newData)
+    }
+
+    //MARK: NSUserDefaults todayCigarettesNumber get and set
+    
+    func setTodayCigarettesNumberToNSUserDefaults(_ todayCigarettesNumber: Int){
+        
+        if let userDefaults = UserDefaults(suiteName: appGroupName) {
+            userDefaults.set(todayCigarettesNumber as AnyObject, forKey: "todayCigarettesNumber")
+            userDefaults.synchronize()
+        }
+    }
+    
+    func getTodayCigarettesNumberFromNSUserDefaults() -> Int{
+        
+        if let userDefaults = UserDefaults(suiteName: appGroupName){
+            return userDefaults.integer(forKey: "todayCigarettesNumber")
+        }
+        
+        return -1
+    }
+    
+    //MARK: Actions
+    @IBAction func stepperTap(_ sender: UIStepper) {
+        
+        todayCigarettesNumber = Int(sender.value)
+        setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
+        cigarettesNumberLabel.text = String(todayCigarettesNumber)
     }
     
 }
