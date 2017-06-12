@@ -96,7 +96,6 @@ class LineChart: UIView {
         context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{
             let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
-            print(cigarretsOfToday)
             let point = scale(unitX: i, unitY: cigarretsOfToday)
             context.addLine(to: point)
             context.move(to: point)
