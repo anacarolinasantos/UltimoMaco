@@ -12,6 +12,21 @@
 		493118A81EEB12F200D2694C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189F1EEB12F200D2694C /* LineChart.swift */; };
 		493118A91EEB12F200D2694C /* LineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493118A01EEB12F200D2694C /* LineChartData.swift */; };
 		493118AA1EEB12F200D2694C /* PersonalProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493118A11EEB12F200D2694C /* PersonalProgressViewController.swift */; };
+		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
+		604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */; };
+		604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */; };
+		604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */; };
+		604EC0421EEDABAA00C1EA59 /* FagerstromPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0411EEDABAA00C1EA59 /* FagerstromPage3.swift */; };
+		604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0431EEDABAF00C1EA59 /* FagerstromPage4.swift */; };
+		604EC0461EEDABB300C1EA59 /* FagerstromPage5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0451EEDABB300C1EA59 /* FagerstromPage5.swift */; };
+		604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0471EEDABB800C1EA59 /* FagerstromPage6.swift */; };
+		60C7F12C1EEB25340007D583 /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F12B1EEB25340007D583 /* InitialPageViewController.swift */; };
+		60C7F12F1EEB25A00007D583 /* PageModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */; };
+		60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1301EEB3CEB0007D583 /* Page4ViewController.swift */; };
+		60C7F1331EECA1290007D583 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1321EECA1290007D583 /* Page1ViewController.swift */; };
+		60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1341EECA1330007D583 /* Page2ViewController.swift */; };
+		60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1361EECA1400007D583 /* Page3ViewController.swift */; };
+		60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1381EECA1480007D583 /* Page5ViewController.swift */; };
 		BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */; };
 		BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F141EE9B8E6003E65AB /* ViewController.swift */; };
 		BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F161EE9B8E6003E65AB /* Main.storyboard */; };
@@ -27,7 +42,7 @@
 		BDC32F5B1EE9BF2D003E65AB /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDC32F4E1EE9BF2D003E65AB /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BDC32F611EE9C11E003E65AB /* InitialPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */; };
 		BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */; };
-		BDC32F671EE9C234003E65AB /* FagerstromForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */; };
+		BDC32F671EE9C234003E65AB /* FagerstromFormPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F661EE9C234003E65AB /* FagerstromFormPageViewController.storyboard */; };
 		BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F531EE9BF2D003E65AB /* TodayViewController.swift */; };
 		BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */; };
 		BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */; };
@@ -78,6 +93,21 @@
 		4931189F1EEB12F200D2694C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		493118A01EEB12F200D2694C /* LineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartData.swift; sourceTree = "<group>"; };
 		493118A11EEB12F200D2694C /* PersonalProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalProgressViewController.swift; sourceTree = "<group>"; };
+		604EC0361EECA76600C1EA59 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FagerstromFormPageViewController.swift; path = ../FagerstromFormPageViewController.swift; sourceTree = "<group>"; };
+		604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage1.swift; sourceTree = "<group>"; };
+		604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage2.swift; sourceTree = "<group>"; };
+		604EC0411EEDABAA00C1EA59 /* FagerstromPage3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage3.swift; sourceTree = "<group>"; };
+		604EC0431EEDABAF00C1EA59 /* FagerstromPage4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage4.swift; sourceTree = "<group>"; };
+		604EC0451EEDABB300C1EA59 /* FagerstromPage5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage5.swift; sourceTree = "<group>"; };
+		604EC0471EEDABB800C1EA59 /* FagerstromPage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage6.swift; sourceTree = "<group>"; };
+		60C7F12B1EEB25340007D583 /* InitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
+		60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModelViewController.swift; sourceTree = "<group>"; };
+		60C7F1301EEB3CEB0007D583 /* Page4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
+		60C7F1321EECA1290007D583 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
+		60C7F1341EECA1330007D583 /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
+		60C7F1361EECA1400007D583 /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
+		60C7F1381EECA1480007D583 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		BDC32F0F1EE9B8E6003E65AB /* MiniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC32F141EE9B8E6003E65AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +130,7 @@
 		BDC32F581EE9BF2D003E65AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialPageViewController.storyboard; sourceTree = "<group>"; };
 		BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersonalMotivations.storyboard; sourceTree = "<group>"; };
-		BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FagerstromForm.storyboard; sourceTree = "<group>"; };
+		BDC32F661EE9C234003E65AB /* FagerstromFormPageViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FagerstromFormPageViewController.storyboard; sourceTree = "<group>"; };
 		BDC32F701EE9C54E003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProfile.storyboard; sourceTree = "<group>"; };
 		BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AppConfigurations.storyboard; sourceTree = "<group>"; };
 		BDC32F751EE9C585003E65AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HealthInformation.storyboard; sourceTree = "<group>"; };
@@ -146,12 +176,57 @@
 			children = (
 				4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */,
 				4931189D1EEB12F200D2694C /* ChartPoint.swift */,
-				4931189F1EEB12F200D2694C /* LineChart.swift */,
 				493118A01EEB12F200D2694C /* LineChartData.swift */,
+				4931189F1EEB12F200D2694C /* LineChart.swift */,
 				493118A11EEB12F200D2694C /* PersonalProgressViewController.swift */,
 			);
 			name = PersonalProgress;
 			path = ChartTestImplementation;
+			sourceTree = "<group>";
+		};
+		604EC0351EECA2AB00C1EA59 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				60C7F1321EECA1290007D583 /* Page1ViewController.swift */,
+				60C7F1341EECA1330007D583 /* Page2ViewController.swift */,
+				60C7F1361EECA1400007D583 /* Page3ViewController.swift */,
+				60C7F1301EEB3CEB0007D583 /* Page4ViewController.swift */,
+				60C7F1381EECA1480007D583 /* Page5ViewController.swift */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F661EE9C234003E65AB /* FagerstromFormPageViewController.storyboard */,
+				604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */,
+				604EC0491EEDABBD00C1EA59 /* FagerstromPages */,
+			);
+			name = FagerstromFormPageViewController;
+			sourceTree = "<group>";
+		};
+		604EC0491EEDABBD00C1EA59 /* FagerstromPages */ = {
+			isa = PBXGroup;
+			children = (
+				604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */,
+				604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */,
+				604EC0411EEDABAA00C1EA59 /* FagerstromPage3.swift */,
+				604EC0431EEDABAF00C1EA59 /* FagerstromPage4.swift */,
+				604EC0451EEDABB300C1EA59 /* FagerstromPage5.swift */,
+				604EC0471EEDABB800C1EA59 /* FagerstromPage6.swift */,
+			);
+			name = FagerstromPages;
+			sourceTree = "<group>";
+		};
+		60C7F12D1EEB25390007D583 /* InitialPageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */,
+				60C7F12B1EEB25340007D583 /* InitialPageViewController.swift */,
+				604EC0351EECA2AB00C1EA59 /* Pages */,
+			);
+			name = InitialPageViewController;
 			sourceTree = "<group>";
 		};
 		BDC32F061EE9B8E6003E65AB = {
@@ -185,6 +260,8 @@
 				BDC32F431EE9BC7F003E65AB /* Swift Files */,
 				BDC32F461EE9BD57003E65AB /* Controllers */,
 				BDC32F481EE9BD94003E65AB /* Storyboards */,
+				604EC0361EECA76600C1EA59 /* Extensions.swift */,
+				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
 				BDC32F471EE9BD6C003E65AB /* Database Files */,
 			);
 			path = MiniChallenge3;
@@ -221,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
+				60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -242,9 +320,8 @@
 				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
 				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
 				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
-				BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */,
-				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
-				BDC32F661EE9C234003E65AB /* FagerstromForm.storyboard */,
+				60C7F12D1EEB25390007D583 /* InitialPageViewController */,
+				604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -426,7 +503,7 @@
 				BDC32F761EE9C585003E65AB /* HealthInformation.storyboard in Resources */,
 				BDC32F611EE9C11E003E65AB /* InitialPageViewController.storyboard in Resources */,
 				BDC32F1D1EE9B8E6003E65AB /* Assets.xcassets in Resources */,
-				BDC32F671EE9C234003E65AB /* FagerstromForm.storyboard in Resources */,
+				BDC32F671EE9C234003E65AB /* FagerstromFormPageViewController.storyboard in Resources */,
 				BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */,
 				493118A51EEB12F200D2694C /* PersonalProgress.storyboard in Resources */,
 				BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */,
@@ -464,15 +541,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C7F12F1EEB25A00007D583 /* PageModelViewController.swift in Sources */,
+				60C7F12C1EEB25340007D583 /* InitialPageViewController.swift in Sources */,
 				493118AA1EEB12F200D2694C /* PersonalProgressViewController.swift in Sources */,
 				BDC32F451EE9BCD5003E65AB /* DatabaseController.swift in Sources */,
+				60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */,
 				493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */,
+				60C7F1331EECA1290007D583 /* Page1ViewController.swift in Sources */,
+				604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */,
+				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
+				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
 				BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */,
+				604EC0421EEDABAA00C1EA59 /* FagerstromPage3.swift in Sources */,
+				604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */,
 				493118A81EEB12F200D2694C /* LineChart.swift in Sources */,
 				BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */,
 				BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */,
+				60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */,
+				604EC0461EEDABB300C1EA59 /* FagerstromPage5.swift in Sources */,
 				493118A91EEB12F200D2694C /* LineChartData.swift in Sources */,
+				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
+				60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */,
+				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
+				604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
