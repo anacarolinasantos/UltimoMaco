@@ -26,13 +26,13 @@
         <attribute name="enableReminder" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
-        <attribute name="reminderTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reminderTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <elements>
         <element name="Achievement" positionX="-108" positionY="-205" width="128" height="88"/>
         <element name="CigaretteEntry" positionX="-315" positionY="35" width="128" height="73"/>
+        <element name="FagerstromTest" positionX="-126" positionY="-81" width="128" height="118"/>
         <element name="Motivation" positionX="43" positionY="-25" width="128" height="88"/>
         <element name="User" positionX="-315" positionY="-162" width="128" height="118"/>
-        <element name="FagerstromTest" positionX="-126" positionY="-81" width="128" height="118"/>
     </elements>
 </model>

@@ -29,6 +29,8 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
             allViewControllers[i - 1].pageViewController = self
         }
         
+        (allViewControllers[4] as! Page5ViewController).pageController = self
+        
         // -- SETUP
         self.dataSource = self
         self.delegate = self
