@@ -19,8 +19,12 @@ class LineChartData {
     init(points: [ChartPoint]) {
         self.points = points
         self.totalDays = points.count-1
-        
         lastValidPoint = points.filter({ $0.cigarettes != -1 }).last!
+        
+        //quicksort(&self.points, 0, points.count-1)
+        
+        //lastValidPoint = points.filter({ $0.cigarettes != -1 }).last!
+        
     }
     
     func getLastValidPointIndex() -> Int {
@@ -40,4 +44,25 @@ class LineChartData {
         }
         return max
     }
+    
+    func partition(_ v: inout [ChartPoint], left: Int, right: Int) -> Int {
+        var i = left
+        for j in (left + 1)..<(right + 1) {
+            if v[j].cigarettes < v[left].cigarettes {
+                i += 1
+                (v[i], v[j]) = (v[j], v[i])
+            }
+        }
+        (v[i], v[left]) = (v[left], v[i])
+        return i
+    }
+    
+    func quicksort(_ v: inout [ChartPoint],_ left: Int,_ right: Int) {
+        if right > left {
+            let pivotIndex = partition(&v, left: left, right: right)
+            quicksort(&v, left, pivotIndex - 1)
+            quicksort(&v, pivotIndex + 1, right)
+        }
+    }
+
 }

@@ -143,7 +143,7 @@ class LineChart: UIView {
         
         //Draws the circles
         for i in 1...pointData.totalDays {
-            let cigarretsOfToday = -(Int(Double(pointData.getMaxCigarettes())/Double(pointData.totalDays) * Double(i))) + pointData.getMaxCigarettes()
+            let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
             let p = (pointData.points[i])
             let point = scale(unitX: i, unitY: p.cigarettes)
             if p.cigarettes > 0 {
