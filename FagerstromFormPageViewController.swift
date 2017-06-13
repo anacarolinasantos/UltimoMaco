@@ -11,12 +11,22 @@ import UIKit
 class FagerstromFormPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     //MARK: - Atributes
-    let pagesCount:Int = 6
+    var isAbleToContinue = true
+    
+    var timer = Timer()
+    
+    var allViewControllers: [PageModelViewController] = []
     
     //MARK: - ViewController Life Cicle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 1...5 {
+            allViewControllers.append(storyboard?.instantiateViewController(withIdentifier: "Fargerstrom\(i)") as! PageModelViewController)
+            allViewControllers[i - 1].index = i - 1
+            allViewControllers[i - 1].pageViewController = self
+        }
         
         // -- SETUP
         self.dataSource = self
@@ -25,45 +35,35 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
         self.providesPresentationContextTransitionStyle = true
         self.setViewControllers([startingViewController], direction: .forward, animated: false, completion: {done in })
         
+        timer = .scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.verify), userInfo: nil, repeats: true)
+        
+    }
+    
+    func verify() {
+        if !isAbleToContinue {
+            self.dataSource = nil
+            self.dataSource = self
+        }
+        isAbleToContinue = true
     }
     
     // ViewController 'get' method
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> PageModelViewController? {
-        
-        switch index {
-        case 0:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom1") as! PageModelViewController
-            pageController.index = 0
-            return pageController
-        case 1:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom2") as! PageModelViewController
-            pageController.index = 1
-            return pageController
-        case 2:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom3") as! PageModelViewController
-            pageController.index = 2
-            return pageController
-        case 3:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom4") as! PageModelViewController
-            pageController.index = 3
-            return pageController
-        case 4:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom5") as! PageModelViewController
-            pageController.index = 4
-            return pageController
-        case 5:
-            let pageController = storyboard.instantiateViewController(withIdentifier: "Fargerstrom6") as! PageModelViewController
-            pageController.index = 5
-            return pageController
-        default:
-            return nil
-        }
-        
+        return allViewControllers[index]
     }
     
     //MARK: - UIPageViewControllerDataSource
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let currentViewController = (viewController as! PageModelViewController)
+        
+        isAbleToContinue = false
+        
+        if !currentViewController.shouldGoBackToPreviousViewController() {
+            isAbleToContinue = false
+            return nil
+        }
+        
         if var index = (viewController as! PageModelViewController).index {
             if (index == 0) {
                 return nil
@@ -75,7 +75,13 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if var index = (viewController as! PageModelViewController).index {
+        let currentViewController = (viewController as! PageModelViewController)
+        
+        if !currentViewController.shouldContinueToNextViewController() {
+            isAbleToContinue = false
+            return nil
+        }
+        if var index = currentViewController.index {
             if (index == 6) {
                 return nil
             }
@@ -87,7 +93,7 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pagesCount
+        return allViewControllers.count
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {

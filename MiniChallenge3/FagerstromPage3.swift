@@ -13,16 +13,18 @@ class FagerstromPage3: PageModelViewController{
     //MARK: - Outlets
     
     //MARK: - Atributes
+    var points: Int?
     
-    //MARK: - ViewController Life Cicle
+    override func shouldContinueToNextViewController() -> Bool {
+        return points != nil
+    }
     
     //MARK: - Actions
-    
     @IBAction func yesTap(_ sender: Any) {
-        //TODO: send 1 point to database
+        points = 1
     }
     
     @IBAction func noTap(_ sender: Any) {
-        //TODO: send 0 point to database
+        points = 0
     }
 }

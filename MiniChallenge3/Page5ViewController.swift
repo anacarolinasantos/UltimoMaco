@@ -16,10 +16,6 @@ class Page5ViewController: PageModelViewController {
     
     @IBOutlet weak var allowNotifications: UIButton!
     
-    //MARK: - Atributes
-    
-    var pageController: UIPageViewController?
-    
     //MARK: - ViewController Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +34,7 @@ class Page5ViewController: PageModelViewController {
 
             //ON ANIMATION COMPLETION DO THIS START HERE:
             
-            if let vcs = (self.pageController as? InitialPageViewController)?.allViewControllers {
+            if let vcs = (self.pageViewController as? InitialPageViewController)?.allViewControllers {
                 
                 let name = (vcs[0] as! Page1ViewController).nameTextField.text
                 let img = (vcs[0] as! Page1ViewController).userPhoto.image

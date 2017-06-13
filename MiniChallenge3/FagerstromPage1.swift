@@ -13,25 +13,27 @@ class FagerstromPage1: PageModelViewController{
     //MARK: - Outlets
     
     //MARK: - Atributes
+    var points: Int?
     
-    //MARK: - ViewController Life Cicle
+    override func shouldContinueToNextViewController() -> Bool {
+        return points != nil
+    }
     
     //MARK: - Actions
-    
     @IBAction func moreThan60Tap(_ sender: Any) {
-        //TODO: send 0 points to database
+        points = 0
     }
     
     @IBAction func between30And60Tap(_ sender: Any) {
-        //TODO: send 1 points to database
+        points = 1
     }
     
     @IBAction func between5And30Tap(_ sender: Any) {
-        //TODO: send 2 points to database
+        points = 2
     }
 
     @IBAction func lessThan5Tap(_ sender: Any) {
-        //TODO: send 3 points to database
+        points = 3
     }
     
 }
