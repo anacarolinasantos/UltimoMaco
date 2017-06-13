@@ -27,8 +27,9 @@ class ViewControllerTeste: UITableViewController {
         
         // -- SETUP
         self.navigationController?.navigationBar.isHidden = true
-        
         fagerstromCalculate()
+        //Gets smokingLoad and sets it to its label.
+        smokingLoadLabel.text = String(UserDefaults.standard.integer(forKey: "smokingLoad"))
         
         do {
             // Verify if user exists, and gets profile image and name
@@ -77,8 +78,6 @@ class ViewControllerTeste: UITableViewController {
         } catch _ as NSError {
             print("Error")
         }
-        
-        addictionIndex = 10
         
         switch addictionIndex {
         case 0, 1:
