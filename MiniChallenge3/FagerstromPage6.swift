@@ -69,16 +69,16 @@ class FagerstromPage6: PageModelViewController{
             
             let sum = p1! + p2! + p3! + p4! + p5! + p6
             
-            if sum <= 2 {
+            if sum < 2 {
                 dependencyLevel = "Muito baixo"
                 color = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-            } else if sum <= 4 {
+            } else if sum < 4 {
                 dependencyLevel = "Moderado"
                 color = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-            } else if sum <= 7 {
+            } else if sum < 7 {
                 dependencyLevel = "Acima da média"
                 color = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
-            } else if sum <= 8 {
+            } else if sum < 8 {
                 dependencyLevel = "Muito alto"
                 color = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
             } else {
