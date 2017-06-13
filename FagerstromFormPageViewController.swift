@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class FagerstromFormPageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
@@ -16,6 +17,8 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
     var timer = Timer()
     
     var allViewControllers: [PageModelViewController] = []
+    
+    var picker = UIImagePickerController()
     
     //MARK: - ViewController Life Cicle
 
@@ -30,7 +33,7 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
         
         // -- SETUP
         self.dataSource = self
-
+        
         let startingViewController: PageModelViewController = self.viewControllerAtIndex(0, storyboard: self.storyboard!)!
         self.providesPresentationContextTransitionStyle = true
         self.setViewControllers([startingViewController], direction: .forward, animated: false, completion: {done in })

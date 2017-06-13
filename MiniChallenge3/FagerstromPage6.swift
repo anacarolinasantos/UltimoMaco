@@ -21,12 +21,16 @@ class FagerstromPage6: PageModelViewController{
         var test: FagerstromTest?
         
         do {
-            var t = try DatabaseController.persistentContainer.viewContext.fetch(FagerstromTest.fetchRequest())[0] as? FagerstromTest
-            if t == nil {
-                t = NSEntityDescription.insertNewObject(forEntityName: "FagerstromTest", into: DatabaseController.persistentContainer.viewContext) as? FagerstromTest
+            var tests = try DatabaseController.persistentContainer.viewContext.fetch(FagerstromTest.fetchRequest())
+            if tests.count == 0 {
+                test = NSEntityDescription.insertNewObject(forEntityName: "FagerstromTest", into: DatabaseController.persistentContainer.viewContext) as? FagerstromTest
+            } else {
+                test = tests[0] as? FagerstromTest
             }
-            test = t
-        } catch _ as NSError { print("Error") }
+            
+        } catch _ as NSError {
+            print("Error")
+        }
         
         
         if let vcs = (self.pageViewController as? FagerstromFormPageViewController)?.allViewControllers {
@@ -35,10 +39,15 @@ class FagerstromPage6: PageModelViewController{
             var color = UIColor.black
             
             let p1 = (vcs[0] as! FagerstromPage1).points
+            test?.cigarreteRestriction = Int16(p1!)
             let p2 = (vcs[1] as! FagerstromPage2).points
+            test?.cigQtyFirstHours = Int16(p2!)
             let p3 = (vcs[2] as! FagerstromPage3).points
+            test?.firstCigarrete = Int16(p3!)
             let p4 = (vcs[3] as! FagerstromPage4).points
+            test?.morningCigarrete = Int16(p4!)
             let p5 = (vcs[4] as! FagerstromPage5).points
+            test?.sickSmoking = Int16(p5!)
             
             var p6 = 0
             do {
@@ -80,6 +89,8 @@ class FagerstromPage6: PageModelViewController{
             points.text = String(describing: sum)
             resultLabel.text = dependencyLevel
             resultLabel.textColor = color
+            
+            DatabaseController.saveContext()
         }
     }
     
@@ -89,5 +100,6 @@ class FagerstromPage6: PageModelViewController{
     
     //MARK: - Actions
     @IBAction func end(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

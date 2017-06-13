@@ -34,16 +34,8 @@ de acordar você fuma o primeiro cigarro?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
-                                <rect key="frame" x="120" y="356" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="mais de 60 minutos"/>
-                                <connections>
-                                    <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
-                                <rect key="frame" x="111" y="401" width="152" height="30"/>
+                                <rect key="frame" x="111" y="406" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="entre 30 e 60 minutos"/>
                                 <connections>
@@ -51,7 +43,7 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
-                                <rect key="frame" x="116" y="449" width="143" height="30"/>
+                                <rect key="frame" x="114" y="467" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="entre 5 e 30 minutos"/>
                                 <connections>
@@ -59,16 +51,30 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
-                                <rect key="frame" x="118" y="497" width="139" height="30"/>
+                                <rect key="frame" x="116" y="534" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="menos de 5 minutos"/>
                                 <connections>
                                     <action selector="lessThan5Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="675-1g-cHh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
+                                <rect key="frame" x="120" y="348" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="mais de 60 minutos"/>
+                                <connections>
+                                    <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="R6U-Ku-PTz" id="P3f-Fl-NxS"/>
+                        <outlet property="three" destination="nYC-Ny-NAh" id="yid-wA-KyR"/>
+                        <outlet property="two" destination="CB5-8C-4pA" id="Wka-kZ-F78"/>
+                        <outlet property="zero" destination="0a3-5w-5BJ" id="06p-0j-Dev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-V6-Inj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +125,10 @@ de acordar você fuma o primeiro cigarro?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="A5h-Ev-5lX" id="m8a-5Y-KHb"/>
+                        <outlet property="zero" destination="22Q-ms-De0" id="21h-am-POl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sc-Dj-ewV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,7 +166,6 @@ mais satisfação?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="Dx7-Hf-wsc"/>
-                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="lZK-Iw-abY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
@@ -165,12 +174,15 @@ mais satisfação?</string>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="S0I-rm-lLp"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="XA0-io-XLk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="q8A-Df-Wiz" id="c2g-h8-eM3"/>
+                        <outlet property="zero" destination="jAa-ja-zVC" id="Vbs-tp-APt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyP-wI-aMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +219,6 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="lVQ-z8-QaT"/>
-                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="uie-sA-bzJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
@@ -216,12 +227,15 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="iO5-Lj-BRR"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="o3S-G8-PRK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="3DM-JI-3wR" id="Utu-7x-I4r"/>
+                        <outlet property="zero" destination="5qv-K4-cwa" id="T61-Ab-iaW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fak-Oq-vrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,21 +270,24 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="1gw-5q-bgO"/>
-                                    <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="xKE-fu-SuL"/>
+                                    <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="9Gg-bx-xtG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
-                                <rect key="frame" x="171" y="427" width="32" height="30"/>
+                                <rect key="frame" x="171" y="426" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="Gp6-qQ-FeG"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="Mbp-c2-jdv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="kbK-2J-4cB" id="c8a-2x-5tK"/>
+                        <outlet property="zero" destination="P5L-3k-DCk" id="c8E-VB-FQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-44-W15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
