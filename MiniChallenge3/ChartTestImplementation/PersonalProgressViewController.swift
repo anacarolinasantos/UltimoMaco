@@ -31,7 +31,8 @@ public class PersonalProgressViewController: UIViewController {
         super.viewDidLoad()
         
         // -- SETUP
-        chart.pointData = LineChartData(points: getChartPointsFromDatabase())
+        chartData = LineChartData(points: getChartPointsFromDatabase())
+        chart.pointData = chartData
         
         //Update main atributes
         updateCigarettesNumber()
@@ -41,7 +42,7 @@ public class PersonalProgressViewController: UIViewController {
                                       selector: #selector(self.updateCigarettesNumber),
                                       userInfo: nil,
                                       repeats: true)
-        
+    
         today.text = chartData.points.last?.getFormattedDate()
         todayIndex = chartData.points.count-1
         
@@ -101,7 +102,7 @@ public class PersonalProgressViewController: UIViewController {
     func getChartPointsFromDatabase() -> [ChartPoint]{
         var entries: [CigaretteEntry] = []
         do {
-            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CiggareteEntry"))
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry")) as! [CigaretteEntry]
         } catch _ as NSError {
             print("Error")
         }
@@ -113,6 +114,7 @@ public class PersonalProgressViewController: UIViewController {
                 chartPoints.append(ChartPoint(p.date! as Date))
             }
         }
+        
         return chartPoints
     }
     
@@ -129,5 +131,8 @@ public class PersonalProgressViewController: UIViewController {
         todayIndex += 1
         today.text = chartData.points[todayIndex].getFormattedDate()
     }
+    
+    
+    
 }
 
