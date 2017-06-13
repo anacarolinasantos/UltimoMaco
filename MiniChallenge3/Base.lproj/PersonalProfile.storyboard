@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f2R-3l-At8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="f2R-3l-At8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="325"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfh-ty-9Oi" id="ZdV-LO-bsf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="325"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="324.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-bK-0qG">
@@ -107,11 +107,11 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Saúde" id="mv4-OK-j22">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="54y-Q6-lpT" detailTextLabel="FvT-cy-79U" style="IBUITableViewCellStyleValue1" id="XZl-88-6Op">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="54y-Q6-lpT" detailTextLabel="FvT-cy-79U" style="IBUITableViewCellStyleValue1" id="XZl-88-6Op">
                                         <rect key="frame" x="0.0" y="496" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XZl-88-6Op" id="FNz-FB-5LN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Grau de dependência" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="54y-Q6-lpT">
@@ -122,7 +122,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Muito baixo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FvT-cy-79U">
-                                                    <rect key="frame" x="271.5" y="12" width="88.5" height="20.5"/>
+                                                    <rect key="frame" x="251.5" y="12" width="88.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -130,6 +130,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0Ub-qs-d1f" kind="show" id="PNP-7R-qub"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="dVT-Qs-jcy" detailTextLabel="T1O-mC-SC6" style="IBUITableViewCellStyleValue1" id="7wY-9D-huW">
                                         <rect key="frame" x="0.0" y="540" width="375" height="44"/>
@@ -145,8 +148,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="15 cigarros por ano" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T1O-mC-SC6">
-                                                    <rect key="frame" x="213" y="12" width="147" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="200" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhi-Ri-cxN">
+                                                    <rect key="frame" x="228" y="12" width="43" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="maços.ano" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T1O-mC-SC6">
+                                                    <rect key="frame" x="276" y="12" width="84" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -165,7 +175,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="o8h-81-DTV"/>
                     <connections>
+                        <outlet property="fagerstromLabel" destination="FvT-cy-79U" id="wvj-Ne-qCY"/>
                         <outlet property="nameLabel" destination="8FK-WI-ps9" id="gdv-hs-WC4"/>
+                        <outlet property="smokingLoadLabel" destination="Fhi-Ri-cxN" id="GBj-Hm-rz6"/>
                         <outlet property="userImage" destination="wuv-bK-0qG" id="dwc-kK-Vue"/>
                     </connections>
                 </tableViewController>
@@ -179,15 +191,15 @@
                 <viewControllerPlaceholder storyboardName="PersonalMotivations" id="JAu-mR-jah" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULI-u6-k91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4224" y="233"/>
+            <point key="canvasLocation" x="4226" y="212"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--FagerstromFormPageViewController-->
         <scene sceneID="zCc-kP-Y4I">
             <objects>
-                <viewControllerPlaceholder id="0Ub-qs-d1f" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="FagerstromFormPageViewController" id="0Ub-qs-d1f" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XeT-fb-7qe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4231" y="283"/>
+            <point key="canvasLocation" x="4302" y="255"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lx3-Mm-uln">

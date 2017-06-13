@@ -14,10 +14,12 @@ class ViewControllerTeste: UITableViewController {
     //MARK: - Outlets
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var fagerstromLabel: UILabel!
+    @IBOutlet weak var smokingLoadLabel: UILabel!
     
     //MARK: - Atributes
     var cigaretteNumberPoints: Int = 0
-    var addictionIndex: Int = 0
+    var addictionIndex: Int = -1
     
     //MARK: - UIViewController life cicle
     override func viewDidLoad() {
@@ -25,6 +27,9 @@ class ViewControllerTeste: UITableViewController {
         
         // -- SETUP
         self.navigationController?.navigationBar.isHidden = true
+        fagerstromCalculate()
+        //Gets smokingLoad and sets it to its label.
+        smokingLoadLabel.text = String(UserDefaults.standard.integer(forKey: "smokingLoad"))
         
         do {
             // Verify if user exists, and gets profile image and name
@@ -36,6 +41,16 @@ class ViewControllerTeste: UITableViewController {
                 }
             }
             
+            
+        } catch _ as NSError {
+            print("Error")
+        }
+        
+    }
+    
+    func fagerstromCalculate() {
+        
+        do {
             // Verify if cigaretteEntry exists, and gets cigarettes number
             if let cigaretteEntry = (try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as? [CigaretteEntry]) {
                 
@@ -60,11 +75,34 @@ class ViewControllerTeste: UITableViewController {
                 }
                 
             }
-            
         } catch _ as NSError {
             print("Error")
         }
         
+        switch addictionIndex {
+        case 0, 1:
+            fagerstromLabel.text = "Muito baixo"
+            fagerstromLabel.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+            break
+        case 2, 3:
+            fagerstromLabel.text = "Moderado"
+            fagerstromLabel.textColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            break
+        case 4, 5:
+            fagerstromLabel.text = "Acima da média"
+            fagerstromLabel.textColor = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+            break
+        case 6, 7:
+            fagerstromLabel.text = "Muito alto"
+            fagerstromLabel.textColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+            break
+        case 8, 9, 10:
+            fagerstromLabel.text = "Grave"
+            fagerstromLabel.textColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+            break
+        default:
+            fagerstromLabel.text = "Calcular"
+        }
     }
     
     //MARK: - UITableViewController
@@ -76,7 +114,7 @@ class ViewControllerTeste: UITableViewController {
     }
     
     //MARK: - Actions
-
+    
     @IBAction func editTap(_ sender: UIButton) {
     }
     

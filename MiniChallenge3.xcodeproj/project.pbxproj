@@ -33,6 +33,12 @@
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
 		BDC1DA111EEF1ABE00070139 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA0F1EEF1ABE00070139 /* User+CoreDataClass.swift */; };
 		BDC1DA121EEF1ABE00070139 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA101EEF1ABE00070139 /* User+CoreDataProperties.swift */; };
+		BDC1DA231EF048C800070139 /* Motivation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA1D1EF048C800070139 /* Motivation+CoreDataClass.swift */; };
+		BDC1DA241EF048C800070139 /* Motivation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA1E1EF048C800070139 /* Motivation+CoreDataProperties.swift */; };
+		BDC1DA251EF048C800070139 /* Achievement+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA1F1EF048C800070139 /* Achievement+CoreDataClass.swift */; };
+		BDC1DA261EF048C800070139 /* Achievement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA201EF048C800070139 /* Achievement+CoreDataProperties.swift */; };
+		BDC1DA291EF0492D00070139 /* FagerstromTest+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */; };
+		BDC1DA2A1EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */; };
 		BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */; };
 		BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F141EE9B8E6003E65AB /* ViewController.swift */; };
 		BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F161EE9B8E6003E65AB /* Main.storyboard */; };
@@ -120,6 +126,12 @@
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		BDC1DA0F1EEF1ABE00070139 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDC1DA101EEF1ABE00070139 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDC1DA1D1EF048C800070139 /* Motivation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Motivation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDC1DA1E1EF048C800070139 /* Motivation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Motivation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDC1DA1F1EF048C800070139 /* Achievement+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDC1DA201EF048C800070139 /* Achievement+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDC32F0F1EE9B8E6003E65AB /* MiniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC32F141EE9B8E6003E65AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +332,12 @@
 		BDC32F471EE9BD6C003E65AB /* Database Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */,
+				BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */,
+				BDC1DA1D1EF048C800070139 /* Motivation+CoreDataClass.swift */,
+				BDC1DA1E1EF048C800070139 /* Motivation+CoreDataProperties.swift */,
+				BDC1DA1F1EF048C800070139 /* Achievement+CoreDataClass.swift */,
+				BDC1DA201EF048C800070139 /* Achievement+CoreDataProperties.swift */,
 				BDC1DA0F1EEF1ABE00070139 /* User+CoreDataClass.swift */,
 				BDC1DA101EEF1ABE00070139 /* User+CoreDataProperties.swift */,
 				BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */,
@@ -563,21 +581,26 @@
 				60C7F12C1EEB25340007D583 /* InitialPageViewController.swift in Sources */,
 				493118AA1EEB12F200D2694C /* PersonalProgressViewController.swift in Sources */,
 				BDC32F451EE9BCD5003E65AB /* DatabaseController.swift in Sources */,
+				BDC1DA251EF048C800070139 /* Achievement+CoreDataClass.swift in Sources */,
 				60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */,
 				493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */,
 				60C7F1331EECA1290007D583 /* Page1ViewController.swift in Sources */,
 				604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */,
+				BDC1DA231EF048C800070139 /* Motivation+CoreDataClass.swift in Sources */,
 				BDC1DA121EEF1ABE00070139 /* User+CoreDataProperties.swift in Sources */,
 				BDC1DA111EEF1ABE00070139 /* User+CoreDataClass.swift in Sources */,
 				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
 				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
 				45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */,
+				BDC1DA241EF048C800070139 /* Motivation+CoreDataProperties.swift in Sources */,
 				BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */,
 				BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */,
 				BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */,
 				604EC0421EEDABAA00C1EA59 /* FagerstromPage3.swift in Sources */,
 				604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */,
+				BDC1DA291EF0492D00070139 /* FagerstromTest+CoreDataClass.swift in Sources */,
 				493118A81EEB12F200D2694C /* LineChart.swift in Sources */,
+				BDC1DA261EF048C800070139 /* Achievement+CoreDataProperties.swift in Sources */,
 				BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */,
 				BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */,
 				BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */,
@@ -589,6 +612,7 @@
 				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
 				604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */,
+				BDC1DA2A1EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
