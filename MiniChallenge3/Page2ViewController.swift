@@ -14,7 +14,7 @@ class Page2ViewController: PageModelViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var amountPickerView: UIPickerView!
     
     //MARK: - Atributes
-    var cigaretteNumber: Int?
+    var cigaretteNumber: Int = 1
     var amount: [Int] = []  //It is the PickerView DataSource
     
     //MARK: - ViewController Life Cicle

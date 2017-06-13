@@ -16,10 +16,20 @@ class FagerstromPage6: PageModelViewController{
     
     @IBOutlet weak var resultLabel: UILabel!
     
-    
     //MARK: - ViewController Life Cicle
     override func viewWillAppear(_ animated: Bool) {
-        if let vcs = (self.pageViewController as? InitialPageViewController)?.allViewControllers {
+        var test: FagerstromTest?
+        
+        do {
+            var t = try DatabaseController.persistentContainer.viewContext.fetch(FagerstromTest.fetchRequest())[0] as? FagerstromTest
+            if t == nil {
+                t = NSEntityDescription.insertNewObject(forEntityName: "FagerstromTest", into: DatabaseController.persistentContainer.viewContext) as? FagerstromTest
+            }
+            test = t
+        } catch _ as NSError { print("Error") }
+        
+        
+        if let vcs = (self.pageViewController as? FagerstromFormPageViewController)?.allViewControllers {
             
             var dependencyLevel = ""
             var color = UIColor.black

@@ -22,7 +22,7 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for i in 1...5 {
+        for i in 1...6 {
             allViewControllers.append(storyboard?.instantiateViewController(withIdentifier: "Fargerstrom\(i)") as! PageModelViewController)
             allViewControllers[i - 1].index = i - 1
             allViewControllers[i - 1].pageViewController = self
@@ -82,7 +82,7 @@ class FagerstromFormPageViewController: UIPageViewController, UIPageViewControll
             return nil
         }
         if var index = currentViewController.index {
-            if (index == 6) {
+            if (index == 5) {
                 return nil
             }
             index += 1
