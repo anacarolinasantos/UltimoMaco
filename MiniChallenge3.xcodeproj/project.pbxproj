@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */; };
+		45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */; };
+		45750EAD1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */; };
+		45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */; };
+		45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */; };
+		45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */; };
 		493118A51EEB12F200D2694C /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */; };
 		493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189D1EEB12F200D2694C /* ChartPoint.swift */; };
 		493118A81EEB12F200D2694C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189F1EEB12F200D2694C /* LineChart.swift */; };
@@ -101,6 +106,11 @@
 
 /* Begin PBXFileReference section */
 		45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTeste.swift; sourceTree = "<group>"; };
+		45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMotivationTableViewController.swift; sourceTree = "<group>"; };
+		45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeOneTableViewCell.swift; sourceTree = "<group>"; };
+		45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeTwoTableViewCell.swift; sourceTree = "<group>"; };
+		45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeThreeTableViewCell.swift; sourceTree = "<group>"; };
+		45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMotivationTableViewController.swift; sourceTree = "<group>"; };
 		4931189C1EEB12F200D2694C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProgress.storyboard; sourceTree = "<group>"; };
 		4931189D1EEB12F200D2694C /* ChartPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPoint.swift; sourceTree = "<group>"; };
 		4931189F1EEB12F200D2694C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -325,6 +335,11 @@
 				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
 				60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */,
 				45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */,
+				45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */,
+				45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */,
+				45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */,
+				45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */,
+				45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -577,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45750EAD1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift in Sources */,
 				60C7F12F1EEB25A00007D583 /* PageModelViewController.swift in Sources */,
 				60C7F12C1EEB25340007D583 /* InitialPageViewController.swift in Sources */,
 				493118AA1EEB12F200D2694C /* PersonalProgressViewController.swift in Sources */,
@@ -592,7 +608,10 @@
 				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
 				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
 				45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */,
+				45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */,
+				45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */,
 				BDC1DA241EF048C800070139 /* Motivation+CoreDataProperties.swift in Sources */,
+				45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */,
 				BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */,
 				BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */,
 				BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */,
@@ -609,6 +628,7 @@
 				493118A91EEB12F200D2694C /* LineChartData.swift in Sources */,
 				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
 				60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */,
+				45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */,
 				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
 				604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */,
