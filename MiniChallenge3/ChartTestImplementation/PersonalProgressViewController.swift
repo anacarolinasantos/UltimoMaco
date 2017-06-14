@@ -9,20 +9,19 @@
 import UIKit
 import CoreData
 
-public class PersonalProgressViewController: UIViewController {
-
+public class PersonalProgressViewController: UIViewController, UIGestureRecognizerDelegate {
+    
     //MARK: Outlets
     @IBOutlet weak var chart: LineChart!
     @IBOutlet weak var cigarettesNumberLabel: UILabel!
     @IBOutlet weak var stepperOutlet: UIStepper!
     @IBOutlet weak var today: UILabel!
-
+    
     
     //MARK: Atributes
     var todayCigarettesNumber:Int = 0
     let appGroupName:String = "group.br.minichallenge.3"
     var synchronize = Timer()
-    var chartData: LineChartData!
     var todayIndex: Int = 0
     
     //MARK: ViewController Life Cicle
@@ -31,8 +30,6 @@ public class PersonalProgressViewController: UIViewController {
         super.viewDidLoad()
         
         // -- SETUP
-        chartData = LineChartData(points: getChartPointsFromDatabase())
-        chart.pointData = chartData
         
         //Update main atributes
         updateCigarettesNumber()
@@ -42,9 +39,17 @@ public class PersonalProgressViewController: UIViewController {
                                       selector: #selector(self.updateCigarettesNumber),
                                       userInfo: nil,
                                       repeats: true)
-    
-        today.text = chartData.points.last?.getFormattedDate()
-        todayIndex = chartData.points.count-1
+        
+        today.text = LineChartData().points.last?.getFormattedDate()
+        todayIndex = LineChartData().points.count-1
+        
+        for view in self.view.subviews{
+            if let thisView = view as? LineChart{
+                let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+                recognizer.delegate = self
+                thisView.addGestureRecognizer(recognizer)
+            }
+        }
         
     }
     
@@ -75,13 +80,13 @@ public class PersonalProgressViewController: UIViewController {
     }
     
     //MARK: Actions
-
+    
     @IBAction func stepperTap(_ sender: UIStepper) {
         
         todayCigarettesNumber = Int(sender.value)
         setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
-        chart.pointData?.points[todayIndex].cigarettes = Int(sender.value)
+        chart.pointData.points[todayIndex].cigarettes = Int(sender.value)
         updateChart()
     }
     
@@ -93,29 +98,9 @@ public class PersonalProgressViewController: UIViewController {
         } catch _ as NSError {
             print("Error")
         }
-        print(entries.count)
-
-        DatabaseController.saveContext()
-
-    }
-    
-    func getChartPointsFromDatabase() -> [ChartPoint]{
-        var entries: [CigaretteEntry] = []
-        do {
-            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry")) as! [CigaretteEntry]
-        } catch _ as NSError {
-            print("Error")
-        }
-        var chartPoints: [ChartPoint] = []
-        for p in entries{
-            if p.cigaretteNumber != -1{
-                chartPoints.append(ChartPoint(p.date! as Date, Int(p.cigaretteNumber)))
-            }else{
-                chartPoints.append(ChartPoint(p.date! as Date))
-            }
-        }
         
-        return chartPoints
+        DatabaseController.saveContext()
+        
     }
     
     public func updateChart(){
@@ -125,14 +110,22 @@ public class PersonalProgressViewController: UIViewController {
     
     @IBAction func yesterday(_ sender: Any) {
         todayIndex -= 1
-        today.text = chartData.points[todayIndex].getFormattedDate()
+        today.text = LineChartData().points[todayIndex].getFormattedDate()
     }
     @IBAction func tomorrow(_ sender: Any) {
         todayIndex += 1
-        today.text = chartData.points[todayIndex].getFormattedDate()
+        today.text = LineChartData().points[todayIndex].getFormattedDate()
     }
     
+    func handleTap(recognizer: UITapGestureRecognizer){
+        performSegue(withIdentifier: "showHistoric", sender: recognizer)
+    }
     
+    //    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        if segue.identifier == "showHistoric" {
+    //            
+    //        }
+    //    }
     
 }
 

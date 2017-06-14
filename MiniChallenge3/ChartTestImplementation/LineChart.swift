@@ -10,22 +10,21 @@ import UIKit
 
 class LineChart: UIView {
     
-    var pointData: LineChartData?
-
+    var pointData = LineChartData()
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        if let pD = pointData {
-            drawChart(pointData: pD)
-        }
+        drawChart(pointData: pointData)
+        
     }
     
     func scale(unitX: Int, unitY: Int) -> CGPoint {
-
-        let y = CGFloat(unitY) * (bounds.height * 0.9) * 0.95 / CGFloat((pointData?.getMaxCigarettes())!)
-        return CGPoint(x: (CGFloat(unitX) * ((bounds.width) - (bounds.height * 0.075))  * 0.95 / (CGFloat(pointData!.totalDays)) + (bounds.height * 0.075)),
+        
+        let y = CGFloat(unitY) * (bounds.height * 0.9) * 0.95 / CGFloat((pointData.getMaxCigarettes()))
+        return CGPoint(x: (CGFloat(unitX) * ((bounds.width) - (bounds.height * 0.075))  * 0.95 / (CGFloat(pointData.totalDays)) + (bounds.height * 0.075)),
                        y: ((bounds.height * 0.9) - y))
     }
- 
+    
     func drawChart(pointData: LineChartData) {
         if let context = UIGraphicsGetCurrentContext() {
             drawGoal(context: context, pointData: pointData)
@@ -93,6 +92,7 @@ class LineChart: UIView {
         context.setStrokeColor(UIColor.blue.cgColor)
         context.setLineWidth(3)
         let firstPoint = pointData.points[0]
+        print(firstPoint.day)
         context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{
             let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
@@ -101,7 +101,7 @@ class LineChart: UIView {
             context.move(to: point)
             
         }
-
+        
         context.strokePath()
     }
     
@@ -169,5 +169,5 @@ class LineChart: UIView {
             }
         }
     }
-
+    
 }

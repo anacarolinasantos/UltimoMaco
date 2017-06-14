@@ -78,16 +78,17 @@
                         <outlet property="cigarettesNumberLabel" destination="1dz-83-VSQ" id="Bqv-Z5-C5Y"/>
                         <outlet property="stepperOutlet" destination="cNd-EU-PdA" id="OVK-um-GEn"/>
                         <outlet property="today" destination="1Gp-FO-51z" id="7Np-ef-C62"/>
+                        <segue destination="7WN-xL-fDE" kind="presentation" identifier="showHistoric" id="uqH-sQ-rQE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1169" y="176"/>
         </scene>
-        <!--View Controller-->
+        <!--Historic View Controller-->
         <scene sceneID="da4-YC-tLM">
             <objects>
-                <viewController id="7WN-xL-fDE" sceneMemberID="viewController">
+                <viewController id="7WN-xL-fDE" customClass="HistoricViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n2J-cz-xUi"/>
                         <viewControllerLayoutGuide type="bottom" id="JMb-Le-pDa"/>
@@ -96,20 +97,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fie-Xk-5v1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Vt-IG-ic1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="Bum-DY-vUC"/>
+                                    <navigationItem title="Dados" id="aem-YI-6C8">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" style="done" id="NR5-BS-SBI">
+                                            <connections>
+                                                <action selector="voltarButtonPressed:" destination="7WN-xL-fDE" id="Bzu-6h-sI4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7L-kI-Jj2">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="bg2-cP-uzL" kind="embed" id="QPd-LB-ZCr"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiQ-ge-qVr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="136"/>
+            <point key="canvasLocation" x="2197.5999999999999" y="175.86206896551727"/>
+        </scene>
+        <!--Historic Table View Controller-->
+        <scene sceneID="zZl-8m-g92">
+            <objects>
+                <tableViewController id="bg2-cP-uzL" customClass="HistoricTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1lc-M3-LpA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="1Yv-d0-bEn" customClass="HistoricTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Yv-d0-bEn" id="Qz3-UC-R2t">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrC-Qf-Mkc">
+                                            <rect key="frame" x="156" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="caV-n7-Qeg">
+                                            <rect key="frame" x="273" y="7" width="94" height="29"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="stepperTouched:" destination="1Yv-d0-bEn" eventType="valueChanged" id="8ud-PM-KzY"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBi-Vr-UhU">
+                                            <rect key="frame" x="15" y="10" width="81" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="date" destination="xBi-Vr-UhU" id="Qcg-0U-jde"/>
+                                    <outlet property="numberOfCigarettes" destination="nrC-Qf-Mkc" id="lDh-Lw-YW6"/>
+                                    <outlet property="stepper" destination="caV-n7-Qeg" id="D6e-Hz-75v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bg2-cP-uzL" id="1WK-y1-Uqw"/>
+                            <outlet property="delegate" destination="bg2-cP-uzL" id="3gj-Hm-oa4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDl-1f-Utn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3173.5999999999999" y="207.34632683658174"/>
         </scene>
     </scenes>
 </document>

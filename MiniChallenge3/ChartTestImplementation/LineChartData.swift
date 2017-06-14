@@ -7,24 +7,20 @@
 //
 
 import Foundation
+import CoreData
 
 class LineChartData {
     
-    var totalDays: Int
+    var totalDays: Int = 0
     
-    var points: [ChartPoint]
+    var points: [ChartPoint] = []
     
-    var lastValidPoint: ChartPoint
+    var lastValidPoint: ChartPoint = ChartPoint(Date())
     
-    init(points: [ChartPoint]) {
-        self.points = points
+    init() {
+        points = getChartPointsFromDatabase().sorted(by: { ($0.day as Date) < ($1.day as Date) })
         self.totalDays = points.count-1
         lastValidPoint = points.filter({ $0.cigarettes != -1 }).last!
-        
-        //quicksort(&self.points, 0, points.count-1)
-        
-        //lastValidPoint = points.filter({ $0.cigarettes != -1 }).last!
-        
     }
     
     func getLastValidPointIndex() -> Int {
@@ -45,24 +41,23 @@ class LineChartData {
         return max
     }
     
-    func partition(_ v: inout [ChartPoint], left: Int, right: Int) -> Int {
-        var i = left
-        for j in (left + 1)..<(right + 1) {
-            if v[j].cigarettes < v[left].cigarettes {
-                i += 1
-                (v[i], v[j]) = (v[j], v[i])
+    func getChartPointsFromDatabase() -> [ChartPoint]{
+        var entries: [CigaretteEntry] = []
+        do {
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry")) as! [CigaretteEntry]
+        } catch _ as NSError {
+            print("Error")
+        }
+        var chartPoints: [ChartPoint] = []
+        for p in entries{
+            if p.cigaretteNumber != -1{
+                chartPoints.append(ChartPoint(p.date! as Date, Int(p.cigaretteNumber)))
+            }else{
+                chartPoints.append(ChartPoint(p.date! as Date))
             }
         }
-        (v[i], v[left]) = (v[left], v[i])
-        return i
-    }
-    
-    func quicksort(_ v: inout [ChartPoint],_ left: Int,_ right: Int) {
-        if right > left {
-            let pivotIndex = partition(&v, left: left, right: right)
-            quicksort(&v, left, pivotIndex - 1)
-            quicksort(&v, pivotIndex + 1, right)
-        }
+        
+        return chartPoints
     }
 
 }
