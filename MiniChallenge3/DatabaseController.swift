@@ -9,16 +9,32 @@
 import Foundation
 import CoreData
 
+class PersistentContainer: NSPersistentContainer {
+    
+    override class func defaultDirectoryURL() -> URL {
+        
+        return FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.br.minichallenge.3")!
+    }
+    
+    override init(name: String, managedObjectModel model: NSManagedObjectModel) {
+        super.init(name: name, managedObjectModel: model)
+    }
+    
+    
+    
+}
+
 class DatabaseController {
     
-    static var persistentContainer: NSPersistentContainer = {
+    static var persistentContainer: PersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "MiniChallenge3")
+        
+        let container = PersistentContainer(name: "MiniChallenge3")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -37,7 +53,7 @@ class DatabaseController {
         })
         return container
     }()
-        
+    
     static func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
