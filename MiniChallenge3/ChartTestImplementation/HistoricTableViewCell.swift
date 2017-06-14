@@ -33,33 +33,8 @@ class HistoricTableViewCell: UITableViewCell {
     }
     
     @IBAction func stepperTouched(_ sender: Any) {
-        
         point.cigarettes = Int(stepper!.value)
-        
-        var entries: [CigaretteEntry] = []
-        do {
-            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry"))
-        } catch _ as NSError {
-            print("Error")
-        }
-        for entrie in entries{
-            
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateStyle = .short
-//                dateFormatter.timeStyle = .none
-//                dateFormatter.locale = Locale(identifier: "pt_BR")
-//                var dateEntrie = dateFormatter.string(from: entrie.date! as Date)
-//                let index = dateEntrie.index(date.startIndex, offsetBy: 5)
-//                dateEntrie = dateEntrie.substring(to: index)
-//            
-//            if dateEntrie == date{
-//                entrie.cigaretteNumber = point.cigarettes
-//            }
-//            
-        }
-        
-        DatabaseController.saveContext()
-        
+        LineChartData().updateSomePoint(date.text!, point.cigarettes)
         self.awakeFromNib(self.point)
         
     }

@@ -59,5 +59,47 @@ class LineChartData {
         
         return chartPoints
     }
-
+    
+    func updateSomePoint(_ date: String,_ cigarettNumber: Int){
+        //Pega todas as entradas
+        var entries: [CigaretteEntry] = []
+        do {
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry"))
+        } catch _ as NSError {
+            print("Error")
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        for entrie in entries{
+            var dateFormated = dateFormatter.string(from: entrie.date! as Date)
+            let index = dateFormated.index(dateFormated.startIndex, offsetBy: 5)
+            dateFormated = dateFormated.substring(to: index)
+            if date == dateFormated{
+                entrie.cigaretteNumber = Int32(cigarettNumber)
+                break
+            }
+        }
+        DatabaseController.saveContext()
+    }
+    
+    func updateSomePoint(_ date: Date,_ cigarettNumber: Int){
+        //Pega todas as entradas
+        var entries: [CigaretteEntry] = []
+        do {
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry"))
+        } catch _ as NSError {
+            print("Error")
+        }
+        for entrie in entries{
+            if date == entrie.date! as Date{
+                entrie.cigaretteNumber = Int32(cigarettNumber)
+                break
+            }
+        }
+        
+        DatabaseController.saveContext()
+    }
+    
 }

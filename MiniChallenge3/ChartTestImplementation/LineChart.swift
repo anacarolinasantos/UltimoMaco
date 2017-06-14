@@ -10,10 +10,11 @@ import UIKit
 
 class LineChart: UIView {
     
-    var pointData = LineChartData()
+    var pointData: LineChartData!
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        pointData = LineChartData()
         drawChart(pointData: pointData)
         
     }
@@ -92,7 +93,6 @@ class LineChart: UIView {
         context.setStrokeColor(UIColor.blue.cgColor)
         context.setLineWidth(3)
         let firstPoint = pointData.points[0]
-        print(firstPoint.day)
         context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{
             let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes

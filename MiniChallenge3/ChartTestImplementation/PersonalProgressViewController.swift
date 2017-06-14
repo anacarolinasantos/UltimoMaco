@@ -90,19 +90,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         updateChart()
     }
     
-    func alteraUltimoCampo(_ cigarettNumber: Int){
-        //Pega todas as entradas
-        var entries: [CigaretteEntry] = []
-        do {
-            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CiggareteEntry"))
-        } catch _ as NSError {
-            print("Error")
-        }
-        
-        DatabaseController.saveContext()
-        
-    }
-    
     public func updateChart(){
         chart.subviews.forEach { $0.removeFromSuperview() }
         chart.setNeedsDisplay()
@@ -121,11 +108,9 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         performSegue(withIdentifier: "showHistoric", sender: recognizer)
     }
     
-    //    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "showHistoric" {
-    //            
-    //        }
-    //    }
+    public override func viewWillAppear(_ animated: Bool) {
+        updateChart()
+    }
     
 }
 
