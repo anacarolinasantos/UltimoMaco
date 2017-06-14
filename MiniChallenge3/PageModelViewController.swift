@@ -17,5 +17,9 @@ class PageModelViewController: UIViewController {
     public func shouldContinueToNextViewController() -> Bool {
         return true
     }
+    
+    public func shouldGoBackToPreviousViewController() -> Bool {
+        return true
+    }
 
 }

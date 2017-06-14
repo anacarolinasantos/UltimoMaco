@@ -17,9 +17,7 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     var timer = Timer()
     
     var isAbleToContinue = true
-    
-    var userInfo: [Any] = []
-    
+        
     //MARK: - ViewController Life Cicle
     
     override func viewDidLoad() {
@@ -30,9 +28,7 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
             allViewControllers[i - 1].index = i - 1
             allViewControllers[i - 1].pageViewController = self
         }
-        
-        (allViewControllers[4] as! Page5ViewController).pageController = self
-        
+                
         // -- SETUP
         self.dataSource = self
         self.delegate = self

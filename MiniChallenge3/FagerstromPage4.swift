@@ -11,18 +11,38 @@ import UIKit
 class FagerstromPage4: PageModelViewController{
     
     //MARK: - Outlets
+    @IBOutlet weak var zero: UIButton!
     
-    //MARK: - Atributes
+    @IBOutlet weak var one: UIButton!
     
-    //MARK: - ViewController Life Cicle
+    var originalColor = UIColor.green
     
-    //MARK: - Actions
-    
-    @IBAction func yesTap(_ sender: Any) {
-        //TODO: send 1 point to database
+    func cleanAll() {
+        zero.tintColor = originalColor
+        one.tintColor = originalColor
     }
     
+    //MARK: - Atributes
+    var points: Int?
+    
+    override func shouldContinueToNextViewController() -> Bool {
+        return points != nil
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        originalColor = zero.tintColor
+    }
+    
+    //MARK: - Actions
+    @IBAction func yesTap(_ sender: Any) {
+        points = 1
+        cleanAll()
+        zero.tintColor = UIColor.yellow    }
+    
     @IBAction func noTap(_ sender: Any) {
-        //TODO: send 0 point to database
+        points = 0
+        cleanAll()
+        one.tintColor = UIColor.yellow
     }
 }

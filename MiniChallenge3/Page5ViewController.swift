@@ -16,10 +16,6 @@ class Page5ViewController: PageModelViewController {
     
     @IBOutlet weak var allowNotifications: UIButton!
     
-    //MARK: - Atributes
-    
-    var pageController: UIPageViewController?
-    
     //MARK: - ViewController Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +34,7 @@ class Page5ViewController: PageModelViewController {
 
             //ON ANIMATION COMPLETION DO THIS START HERE:
             
-            if let vcs = (self.pageController as? InitialPageViewController)?.allViewControllers {
+            if let vcs = (self.pageViewController as? InitialPageViewController)?.allViewControllers {
                 
                 let name = (vcs[0] as! Page1ViewController).nameTextField.text
                 let img = (vcs[0] as! Page1ViewController).userPhoto.image
@@ -60,22 +56,17 @@ class Page5ViewController: PageModelViewController {
                 for i in 1...((weeksStop! * 7) + 1) {
                     let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                     cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
-                    cigEntry.cigaretteNumber = -1
-                }
-                
-                DatabaseController.saveContext()
-                
-                do {
-                    let firstEntry = (try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()))[0] as! CigaretteEntry
-                    firstEntry.cigaretteNumber = Int32(cigsDaily!)
-                } catch _ as NSError {
-                    print("Error")
+                    if i == 1 {
+                        cigEntry.cigaretteNumber = Int32(cigsDaily)
+                    } else {
+                        cigEntry.cigaretteNumber = -1
+                    }
                 }
                 
                 DatabaseController.saveContext()
                 
                 UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
-                UserDefaults.standard.set(cigsDaily! / 20 * cigsYears!, forKey: "smokingLoad")
+                UserDefaults.standard.set(cigsDaily / 20 * cigsYears, forKey: "smokingLoad")
                 UserDefaults.standard.synchronize()
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()

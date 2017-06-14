@@ -14,7 +14,7 @@ class Page3ViewController: PageModelViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var amountPickerView: UIPickerView!
     
     //MARK: - Atributes
-    var yearsNumber: Int?
+    var yearsNumber: Int = 0
     var amount: [Int] = []  //It is the PickerView DataSource
     
     //MARK: - ViewController Life Cicle
