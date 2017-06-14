@@ -44,7 +44,7 @@ class Page5ViewController: PageModelViewController {
                 user.achievementNotifier = true
                 user.reminderTime = reminderTime as NSDate?
                 
-                for i in 1...((weeksStop! * 7) + 1) {
+                for i in 0...(weeksStop! * 7) {
                     let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                     cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
                     if i == 1 {
@@ -55,7 +55,6 @@ class Page5ViewController: PageModelViewController {
                 }
                 
                 AchievementsController.generateAchievements()
-                AchievementsController.createMassForTests()
                 
                 DatabaseController.saveContext()
                 

@@ -24,7 +24,6 @@ public class AchievementsController {
         instanceOfAchievement("sevenDaysInARow.png")
         instanceOfAchievement("noSmokeForToday.png")
         instanceOfAchievement("remainedUnderGoal.png")
-        
         instanceOfAchievement("halfCigarretes.png")
         instanceOfAchievement("reducedFirstCiggarret.png")
         instanceOfAchievement("lastPackOfCigarretes.png")
@@ -118,8 +117,8 @@ public class AchievementsController {
                     return false
                 case "stoppedSmoking.png":
                     if !a.hasAchievement {
-                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber <= entries[0].cigaretteNumber - 1 }).count
-                        if anyEntryIsHalf > 0 {
+                        let lastDay = entries.last
+                        if Calendar.current.isDateInToday(lastDay?.date as Date!) && lastDay?.cigaretteNumber == 0 {
                             a.hasAchievement = true
                             return true
                         }
@@ -193,7 +192,19 @@ public class AchievementsController {
         return count
     }
     
-    static public func createMassForTests() {
+    static public func test() {
+        for i in 1...((4 * 7) + 1) {
+            let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
+            cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
+            if i == 1 {
+                cigEntry.cigaretteNumber = Int32(30)
+            } else {
+                cigEntry.cigaretteNumber = -1
+            }
+        }
+        DatabaseController.saveContext()
+        AchievementsController.generateAchievements()
+        DatabaseController.saveContext()
         do {
             if var entries = try(DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as? [CigaretteEntry]) {
                 entries = entries.sorted(by: { ($0.date! as Date) < ($1.date! as Date) })

@@ -22,7 +22,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     var todayCigarettesNumber:Int = 0
     let appGroupName:String = "group.br.minichallenge.3"
     var synchronize = Timer()
-    var todayIndex: Int = 0
     
     //MARK: ViewController Life Cicle
     
@@ -39,9 +38,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
                                       selector: #selector(self.updateCigarettesNumber),
                                       userInfo: nil,
                                       repeats: true)
-        
-        today.text = LineChartData().points.last?.getFormattedDate()
-        todayIndex = LineChartData().points.count-1
         
         for view in self.view.subviews{
             if let thisView = view as? LineChart{
@@ -86,7 +82,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         todayCigarettesNumber = Int(sender.value)
         setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
-        chart.pointData.points[todayIndex].cigarettes = Int(sender.value)
+        chart.pointData.points[LineChartData().points.count-1].cigarettes = Int(sender.value)
         updateChart()
     }
     
@@ -95,22 +91,14 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         chart.setNeedsDisplay()
     }
     
-    @IBAction func yesterday(_ sender: Any) {
-        todayIndex -= 1
-        today.text = LineChartData().points[todayIndex].getFormattedDate()
-    }
-    @IBAction func tomorrow(_ sender: Any) {
-        todayIndex += 1
-        today.text = LineChartData().points[todayIndex].getFormattedDate()
-    }
-    
     func handleTap(recognizer: UITapGestureRecognizer){
         performSegue(withIdentifier: "showHistoric", sender: recognizer)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         updateChart()
+        let cigarretsOfToday = -(Int(Double(chart.pointData.points[0].cigarettes)/Double(chart.pointData.totalDays) * Double(LineChartData().points.count-1))) + chart.pointData.points[0].cigarettes
+        today.text = "Meta apenas \(cigarretsOfToday) cigarros"
     }
-    
 }
 
