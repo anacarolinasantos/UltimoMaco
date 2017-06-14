@@ -53,6 +53,7 @@
 		BDC1DA261EF048C800070139 /* Achievement+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA201EF048C800070139 /* Achievement+CoreDataProperties.swift */; };
 		BDC1DA291EF0492D00070139 /* FagerstromTest+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */; };
 		BDC1DA2A1EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */; };
+		BDC1DA321EF1E1DC00070139 /* AchievementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */; };
 		BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */; };
 		BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F141EE9B8E6003E65AB /* ViewController.swift */; };
 		BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F161EE9B8E6003E65AB /* Main.storyboard */; };
@@ -156,6 +157,7 @@
 		BDC1DA201EF048C800070139 /* Achievement+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Achievement+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsController.swift; sourceTree = "<group>"; };
 		BDC32F0F1EE9B8E6003E65AB /* MiniChallenge3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC32F141EE9B8E6003E65AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 		BDC32F461EE9BD57003E65AB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */,
 				BDA3AF801EEEFE770087F71A /* NotificationController.swift */,
 				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
 				60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */,
@@ -611,6 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC1DA321EF1E1DC00070139 /* AchievementsController.swift in Sources */,
 				45750EAD1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift in Sources */,
 				60C7F12F1EEB25A00007D583 /* PageModelViewController.swift in Sources */,
 				60C7F12C1EEB25340007D583 /* InitialPageViewController.swift in Sources */,

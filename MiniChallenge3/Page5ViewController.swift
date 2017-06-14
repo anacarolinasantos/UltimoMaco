@@ -25,15 +25,6 @@ class Page5ViewController: PageModelViewController {
     
     @IBAction func startUsingApp(_ sender: Any) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {(granted, error) in
-            
-            if granted {
-                //DRAW CHECKMARK
-            } else {
-                //DRAW "X"
-            }
-
-            //ON ANIMATION COMPLETION DO THIS START HERE:
-            
             if let vcs = (self.pageViewController as? InitialPageViewController)?.allViewControllers {
                 
                 let name = (vcs[0] as! Page1ViewController).nameTextField.text
@@ -63,6 +54,9 @@ class Page5ViewController: PageModelViewController {
                     }
                 }
                 
+                AchievementsController.generateAchievements()
+                AchievementsController.createMassForTests()
+                
                 DatabaseController.saveContext()
                 
                 UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
@@ -71,10 +65,7 @@ class Page5ViewController: PageModelViewController {
                 
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
                 self.present(vc!, animated: true, completion: nil)
-            }
-            
-            //STOP HERE
+            }            
         })
     }
-    
 }
