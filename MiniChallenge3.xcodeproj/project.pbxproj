@@ -23,6 +23,7 @@
 		494EEE701EF06D3200465D6B /* HistoricTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */; };
 		494EEE721EF06D7A00465D6B /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */; };
 		49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */; };
+		49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */; };
 		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
 		604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */; };
 		604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */; };
@@ -138,6 +139,7 @@
 		494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricTableViewController.swift; sourceTree = "<group>"; };
 		494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
 		49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
+		49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		604EC0361EECA76600C1EA59 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FagerstromFormPageViewController.swift; path = ../FagerstromFormPageViewController.swift; sourceTree = "<group>"; };
 		604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage1.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */,
+				49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */,
 				BDC1DA391EF29F7900070139 /* AchievementsViewController.swift */,
 				494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */,
 				494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */,
@@ -681,6 +684,7 @@
 				493118A91EEB12F200D2694C /* LineChartData.swift in Sources */,
 				606195A61EF1E0B200249D81 /* NotificationModel.swift in Sources */,
 				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
+				49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */,
 				BDC1DA381EF1F02600070139 /* AchievementCollectionViewCell.swift in Sources */,
 				60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */,
 				45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */,
