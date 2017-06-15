@@ -50,15 +50,16 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
         
         let achievement = achievements[indexPath.row]
         let achievementAsset = UIImage(named: achievement.assetIdentifier!)
-        if achievement.hasAchievement {
+        if !achievement.hasAchievement {
             cell.achievementId.image = achievementAsset?.bwImage
+            cell.count.text = ""
         } else {
             cell.achievementId.image = achievementAsset
+            cell.count.text = String(achievement.amount)
+            cell.count.layer.cornerRadius = cell.count.frame.size.width / 2
+            cell.count.clipsToBounds = true
+            cell.count.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.5)
         }
-        cell.count.text = String(achievement.amount)
-        cell.count.layer.cornerRadius = cell.count.frame.size.width / 2
-        cell.count.clipsToBounds = true
-        cell.count.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.5)
         
         
         return cell
