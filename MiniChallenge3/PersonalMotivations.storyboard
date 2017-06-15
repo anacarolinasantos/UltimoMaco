@@ -49,7 +49,6 @@
                                     <outlet property="descriptionLabel" destination="51e-iA-OIn" id="Krh-5n-rqU"/>
                                     <outlet property="motivationImage" destination="bc9-JC-Xtp" id="MdS-Kf-OjM"/>
                                     <outlet property="titleLabel" destination="SSa-pf-qLN" id="6CF-QX-pP9"/>
-                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="grp-53-Gpc"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCustomCell" rowHeight="160" id="AT4-ka-FXb" customClass="MotivationTypeTwoTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
@@ -67,7 +66,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="motivationLargeImage" destination="6Nb-aQ-aaZ" id="kv8-Df-YaT"/>
-                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="ni3-D6-AWV"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdCustomCell" rowHeight="80" id="1Xf-ke-mly" customClass="MotivationTypeThreeTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
@@ -96,7 +94,6 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="LFl-m6-WJY" id="Bj6-9B-dQC"/>
                                     <outlet property="titleLabel" destination="Z9n-ZS-xtv" id="H0X-kg-Z4O"/>
-                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="Wnd-A4-HDo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +105,7 @@
                     <navigationItem key="navigationItem" title="Motivação" id="Lis-BU-hUK">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="epf-a9-DGy">
                             <connections>
-                                <segue destination="6TB-H6-qWA" kind="show" id="grd-xX-8kR"/>
+                                <action selector="addNewMotivation:" destination="hZa-Uw-MjD" id="7w5-XX-pIR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -193,6 +190,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nova Motivação" id="bvI-TP-PfE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Urz-X6-jJY">
+                            <connections>
+                                <action selector="didCancel:" destination="6TB-H6-qWA" id="dg6-yR-ZUN"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8qs-s9-7h1">
                             <connections>
                                 <action selector="saveMotivation:" destination="6TB-H6-qWA" id="0z1-6R-C53"/>
@@ -210,7 +212,4 @@
             <point key="canvasLocation" x="5967.1999999999998" y="-645.42728635682158"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Wnd-A4-HDo"/>
-    </inferredMetricsTieBreakers>
 </document>
