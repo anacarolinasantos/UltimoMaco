@@ -92,7 +92,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     }
     
     func handleTap(recognizer: UITapGestureRecognizer){
-        performSegue(withIdentifier: "showHistoric", sender: recognizer)
+        performSegue(withIdentifier: "showHistoric", sender: nil)
     }
     
     override public func viewWillAppear(_ animated: Bool) {

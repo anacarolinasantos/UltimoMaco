@@ -18,9 +18,6 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Conquistas"
-        self.navigationController?.setToolbarHidden(false, animated: true)
-        let back = UIBarButtonItem(title: "Voltar", style: .done, target: self, action: #selector(self.back))
-        self.navigationItem.rightBarButtonItem = back
     }
     
     override func viewWillAppear(_ animated: Bool) {
