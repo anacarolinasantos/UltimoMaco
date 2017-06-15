@@ -9,20 +9,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Motivação-->
         <scene sceneID="WhB-FZ-fGb">
             <objects>
-                <tableViewController id="hZa-Uw-MjD" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ITL-4n-KCl">
+                <tableViewController id="hZa-Uw-MjD" customClass="ProfileMotivationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ITL-4n-KCl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="GHI-bJ-DDE">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstCustomCell" rowHeight="80" id="GHI-bJ-DDE" customClass="MotivationTypeOneTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHI-bJ-DDE" id="cTI-ih-3HW">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSa-pf-qLN">
@@ -46,14 +46,17 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6TB-H6-qWA" kind="show" id="grp-53-Gpc"/>
+                                    <outlet property="descriptionLabel" destination="51e-iA-OIn" id="Krh-5n-rqU"/>
+                                    <outlet property="motivationImage" destination="bc9-JC-Xtp" id="MdS-Kf-OjM"/>
+                                    <outlet property="titleLabel" destination="SSa-pf-qLN" id="6CF-QX-pP9"/>
+                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="grp-53-Gpc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="AT4-ka-FXb">
-                                <rect key="frame" x="0.0" y="108" width="375" height="160"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCustomCell" rowHeight="160" id="AT4-ka-FXb" customClass="MotivationTypeTwoTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="135.5" width="375" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AT4-ka-FXb" id="We3-z3-esf">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-aQ-aaZ">
@@ -63,14 +66,15 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6TB-H6-qWA" kind="show" id="ni3-D6-AWV"/>
+                                    <outlet property="motivationLargeImage" destination="6Nb-aQ-aaZ" id="kv8-Df-YaT"/>
+                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="ni3-D6-AWV"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="1Xf-ke-mly">
-                                <rect key="frame" x="0.0" y="268" width="375" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdCustomCell" rowHeight="80" id="1Xf-ke-mly" customClass="MotivationTypeThreeTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="295.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Xf-ke-mly" id="t3H-jK-NWI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9n-ZS-xtv">
@@ -90,7 +94,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6TB-H6-qWA" kind="showDetail" id="XZo-Qg-yPu"/>
+                                    <outlet property="descriptionLabel" destination="LFl-m6-WJY" id="Bj6-9B-dQC"/>
+                                    <outlet property="titleLabel" destination="Z9n-ZS-xtv" id="H0X-kg-Z4O"/>
+                                    <segue destination="6TB-H6-qWA" kind="show" identifier="editMotivation" id="Wnd-A4-HDo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,18 +105,24 @@
                             <outlet property="delegate" destination="hZa-Uw-MjD" id="Jt7-l9-DCW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Lis-BU-hUK"/>
+                    <navigationItem key="navigationItem" title="Motivação" id="Lis-BU-hUK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="epf-a9-DGy">
+                            <connections>
+                                <segue destination="6TB-H6-qWA" kind="show" id="grd-xX-8kR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8z-7N-eSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4122.3999999999996" y="-644.52773613193403"/>
+            <point key="canvasLocation" x="5061.6000000000004" y="-644.52773613193403"/>
         </scene>
         <!--Nova Motivação-->
         <scene sceneID="lOP-fh-PyL">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyi-ic-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="6TB-H6-qWA" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4i0-Ma-Khw">
+                <tableViewController id="6TB-H6-qWA" customClass="NewMotivationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4i0-Ma-Khw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -121,15 +133,15 @@
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Mq-Sk-Bgt" id="cvz-ZZ-K4y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGO-Gg-KUZ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mGO-Gg-KUZ">
                                                     <rect key="frame" x="8" y="8" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -142,16 +154,15 @@
                                         <rect key="frame" x="0.0" y="155.5" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mcZ-nh-ELV" id="t36-HM-ZtW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="o4k-gN-sBC">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="o4k-gN-sBC">
                                                     <rect key="frame" x="8" y="3" width="359" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 </textView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -164,7 +175,7 @@
                                         <rect key="frame" x="0.0" y="281.5" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0m2-wv-WwC" id="YuX-qo-wm7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3o-Ty-wK9">
@@ -183,14 +194,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nova Motivação" id="bvI-TP-PfE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8qs-s9-7h1"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="8qs-s9-7h1">
+                            <connections>
+                                <action selector="saveMotivation:" destination="6TB-H6-qWA" id="0z1-6R-C53"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="o4k-gN-sBC" id="88b-Ud-f0i"/>
+                        <outlet property="motivationImage" destination="R3o-Ty-wK9" id="RA9-gc-Mcp"/>
+                        <outlet property="titleTextField" destination="mGO-Gg-KUZ" id="wVu-2s-rUq"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="5028" y="-645.42728635682158"/>
+            <point key="canvasLocation" x="5967.1999999999998" y="-645.42728635682158"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ni3-D6-AWV"/>
+        <segue reference="Wnd-A4-HDo"/>
     </inferredMetricsTieBreakers>
 </document>

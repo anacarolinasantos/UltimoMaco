@@ -9,87 +9,100 @@
 import UIKit
 
 class ProfileMotivationTableViewController: UITableViewController {
-
+    
+    //MARK: - Atributes
+    var motivations: [Motivation]?
+    
+    //MARK: - UIViewController life cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        do {
+            // Verify if Motivations exists, and gets it
+            if let motivations = (try DatabaseController.persistentContainer.viewContext.fetch(Motivation.fetchRequest()) as? [Motivation]) {
+                
+                if motivations.count != 0 {
+                    self.motivations = motivations
+                }
+            }
+        } catch _ as NSError {
+            print("Error")
+        }
+        
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let motivationsSize = motivations?.count {
+            return motivationsSize
+        } else {
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let motivation = motivations?[indexPath.row]
+        
+        //If there is a description, then the cell is thinner
+        if motivation?.description != nil {
+            return 100
+        } else {
+            return 200
+        }
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        //Configure the cell depending on which information motivantions has
+        let motivation = motivations?[indexPath.row]
 
-        // Configure the cell...
-
-        return cell
+        //Verify if there is an image on this motivation and a description, and then make the first type of motivations cells
+        if let motivationImage = motivation?.getImageAsMedia() {
+            if motivation?.desMotivation != nil && motivation?.desMotivation != "" {
+                let firstCell = tableView.dequeueReusableCell(withIdentifier: "firstCustomCell", for: indexPath) as! MotivationTypeOneTableViewCell
+                
+                firstCell.titleLabel?.text = motivation?.title
+                firstCell.descriptionLabel?.text = motivation?.desMotivation
+                firstCell.motivationImage?.image = motivationImage
+                
+                return firstCell
+            }
+            //If it doesn't have a description, then make the second type of cells
+            let secondCell = tableView.dequeueReusableCell(withIdentifier: "secondCustomCell", for: indexPath) as! MotivationTypeTwoTableViewCell
+            
+            secondCell.motivationLargeImage.image = motivationImage
+            
+            return secondCell
+            
+        }
+        
+        //If it doesn't have an image, then make the third type of cells
+        let thirdCell = tableView.dequeueReusableCell(withIdentifier: "thirdCustomCell", for: indexPath) as! MotivationTypeThreeTableViewCell
+        
+        thirdCell.titleLabel?.text = motivation?.title
+        thirdCell.descriptionLabel?.text = motivation?.description
+        
+        return thirdCell
+        
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editMotivation" {
+            
+            let destination = segue.destination as? NewMotivationTableViewController
+            
+            //TODO: MUDAR PARA PUSH E PUT, E ACESSAR PELO DID SELECTED (METODO)
+            destination?.motivation = motivations?[(tableView.indexPathForSelectedRow?.hashValue)!]
+        }
     }
-    */
-
 }

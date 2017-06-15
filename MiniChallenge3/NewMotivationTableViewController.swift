@@ -7,89 +7,140 @@
 //
 
 import UIKit
+import CoreData
 
-class NewMotivationTableViewController: UITableViewController {
+class NewMotivationTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
 
+    //MARK: - Outlets
+    @IBOutlet weak var titleTextField: UITextField?
+    @IBOutlet weak var descriptionTextView: UITextView?
+    @IBOutlet weak var motivationImage: UIImageView?
+    
+    //MARK: - Atributes
+    var motivation: Motivation?
+    
+    //MARK: - UIViewController life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if motivation != nil {
+            if let image = motivation?.getImageAsMedia() {
+                motivationImage?.image = image
+                
+                if let description = motivation?.desMotivation {
+                    titleTextField?.text = motivation?.title
+                    descriptionTextView?.text = description
+                }
+            } else {
+                titleTextField?.text = motivation?.title
+                descriptionTextView?.text = motivation?.desMotivation
+            }
+        } else {
+            motivation = NSEntityDescription.insertNewObject(forEntityName: "Motivation", into: DatabaseController.persistentContainer.viewContext) as? Motivation
+        }
+        
+        titleTextField?.delegate = self
+        descriptionTextView?.delegate = self
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        descriptionTextView?.layer.borderWidth = 0.5
+        descriptionTextView?.layer.borderColor = UIColor(red: 216/255, green: 215/255, blue: 220/255, alpha: 1).cgColor
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //If user select the imageView, then opens the picker view to choose an image
+        if indexPath.section == 2 && indexPath.row == 0{
+            let picker = UIImagePickerController()
+            
+            picker.delegate = self
+            picker.sourceType = .photoLibrary
+            picker.allowsEditing = true
+            
+            self.present(picker, animated: true, completion: nil)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //MARK: - ImagePicker delegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        motivation?.imageAsMedia(image: image)
+        
+        dismiss(animated: true, completion: nil)
+        
+        motivationImage?.image = image
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    //MARK: - TextField delegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //Limit to 20 characters the motivation title
+        let charLimit = 20
+        
+        let startLength = textField.text?.characters.count ?? 0
+        let addLength = string.characters.count
+        let lengthReplace = range.length
+        
+        let newLength = startLength + addLength - lengthReplace
+        
+        //Don't allow punctuation in the text field
+        let setNotAllowed = NSCharacterSet.punctuationCharacters
+        
+        //Check all the possibilities to allow or not the insertion on the text field
+        if string.isEmpty {
+            return true
+        } else if let _ = string.rangeOfCharacter(from: setNotAllowed, options: .caseInsensitive) {
+            return false
+        } else if newLength <= charLimit {
+            return true
+        } else {
+            return false
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    //MARK: - TextView delegate
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        //If click in Done, then hides the keyboard
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        //always check all the possibilities to allow or not the insertion on the text field
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        let numberOfChars = newText.characters.count
+        
+        
+        //If text length is smaller than 140 and there are no punctuation, so return true
+        return numberOfChars < 140 && (text.rangeOfCharacter(from: NSCharacterSet.punctuationCharacters, options: .caseInsensitive) == nil)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    //MARK: - Action
+    @IBAction func saveMotivation(_ sender: UIBarButtonItem) {
+        
+        if titleTextField?.text != nil || titleTextField?.text != "" {
+            motivation?.title = titleTextField?.text
+        }
+        
+        if descriptionTextView?.text != nil || descriptionTextView?.text != "" {
+            motivation?.desMotivation = descriptionTextView?.text
+        }
+        
+        DatabaseController.saveContext()
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
-
 }
