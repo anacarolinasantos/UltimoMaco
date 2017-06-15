@@ -10,6 +10,11 @@ import UIKit
 
 class MotivationTypeOneTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var motivationImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +25,4 @@ class MotivationTypeOneTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

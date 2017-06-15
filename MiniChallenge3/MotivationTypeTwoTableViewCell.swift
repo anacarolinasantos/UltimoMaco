@@ -10,6 +10,9 @@ import UIKit
 
 class MotivationTypeTwoTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    @IBOutlet weak var motivationLargeImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

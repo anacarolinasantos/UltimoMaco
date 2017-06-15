@@ -295,7 +295,6 @@
 				BDC32F461EE9BD57003E65AB /* Controllers */,
 				BDC32F481EE9BD94003E65AB /* Storyboards */,
 				604EC0361EECA76600C1EA59 /* Extensions.swift */,
-				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
 				BDC32F471EE9BD6C003E65AB /* Database Files */,
 			);
 			path = MiniChallenge3;
@@ -372,6 +371,7 @@
 				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
 				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
 				60C7F12D1EEB25390007D583 /* InitialPageViewController */,
+				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
 				604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */,
 			);
 			name = Storyboards;
