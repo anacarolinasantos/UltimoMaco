@@ -120,8 +120,7 @@
         <!--Nova Motivação-->
         <scene sceneID="lOP-fh-PyL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyi-ic-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="6TB-H6-qWA" customClass="NewMotivationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="newMotivation" id="6TB-H6-qWA" customClass="NewMotivationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="4i0-Ma-Khw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +205,7 @@
                         <outlet property="titleTextField" destination="mGO-Gg-KUZ" id="wVu-2s-rUq"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qyi-ic-zlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5967.1999999999998" y="-645.42728635682158"/>
         </scene>

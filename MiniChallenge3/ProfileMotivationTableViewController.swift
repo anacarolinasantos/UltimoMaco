@@ -12,11 +12,18 @@ class ProfileMotivationTableViewController: UITableViewController {
     
     //MARK: - Atributes
     var motivations: [Motivation]?
+    var newMotivationViewController: NewMotivationTableViewController?
     
     //MARK: - UIViewController life cicle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newMotivationViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMotivation") as? NewMotivationTableViewController
+
+        let navigationController = UINavigationController(rootViewController: newMotivationViewController!)
+        
+        self.present(navigationController, animated: true, completion: nil)
         
         do {
             // Verify if Motivations exists, and gets it
