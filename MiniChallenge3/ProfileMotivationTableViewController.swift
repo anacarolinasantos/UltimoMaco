@@ -15,7 +15,6 @@ class ProfileMotivationTableViewController: UITableViewController {
     var newMotivationViewController: NewMotivationTableViewController?
     
     //MARK: - UIViewController life cicle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,12 +32,20 @@ class ProfileMotivationTableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.isHidden = false
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +67,6 @@ class ProfileMotivationTableViewController: UITableViewController {
             return 200
         }
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Configure the cell depending on which information motivantions has
@@ -99,6 +105,8 @@ class ProfileMotivationTableViewController: UITableViewController {
         newMotivationViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMotivation") as? NewMotivationTableViewController
         
         let navigationController = UINavigationController(rootViewController: newMotivationViewController!)
+        
+        newMotivationViewController?.motivation = motivations?[indexPath.row]
         
         self.present(navigationController, animated: true, completion: nil)
     }
