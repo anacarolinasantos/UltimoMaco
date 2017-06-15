@@ -34,16 +34,8 @@ de acordar você fuma o primeiro cigarro?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
-                                <rect key="frame" x="120" y="356" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="mais de 60 minutos"/>
-                                <connections>
-                                    <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
-                                <rect key="frame" x="111" y="401" width="152" height="30"/>
+                                <rect key="frame" x="111" y="406" width="152" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="entre 30 e 60 minutos"/>
                                 <connections>
@@ -51,7 +43,7 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
-                                <rect key="frame" x="116" y="449" width="143" height="30"/>
+                                <rect key="frame" x="114" y="467" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="entre 5 e 30 minutos"/>
                                 <connections>
@@ -59,16 +51,30 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
-                                <rect key="frame" x="118" y="497" width="139" height="30"/>
+                                <rect key="frame" x="116" y="534" width="139" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="menos de 5 minutos"/>
                                 <connections>
                                     <action selector="lessThan5Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="675-1g-cHh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
+                                <rect key="frame" x="120" y="348" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="mais de 60 minutos"/>
+                                <connections>
+                                    <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="R6U-Ku-PTz" id="P3f-Fl-NxS"/>
+                        <outlet property="three" destination="nYC-Ny-NAh" id="yid-wA-KyR"/>
+                        <outlet property="two" destination="CB5-8C-4pA" id="Wka-kZ-F78"/>
+                        <outlet property="zero" destination="0a3-5w-5BJ" id="06p-0j-Dev"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-V6-Inj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +125,10 @@ de acordar você fuma o primeiro cigarro?</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="A5h-Ev-5lX" id="m8a-5Y-KHb"/>
+                        <outlet property="zero" destination="22Q-ms-De0" id="21h-am-POl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sc-Dj-ewV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,7 +166,6 @@ mais satisfação?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="Dx7-Hf-wsc"/>
-                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="lZK-Iw-abY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
@@ -165,12 +174,15 @@ mais satisfação?</string>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="S0I-rm-lLp"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="XA0-io-XLk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="q8A-Df-Wiz" id="c2g-h8-eM3"/>
+                        <outlet property="zero" destination="jAa-ja-zVC" id="Vbs-tp-APt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyP-wI-aMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,7 +219,6 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="lVQ-z8-QaT"/>
-                                    <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="uie-sA-bzJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
@@ -216,12 +227,15 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="iO5-Lj-BRR"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="o3S-G8-PRK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="3DM-JI-3wR" id="Utu-7x-I4r"/>
+                        <outlet property="zero" destination="5qv-K4-cwa" id="T61-Ab-iaW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fak-Oq-vrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,21 +270,24 @@ primeiras horas do dia?</string>
                                 <state key="normal" title="SIM"/>
                                 <connections>
                                     <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="1gw-5q-bgO"/>
-                                    <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="xKE-fu-SuL"/>
+                                    <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="9Gg-bx-xtG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
-                                <rect key="frame" x="171" y="427" width="32" height="30"/>
+                                <rect key="frame" x="171" y="426" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="NÃO"/>
                                 <connections>
                                     <action selector="noTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="Gp6-qQ-FeG"/>
-                                    <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="Mbp-c2-jdv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="one" destination="kbK-2J-4cB" id="c8a-2x-5tK"/>
+                        <outlet property="zero" destination="P5L-3k-DCk" id="c8E-VB-FQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-44-W15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,42 +306,42 @@ primeiras horas do dia?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-LZ-eAC">
-                                <rect key="frame" x="96" y="126" width="182" height="59"/>
+                                <rect key="frame" x="0.0" y="126" width="375" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pontos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-tQ-Jtq">
-                                <rect key="frame" x="158" y="193" width="58" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pontos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-tQ-Jtq">
+                                <rect key="frame" x="0.0" y="202" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grau de dependência:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-FS-2lM">
-                                <rect key="frame" x="103" y="323" width="169" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grau de dependência:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-FS-2lM">
+                                <rect key="frame" x="0.0" y="350" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A33-5T-e3s">
-                                <rect key="frame" x="158" y="222" width="61" height="93"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A33-5T-e3s">
+                                <rect key="frame" x="0.0" y="231" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-aE-j3K">
-                                <rect key="frame" x="0.0" y="352" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="395" width="375" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-9N-NTj">
-                                <rect key="frame" x="114" y="469" width="146" height="30"/>
+                                <rect key="frame" x="113" y="468" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Finalizar questionário"/>
                                 <connections>
@@ -336,6 +353,7 @@ primeiras horas do dia?</string>
                     </view>
                     <connections>
                         <outlet property="points" destination="A33-5T-e3s" id="uG2-3A-Zbx"/>
+                        <outlet property="resultLabel" destination="wtq-aE-j3K" id="DC7-Db-W0b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cy-6Q-xXq" userLabel="First Responder" sceneMemberID="firstResponder"/>

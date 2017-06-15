@@ -35,3 +35,33 @@ extension UIView {
         layer.add(animation, forKey: "shake")
     }
 }
+
+extension UIImage {
+    var bwImage: UIImage? {
+        guard let cgImage = cgImage,
+            let bwContext = bwContext else {
+                return nil
+        }
+        
+        let rect = CGRect(origin: .zero, size: size)
+        bwContext.draw(cgImage, in: rect)
+        let bwCgImage = bwContext.makeImage()
+        
+        return bwCgImage.flatMap { UIImage(cgImage: $0) }
+    }
+    
+    private var bwContext: CGContext? {
+        let bwContext = CGContext(data: nil,
+                                  width: Int(size.width * scale),
+                                  height: Int(size.height * scale),
+                                  bitsPerComponent: 8,
+                                  bytesPerRow: Int(size.width * scale),
+                                  space: CGColorSpaceCreateDeviceGray(),
+                                  bitmapInfo: CGImageAlphaInfo.none.rawValue)
+        
+        bwContext?.interpolationQuality = .high
+        bwContext?.setShouldAntialias(false)
+        
+        return bwContext
+    }
+}

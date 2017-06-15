@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Photos
 
 class ViewControllerTeste: UITableViewController {
     
@@ -19,7 +20,10 @@ class ViewControllerTeste: UITableViewController {
     
     //MARK: - Atributes
     var cigaretteNumberPoints: Int = 0
+
     var addictionIndex: Int = -1
+    
+    var picker = UIImagePickerController()
     
     //MARK: - UIViewController life cicle
     override func viewDidLoad() {
@@ -27,9 +31,14 @@ class ViewControllerTeste: UITableViewController {
         
         // -- SETUP
         self.navigationController?.navigationBar.isHidden = true
-        fagerstromCalculate()
         //Gets smokingLoad and sets it to its label.
         smokingLoadLabel.text = String(UserDefaults.standard.integer(forKey: "smokingLoad"))
+        picker.delegate = self
+        
+        userImage.layer.cornerRadius = 20
+        userImage.clipsToBounds = true
+        userImage.isUserInteractionEnabled = true
+        
         
         do {
             // Verify if user exists, and gets profile image and name
@@ -46,6 +55,10 @@ class ViewControllerTeste: UITableViewController {
             print("Error")
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fagerstromCalculate()
     }
     
     func fagerstromCalculate() {
@@ -119,3 +132,61 @@ class ViewControllerTeste: UITableViewController {
     }
     
 }
+
+extension ViewControllerTeste: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBAction func didChangePhoto(_ sender: Any) {
+        if PHPhotoLibrary.authorizationStatus() == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({ handler in
+                if handler == .authorized {
+                    self.showPickerPhoto()
+                } else if handler == .denied {
+                    self.alertAuth()
+                }
+            })
+        } else if PHPhotoLibrary.authorizationStatus() == .authorized {
+            self.showPickerPhoto()
+        }  else if PHPhotoLibrary.authorizationStatus() == .denied {
+            self.alertAuth()
+        }
+    }
+    
+    func alertAuth() {
+        let alert = UIAlertController(title: "Mude a permissão de acesso ao rolo de câmera nas configurações para poder alterar sua foto de perfil",
+                                      message: nil,
+                                      preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Ok", comment: "default"), style: .default)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
+    
+    func showPickerPhoto() {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        picker.modalPresentationStyle = .popover
+        present(picker,animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userImage.image = image
+            
+            do {
+                if let user = (try DatabaseController.persistentContainer.viewContext.fetch(User.fetchRequest()) as? [User]) {
+                    if user.count != 0 {
+                        user[0].imageAsMedia(image: image)
+                        DatabaseController.saveContext()
+                    }
+                }
+            } catch _ as NSError { print("Error") }
+        }
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+    
+}
+

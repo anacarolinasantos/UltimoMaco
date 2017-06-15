@@ -11,6 +11,16 @@ import UIKit
 class FagerstromPage4: PageModelViewController{
     
     //MARK: - Outlets
+    @IBOutlet weak var zero: UIButton!
+    
+    @IBOutlet weak var one: UIButton!
+    
+    var originalColor = UIColor.green
+    
+    func cleanAll() {
+        zero.tintColor = originalColor
+        one.tintColor = originalColor
+    }
     
     //MARK: - Atributes
     var points: Int?
@@ -19,12 +29,20 @@ class FagerstromPage4: PageModelViewController{
         return points != nil
     }
     
-    //MARK: - Actions
-    @IBAction func yesTap(_ sender: Any) {
-        points = 0
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        originalColor = zero.tintColor
     }
     
-    @IBAction func noTap(_ sender: Any) {
+    //MARK: - Actions
+    @IBAction func yesTap(_ sender: Any) {
         points = 1
+        cleanAll()
+        zero.tintColor = UIColor.yellow    }
+    
+    @IBAction func noTap(_ sender: Any) {
+        points = 0
+        cleanAll()
+        one.tintColor = UIColor.yellow
     }
 }
