@@ -9,25 +9,31 @@
 import UIKit
 import CoreData
 
-class HistoricTableViewCell: UITableViewCell {
+class HistoricTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var numberOfCigarettes: UILabel!
-    @IBOutlet weak var stepper: UIStepper!
-    
+    @IBOutlet weak var picker: UIPickerView!
+
     var point: ChartPoint!
+    var rowTitles: [String]! = []
     
     func awakeFromNib(_ point:ChartPoint) {
         super.awakeFromNib()
-        self.point = point
+        
         date.text = point.getFormattedDate()
+        self.point = point
         if point.cigarettes != -1 {
         numberOfCigarettes.text = String(point.cigarettes)
         }
         else {
             numberOfCigarettes.text = "Não registrado"
         }
-        stepper.value = Double(point.cigarettes)
+        picker.delegate = self
+        
+        rowTitles.append(contentsOf: ["Sem valor"])
+        let sequence = Array(0...100)
+        rowTitles.append(contentsOf: sequence.map{ String($0) })
         
     }
 
@@ -35,13 +41,18 @@ class HistoricTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    @IBAction func stepperTouched(_ sender: Any) {
-        point.cigarettes = Int(stepper!.value)
-        LineChartData().updateSomePoint(date.text!, point.cigarettes)
-        self.awakeFromNib(self.point)
-        
+        picker.isHidden = false
     }
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 101
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return rowTitles[row]
+    }
 }
