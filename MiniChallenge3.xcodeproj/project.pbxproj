@@ -13,6 +13,8 @@
 		45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */; };
 		45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */; };
 		45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */; };
+		45C54A411EF2E1C700E1FCBD /* HealthInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */; };
+		45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */; };
 		493118A51EEB12F200D2694C /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */; };
 		493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189D1EEB12F200D2694C /* ChartPoint.swift */; };
 		493118A81EEB12F200D2694C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189F1EEB12F200D2694C /* LineChart.swift */; };
@@ -124,6 +126,8 @@
 		45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeTwoTableViewCell.swift; sourceTree = "<group>"; };
 		45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeThreeTableViewCell.swift; sourceTree = "<group>"; };
 		45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMotivationTableViewController.swift; sourceTree = "<group>"; };
+		45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthInformationModel.swift; sourceTree = "<group>"; };
+		45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthInformationDatabase.swift; sourceTree = "<group>"; };
 		4931189C1EEB12F200D2694C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProgress.storyboard; sourceTree = "<group>"; };
 		4931189D1EEB12F200D2694C /* ChartPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPoint.swift; sourceTree = "<group>"; };
 		4931189F1EEB12F200D2694C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -351,6 +355,8 @@
 				BDC32F441EE9BCD5003E65AB /* DatabaseController.swift */,
 				606195A31EF1E0B200249D81 /* NotificationsDatabase.swift */,
 				606195A41EF1E0B200249D81 /* NotificationModel.swift */,
+				45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */,
+				45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */,
 			);
 			name = "Swift Files";
 			sourceTree = "<group>";
@@ -641,6 +647,7 @@
 				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
 				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
 				45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */,
+				45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */,
 				45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */,
 				45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */,
 				BDC1DA241EF048C800070139 /* Motivation+CoreDataProperties.swift in Sources */,
@@ -671,6 +678,7 @@
 				45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */,
 				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
+				45C54A411EF2E1C700E1FCBD /* HealthInformationModel.swift in Sources */,
 				604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */,
 				BDC1DA2A1EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift in Sources */,
 			);
