@@ -55,6 +55,13 @@ class HistoricTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.insertRows(at: <#T##[IndexPath]#>, with: <#T##UITableViewRowAnimation#>)
+
+    }
+    
+
 
     /*
     // Override to support conditional editing of the table view.

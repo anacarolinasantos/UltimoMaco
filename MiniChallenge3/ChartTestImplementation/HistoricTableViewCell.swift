@@ -35,6 +35,7 @@ class HistoricTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerView
         let sequence = Array(0...100)
         rowTitles.append(contentsOf: sequence.map{ String($0) })
         
+        picker.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

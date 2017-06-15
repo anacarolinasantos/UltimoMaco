@@ -162,11 +162,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="254" id="1Yv-d0-bEn" customClass="HistoricTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="254"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="43" id="1Yv-d0-bEn" customClass="HistoricTableViewCell" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Yv-d0-bEn" id="Qz3-UC-R2t">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="253.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="42.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrC-Qf-Mkc">
@@ -183,17 +183,26 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bU7-Kh-1h0">
-                                            <rect key="frame" x="0.0" y="37" width="375" height="216"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        </pickerView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="date" destination="xBi-Vr-UhU" id="Qcg-0U-jde"/>
                                     <outlet property="numberOfCigarettes" destination="nrC-Qf-Mkc" id="lDh-Lw-YW6"/>
-                                    <outlet property="picker" destination="bU7-Kh-1h0" id="Bl5-cv-2zW"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="picker" id="tMC-cp-fev">
+                                <rect key="frame" x="0.0" y="71" width="375" height="235"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tMC-cp-fev" id="J1a-bg-avc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bU7-Kh-1h0">
+                                            <rect key="frame" x="-8" y="18" width="375" height="216"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        </pickerView>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
