@@ -91,7 +91,8 @@ class LineChart: UIView {
     
     func drawGoal(context: CGContext, pointData: LineChartData) {
         context.setStrokeColor(UIColor.blue.cgColor)
-        context.setLineWidth(3)
+        context.setLineWidth(2)
+        context.setLineJoin(.round)
         let firstPoint = pointData.points[0]
         context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{

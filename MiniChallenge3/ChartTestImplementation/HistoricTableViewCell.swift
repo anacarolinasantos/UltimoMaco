@@ -21,7 +21,12 @@ class HistoricTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.point = point
         date.text = point.getFormattedDate()
+        if point.cigarettes != -1 {
         numberOfCigarettes.text = String(point.cigarettes)
+        }
+        else {
+            numberOfCigarettes.text = "Não registrado"
+        }
         stepper.value = Double(point.cigarettes)
         
     }

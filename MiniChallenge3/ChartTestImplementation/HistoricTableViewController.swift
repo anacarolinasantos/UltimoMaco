@@ -37,7 +37,7 @@ class HistoricTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return chartData.points.count
+        return chartData.points.count - 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +48,7 @@ class HistoricTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
         
-        cell.awakeFromNib(chartData.points[indexPath.row])
+        cell.awakeFromNib(chartData.points[indexPath.row + 1])
         
 //        cell.date.text = chartData.getFormatedDate(indexPath.row)
 //        cell.numberOfCigarettes.text = String(chartData.points[indexPath.row].cigarettes)

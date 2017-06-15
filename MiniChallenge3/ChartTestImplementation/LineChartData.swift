@@ -93,13 +93,28 @@ class LineChartData {
             print("Error")
         }
         for entrie in entries{
-            if date == entrie.date! as Date{
+            if Calendar.current.dateComponents([.month,.day], from: date) == Calendar.current.dateComponents([.month,.day], from: entrie.date! as Date){
                 entrie.cigaretteNumber = Int32(cigarettNumber)
                 break
             }
         }
         
         DatabaseController.saveContext()
+    }
+    
+    func getCigarettesOfSomeDay(_ date: Date) -> Int{
+        var entries: [CigaretteEntry] = []
+        do {
+            entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry"))
+        } catch _ as NSError {
+            print("Error")
+        }
+        for entrie in entries{
+            if Calendar.current.dateComponents([.month,.day], from: date) == Calendar.current.dateComponents([.month,.day], from: entrie.date! as Date){
+                return Int(entrie.cigaretteNumber)
+            }
+        }
+        return -1
     }
     
 }

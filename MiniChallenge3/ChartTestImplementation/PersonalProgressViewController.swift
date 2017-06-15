@@ -34,10 +34,10 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         updateCigarettesNumber()
         
         //Timer that calls updateCigarettesNumberLabel each 0.01 second to keep it updated with NSUserDefaults
-        synchronize = .scheduledTimer(timeInterval: 0.01, target: self,
-                                      selector: #selector(self.updateCigarettesNumber),
-                                      userInfo: nil,
-                                      repeats: true)
+//        synchronize = .scheduledTimer(timeInterval: 0.01, target: self,
+//                                      selector: #selector(self.updateCigarettesNumber),
+//                                      userInfo: nil,
+//                                      repeats: true)
         
         for view in self.view.subviews{
             if let thisView = view as? LineChart{
@@ -80,9 +80,10 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     @IBAction func stepperTap(_ sender: UIStepper) {
         
         todayCigarettesNumber = Int(sender.value)
+        stepperOutlet.value = Double(todayCigarettesNumber)
         setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
-        chart.pointData.points[LineChartData().points.count-1].cigarettes = Int(sender.value)
+        chart.pointData.updateSomePoint(Date(), todayCigarettesNumber)
         updateChart()
     }
     
@@ -109,6 +110,10 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
         let cigarretsOfToday = AchievementsController.checkGoalCigarrets(entry: allEntries[0], allEntries: allEntries)
         today.text = "Meta apenas \(cigarretsOfToday) cigarros"
+        
+        let cigarettesNumber = LineChartData().getCigarettesOfSomeDay(Date())
+        cigarettesNumberLabel.text = String(cigarettesNumber)
+        
     }
 }
 
