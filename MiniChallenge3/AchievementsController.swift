@@ -134,7 +134,7 @@ public class AchievementsController {
         return false
     }
     
-    static private func checkGoalCigarrets(entry: CigaretteEntry, allEntries: [CigaretteEntry]) -> Int {
+    static public func checkGoalCigarrets(entry: CigaretteEntry, allEntries: [CigaretteEntry]) -> Int {
         let i = allEntries.index(of: entry)
         return -(Int(Double(allEntries[0].cigaretteNumber)/Double(allEntries.count - 1) * Double(i!))) + Int(allEntries[0].cigaretteNumber)
     }
@@ -193,7 +193,7 @@ public class AchievementsController {
     }
     
     static public func test() {
-        for i in 1...((4 * 7) + 1) {
+        for i in 0...(4 * 7) {
             let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
             cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
             if i == 1 {

@@ -47,7 +47,7 @@ class Page5ViewController: PageModelViewController {
                 for i in 0...(weeksStop! * 7) {
                     let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                     cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
-                    if i == 1 {
+                    if i == 0 {
                         cigEntry.cigaretteNumber = Int32(cigsDaily)
                     } else {
                         cigEntry.cigaretteNumber = -1

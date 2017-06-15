@@ -95,9 +95,19 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         performSegue(withIdentifier: "showHistoric", sender: recognizer)
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         updateChart()
-        let cigarretsOfToday = -(Int(Double(chart.pointData.points[0].cigarettes)/Double(chart.pointData.totalDays) * Double(LineChartData().points.count-1))) + chart.pointData.points[0].cigarettes
+        
+        var allEntries: [CigaretteEntry] = []
+        
+        do {
+            allEntries = try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as! [CigaretteEntry]
+        } catch _ as NSError { print("Error") }
+        
+        allEntries = allEntries.sorted(by: { ($0.date as Date!) < ($1.date as Date!) } )
+        
+        let cigarretsOfToday = AchievementsController.checkGoalCigarrets(entry: allEntries[0], allEntries: allEntries)
         today.text = "Meta apenas \(cigarretsOfToday) cigarros"
     }
 }
