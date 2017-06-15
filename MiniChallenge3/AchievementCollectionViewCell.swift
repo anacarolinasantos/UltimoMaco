@@ -10,4 +10,8 @@ import UIKit
 
 class AchievementCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var achievementId: UIImageView!
+    
+    @IBOutlet weak var count: UILabel!
+    
 }
