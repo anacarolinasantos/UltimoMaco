@@ -19,12 +19,6 @@ class ProfileMotivationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newMotivationViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMotivation") as? NewMotivationTableViewController
-
-        let navigationController = UINavigationController(rootViewController: newMotivationViewController!)
-        
-        self.present(navigationController, animated: true, completion: nil)
-        
         do {
             // Verify if Motivations exists, and gets it
             if let motivations = (try DatabaseController.persistentContainer.viewContext.fetch(Motivation.fetchRequest()) as? [Motivation]) {
@@ -99,17 +93,35 @@ class ProfileMotivationTableViewController: UITableViewController {
         thirdCell.descriptionLabel?.text = motivation?.description
         
         return thirdCell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        newMotivationViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMotivation") as? NewMotivationTableViewController
         
+        let navigationController = UINavigationController(rootViewController: newMotivationViewController!)
+        
+        self.present(navigationController, animated: true, completion: nil)
     }
 
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "editMotivation" {
-            
-            let destination = segue.destination as? NewMotivationTableViewController
-            
-            //TODO: MUDAR PARA PUSH E PUT, E ACESSAR PELO DID SELECTED (METODO)
-            destination?.motivation = motivations?[(tableView.indexPathForSelectedRow?.hashValue)!]
-        }
+    //MARK: - Actions
+    @IBAction func addNewMotivation(_ sender: UIBarButtonItem) {
+        newMotivationViewController = self.storyboard?.instantiateViewController(withIdentifier: "newMotivation") as? NewMotivationTableViewController
+        
+        let navigationController = UINavigationController(rootViewController: newMotivationViewController!)
+        
+        self.present(navigationController, animated: true, completion: nil)
     }
+    
+    
+    
+//    // MARK: - Navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "editMotivation" {
+//            
+//            let destination = segue.destination as? NewMotivationTableViewController
+//            
+//            //TODO: MUDAR PARA PUSH E PUT, E ACESSAR PELO DID SELECTED (METODO)
+//            destination?.motivation = motivations?[(tableView.indexPathForSelectedRow?.hashValue)!]
+//        }
+//    }
 }
