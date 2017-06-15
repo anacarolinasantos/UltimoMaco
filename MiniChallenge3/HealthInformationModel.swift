@@ -6,4 +6,9 @@
 //  Copyright © 2017 Guilherme Paciulli. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HealthInformationModel {
+    
+    
+}
