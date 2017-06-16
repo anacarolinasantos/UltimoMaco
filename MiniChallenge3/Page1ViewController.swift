@@ -13,19 +13,26 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
     
     //MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet weak var warningPopup: UIView!
+    @IBOutlet weak var warningButton: UIButton!
     
     var picker = UIImagePickerController()
     
     //MARK: - ViewController Life Cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // -- SETUP
         picker.delegate = self
         self.hideKeyboardWhenTappedAround()
         nameTextField.delegate = self
         userPhoto.isUserInteractionEnabled = true
+        
+        //Setting warning
+        warningButton.isHidden = true
+        warningPopup.isHidden = true
+        warningPopup.layer.cornerRadius = 11
     }
     
     //MARK: - UITextFieldDelegate
@@ -40,6 +47,11 @@ class Page1ViewController: PageModelViewController, UITextFieldDelegate {
         return (nameTextField.text?.isValid())!
     }
     
+    //MARK: - Actions
+    
+    @IBAction func warningTap(_ sender: UIButton) {
+        warningPopup.isHidden = !warningPopup.isHidden
+    }
 }
 
 extension Page1ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
