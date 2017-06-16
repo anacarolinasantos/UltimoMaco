@@ -25,7 +25,6 @@
 		49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */; };
 		49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */; };
 		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
-		604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */; };
 		604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */; };
 		604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */; };
 		604EC0421EEDABAA00C1EA59 /* FagerstromPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0411EEDABAA00C1EA59 /* FagerstromPage3.swift */; };
@@ -45,6 +44,7 @@
 		60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1341EECA1330007D583 /* Page2ViewController.swift */; };
 		60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1361EECA1400007D583 /* Page3ViewController.swift */; };
 		60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1381EECA1480007D583 /* Page5ViewController.swift */; };
+		60D1E04A1EF4357A0048FE2C /* FagerstromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -141,7 +141,6 @@
 		49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		604EC0361EECA76600C1EA59 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FagerstromFormPageViewController.swift; path = ../FagerstromFormPageViewController.swift; sourceTree = "<group>"; };
 		604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage1.swift; sourceTree = "<group>"; };
 		604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage2.swift; sourceTree = "<group>"; };
 		604EC0411EEDABAA00C1EA59 /* FagerstromPage3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage3.swift; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		60C7F1341EECA1330007D583 /* Page2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
 		60C7F1361EECA1400007D583 /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		60C7F1381EECA1480007D583 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
+		60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromViewController.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC32F661EE9C234003E65AB /* FagerstromFormPageViewController.storyboard */,
-				604EC03B1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift */,
+				60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */,
 				604EC0491EEDABBD00C1EA59 /* FagerstromPages */,
 			);
 			name = FagerstromFormPageViewController;
@@ -649,7 +649,6 @@
 				60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */,
 				493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */,
 				60C7F1331EECA1290007D583 /* Page1ViewController.swift in Sources */,
-				604EC03C1EEDA5A300C1EA59 /* FagerstromFormPageViewController.swift in Sources */,
 				BDC1DA231EF048C800070139 /* Motivation+CoreDataClass.swift in Sources */,
 				BDC1DA121EEF1ABE00070139 /* User+CoreDataProperties.swift in Sources */,
 				BDC1DA111EEF1ABE00070139 /* User+CoreDataClass.swift in Sources */,
@@ -664,6 +663,7 @@
 				45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */,
 				BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */,
 				BDC32F151EE9B8E6003E65AB /* ViewController.swift in Sources */,
+				60D1E04A1EF4357A0048FE2C /* FagerstromViewController.swift in Sources */,
 				BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */,
 				49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */,
 				604EC0421EEDABAA00C1EA59 /* FagerstromPage3.swift in Sources */,

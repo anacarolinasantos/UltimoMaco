@@ -65,3 +65,16 @@ extension UIImage {
         return bwContext
     }
 }
+
+extension UIPageViewController {
+    
+    public var scrollView: UIScrollView? {
+        for view in self.view.subviews {
+            if let scrollView = view as? UIScrollView {
+                return scrollView
+            }
+        }
+        return nil
+    }
+    
+}
