@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h6U-cI-kcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h6U-cI-kcn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,64 +23,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-7r-HcG">
-                                <rect key="frame" x="137" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-7r-HcG">
+                                <rect key="frame" x="130" y="119" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pOd-7r-HcG" secondAttribute="height" multiplier="1:1" id="TnZ-hy-pie"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
-                                <rect key="frame" x="96" y="239" width="182" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Quanto tempo depois 
-de acordar você fuma o primeiro cigarro?</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
-                                <rect key="frame" x="111" y="406" width="152" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="entre 30 e 60 minutos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
+                                <rect key="frame" x="51" y="388" width="268" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="hDa-lT-fWj"/>
+                                    <constraint firstAttribute="height" constant="63" id="qPq-hm-Ulm"/>
+                                </constraints>
+                                <state key="normal" image="between30and60Button"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="between30And60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="fdC-9u-rfM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
-                                <rect key="frame" x="114" y="467" width="143" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="entre 5 e 30 minutos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
+                                <rect key="frame" x="51" y="461" width="268" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="EbK-Hx-hrW"/>
+                                    <constraint firstAttribute="width" constant="268" id="hcP-e6-MSc"/>
+                                </constraints>
+                                <state key="normal" image="between5and30Button"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="between5And30Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="CyS-y7-Ehw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
-                                <rect key="frame" x="116" y="534" width="139" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="menos de 5 minutos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
+                                <rect key="frame" x="51" y="534" width="268" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="ij5-jz-TDO"/>
+                                    <constraint firstAttribute="height" constant="63" id="ju5-yk-fxl"/>
+                                </constraints>
+                                <state key="normal" image="lessThan5Button"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="lessThan5Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="675-1g-cHh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
-                                <rect key="frame" x="120" y="348" width="135" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="mais de 60 minutos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
+                                <rect key="frame" x="51" y="315" width="268" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="qm3-xb-EcA"/>
+                                    <constraint firstAttribute="height" constant="63" id="vTI-4M-3eb"/>
+                                </constraints>
+                                <state key="normal" image="moreThan60Button"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
+                                <rect key="frame" x="31" y="241" width="308" height="46"/>
+                                <string key="text">Quanto tempo depois 
+de acordar você fuma o primeiro cigarro?</string>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="centerX" secondItem="CB5-8C-4pA" secondAttribute="centerX" id="713-lA-00B"/>
+                            <constraint firstItem="pOd-7r-HcG" firstAttribute="leading" secondItem="qXg-6Z-Fyu" secondAttribute="leadingMargin" constant="114" id="9wu-ry-rRg"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="centerX" secondItem="0a3-5w-5BJ" secondAttribute="centerX" id="I1b-t4-Qsg"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="top" secondItem="RLw-jC-sN9" secondAttribute="bottom" constant="28" id="IoW-bW-cYN"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="top" secondItem="0a3-5w-5BJ" secondAttribute="bottom" constant="10" id="RZS-Hb-L7c"/>
+                            <constraint firstItem="pOd-7r-HcG" firstAttribute="top" secondItem="U5s-S9-0BW" secondAttribute="bottom" constant="99" id="aKQ-xJ-JBb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pOd-7r-HcG" secondAttribute="trailing" constant="119" id="b4m-hQ-793"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="top" secondItem="R6U-Ku-PTz" secondAttribute="bottom" constant="10" id="b7X-1m-40G"/>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="top" secondItem="CB5-8C-4pA" secondAttribute="bottom" constant="10" id="j9k-Oi-7KG"/>
+                            <constraint firstItem="RLw-jC-sN9" firstAttribute="centerX" secondItem="pOd-7r-HcG" secondAttribute="centerX" id="lX9-tp-eGA"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="centerX" secondItem="R6U-Ku-PTz" secondAttribute="centerX" id="lqV-tD-YFf"/>
+                            <constraint firstItem="RLw-jC-sN9" firstAttribute="top" secondItem="pOd-7r-HcG" secondAttribute="bottom" constant="12" id="mDg-JK-VUb"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="centerX" secondItem="pOd-7r-HcG" secondAttribute="centerX" id="tWM-yM-I2d"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="one" destination="R6U-Ku-PTz" id="P3f-Fl-NxS"/>
-                        <outlet property="three" destination="nYC-Ny-NAh" id="yid-wA-KyR"/>
-                        <outlet property="two" destination="CB5-8C-4pA" id="Wka-kZ-F78"/>
-                        <outlet property="zero" destination="0a3-5w-5BJ" id="06p-0j-Dev"/>
+                        <outlet property="between30And60ButtonOutlet" destination="R6U-Ku-PTz" id="WfU-wX-qd7"/>
+                        <outlet property="between5And30ButtonOutlet" destination="CB5-8C-4pA" id="eGh-0G-DWd"/>
+                        <outlet property="lessThan5ButtonOutlet" destination="nYC-Ny-NAh" id="KqL-No-GDA"/>
+                        <outlet property="moreThan60ButtonOutlet" destination="0a3-5w-5BJ" id="oQ8-Df-uSn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-V6-Inj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1956" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="-1943" y="1003"/>
         </scene>
         <!--Fagerstrom Page2-->
         <scene sceneID="tt6-Yx-Nsr">
@@ -92,47 +126,67 @@ de acordar você fuma o primeiro cigarro?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-7Q-pEa">
-                                <rect key="frame" x="140" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prohibitedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-7Q-pEa">
+                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Uu5-7Q-pEa" secondAttribute="height" multiplier="1:1" id="qWx-7l-kFS"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
-                                <rect key="frame" x="-45" y="239" width="470" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
+                                <rect key="frame" x="97.5" y="241" width="179" height="69"/>
                                 <string key="text">Você tem dificuldade de
  ficar sem fumar em
  locais proibidos?</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-Ev-5lX">
-                                <rect key="frame" x="175" y="365" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIM"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-Ev-5lX">
+                                <rect key="frame" x="87" y="368" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="ngL-cj-dBq"/>
+                                    <constraint firstAttribute="height" constant="63" id="wOs-BZ-CCa"/>
+                                </constraints>
+                                <state key="normal" image="yesButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="aiX-3A-6gN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-ms-De0">
-                                <rect key="frame" x="174" y="427" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NÃO"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-ms-De0">
+                                <rect key="frame" x="87" y="446" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="J5n-E9-cbE"/>
+                                    <constraint firstAttribute="width" constant="201" id="K5a-SF-bpS"/>
+                                </constraints>
+                                <state key="normal" image="noButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="noTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="czg-St-uiY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="centerX" secondItem="A5h-Ev-5lX" secondAttribute="centerX" id="CQ9-gG-im8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uu5-7Q-pEa" secondAttribute="trailing" constant="117" id="I7O-ft-7AS"/>
+                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="centerX" secondItem="Uu5-7Q-pEa" secondAttribute="centerX" id="JZJ-OO-c94"/>
+                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="top" secondItem="Uu5-7Q-pEa" secondAttribute="bottom" constant="12" id="PvQ-ce-0IC"/>
+                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="top" secondItem="T3k-BO-MDi" secondAttribute="bottom" constant="99" id="V7E-XP-a67"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="top" secondItem="Tc6-pd-n4F" secondAttribute="bottom" constant="58" id="cYs-CL-4HV"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="centerX" secondItem="Uu5-7Q-pEa" secondAttribute="centerX" id="dD2-YP-Ocj"/>
+                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="leading" secondItem="m3Q-xi-fta" secondAttribute="leadingMargin" constant="116" id="dzX-V2-OLf"/>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="top" secondItem="A5h-Ev-5lX" secondAttribute="bottom" constant="15" id="eRm-bs-vwD"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="one" destination="A5h-Ev-5lX" id="m8a-5Y-KHb"/>
-                        <outlet property="zero" destination="22Q-ms-De0" id="21h-am-POl"/>
+                        <outlet property="noButtonOutlet" destination="22Q-ms-De0" id="I5E-RL-f0D"/>
+                        <outlet property="yesButtonOutlet" destination="A5h-Ev-5lX" id="Vmw-J3-TGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Sc-Dj-ewV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1164" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="-1182" y="1016"/>
         </scene>
         <!--Fagerstrom Page3-->
         <scene sceneID="dJc-DU-G5a">
@@ -146,42 +200,63 @@ de acordar você fuma o primeiro cigarro?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n33-7U-qNS">
-                                <rect key="frame" x="137" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8A-Df-Wiz">
+                                <rect key="frame" x="87" y="368" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="FbX-8j-Ovy"/>
+                                    <constraint firstAttribute="height" constant="63" id="hIA-iZ-qpb"/>
+                                </constraints>
+                                <state key="normal" image="yesButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
+                                <connections>
+                                    <action selector="yesTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="44N-uW-0i6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunIcon" translatesAutoresizingMaskIntoConstraints="NO" id="n33-7U-qNS">
+                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n33-7U-qNS" secondAttribute="height" multiplier="1:1" id="V7i-JI-303"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
-                                <rect key="frame" x="96" y="239" width="182" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
+                                <rect key="frame" x="106" y="241" width="162" height="69"/>
                                 <string key="text">O primeiro cigarro da 
 manhã é o que traz 
 mais satisfação?</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8A-Df-Wiz">
-                                <rect key="frame" x="172" y="365" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIM"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
+                                <rect key="frame" x="87" y="446" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="AZu-kF-2Cl"/>
+                                    <constraint firstAttribute="height" constant="63" id="ely-KS-Hr5"/>
+                                </constraints>
+                                <state key="normal" image="noButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
-                                    <action selector="yesTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="Dx7-Hf-wsc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
-                                <rect key="frame" x="171" y="425" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NÃO"/>
-                                <connections>
-                                    <action selector="noTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="S0I-rm-lLp"/>
+                                    <action selector="noTap:" destination="en5-sc-JW3" eventType="touchUpInside" id="x9F-ne-100"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="n33-7U-qNS" secondAttribute="trailing" constant="117" id="5oj-pD-JA2"/>
+                            <constraint firstItem="n33-7U-qNS" firstAttribute="leading" secondItem="ena-ez-PMI" secondAttribute="leadingMargin" constant="116" id="8YI-9Z-SaJ"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="top" secondItem="0Yz-gX-COf" secondAttribute="bottom" constant="58" id="9cc-RE-bVa"/>
+                            <constraint firstItem="n33-7U-qNS" firstAttribute="top" secondItem="PpU-hx-A65" secondAttribute="bottom" constant="99" id="Ahf-uH-olu"/>
+                            <constraint firstItem="0Yz-gX-COf" firstAttribute="centerX" secondItem="n33-7U-qNS" secondAttribute="centerX" id="Bsp-ij-21W"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="centerX" secondItem="n33-7U-qNS" secondAttribute="centerX" id="EHt-v6-YRB"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="top" secondItem="q8A-Df-Wiz" secondAttribute="bottom" constant="15" id="Hqw-sG-m9m"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="centerX" secondItem="q8A-Df-Wiz" secondAttribute="centerX" id="LME-u7-U3T"/>
+                            <constraint firstItem="0Yz-gX-COf" firstAttribute="top" secondItem="n33-7U-qNS" secondAttribute="bottom" constant="12" id="NwN-91-QjH"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="top" secondItem="0Yz-gX-COf" secondAttribute="bottom" constant="58" id="uHS-wJ-6FT"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="one" destination="q8A-Df-Wiz" id="c2g-h8-eM3"/>
-                        <outlet property="zero" destination="jAa-ja-zVC" id="Vbs-tp-APt"/>
+                        <outlet property="noButtonOutlet" destination="jAa-ja-zVC" id="k5M-2c-rgR"/>
+                        <outlet property="yesButtonOutlet" destination="q8A-Df-Wiz" id="l38-aW-mG6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyP-wI-aMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,41 +275,61 @@ mais satisfação?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-56-Wc6">
-                                <rect key="frame" x="137" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-S4-uja">
-                                <rect key="frame" x="96" y="239" width="182" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-S4-uja">
+                                <rect key="frame" x="100.5" y="241" width="173.5" height="46"/>
                                 <string key="text">Você fuma mais nas 
 primeiras horas do dia?</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-K4-cwa">
-                                <rect key="frame" x="172" y="365" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIM"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmIcon" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-56-Wc6">
+                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="44Y-56-Wc6" secondAttribute="height" multiplier="1:1" id="GYa-qz-nVj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-K4-cwa">
+                                <rect key="frame" x="86.5" y="368" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="koU-0s-tuG"/>
+                                    <constraint firstAttribute="height" constant="63" id="lLX-do-Ucp"/>
+                                </constraints>
+                                <state key="normal" image="yesButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="yesTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="lVQ-z8-QaT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
-                                <rect key="frame" x="171" y="427" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NÃO"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
+                                <rect key="frame" x="86.5" y="446" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="JdU-JY-lsH"/>
+                                    <constraint firstAttribute="height" constant="63" id="Uz3-Qi-JFp"/>
+                                </constraints>
+                                <state key="normal" image="noButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="noTap:" destination="4i0-oN-5Io" eventType="touchUpInside" id="iO5-Lj-BRR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="thm-S4-uja" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="Ed4-d6-r6A"/>
+                            <constraint firstItem="44Y-56-Wc6" firstAttribute="leading" secondItem="GOM-DQ-0zb" secondAttribute="leadingMargin" constant="116" id="HS4-ob-94Y"/>
+                            <constraint firstItem="44Y-56-Wc6" firstAttribute="top" secondItem="HxQ-8M-kmP" secondAttribute="bottom" constant="99" id="I4D-ng-PXg"/>
+                            <constraint firstItem="thm-S4-uja" firstAttribute="top" secondItem="44Y-56-Wc6" secondAttribute="bottom" constant="12" id="Ovn-l4-IMt"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="top" secondItem="thm-S4-uja" secondAttribute="bottom" constant="81" id="VlM-R3-Ps6"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="top" secondItem="5qv-K4-cwa" secondAttribute="bottom" constant="15" id="i3e-Yw-r2b"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="iPV-MW-zw3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="44Y-56-Wc6" secondAttribute="trailing" constant="117" id="p2z-cf-eBT"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="centerX" secondItem="5qv-K4-cwa" secondAttribute="centerX" id="rh0-EA-Ag8"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="one" destination="3DM-JI-3wR" id="Utu-7x-I4r"/>
-                        <outlet property="zero" destination="5qv-K4-cwa" id="T61-Ab-iaW"/>
+                        <outlet property="noButtonOutlet" destination="3DM-JI-3wR" id="9JB-DY-j7B"/>
+                        <outlet property="yesButtonOutlet" destination="5qv-K4-cwa" id="Ru1-ti-QZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fak-Oq-vrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -253,40 +348,60 @@ primeiras horas do dia?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-dQ-Gnb">
-                                <rect key="frame" x="137" y="119" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você fuma mesmo doente?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-FN-R7c">
-                                <rect key="frame" x="96" y="239" width="182" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fuma mesmo doente?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-FN-R7c">
+                                <rect key="frame" x="85" y="241" width="204" height="23"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-2J-4cB">
-                                <rect key="frame" x="172" y="365" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIM"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termometerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-dQ-Gnb">
+                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KoC-dQ-Gnb" secondAttribute="height" multiplier="1:1" id="dWJ-13-eAe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-2J-4cB">
+                                <rect key="frame" x="86.5" y="368" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="eRw-Y1-y5A"/>
+                                    <constraint firstAttribute="height" constant="63" id="j8W-Uz-TSi"/>
+                                </constraints>
+                                <state key="normal" image="yesButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="yesTap:" destination="ttw-RD-jLd" eventType="touchUpInside" id="1gw-5q-bgO"/>
                                     <action selector="yesTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="9Gg-bx-xtG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
-                                <rect key="frame" x="171" y="426" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NÃO"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
+                                <rect key="frame" x="86.5" y="446" width="201" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Hce-sj-Rbm"/>
+                                    <constraint firstAttribute="width" constant="201" id="Piz-qh-fHS"/>
+                                </constraints>
+                                <state key="normal" image="noButton"/>
+                                <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="noTap:" destination="1jp-Qd-vql" eventType="touchUpInside" id="Gp6-qQ-FeG"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="leading" secondItem="AYr-wQ-WTH" secondAttribute="leadingMargin" constant="116" id="28O-Ik-A6A"/>
+                            <constraint firstItem="1ee-FN-R7c" firstAttribute="top" secondItem="KoC-dQ-Gnb" secondAttribute="bottom" constant="12" id="6b3-Oe-ECh"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="centerX" secondItem="kbK-2J-4cB" secondAttribute="centerX" id="OdC-f4-bcF"/>
+                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="top" secondItem="Gdi-xq-nMW" secondAttribute="bottom" constant="99" id="Syc-It-IqX"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="top" secondItem="1ee-FN-R7c" secondAttribute="bottom" constant="104" id="VF3-a8-u4u"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="centerX" secondItem="KoC-dQ-Gnb" secondAttribute="centerX" id="WRz-mM-bhs"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="top" secondItem="kbK-2J-4cB" secondAttribute="bottom" constant="15" id="dql-Cy-TMT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KoC-dQ-Gnb" secondAttribute="trailing" constant="117" id="e9f-lL-Y59"/>
+                            <constraint firstItem="1ee-FN-R7c" firstAttribute="centerX" secondItem="KoC-dQ-Gnb" secondAttribute="centerX" id="eUJ-wK-coI"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="one" destination="kbK-2J-4cB" id="c8a-2x-5tK"/>
-                        <outlet property="zero" destination="P5L-3k-DCk" id="c8E-VB-FQO"/>
+                        <outlet property="noButtonOutlet" destination="P5L-3k-DCk" id="mb4-FV-ANa"/>
+                        <outlet property="yesButtonOutlet" destination="kbK-2J-4cB" id="eXo-bA-9kF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-44-W15" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,4 +484,18 @@ primeiras horas do dia?</string>
             <point key="canvasLocation" x="58" y="304"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alarmIcon" width="260" height="267"/>
+        <image name="between30and60Button" width="442" height="97"/>
+        <image name="between5and30Button" width="442" height="97"/>
+        <image name="clockIcon" width="262" height="267"/>
+        <image name="lessThan5Button" width="442" height="97"/>
+        <image name="moreThan60Button" width="442" height="97"/>
+        <image name="noButton" width="442" height="142"/>
+        <image name="prohibitedIcon" width="260" height="267"/>
+        <image name="selectedBigBackground" width="437" height="92"/>
+        <image name="sunIcon" width="262" height="267"/>
+        <image name="termometerIcon" width="262" height="267"/>
+        <image name="yesButton" width="442" height="142"/>
+    </resources>
 </document>
