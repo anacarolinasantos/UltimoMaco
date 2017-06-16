@@ -475,18 +475,9 @@ primeiras horas do dia?</string>
             </objects>
             <point key="canvasLocation" x="2068" y="1002.5487256371815"/>
         </scene>
-        <!--Fagerstrom Form Page View Controller-->
-        <scene sceneID="eA0-PR-Ot3">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="h6U-cI-kcn" customClass="FagerstromFormPageViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hKL-PT-MwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="58" y="304"/>
-        </scene>
         <!--Fagerstrom View Controller-->
         <scene sceneID="Bih-A1-drn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0XN-gR-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FagerstromViewController" id="uQe-eE-WVe" customClass="FagerstromViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h9m-57-UBr"/>
@@ -509,8 +500,9 @@ primeiras horas do dia?</string>
                         <outlet property="pageControl" destination="8zs-AI-UdN" id="6EC-xB-Dcc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XN-gR-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.60000000000002" y="303.59820089955025"/>
+            <point key="canvasLocation" x="63" y="317"/>
         </scene>
     </scenes>
     <resources>

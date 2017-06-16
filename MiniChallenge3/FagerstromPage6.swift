@@ -33,7 +33,7 @@ class FagerstromPage6: PageModelViewController{
         }
         
         
-        if let vcs = (self.pageViewController as? FagerstromFormPageViewController)?.allViewControllers {
+        if let vcs = (UIViewController() as? FagerstromViewController)?.pages {
             
             var dependencyLevel = ""
             var color = UIColor.black

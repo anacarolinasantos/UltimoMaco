@@ -45,6 +45,7 @@
 		60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1361EECA1400007D583 /* Page3ViewController.swift */; };
 		60C7F1391EECA1480007D583 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1381EECA1480007D583 /* Page5ViewController.swift */; };
 		60D1E04A1EF4357A0048FE2C /* FagerstromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */; };
+		60D1E04C1EF499420048FE2C /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D1E04B1EF499420048FE2C /* InitialViewController.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -157,6 +158,7 @@
 		60C7F1361EECA1400007D583 /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		60C7F1381EECA1480007D583 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromViewController.swift; sourceTree = "<group>"; };
+		60D1E04B1EF499420048FE2C /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 			children = (
 				BDC32F601EE9C11E003E65AB /* InitialPageViewController.storyboard */,
 				60C7F12B1EEB25340007D583 /* InitialPageViewController.swift */,
+				60D1E04B1EF499420048FE2C /* InitialViewController.swift */,
 				604EC0351EECA2AB00C1EA59 /* Pages */,
 			);
 			name = InitialPageViewController;
@@ -653,6 +656,7 @@
 				BDC1DA121EEF1ABE00070139 /* User+CoreDataProperties.swift in Sources */,
 				BDC1DA111EEF1ABE00070139 /* User+CoreDataClass.swift in Sources */,
 				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
+				60D1E04C1EF499420048FE2C /* InitialViewController.swift in Sources */,
 				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
 				45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */,
 				45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */,
