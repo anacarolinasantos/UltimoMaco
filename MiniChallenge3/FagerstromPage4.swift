@@ -11,38 +11,37 @@ import UIKit
 class FagerstromPage4: PageModelViewController{
     
     //MARK: - Outlets
-    @IBOutlet weak var zero: UIButton!
-    
-    @IBOutlet weak var one: UIButton!
-    
-    var originalColor = UIColor.green
-    
-    func cleanAll() {
-        zero.tintColor = originalColor
-        one.tintColor = originalColor
-    }
+    @IBOutlet weak var yesButtonOutlet: UIButton!
+    @IBOutlet weak var noButtonOutlet: UIButton!
     
     //MARK: - Atributes
     var points: Int?
     
+    //Manage selected button
+    func deselect() {
+        yesButtonOutlet.isSelected = false
+        noButtonOutlet.isSelected = false
+    }
+    
+    //MARK: - ViewController Life cicle
     override func shouldContinueToNextViewController() -> Bool {
         return points != nil
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        originalColor = zero.tintColor
     }
     
     //MARK: - Actions
-    @IBAction func yesTap(_ sender: Any) {
+    @IBAction func yesTap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 1
-        cleanAll()
-        zero.tintColor = UIColor.yellow    }
+    }
     
-    @IBAction func noTap(_ sender: Any) {
+    @IBAction func noTap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 0
-        cleanAll()
-        one.tintColor = UIColor.yellow
     }
 }

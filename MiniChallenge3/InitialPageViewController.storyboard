@@ -40,13 +40,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="opcional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztS-iD-obd">
-                                <rect key="frame" x="165" y="255" width="44" height="12"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <rect key="frame" x="170.5" y="255" width="35.5" height="13.5"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="10"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome (Obrigatório)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gp7-or-Ti5">
-                                <rect key="frame" x="16" y="372" width="343" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome (obrigatório)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gp7-or-Ti5">
+                                <rect key="frame" x="16" y="348.5" width="343" height="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -63,9 +63,8 @@
                                     <constraint firstAttribute="width" secondItem="gOm-PP-QPE" secondAttribute="height" multiplier="1:1" id="Cxc-3Q-wfu"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DdM-nW-xaf">
-                                <rect key="frame" x="252" y="343" width="81" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdM-nW-xaf">
+                                <rect key="frame" x="252" y="319.5" width="81" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rsd-dc-BLi">
                                         <rect key="frame" x="3" y="0.0" width="66" height="37"/>
@@ -86,10 +85,17 @@ obrigatória</string>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.063220985233783722" green="0.57575803995132446" blue="0.66836756467819214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="97y-Ej-8Pb"/>
+                                    <constraint firstAttribute="width" constant="81" id="jks-4F-I6l"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR2-7J-xQO">
-                                <rect key="frame" x="311" y="357" width="22" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eR2-7J-xQO">
+                                <rect key="frame" x="311" y="333.5" width="22" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="YpB-GC-l6S"/>
+                                    <constraint firstAttribute="width" constant="22" id="ivY-ES-Fwl"/>
+                                </constraints>
                                 <state key="normal" image="warning"/>
                                 <connections>
                                     <action selector="warningTap:" destination="Rlm-en-eFy" eventType="touchUpInside" id="zWZ-7P-kmp"/>
@@ -99,16 +105,20 @@ obrigatória</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gOm-PP-QPE" firstAttribute="top" secondItem="mIb-0E-gXI" secondAttribute="bottom" constant="91" id="04j-c3-d7x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DdM-nW-xaf" secondAttribute="trailing" constant="26" id="1KZ-My-c6F"/>
                             <constraint firstItem="LGV-W3-Efr" firstAttribute="centerX" secondItem="gOm-PP-QPE" secondAttribute="centerX" id="3p5-dg-3Sr"/>
-                            <constraint firstItem="Gp7-or-Ti5" firstAttribute="top" secondItem="ztS-iD-obd" secondAttribute="bottom" constant="105" id="I0Y-Xi-B1F"/>
+                            <constraint firstItem="Gp7-or-Ti5" firstAttribute="top" secondItem="ztS-iD-obd" secondAttribute="bottom" constant="80" id="I0Y-Xi-B1F"/>
                             <constraint firstItem="Gp7-or-Ti5" firstAttribute="leading" secondItem="XeT-D6-JpS" secondAttribute="leadingMargin" id="Jck-qK-IJB"/>
                             <constraint firstItem="LGV-W3-Efr" firstAttribute="top" secondItem="gOm-PP-QPE" secondAttribute="bottom" constant="12" id="KIw-7M-Gv1"/>
+                            <constraint firstItem="DdM-nW-xaf" firstAttribute="bottom" secondItem="Gp7-or-Ti5" secondAttribute="bottom" constant="-9" id="NsH-eI-4ug"/>
                             <constraint firstItem="gOm-PP-QPE" firstAttribute="leading" secondItem="XeT-D6-JpS" secondAttribute="leadingMargin" constant="117" id="QWd-VK-g1Z"/>
                             <constraint firstItem="gOm-PP-QPE" firstAttribute="centerX" secondItem="XeT-D6-JpS" secondAttribute="centerX" id="W26-fA-uzu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eR2-7J-xQO" secondAttribute="trailing" constant="26" id="X7L-61-0oW"/>
                             <constraint firstItem="ztS-iD-obd" firstAttribute="top" secondItem="LGV-W3-Efr" secondAttribute="bottom" id="dxD-si-cRW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gp7-or-Ti5" secondAttribute="trailing" id="guT-iL-Xet"/>
                             <constraint firstItem="Gp7-or-Ti5" firstAttribute="centerX" secondItem="gOm-PP-QPE" secondAttribute="centerX" id="ht9-pl-UPD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gOm-PP-QPE" secondAttribute="trailing" constant="116" id="i3n-tq-9gj"/>
+                            <constraint firstItem="eR2-7J-xQO" firstAttribute="bottom" secondItem="Gp7-or-Ti5" secondAttribute="bottom" constant="-9" id="kBY-bz-PRk"/>
                             <constraint firstItem="ztS-iD-obd" firstAttribute="centerX" secondItem="LGV-W3-Efr" secondAttribute="centerX" id="rTq-Ih-jOR"/>
                         </constraints>
                     </view>
@@ -141,21 +151,15 @@ obrigatória</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fuma quantos cigarros por dia?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-tg-br7">
-                                <rect key="frame" x="47" y="233" width="280" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="50.5" y="233" width="273.5" height="23"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3z-ID-EBY">
-                                <rect key="frame" x="144" y="290.5" width="86" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="OPJ-yL-n7s"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cigarros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwF-M3-Mcu">
-                                <rect key="frame" x="230" y="388" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="230" y="389.5" width="63" height="23"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="lungIcon" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-JI-pJe">
@@ -164,6 +168,12 @@ obrigatória</string>
                                     <constraint firstAttribute="width" secondItem="AR3-JI-pJe" secondAttribute="height" multiplier="1:1" id="L1e-tb-1Aj"/>
                                 </constraints>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3z-ID-EBY">
+                                <rect key="frame" x="144" y="293" width="86" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="OPJ-yL-n7s"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -200,21 +210,21 @@ obrigatória</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fuma há quantos anos?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP3-xQ-NgO">
-                                <rect key="frame" x="77" y="233" width="221" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="78.5" y="233" width="217" height="23"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiB-nj-zMm">
-                                <rect key="frame" x="144" y="290.5" width="86" height="216"/>
+                                <rect key="frame" x="144" y="293" width="86" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="r5j-dP-mGK"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbC-6n-H2o">
-                                <rect key="frame" x="230" y="388" width="39" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="230" y="389.5" width="37" height="23"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="timeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="td0-u7-MWv">
@@ -258,16 +268,21 @@ obrigatória</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uH-pv-fEp">
-                                <rect key="frame" x="137" y="116" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notificationIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9uH-pv-fEp">
+                                <rect key="frame" x="132" y="111" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9uH-pv-fEp" secondAttribute="height" multiplier="1:1" id="01i-ws-FL2"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qke-aZ-HRz">
-                                <rect key="frame" x="16" y="224" width="343" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qke-aZ-HRz">
+                                <rect key="frame" x="16" y="233" width="343" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="4IJ-bc-qx2"/>
+                                    <constraint firstAttribute="width" constant="343" id="IZY-pL-IoO"/>
+                                </constraints>
                                 <string key="text">Usamos as notificações para te lembrar de algumas coisas durante sua experiência no aplicativo. Permita-as para ter a experiência completa do aplicativo</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-s6-zi3">
@@ -280,6 +295,14 @@ obrigatória</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9uH-pv-fEp" secondAttribute="trailing" constant="117" id="1t5-f5-bu4"/>
+                            <constraint firstItem="Qke-aZ-HRz" firstAttribute="top" secondItem="9uH-pv-fEp" secondAttribute="bottom" constant="12" id="6sn-ZR-ZXs"/>
+                            <constraint firstItem="9uH-pv-fEp" firstAttribute="top" secondItem="3vS-gX-Maa" secondAttribute="bottom" constant="91" id="IjG-2c-fBC"/>
+                            <constraint firstItem="Qke-aZ-HRz" firstAttribute="centerX" secondItem="9uH-pv-fEp" secondAttribute="centerX" id="Lpx-Ec-FbO"/>
+                            <constraint firstItem="9uH-pv-fEp" firstAttribute="leading" secondItem="EFc-wb-nrb" secondAttribute="leadingMargin" constant="116" id="fHg-r2-Axd"/>
+                            <constraint firstItem="Qke-aZ-HRz" firstAttribute="top" secondItem="9uH-pv-fEp" secondAttribute="bottom" constant="12" id="s7J-hU-hNN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="allowNotifications" destination="YUn-s6-zi3" id="Xne-MQ-E8H"/>
@@ -307,7 +330,7 @@ obrigatória</string>
                                     <constraint firstAttribute="height" constant="41" id="QKy-sb-ADK"/>
                                     <constraint firstAttribute="width" constant="149" id="nAH-Qf-XC0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -324,6 +347,7 @@ obrigatória</string>
                                     <constraint firstAttribute="width" constant="67" id="qOV-Jk-JIE"/>
                                 </constraints>
                                 <state key="normal" image="twoWeeksButton"/>
+                                <state key="selected" backgroundImage="selectedBackground"/>
                                 <connections>
                                     <action selector="twoTap:" destination="TEJ-Im-A9W" eventType="touchUpInside" id="2KI-qo-xda"/>
                                 </connections>
@@ -335,6 +359,7 @@ obrigatória</string>
                                     <constraint firstAttribute="height" constant="63" id="XGv-9h-ldI"/>
                                 </constraints>
                                 <state key="normal" image="oneWeekButton"/>
+                                <state key="selected" backgroundImage="selectedBackground"/>
                                 <connections>
                                     <action selector="oneTap:" destination="TEJ-Im-A9W" eventType="touchUpInside" id="gqr-XF-3nc"/>
                                 </connections>
@@ -346,6 +371,7 @@ obrigatória</string>
                                     <constraint firstAttribute="width" constant="67" id="XXL-VL-gB7"/>
                                 </constraints>
                                 <state key="normal" image="threeWeeksButton"/>
+                                <state key="selected" backgroundImage="selectedBackground"/>
                                 <connections>
                                     <action selector="threeTap:" destination="TEJ-Im-A9W" eventType="touchUpInside" id="dvi-fs-b59"/>
                                 </connections>
@@ -357,6 +383,7 @@ obrigatória</string>
                                     <constraint firstAttribute="height" constant="63" id="nyh-hu-lfc"/>
                                 </constraints>
                                 <state key="normal" image="fourlWeeksButton"/>
+                                <state key="selected" backgroundImage="selectedBackground"/>
                                 <connections>
                                     <action selector="fourTap:" destination="TEJ-Im-A9W" eventType="touchUpInside" id="jUm-zL-RbG"/>
                                 </connections>
@@ -400,11 +427,13 @@ obrigatória</string>
         <image name="calendarIcon" width="315" height="321"/>
         <image name="fourlWeeksButton" width="150" height="150"/>
         <image name="lungIcon" width="315" height="321"/>
+        <image name="notificationIcon" width="262" height="267"/>
         <image name="oneWeekButton" width="300" height="300"/>
+        <image name="selectedBackground" width="30" height="30"/>
         <image name="threeWeeksButton" width="150" height="150"/>
         <image name="timeIcon" width="315" height="321"/>
         <image name="twoWeeksButton" width="150" height="150"/>
         <image name="userPhoto" width="312" height="321"/>
-        <image name="warning" width="62" height="62"/>
+        <image name="warning" width="262" height="267"/>
     </resources>
 </document>

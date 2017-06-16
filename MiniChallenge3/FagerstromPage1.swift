@@ -11,58 +11,50 @@ import UIKit
 class FagerstromPage1: PageModelViewController{
     
     //MARK: - Outlets
-    @IBOutlet weak var zero: UIButton!
-    
-    @IBOutlet weak var one: UIButton!
-    
-    @IBOutlet weak var two: UIButton!
-    
-    @IBOutlet weak var three: UIButton!
-    
-    var originalColor = UIColor.green
-    
-    func cleanAll() {
-        zero.tintColor = originalColor
-        one.tintColor = originalColor
-        two.tintColor = originalColor
-        three.tintColor = originalColor
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        originalColor = zero.tintColor
-    }
+    @IBOutlet weak var moreThan60ButtonOutlet: UIButton!
+    @IBOutlet weak var between30And60ButtonOutlet: UIButton!
+    @IBOutlet weak var between5And30ButtonOutlet: UIButton!
+    @IBOutlet weak var lessThan5ButtonOutlet: UIButton!
     
     //MARK: - Atributes
     var points: Int?
     
+    //MARK: - ViewController Life cicle
     override func shouldContinueToNextViewController() -> Bool {
         return points != nil
     }
     
+    //Manage selected button
+    func deselect(){
+        moreThan60ButtonOutlet.isSelected = false
+        between30And60ButtonOutlet.isSelected = false
+        between5And30ButtonOutlet.isSelected = false
+        lessThan5ButtonOutlet.isSelected = false
+    }
+    
     //MARK: - Actions
-    @IBAction func moreThan60Tap(_ sender: Any) {
+    @IBAction func moreThan60Tap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 0
-        cleanAll()
-        zero.tintColor = UIColor.yellow
     }
     
-    @IBAction func between30And60Tap(_ sender: Any) {
+    @IBAction func between30And60Tap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 1
-        cleanAll()
-        one.tintColor = UIColor.yellow
     }
     
-    @IBAction func between5And30Tap(_ sender: Any) {
+    @IBAction func between5And30Tap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 2
-        cleanAll()
-        two.tintColor = UIColor.yellow
     }
 
-    @IBAction func lessThan5Tap(_ sender: Any) {
+    @IBAction func lessThan5Tap(_ sender: UIButton) {
+        deselect()
+        sender.isSelected = true
         points = 3
-        cleanAll()
-        three.tintColor = UIColor.yellow
     }
     
 }
