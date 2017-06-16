@@ -19,7 +19,7 @@ class HistoricTableViewCell: UITableViewCell{
     func awakeFromNib(_ point:ChartPoint) {
         super.awakeFromNib()
         
-        date.text = point.getFormattedDate()
+        date.text = point.getExpandedFormattedDate()
         self.point = point
         if point.cigarettes != -1 {
         numberOfCigarettes.text = String(point.cigarettes)+" cigarros"

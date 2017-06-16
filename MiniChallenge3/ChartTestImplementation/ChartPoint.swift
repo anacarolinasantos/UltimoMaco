@@ -29,6 +29,21 @@ class ChartPoint {
         date = date.substring(to: index)
         return date
     }
+    
+    func getExpandedFormattedDate() -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        var date = dateFormatter.string(from: self.day as Date)
+        let index = date.index(date.startIndex, offsetBy: 9)
+        date = date.substring(to: index)
+        if date[date.index(before: date.endIndex)] == " "{
+            date.remove(at: date.index(before: date.endIndex))
+            date = "0"+date
+        }
+        return date
+    }
 
     
     func getDay() -> Int{

@@ -33,37 +33,48 @@ class HistoricTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
+
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = UITableViewHeaderFooterView()
+        
+        for view in (header.subviews) {
+            view.removeFromSuperview()
+        }
+        
+        let label = UILabel(frame: CGRect(x: 10, y: 10, width: tableView.frame.size.width, height: 50))
+        
+        label.text = "CIGARROS"
+        label.textColor = UIColor.gray
+        label.font = UIFont(name: "Avenir-Book", size: 12)
+        header.addSubview(label)
+        header.bringSubview(toFront: label)
+        return header
+        
+    }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "CIGARROS"
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return cellIdentifiers.count
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = UIColor.gray
-        header.textLabel?.font = UIFont(name: "System", size: 23)
-    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if cellIdentifiers[indexPath.row] == "cell"{
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HistoricTableViewCell  else {
-                fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+                fatalError("The dequeued cell is not an instance of HistoricTableViewCell.")
             }
             
             cell.awakeFromNib(chartData.points[indexPath.row + 1])
             return cell
         } else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "picker", for: indexPath) as? PickerTableViewCell  else {
-                fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+                fatalError("The dequeued cell is not an instance of PickerTableViewCell.")
             }
             
             return cell
@@ -72,18 +83,38 @@ class HistoricTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.beginUpdates()
-        if cellIdentifiers[indexPath.row + 1] == "picker"{
-            cellIdentifiers.remove(at: indexPath.row + 1)
-            let newIndexPath = IndexPath(row: indexPath.row + 1, section: 0)
-            tableView.deleteRows(at: [newIndexPath], with: .automatic)
-        }else{
-            cellIdentifiers.insert("picker", at: indexPath.row+1)
-            let newIndexPath = IndexPath(row: indexPath.row+1, section: 0)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        var touchedRow = indexPath.row
+        var i = 0
+        while i<cellIdentifiers.count{
+            if cellIdentifiers[i] == "picker" && i != indexPath.row + 1{
+                cellIdentifiers.remove(at: i)
+                let newIndexPath = IndexPath(row: i, section: 0)
+                tableView.deleteRows(at: [newIndexPath], with: .top)
+                if i < touchedRow{
+                    touchedRow -= 1
+                }
+            }else{
+                i+=1
+            }
         }
+        
+        if cellIdentifiers[touchedRow + 1] == "picker"{
+            cellIdentifiers.remove(at: touchedRow + 1)
+            let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+            tableView.deleteRows(at: [newIndexPath], with: .top)
+
+        }else{
+            cellIdentifiers.insert("picker", at: touchedRow + 1)
+            let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+            tableView.insertRows(at: [newIndexPath], with: .bottom)
+
+        }
+        
         tableView.endUpdates()
+        
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
