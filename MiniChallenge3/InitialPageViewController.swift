@@ -11,11 +11,8 @@ import UIKit
 class InitialPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     //MARK: - Atributes
-    
     var allViewControllers: [PageModelViewController] = []
-    
     var timer = Timer()
-    
     var isAbleToContinue = true
         
     //MARK: - ViewController Life Cicle
@@ -58,7 +55,7 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         isAbleToContinue = false
-
+        
         if var index = (viewController as! PageModelViewController).index {
             if (index == 0) {
                 return nil
@@ -70,9 +67,24 @@ class InitialPageViewController: UIPageViewController, UIPageViewControllerDataS
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
         let currentViewController = (viewController as! PageModelViewController)
         
         if !currentViewController.shouldContinueToNextViewController() {
+            
+            if let page1 = currentViewController as? Page1ViewController {
+                page1.warningButton.isHidden = false
+                page1.warningButton.shake()
+                page1.nameTextField.shake()
+            } else if let page4 = currentViewController as? Page4ViewController{
+                if currentViewController.index == 3{
+                    page4.oneWeekButtonOutlet.shake()
+                    page4.twoWeeksButtonOutlet.shake()
+                    page4.threeWeeksButtonOutlet.shake()
+                    page4.fourWeeksButtonOutlet.shake()
+                }
+            }
+        
             isAbleToContinue = false
             return nil
         }

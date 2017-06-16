@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "user.png",
+      "filename" : "oneWeekButton.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "oneWeekButton-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "oneWeekButton-2.png",
       "scale" : "3x"
     }
   ],

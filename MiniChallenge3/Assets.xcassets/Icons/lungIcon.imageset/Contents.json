@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "sevenDaysInARow.png",
+      "filename" : "lungIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "lungIcon-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "lungIcon-2.png",
       "scale" : "3x"
     }
   ],
