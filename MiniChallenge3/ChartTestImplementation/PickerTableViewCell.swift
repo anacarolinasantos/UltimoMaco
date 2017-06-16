@@ -8,11 +8,17 @@
 
 import UIKit
 
-class PickerTableViewCell: UITableViewCell {
+class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource  {
+    
+    @IBOutlet weak var picker: UIPickerView!
+    var rowTitles: [String]! = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        picker.delegate = self
+        rowTitles.append(contentsOf: ["Sem valor"])
+        let sequence = Array(0...100)
+        rowTitles.append(contentsOf: sequence.map{ String($0) })
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +26,22 @@ class PickerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 101
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return rowTitles[row]
+    }
+    
+//    override func didChangeValue(forKey key: String) {
+//        LineChartData().updateSomePoint(<#T##date: Date##Date#>, <#T##cigarettNumber: Int##Int#>)
+//    }
+
 
 }
