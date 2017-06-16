@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h6U-cI-kcn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQe-eE-WVe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -112,7 +112,7 @@ de acordar você fuma o primeiro cigarro?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-V6-Inj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1943" y="1003"/>
+            <point key="canvasLocation" x="-1943.2" y="1002.5487256371815"/>
         </scene>
         <!--Fagerstrom Page2-->
         <scene sceneID="tt6-Yx-Nsr">
@@ -482,6 +482,35 @@ primeiras horas do dia?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKL-PT-MwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="58" y="304"/>
+        </scene>
+        <!--Fagerstrom View Controller-->
+        <scene sceneID="Bih-A1-drn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XN-gR-10u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="FagerstromViewController" id="uQe-eE-WVe" customClass="FagerstromViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h9m-57-UBr"/>
+                        <viewControllerLayoutGuide type="bottom" id="S28-lS-AnK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kTU-qS-UBa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="8zs-AI-UdN">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.40000000000000002" alpha="1" colorSpace="deviceCMYK"/>
+                                <color key="currentPageIndicatorTintColor" red="0.071403793990000006" green="0.41595143080000002" blue="0.61131823060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="8zs-AI-UdN" id="6EC-xB-Dcc"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="303.59820089955025"/>
         </scene>
     </scenes>
     <resources>
