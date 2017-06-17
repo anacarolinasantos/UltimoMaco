@@ -10,6 +10,13 @@ import UIKit
 
 class HealthInformationTableViewController: UITableViewController {
 
+    //MARK: - Outlets
+    
+    
+    //MARK: - Atributes
+    var informations: [HealthInformationModel]?
+    
+    //MARK: - UIViewController life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,15 +33,20 @@ class HealthInformationTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.5
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let informationsSize = informations?.count {
+            return informationsSize
+        } else {
+            return 0
+        }
     }
 
     /*

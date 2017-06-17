@@ -9,12 +9,6 @@
 import UIKit
 
 class HealthInformationMainViewController: UIViewController {
-
-    //MARK: - Outlets
-
-    
-    //MARK: - Atributes
-
     
     //MARK: - UIViewController life cicle
     override func viewDidLoad() {
@@ -28,18 +22,28 @@ class HealthInformationMainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destination: HealthInformationTableViewController = segue.destination as! HealthInformationTableViewController
+        
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "healthInformation":
+                destination.informations = HealthInformationDB.getInformation(from: .health)
+            case "helpInformation":
+                destination.informations = HealthInformationDB.getInformation(from: .help)
+            case "tipsInformation":
+                destination.informations = HealthInformationDB.getInformation(from: .tips)
+            case "fissureInformation":
+                destination.informations = HealthInformationDB.getInformation(from: .fissure)
+            case "habitsInformation":
+                destination.informations = HealthInformationDB.getInformation(from: .habits)
+            default:
+                break
+            }
+        }
     }
-    */
-
-    //MARK: - Action
 
     
 }

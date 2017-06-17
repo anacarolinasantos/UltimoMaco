@@ -61,30 +61,45 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="health"/>
                                 <state key="normal" title="Saúde"/>
+                                <connections>
+                                    <segue destination="LIM-Xq-rEH" kind="show" identifier="healthInformation" id="3gd-5Z-pZs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-B5-lZu">
                                 <rect key="frame" x="60" y="257" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="help"/>
                                 <state key="normal" title="Ajuda"/>
+                                <connections>
+                                    <segue destination="LIM-Xq-rEH" kind="show" identifier="helpInformation" id="bFf-e0-X72"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auN-2B-Ota">
                                 <rect key="frame" x="280" y="257" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tips"/>
                                 <state key="normal" title="Dicas"/>
+                                <connections>
+                                    <segue destination="LIM-Xq-rEH" kind="show" identifier="tipsInformation" id="CKC-2a-fwd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-c9-0cc">
                                 <rect key="frame" x="163" y="372" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="fissure"/>
                                 <state key="normal" title="Fissura"/>
+                                <connections>
+                                    <segue destination="LIM-Xq-rEH" kind="show" identifier="fissureInformation" id="M6E-bg-XQl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
                                 <rect key="frame" x="53" y="114" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="habits"/>
                                 <state key="normal" title="Hábitos"/>
+                                <connections>
+                                    <segue destination="LIM-Xq-rEH" kind="show" identifier="habitsInformation" id="g2k-9p-mMB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,7 +115,7 @@
             <objects>
                 <tableViewController id="LIM-Xq-rEH" customClass="HealthInformationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hF1-KV-JGm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -145,4 +160,7 @@
     <resources>
         <image name="tipsIcon" width="17" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3gd-5Z-pZs"/>
+    </inferredMetricsTieBreakers>
 </document>
