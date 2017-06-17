@@ -103,4 +103,8 @@ public class NotificationController{
         })
     }
     
+    public static func prepareAll(_ date: Date){
+        
+    }
+    
 }
