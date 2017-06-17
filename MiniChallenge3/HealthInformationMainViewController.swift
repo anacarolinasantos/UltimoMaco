@@ -25,7 +25,7 @@ class HealthInformationMainViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination: HealthInformationTableViewController = segue.destination as! HealthInformationTableViewController
+        let destination: HealthInformationViewController = segue.destination as! HealthInformationViewController
         
         if let identifier = segue.identifier {
             switch identifier {
