@@ -334,6 +334,15 @@
 			name = InitialPageViewController;
 			sourceTree = "<group>";
 		};
+		60D1E0731EF57D6A0048FE2C /* AppConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
+				60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */,
+			);
+			name = AppConfigurations;
+			sourceTree = "<group>";
+		};
 		BDC32F061EE9B8E6003E65AB = {
 			isa = PBXGroup;
 			children = (
@@ -448,8 +457,7 @@
 				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
 				493118961EEB12F200D2694C /* PersonalProgress */,
 				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
-				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
-				60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */,
+				60D1E0731EF57D6A0048FE2C /* AppConfigurations */,
 				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
 				60C7F12D1EEB25390007D583 /* InitialPageViewController */,
 				604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */,
