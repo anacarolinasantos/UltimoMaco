@@ -99,11 +99,10 @@ class LineChart: UIView {
         let form = UIBezierPath()
         let firstPoint = pointData.points[0]
         form.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
-        for i in 1...pointData.totalDays{
-            let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
-            let point = scale(unitX: i, unitY: cigarretsOfToday)
-            form.addLine(to: point)
+        for i in 1..<pointData.points.count{
+            form.addLine(to: scale(unitX: i, unitY: pointData.getTargetOfConsumption(pointData.points[i].day)))
         }
+        
         form.addLine(to: scale(unitX: 0, unitY: 0))
         
         let triangleShapeLayer = CAShapeLayer()
@@ -152,11 +151,10 @@ class LineChart: UIView {
         
         //Draws the circles
         for i in 1...pointData.totalDays {
-            let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
             let p = (pointData.points[i])
             let point = scale(unitX: i, unitY: p.cigarettes)
             if p.cigarettes > 0 {
-                if p.cigarettes <= cigarretsOfToday{
+                if p.cigarettes <= pointData.getTargetOfConsumption(pointData.points[i].day){
                     context.setStrokeColor(UIColor.yellow.cgColor)
                 }else{
                     context.setStrokeColor(UIColor.red.cgColor)

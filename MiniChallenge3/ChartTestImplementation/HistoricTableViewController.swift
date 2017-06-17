@@ -80,7 +80,7 @@ class HistoricTableViewController: UITableViewController, CustomCellUpdater {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "picker", for: indexPath) as? PickerTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of PickerTableViewCell.")
             }
-            cell.awakeFromNib(self,chartData.points[indexPath.row].day)
+            cell.awakeFromNib(self,chartData.points[indexPath.row].day,chartData.points[indexPath.row].cigarettes)
             return cell
         }
         

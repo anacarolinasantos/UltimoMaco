@@ -19,7 +19,7 @@ class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDa
     var forDate: Date!
     weak var delegate: CustomCellUpdater?
     
-    func awakeFromNib(_ delegate: CustomCellUpdater,_ date: Date) {
+    func awakeFromNib(_ delegate: CustomCellUpdater,_ date: Date,_ cigarettes: Int) {
         super.awakeFromNib()
         forDate = date
         picker.delegate = self
@@ -27,6 +27,7 @@ class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDa
         let sequence = Array(0...100)
         rowTitles.append(contentsOf: sequence.map{ String($0) })
         self.delegate = delegate
+        picker.selectRow(cigarettes+1, inComponent: 0, animated: false)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
