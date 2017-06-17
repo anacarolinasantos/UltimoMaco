@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Dicas-->
         <scene sceneID="5PZ-6t-wMz">
             <objects>
                 <viewController id="Yr0-56-9Zl" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                             <constraint firstItem="Vic-UE-yZz" firstAttribute="width" secondItem="QNP-Qj-z0L" secondAttribute="width" id="ubC-Rg-9ra"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Imq-aQ-gJS"/>
+                    <tabBarItem key="tabBarItem" title="Dicas" image="tipsIcon" id="Imq-aQ-gJS"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4J9-Zc-8g4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -48,6 +48,10 @@
         <scene sceneID="JgS-8j-X3G">
             <objects>
                 <viewController id="fjJ-ue-LLd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0P-aF-4qF"/>
+                        <viewControllerLayoutGuide type="bottom" id="6zg-jO-xiO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FJb-sz-0Rq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,4 +171,7 @@
             <point key="canvasLocation" x="1376.8" y="1025.9370314842579"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tipsIcon" width="17" height="25"/>
+    </resources>
 </document>

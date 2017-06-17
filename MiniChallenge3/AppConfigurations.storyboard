@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Configurações-->
         <scene sceneID="h0h-LT-yYW">
             <objects>
                 <viewController id="Fsm-XD-tYw" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ECU-Od-2HF"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="configIcon" id="ECU-Od-2HF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgL-Cp-t0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,4 +132,7 @@
             <point key="canvasLocation" x="2284" y="915.74212893553226"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="configIcon" width="25" height="25"/>
+    </resources>
 </document>
