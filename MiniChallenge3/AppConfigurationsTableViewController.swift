@@ -13,7 +13,6 @@ class AppConfigurationsTableViewController: UITableViewController {
     //MARK: - Outlets
     
     //MARK: - Atributes
-    static var enableNotifications = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +21,10 @@ class AppConfigurationsTableViewController: UITableViewController {
 
     //MARK: - Actions
     
+    // -- SWITCH DID CHANGE VALUE
     @IBAction func notificationSwitchChangeValue(_ sender: UISwitch) {
-        AppConfigurationsTableViewController.enableNotifications = sender.isOn
-        print(AppConfigurationsTableViewController.enableNotifications)
+        // this atribute is a boolean and returns the switch state
+        print(sender.isOn)
     }
 
 }
