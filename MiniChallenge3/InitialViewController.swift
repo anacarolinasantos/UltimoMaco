@@ -22,7 +22,7 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
     // The UIPageViewController
     var pageContainer: UIPageViewController!
     // The pages it contains
-    var pages = [PageModelViewController]()
+    static var pages = [PageModelViewController]()
     // Track the current index
     var currentIndex: Int? = 0
     private var pendingIndex: Int?
@@ -33,25 +33,25 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
         super.viewDidLoad()
         
         // Setup the pages
-        let storyboard = UIStoryboard(name: "FagerstromFormPageViewController", bundle: nil)
+        let storyboard = UIStoryboard(name: "InitialPageViewController", bundle: nil)
         
         for i in 1...5 {
-            pages.append(storyboard.instantiateViewController(withIdentifier: "Page\(i)") as! PageModelViewController)
-            pages[i-1].index = i-1
+            InitialViewController.pages.append(storyboard.instantiateViewController(withIdentifier: "Page\(i)") as! PageModelViewController)
+            InitialViewController.pages[i-1].index = i-1
         }
         
         // Create the page container
         pageContainer = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageContainer.delegate = self
         pageContainer.dataSource = self
-        pageContainer.setViewControllers([pages.first!], direction: .forward, animated: false, completion: nil)
+        pageContainer.setViewControllers([InitialViewController.pages.first!], direction: .forward, animated: false, completion: nil)
         
         // Add it to the view
         view.addSubview(pageContainer.view)
         
         // Configure our custom pageControl
         view.bringSubview(toFront: pageControl)
-        pageControl.numberOfPages = pages.count
+        pageControl.numberOfPages = InitialViewController.pages.count
         pageControl.currentPage = 0
         
         // Timer to keep pageContainer delegate active
@@ -75,8 +75,8 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
         if currentIndex == 0 {
             return nil
         }
-        let previousIndex = abs((currentIndex - 1) % pages.count)
-        return pages[previousIndex]
+        let previousIndex = abs((currentIndex - 1) % InitialViewController.pages.count)
+        return InitialViewController.pages[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -86,20 +86,23 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
             isAbleToContinue = false
             if forward{
                 currentViewController.view.shake()
+                if let page1 = currentViewController as? Page1ViewController{
+                    page1.warningButton.isHidden = false
+                }
             }
             return nil
         }
         
         let currentIndex = currentViewController.index!
-        if currentIndex == pages.count-1 {
+        if currentIndex == InitialViewController.pages.count-1 {
             return nil
         }
-        let nextIndex = abs((currentIndex + 1) % pages.count)
-        return pages[nextIndex]
+        let nextIndex = abs((currentIndex + 1) % InitialViewController.pages.count)
+        return InitialViewController.pages[nextIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        pendingIndex = pages.index(of: pendingViewControllers.first! as! PageModelViewController)
+        pendingIndex = InitialViewController.pages.index(of: pendingViewControllers.first! as! PageModelViewController)
         forward = false
         backward = false
     }
@@ -120,7 +123,7 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
             pageContainer.dataSource = self
         }
         
-        if (pageContainer.scrollView?.panGestureRecognizer.translation(in: pages[currentIndex!].view).x)! < CGFloat(0) {
+        if (pageContainer.scrollView?.panGestureRecognizer.translation(in: InitialViewController.pages[currentIndex!].view).x)! < CGFloat(0) {
             forward = true
             backward = false
         } else {

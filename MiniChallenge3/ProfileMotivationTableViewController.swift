@@ -13,10 +13,12 @@ class ProfileMotivationTableViewController: UITableViewController {
     //MARK: - Atributes
     var motivations: [Motivation]?
     var newMotivationViewController: NewMotivationTableViewController?
+    var timer = Timer()
     
     //MARK: - UIViewController life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.dataSource = self
         
         do {
             // Verify if Motivations exists, and gets it
@@ -33,7 +35,19 @@ class ProfileMotivationTableViewController: UITableViewController {
         self.navigationController?.navigationBar.isHidden = false
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    // update tableview content
+    override func viewWillAppear(_ animated: Bool) {
+        do {
+            // Verify if Motivations exists, and gets it
+            if let motivations = (try DatabaseController.persistentContainer.viewContext.fetch(Motivation.fetchRequest()) as? [Motivation]) {
+                
+                if motivations.count != 0 {
+                    self.motivations = motivations
+                }
+            }
+        } catch _ as NSError {
+            print("Error")
+        }
         tableView.reloadData()
     }
     
