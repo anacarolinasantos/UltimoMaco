@@ -19,6 +19,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     //MARK: Atributes
     var todayCigarettesNumber:Int = 0
     let appGroupName:String = "group.br.minichallenge.3"
+    let lineChartData = LineChartData()
     
     
     //MARK: ViewController Life Cicle
@@ -27,47 +28,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         
         // -- SETUP
-        todayCigarettesNumber = getTodayCigarettesNumberFromNSUserDefaults()
+        todayCigarettesNumber = getTodayCigarettesNumberFromCoreData()
         stepperOutlet.value = Double(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
-    }
-    
-    //MARK: Widget
-    
-    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
         
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-        
-        completionHandler(NCUpdateResult.newData)
     }
 
-    //MARK: NSUserDefaults todayCigarettesNumber get and set
+    //MARK: CoreData todayCigarettesNumber get and set
     
-    func setTodayCigarettesNumberToNSUserDefaults(_ todayCigarettesNumber: Int){
-        
-        if let userDefaults = UserDefaults(suiteName: appGroupName) {
-            userDefaults.set(todayCigarettesNumber as AnyObject, forKey: "todayCigarettesNumber")
-            userDefaults.synchronize()
-        }
+    func setTodayCigarettesNumberToCoreData(_ todayCigarettesNumber: Int){
+        lineChartData.updateSomePoint(Date(), todayCigarettesNumber)
     }
     
-    func getTodayCigarettesNumberFromNSUserDefaults() -> Int{
-        
-        if let userDefaults = UserDefaults(suiteName: appGroupName){
-            return userDefaults.integer(forKey: "todayCigarettesNumber")
-        }
-        
-        return -1
+    func getTodayCigarettesNumberFromCoreData() -> Int{
+        return lineChartData.getCigarettesOfSomeDay(Date())
     }
     
     //MARK: Actions
     @IBAction func stepperTap(_ sender: UIStepper) {
-        
         todayCigarettesNumber = Int(sender.value)
-        setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
+        setTodayCigarettesNumberToCoreData(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
     }
     
