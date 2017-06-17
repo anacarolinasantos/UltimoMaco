@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SDd-Zr-9xD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SDd-Zr-9xD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Re-Wse" customClass="LineChart" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="21" y="72" width="332" height="329"/>
+                                <rect key="frame" x="21" y="72" width="332" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-EU-PdA">
@@ -74,7 +74,9 @@
                             <constraint firstItem="5C9-Re-Wse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="sqS-O5-jaQ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Progresso" image="progressIcon" id="eX9-cA-yi5"/>
                     <navigationItem key="navigationItem" title="Progresso" id="hXl-M3-bZ7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chart" destination="5C9-Re-Wse" id="EIn-Um-FNa"/>
                         <outlet property="cigarettesNumberLabel" destination="1dz-83-VSQ" id="Bqv-Z5-C5Y"/>
@@ -91,7 +93,7 @@
         <scene sceneID="cKQ-jg-275">
             <objects>
                 <collectionViewController title="Conquistas" id="nWq-J3-4fv" customClass="AchievementsCollectionViewCollectionViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="h0t-nA-5IB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="h0t-nA-5IB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,4 +238,7 @@
             <point key="canvasLocation" x="2172" y="175.86206896551727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="progressIcon" width="25" height="19"/>
+    </resources>
 </document>

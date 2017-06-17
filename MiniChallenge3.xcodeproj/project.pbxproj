@@ -15,6 +15,7 @@
 		45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */; };
 		45C54A411EF2E1C700E1FCBD /* HealthInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */; };
 		45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */; };
+		45EA0E2D1EF5971800718832 /* HealthInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EA0E2C1EF5971800718832 /* HealthInformationTableViewController.swift */; };
 		493118A51EEB12F200D2694C /* PersonalProgress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */; };
 		493118A61EEB12F200D2694C /* ChartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189D1EEB12F200D2694C /* ChartPoint.swift */; };
 		493118A81EEB12F200D2694C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4931189F1EEB12F200D2694C /* LineChart.swift */; };
@@ -164,6 +165,7 @@
 		45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMotivationTableViewController.swift; sourceTree = "<group>"; };
 		45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthInformationModel.swift; sourceTree = "<group>"; };
 		45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthInformationDatabase.swift; sourceTree = "<group>"; };
+		45EA0E2C1EF5971800718832 /* HealthInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthInformationTableViewController.swift; sourceTree = "<group>"; };
 		4931189C1EEB12F200D2694C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalProgress.storyboard; sourceTree = "<group>"; };
 		4931189D1EEB12F200D2694C /* ChartPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartPoint.swift; sourceTree = "<group>"; };
 		4931189F1EEB12F200D2694C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */,
 				45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */,
 				45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */,
+				45EA0E2C1EF5971800718832 /* HealthInformationTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -724,6 +727,7 @@
 				60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */,
 				BDC1DA3C1EF2FF9C00070139 /* AchievementPopUpViewController.swift in Sources */,
 				604EC0461EEDABB300C1EA59 /* FagerstromPage5.swift in Sources */,
+				45EA0E2D1EF5971800718832 /* HealthInformationTableViewController.swift in Sources */,
 				493118A91EEB12F200D2694C /* LineChartData.swift in Sources */,
 				606195A61EF1E0B200249D81 /* NotificationModel.swift in Sources */,
 				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
