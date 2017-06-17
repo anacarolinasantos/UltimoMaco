@@ -120,8 +120,8 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
         let numberOfChars = newText.characters.count
         
         
-        //If text length is smaller than 140 and there are no punctuation, so return true
-        return numberOfChars < 140 && (text.rangeOfCharacter(from: NSCharacterSet.punctuationCharacters, options: .caseInsensitive) == nil)
+        //If text length is smaller than 120 and there are no punctuation, so return true
+        return numberOfChars < 120 && (text.rangeOfCharacter(from: NSCharacterSet.punctuationCharacters, options: .caseInsensitive) == nil)
     }
     
     //MARK: - Action

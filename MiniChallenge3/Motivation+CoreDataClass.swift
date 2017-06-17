@@ -11,5 +11,5 @@ import CoreData
 
 
 public class Motivation: NSManagedObject {
-
+    
 }

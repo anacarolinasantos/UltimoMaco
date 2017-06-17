@@ -75,10 +75,10 @@ class ProfileMotivationTableViewController: UITableViewController {
         let motivation = motivations?[indexPath.row]
         
         //If there is a description, then the cell is thinner
-        if motivation?.description != nil {
-            return 100
+        if motivation?.title == "" {
+            return 192
         } else {
-            return 200
+            return 96
         }
     }
     
@@ -110,7 +110,7 @@ class ProfileMotivationTableViewController: UITableViewController {
         let thirdCell = tableView.dequeueReusableCell(withIdentifier: "thirdCustomCell", for: indexPath) as! MotivationTypeThreeTableViewCell
         
         thirdCell.titleLabel?.text = motivation?.title
-        thirdCell.descriptionLabel?.text = motivation?.description
+        thirdCell.descriptionLabel?.text = motivation?.desMotivation
         
         return thirdCell
     }

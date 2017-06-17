@@ -20,9 +20,7 @@ class ViewControllerTeste: UITableViewController {
     
     //MARK: - Atributes
     var cigaretteNumberPoints: Int = 0
-
     var addictionIndex: Int = -1
-    
     var picker = UIImagePickerController()
     
     //MARK: - UIViewController life cicle

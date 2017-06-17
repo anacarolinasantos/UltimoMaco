@@ -15,7 +15,8 @@ class MotivationTypeTwoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        motivationLargeImage.layer.cornerRadius = 5
+        motivationLargeImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
