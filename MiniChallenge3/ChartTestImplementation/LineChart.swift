@@ -28,9 +28,10 @@ class LineChart: UIView {
     
     func drawChart(pointData: LineChartData) {
         if let context = UIGraphicsGetCurrentContext() {
-            drawGoal(context: context, pointData: pointData)
+            drawGoal()
             drawPerformance(context: context, pointData: pointData)
             drawAxes(context: context, pointData: pointData)
+            
         }
     }
     
@@ -73,7 +74,12 @@ class LineChart: UIView {
         let font = UIFont(name: "Helvetica", size: fontSize)
         
         //Y labels
-        let yStep = pointData.getMaxCigarettes()/4
+        var yStep: Int!
+        if pointData.getMaxCigarettes() < 4 {
+            yStep = pointData.getMaxCigarettes()
+        }else{
+            yStep = pointData.getMaxCigarettes()/4
+        }
         for i in stride(from: yStep, through: pointData.getMaxCigarettes(), by: yStep) {
             var point = scale(unitX: 0, unitY: i)
             point.x = point.x - 35
@@ -89,21 +95,23 @@ class LineChart: UIView {
         }
     }
     
-    func drawGoal(context: CGContext, pointData: LineChartData) {
-        context.setStrokeColor(UIColor.blue.cgColor)
-        context.setLineWidth(2)
-        context.setLineJoin(.round)
+    func drawGoal(){
+        let form = UIBezierPath()
         let firstPoint = pointData.points[0]
-        context.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
+        form.move(to: scale(unitX: 0, unitY: (firstPoint.cigarettes)))
         for i in 1...pointData.totalDays{
             let cigarretsOfToday = -(Int(Double(pointData.points[0].cigarettes)/Double(pointData.totalDays) * Double(i))) + pointData.points[0].cigarettes
             let point = scale(unitX: i, unitY: cigarretsOfToday)
-            context.addLine(to: point)
-            context.move(to: point)
-            
+            form.addLine(to: point)
         }
+        form.addLine(to: scale(unitX: 0, unitY: 0))
         
-        context.strokePath()
+        let triangleShapeLayer = CAShapeLayer()
+        triangleShapeLayer.fillColor = #colorLiteral(red: 0.6551201344, green: 0.7809538841, blue: 0.7775118947, alpha: 0.5).cgColor
+        triangleShapeLayer.path = form.cgPath
+        self.layer.sublayers?.removeAll()
+        self.layer.insertSublayer(triangleShapeLayer, at: 0)
+        
     }
     
     func drawPerformance(context: CGContext, pointData: LineChartData) {

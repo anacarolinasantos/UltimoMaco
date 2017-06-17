@@ -59,7 +59,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-83-VSQ">
-                                <rect key="frame" x="49" y="442" width="50" height="21"/>
+                                <rect key="frame" x="21" y="438" width="118" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -227,6 +227,9 @@
                             <outlet property="delegate" destination="bg2-cP-uzL" id="3gj-Hm-oa4"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="theTableView" destination="1lc-M3-LpA" id="8vu-p4-gOn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDl-1f-Utn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

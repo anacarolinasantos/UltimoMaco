@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class HistoricTableViewController: UITableViewController {
+class HistoricTableViewController: UITableViewController, CustomCellUpdater {
     
+    @IBOutlet var theTableView: UITableView!
     var chartData = LineChartData()
     var cellIdentifiers: [String]!
     
@@ -35,7 +36,7 @@ class HistoricTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UITableViewHeaderFooterView()
         
@@ -69,14 +70,17 @@ class HistoricTableViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HistoricTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of HistoricTableViewCell.")
             }
-            
-            cell.awakeFromNib(chartData.points[indexPath.row + 1])
+            if indexPath.row < getPickerIndex(){
+                cell.awakeFromNib(chartData.points[indexPath.row + 1])
+            }else{
+                cell.awakeFromNib(chartData.points[indexPath.row])
+            }
             return cell
         } else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "picker", for: indexPath) as? PickerTableViewCell  else {
                 fatalError("The dequeued cell is not an instance of PickerTableViewCell.")
             }
-            
+            cell.awakeFromNib(self,chartData.points[indexPath.row].day)
             return cell
         }
         
@@ -99,16 +103,23 @@ class HistoricTableViewController: UITableViewController {
             }
         }
         
-        if cellIdentifiers[touchedRow + 1] == "picker"{
-            cellIdentifiers.remove(at: touchedRow + 1)
-            let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
-            tableView.deleteRows(at: [newIndexPath], with: .top)
-
+        if touchedRow != cellIdentifiers.count-1{
+            if cellIdentifiers[touchedRow + 1] == "picker"{
+                cellIdentifiers.remove(at: touchedRow + 1)
+                let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+                tableView.deleteRows(at: [newIndexPath], with: .top)
+            }else{
+                cellIdentifiers.insert("picker", at: touchedRow + 1)
+                let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+                tableView.insertRows(at: [newIndexPath], with: .bottom)
+            }
+            
         }else{
             cellIdentifiers.insert("picker", at: touchedRow + 1)
             let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
-            tableView.insertRows(at: [newIndexPath], with: .bottom)
-
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+            
         }
         
         tableView.endUpdates()
@@ -125,6 +136,19 @@ class HistoricTableViewController: UITableViewController {
         }
     }
     
+    func updateTableView() {
+        chartData = LineChartData()
+        theTableView.reloadData()
+    }
+    
+    func getPickerIndex() -> Int{
+        for i in 0..<cellIdentifiers.count{
+            if cellIdentifiers[i] == "picker"{
+                return i
+            }
+        }
+        return cellIdentifiers.count
+    }
     
     
     /*

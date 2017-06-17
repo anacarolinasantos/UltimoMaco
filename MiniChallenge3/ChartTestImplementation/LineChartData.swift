@@ -117,4 +117,13 @@ class LineChartData {
         return -1
     }
     
+    func getTargetOfConsumption(_ date: Date) -> Int{
+        for i in 1..<points.count{
+            if Calendar.current.dateComponents([.month,.day], from: date) == Calendar.current.dateComponents([.month,.day], from: points[i].day as Date){
+                return -(Int(Double(points[0].cigarettes)/Double(totalDays) * Double(i))) + points[0].cigarettes
+            }
+        }
+        return -1
+    }
+    
 }

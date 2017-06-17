@@ -32,7 +32,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
         //Update main atributes
         updateCigarettesNumber()
-        
+        stepperOutlet.value = Double(LineChartData().getCigarettesOfSomeDay(Date()))
         //Timer that calls updateCigarettesNumberLabel each 0.01 second to keep it updated with NSUserDefaults
 //        synchronize = .scheduledTimer(timeInterval: 0.01, target: self,
 //                                      selector: #selector(self.updateCigarettesNumber),
@@ -108,11 +108,15 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
         allEntries = allEntries.sorted(by: { ($0.date as Date!) < ($1.date as Date!) } )
         
-        let cigarretsOfToday = AchievementsController.checkGoalCigarrets(entry: allEntries[0], allEntries: allEntries)
+        let cigarretsOfToday = LineChartData().getTargetOfConsumption(Date())
         today.text = "Meta apenas \(cigarretsOfToday) cigarros"
         
         let cigarettesNumber = LineChartData().getCigarettesOfSomeDay(Date())
+        if cigarettesNumber != -1 {
         cigarettesNumberLabel.text = String(cigarettesNumber)
+        } else{
+            cigarettesNumberLabel.text = "Sem dados"
+        }
         
     }
 }

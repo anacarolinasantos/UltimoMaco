@@ -8,17 +8,25 @@
 
 import UIKit
 
+protocol CustomCellUpdater: class {
+    func updateTableView()
+}
+
 class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource  {
     
     @IBOutlet weak var picker: UIPickerView!
     var rowTitles: [String]! = []
-
-    override func awakeFromNib() {
+    var forDate: Date!
+    weak var delegate: CustomCellUpdater?
+    
+    func awakeFromNib(_ delegate: CustomCellUpdater,_ date: Date) {
         super.awakeFromNib()
+        forDate = date
         picker.delegate = self
         rowTitles.append(contentsOf: ["Sem valor"])
         let sequence = Array(0...100)
         rowTitles.append(contentsOf: sequence.map{ String($0) })
+        self.delegate = delegate
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,9 +47,11 @@ class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDa
         return rowTitles[row]
     }
     
-//    override func didChangeValue(forKey key: String) {
-//        LineChartData().updateSomePoint(<#T##date: Date##Date#>, <#T##cigarettNumber: Int##Int#>)
-//    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(forDate)
+        LineChartData().updateSomePoint(forDate, row-1)
+        delegate?.updateTableView()
+    }
 
 
 }
