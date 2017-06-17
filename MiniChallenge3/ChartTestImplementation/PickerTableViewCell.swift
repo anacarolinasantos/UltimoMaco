@@ -48,7 +48,6 @@ class PickerTableViewCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(forDate)
         LineChartData().updateSomePoint(forDate, row-1)
         delegate?.updateTableView()
     }
