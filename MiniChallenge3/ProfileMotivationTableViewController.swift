@@ -133,17 +133,4 @@ class ProfileMotivationTableViewController: UITableViewController {
         
         self.present(navigationController, animated: true, completion: nil)
     }
-    
-    
-    
-//    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "editMotivation" {
-//            
-//            let destination = segue.destination as? NewMotivationTableViewController
-//            
-//            //TODO: MUDAR PARA PUSH E PUT, E ACESSAR PELO DID SELECTED (METODO)
-//            destination?.motivation = motivations?[(tableView.indexPathForSelectedRow?.hashValue)!]
-//        }
-//    }
 }

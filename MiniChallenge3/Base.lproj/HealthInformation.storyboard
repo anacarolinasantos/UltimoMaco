@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="466" y="1026"/>
         </scene>
-        <!--View Controller-->
+        <!--Health Information Main View Controller-->
         <scene sceneID="JgS-8j-X3G">
             <objects>
-                <viewController id="fjJ-ue-LLd" sceneMemberID="viewController">
+                <viewController id="fjJ-ue-LLd" customClass="HealthInformationMainViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0P-aF-4qF"/>
                         <viewControllerLayoutGuide type="bottom" id="6zg-jO-xiO"/>
@@ -56,33 +56,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
-                                <rect key="frame" x="42" y="114" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="LIM-Xq-rEH" kind="show" id="Xf9-8h-XEM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omz-OY-jsL">
-                                <rect key="frame" x="276" y="114" width="46" height="30"/>
+                                <rect key="frame" x="277" y="114" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="health"/>
+                                <state key="normal" title="Saúde"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-B5-lZu">
-                                <rect key="frame" x="56" y="257" width="46" height="30"/>
+                                <rect key="frame" x="60" y="257" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="help"/>
+                                <state key="normal" title="Ajuda"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auN-2B-Ota">
-                                <rect key="frame" x="276" y="257" width="46" height="30"/>
+                                <rect key="frame" x="280" y="257" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tips"/>
+                                <state key="normal" title="Dicas"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-c9-0cc">
-                                <rect key="frame" x="164" y="372" width="46" height="30"/>
+                                <rect key="frame" x="163" y="372" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fissure"/>
+                                <state key="normal" title="Fissura"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
+                                <rect key="frame" x="53" y="114" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="habits"/>
+                                <state key="normal" title="Hábitos"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,17 +95,17 @@
             </objects>
             <point key="canvasLocation" x="2316" y="1025.9370314842579"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Health Information Table View Controller-->
         <scene sceneID="5Kh-ij-83E">
             <objects>
-                <tableViewController id="LIM-Xq-rEH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hF1-KV-JGm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
+                <tableViewController id="LIM-Xq-rEH" customClass="HealthInformationTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="hF1-KV-JGm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NPJ-xz-LHo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NPJ-xz-LHo" id="RWv-bT-wmB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
