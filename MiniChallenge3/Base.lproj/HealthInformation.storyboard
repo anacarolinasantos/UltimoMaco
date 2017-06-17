@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="466" y="1026"/>
         </scene>
-        <!--View Controller-->
+        <!--Health Information Main View Controller-->
         <scene sceneID="JgS-8j-X3G">
             <objects>
-                <viewController id="fjJ-ue-LLd" sceneMemberID="viewController">
+                <viewController id="fjJ-ue-LLd" customClass="HealthInformationMainViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0P-aF-4qF"/>
                         <viewControllerLayoutGuide type="bottom" id="6zg-jO-xiO"/>
@@ -56,33 +56,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
-                                <rect key="frame" x="42" y="114" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omz-OY-jsL">
+                                <rect key="frame" x="277" y="114" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="health"/>
+                                <state key="normal" title="Saúde"/>
                                 <connections>
-                                    <segue destination="LIM-Xq-rEH" kind="show" id="Xf9-8h-XEM"/>
+                                    <segue destination="pwl-mt-cAo" kind="show" identifier="healthInformation" id="VBE-gM-QMk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omz-OY-jsL">
-                                <rect key="frame" x="276" y="114" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-B5-lZu">
-                                <rect key="frame" x="56" y="257" width="46" height="30"/>
+                                <rect key="frame" x="60" y="257" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="help"/>
+                                <state key="normal" title="Ajuda"/>
+                                <connections>
+                                    <segue destination="pwl-mt-cAo" kind="show" identifier="helpInformation" id="mnr-qw-ULw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auN-2B-Ota">
-                                <rect key="frame" x="276" y="257" width="46" height="30"/>
+                                <rect key="frame" x="280" y="257" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tips"/>
+                                <state key="normal" title="Dicas"/>
+                                <connections>
+                                    <segue destination="pwl-mt-cAo" kind="show" identifier="tipsInformation" id="6PJ-7y-V7g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-c9-0cc">
-                                <rect key="frame" x="164" y="372" width="46" height="30"/>
+                                <rect key="frame" x="163" y="372" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fissure"/>
+                                <state key="normal" title="Fissura"/>
+                                <connections>
+                                    <segue destination="pwl-mt-cAo" kind="show" identifier="fissureInformation" id="Afe-xW-lOu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
+                                <rect key="frame" x="53" y="114" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="habits"/>
+                                <state key="normal" title="Hábitos"/>
+                                <connections>
+                                    <segue destination="pwl-mt-cAo" kind="show" identifier="habitsInformation" id="OpB-0v-VJ8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,33 +110,37 @@
             </objects>
             <point key="canvasLocation" x="2316" y="1025.9370314842579"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="5Kh-ij-83E">
+        <!--Health Information View Controller-->
+        <scene sceneID="eUC-jR-hcX">
             <objects>
-                <tableViewController id="LIM-Xq-rEH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hF1-KV-JGm">
+                <viewController id="pwl-mt-cAo" customClass="HealthInformationViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kHM-Pi-Qt3"/>
+                        <viewControllerLayoutGuide type="bottom" id="8fn-X1-As4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aag-PN-qTI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-IM-bOf">
+                                <rect key="frame" x="0.0" y="62" width="375" height="558.5"/>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NPJ-xz-LHo">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NPJ-xz-LHo" id="RWv-bT-wmB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="LIM-Xq-rEH" id="gvK-ZU-m3y"/>
-                            <outlet property="delegate" destination="LIM-Xq-rEH" id="g7F-TQ-uUo"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ue9-Eh-Ug4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="RYz-IM-bOf" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="Dd9-OU-TjJ"/>
+                            <constraint firstItem="RYz-IM-bOf" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" id="Im7-62-5Cy"/>
+                            <constraint firstItem="8fn-X1-As4" firstAttribute="top" secondItem="RYz-IM-bOf" secondAttribute="bottom" id="WgJ-jM-LsG"/>
+                            <constraint firstItem="RYz-IM-bOf" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.9" id="g2g-aT-4vj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6k-xw-WvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3324" y="1026"/>
+            <point key="canvasLocation" x="3214" y="1026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NYb-WE-3qr">
@@ -143,4 +164,7 @@
     <resources>
         <image name="tipsIcon" width="17" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OpB-0v-VJ8"/>
+    </inferredMetricsTieBreakers>
 </document>

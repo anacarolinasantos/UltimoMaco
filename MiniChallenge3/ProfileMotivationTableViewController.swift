@@ -75,10 +75,10 @@ class ProfileMotivationTableViewController: UITableViewController {
         let motivation = motivations?[indexPath.row]
         
         //If there is a description, then the cell is thinner
-        if motivation?.description != nil {
-            return 100
+        if motivation?.title == "" {
+            return 192
         } else {
-            return 200
+            return 96
         }
     }
     
@@ -110,7 +110,7 @@ class ProfileMotivationTableViewController: UITableViewController {
         let thirdCell = tableView.dequeueReusableCell(withIdentifier: "thirdCustomCell", for: indexPath) as! MotivationTypeThreeTableViewCell
         
         thirdCell.titleLabel?.text = motivation?.title
-        thirdCell.descriptionLabel?.text = motivation?.description
+        thirdCell.descriptionLabel?.text = motivation?.desMotivation
         
         return thirdCell
     }
@@ -133,17 +133,4 @@ class ProfileMotivationTableViewController: UITableViewController {
         
         self.present(navigationController, animated: true, completion: nil)
     }
-    
-    
-    
-//    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "editMotivation" {
-//            
-//            let destination = segue.destination as? NewMotivationTableViewController
-//            
-//            //TODO: MUDAR PARA PUSH E PUT, E ACESSAR PELO DID SELECTED (METODO)
-//            destination?.motivation = motivations?[(tableView.indexPathForSelectedRow?.hashValue)!]
-//        }
-//    }
 }
