@@ -122,21 +122,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-IM-bOf">
-                                <rect key="frame" x="0.0" y="62" width="375" height="558.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-Hs-ihL">
+                                <rect key="frame" x="9.5" y="74.5" width="356" height="546"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RYz-IM-bOf" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="Dd9-OU-TjJ"/>
-                            <constraint firstItem="RYz-IM-bOf" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" id="Im7-62-5Cy"/>
-                            <constraint firstItem="8fn-X1-As4" firstAttribute="top" secondItem="RYz-IM-bOf" secondAttribute="bottom" id="WgJ-jM-LsG"/>
-                            <constraint firstItem="RYz-IM-bOf" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.9" id="g2g-aT-4vj"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.88" id="5CV-pS-p1i"/>
+                            <constraint firstItem="8fn-X1-As4" firstAttribute="top" secondItem="bRh-Hs-ihL" secondAttribute="bottom" id="C4J-A9-ndP"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="swQ-Lm-14j"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" multiplier="0.95" id="vo5-Gz-Tkr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="informationTextView" destination="bRh-Hs-ihL" id="E6n-36-H1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6k-xw-WvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,7 +11,7 @@ import UIKit
 class HealthInformationViewController: UIViewController {
 
     //MARK: - Outlets
-    
+    @IBOutlet weak var informationTextView: UITextView!
     
     //MARK: - Atributes
     var informations: [HealthInformationModel]?
@@ -19,6 +19,11 @@ class HealthInformationViewController: UIViewController {
     //MARK: - UIViewController life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for information in informations! {
+            informationTextView.text?.append(information.information)
+            informationTextView.text?.append("\n\n")
+        }
     }
 
     override func didReceiveMemoryWarning() {
