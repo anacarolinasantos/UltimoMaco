@@ -77,6 +77,7 @@
 		60D1E06E1EF4D9840048FE2C /* MotivationTypeThreeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */; };
 		60D1E06F1EF4D9840048FE2C /* NewMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */; };
 		60D1E0701EF4D9AB0048FE2C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
+		60D1E0721EF57D070048FE2C /* AppConfigurationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -189,6 +190,7 @@
 		60C7F1381EECA1480007D583 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromViewController.swift; sourceTree = "<group>"; };
 		60D1E04B1EF499420048FE2C /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurationsTableViewController.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				493118961EEB12F200D2694C /* PersonalProgress */,
 				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
 				BDC32F721EE9C56C003E65AB /* AppConfigurations.storyboard */,
+				60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */,
 				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
 				60C7F12D1EEB25390007D583 /* InitialPageViewController */,
 				604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */,
@@ -718,6 +721,7 @@
 				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
 				49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */,
 				BDC1DA381EF1F02600070139 /* AchievementCollectionViewCell.swift in Sources */,
+				60D1E0721EF57D070048FE2C /* AppConfigurationsTableViewController.swift in Sources */,
 				60C7F1371EECA1400007D583 /* Page3ViewController.swift in Sources */,
 				45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */,
 				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
