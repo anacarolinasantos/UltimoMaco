@@ -31,14 +31,10 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         // -- SETUP
         
         //Update main atributes
-        updateCigarettesNumber()
+        viewWillAppear(false)
         stepperOutlet.value = Double(LineChartData().getCigarettesOfSomeDay(Date()))
         //Timer that calls updateCigarettesNumberLabel each 0.01 second to keep it updated with NSUserDefaults
-//        synchronize = .scheduledTimer(timeInterval: 0.01, target: self,
-//                                      selector: #selector(self.updateCigarettesNumber),
-//                                      userInfo: nil,
-//                                      repeats: true)
-        
+
         for view in self.view.subviews{
             if let thisView = view as? LineChart{
                 let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
@@ -47,32 +43,11 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
             }
         }
         
-    }
-    
-    //MARK: NSUserDefaults todayCigarettesNumber get and set
-    
-    func setTodayCigarettesNumberToNSUserDefaults(_ todayCigarettesNumber: Int){
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(appWillEnterForeground),
+                                               name: NSNotification.Name.UIApplicationWillEnterForeground,
+                                               object: nil)
         
-        if let userDefaults = UserDefaults(suiteName: appGroupName) {
-            userDefaults.set(todayCigarettesNumber as AnyObject, forKey: "todayCigarettesNumber")
-            userDefaults.synchronize()
-        }
-    }
-    
-    func getTodayCigarettesNumberFromNSUserDefaults() -> Int{
-        
-        if let userDefaults = UserDefaults(suiteName: appGroupName){
-            return userDefaults.integer(forKey: "todayCigarettesNumber")
-        }
-        
-        return -1
-    }
-    
-    //Updates cigarettesNumberLabel, and stepperOutlet.value
-    func updateCigarettesNumber(){
-        todayCigarettesNumber = getTodayCigarettesNumberFromNSUserDefaults()
-        stepperOutlet.value = Double(todayCigarettesNumber)
-        cigarettesNumberLabel.text = String(todayCigarettesNumber)
     }
     
     //MARK: Actions
@@ -81,7 +56,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
         todayCigarettesNumber = Int(sender.value)
         stepperOutlet.value = Double(todayCigarettesNumber)
-        setTodayCigarettesNumberToNSUserDefaults(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
         chart.pointData.updateSomePoint(Date(), todayCigarettesNumber)
         updateChart()
@@ -118,6 +92,10 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
             cigarettesNumberLabel.text = "Sem dados"
         }
         
+    }
+    
+    func appWillEnterForeground(){
+        viewWillAppear(false)
     }
     
     
