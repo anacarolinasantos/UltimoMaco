@@ -83,7 +83,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         allEntries = allEntries.sorted(by: { ($0.date as Date!) < ($1.date as Date!) } )
         
         let cigarretsOfToday = LineChartData().getTargetOfConsumption(Date())
-        today.text = "Meta apenas \(cigarretsOfToday) cigarros"
+        today.text = "\(cigarretsOfToday)"
         
         let cigarettesNumber = LineChartData().getCigarettesOfSomeDay(Date())
         if cigarettesNumber != -1 {
