@@ -40,7 +40,7 @@ public class AchievementsController {
         } catch _ as NSError {
             print("Error")
         }
-        
+        DatabaseController.saveContext()
         return won
     }
     
