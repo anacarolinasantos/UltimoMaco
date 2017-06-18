@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="466" y="1026"/>
         </scene>
-        <!--Health Information Main View Controller-->
+        <!--Dicas-->
         <scene sceneID="JgS-8j-X3G">
             <objects>
                 <viewController id="fjJ-ue-LLd" customClass="HealthInformationMainViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.65490196078431373" green="0.7803921568627451" blue="0.77647058823529413" alpha="0.2324486301" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ifq-B5-lZu" firstAttribute="leading" secondItem="FJb-sz-0Rq" secondAttribute="leading" constant="60" id="0Py-JS-XgM"/>
                             <constraint firstItem="unz-LP-btK" firstAttribute="centerX" secondItem="ifq-B5-lZu" secondAttribute="centerX" id="96d-HB-x6O"/>
@@ -136,7 +136,7 @@
                             <constraint firstItem="auN-2B-Ota" firstAttribute="centerX" secondItem="omz-OY-jsL" secondAttribute="centerX" id="vkW-23-v5f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QW8-mt-3zY"/>
+                    <navigationItem key="navigationItem" title="Dicas" id="QW8-mt-3zY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oZJ-xz-oxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,6 +157,8 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-Hs-ihL">
                                 <rect key="frame" x="9.5" y="74.5" width="356" height="546"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>

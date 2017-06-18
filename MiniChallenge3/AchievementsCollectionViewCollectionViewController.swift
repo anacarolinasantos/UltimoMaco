@@ -49,10 +49,10 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! AchievementCollectionViewCell
         
         let achievement = achievements[indexPath.row]
+        cell.count.text = ""
         if !achievement.hasAchievement {
             let achievementAsset = UIImage(named: "bw" + achievement.assetIdentifier!)
             cell.achievementId.image = achievementAsset
-            cell.count.text = ""
         } else {
             let achievementAsset = UIImage(named: achievement.assetIdentifier!)
             cell.achievementId.image = achievementAsset
