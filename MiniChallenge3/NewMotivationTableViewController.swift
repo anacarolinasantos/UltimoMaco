@@ -15,6 +15,7 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
     @IBOutlet weak var titleTextField: UITextField?
     @IBOutlet weak var descriptionTextView: UITextView?
     @IBOutlet weak var motivationImage: UIImageView?
+    @IBOutlet weak var removeTableViewCell: UITableViewCell!
     
     //MARK: - Atributes
     var motivation: Motivation?
@@ -35,6 +36,7 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
                 titleTextField?.text = motivation?.title
                 descriptionTextView?.text = motivation?.desMotivation
             }
+            removeTableViewCell.isHidden = false
         } else {
             motivation = NSEntityDescription.insertNewObject(forEntityName: "Motivation", into: DatabaseController.persistentContainer.viewContext) as? Motivation
         }
@@ -120,8 +122,8 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
         let numberOfChars = newText.characters.count
         
         
-        //If text length is smaller than 120 and there are no punctuation, so return true
-        return numberOfChars < 120 && (text.rangeOfCharacter(from: NSCharacterSet.punctuationCharacters, options: .caseInsensitive) == nil)
+        //If text length is smaller than 100, return true
+        return numberOfChars < 100
     }
     
     //MARK: - Action
@@ -144,4 +146,11 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func removeMotivation(_ sender: UIButton) {
+        if let motivation = motivation {
+            DatabaseController.persistentContainer.viewContext.delete(motivation)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
