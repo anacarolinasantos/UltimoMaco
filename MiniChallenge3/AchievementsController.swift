@@ -69,7 +69,7 @@ public class AchievementsController {
                     }
                     return r > 0
                 case "remainedUnderGoal.png":
-                    let numberOfUnderGoalEntries = entries.filter({ checkIfWasInGoal($0, entries) }).count
+                    let numberOfUnderGoalEntries = entries.filter({ checkIfUnderGoal($0, entries) }).count
                     let r = numberOfUnderGoalEntries - Int(a.amount)
                     if r > 0 {
                         a.amount = a.amount + Int16(r)
@@ -95,7 +95,7 @@ public class AchievementsController {
                     return false
                 case "reducedFirstCiggarret.png":
                     if !a.hasAchievement {
-                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber <= entries[0].cigaretteNumber - 1 }).count
+                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber != -1 && $0.cigaretteNumber < entries[0].cigaretteNumber - 1 }).count
                         if anyEntryIsHalf > 0 {
                             a.hasAchievement = true
                             return true
@@ -136,6 +136,7 @@ public class AchievementsController {
     
     static public func checkGoalCigarrets(entry: CigaretteEntry, allEntries: [CigaretteEntry]) -> Int {
         let i = allEntries.index(of: entry)
+        if i == allEntries.count - 1 { return 0 }
         return -(Int(Double(allEntries[0].cigaretteNumber)/Double(allEntries.count - 1) * Double(i!))) + Int(allEntries[0].cigaretteNumber)
     }
     
@@ -143,6 +144,9 @@ public class AchievementsController {
         return checkGoalCigarrets(entry: entry, allEntries: allEntries) <= Int(entry.cigaretteNumber)
     }
     
+    static private func checkIfUnderGoal(_ entry: CigaretteEntry, _ allEntries: [CigaretteEntry]) -> Bool {
+        return checkGoalCigarrets(entry: entry, allEntries: allEntries) < Int(entry.cigaretteNumber)
+    }
     
     static private func checkForThreeDaysInARow(_ entries: [CigaretteEntry]) -> Int {
         var count = 0
