@@ -49,16 +49,20 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! AchievementCollectionViewCell
         
         let achievement = achievements[indexPath.row]
-        let achievementAsset = UIImage(named: achievement.assetIdentifier!)
         if !achievement.hasAchievement {
-            cell.achievementId.image = achievementAsset?.bwImage
+            let achievementAsset = UIImage(named: "bw" + achievement.assetIdentifier!)
+            cell.achievementId.image = achievementAsset
             cell.count.text = ""
         } else {
+            let achievementAsset = UIImage(named: achievement.assetIdentifier!)
             cell.achievementId.image = achievementAsset
-            cell.count.text = String(achievement.amount)
-            cell.count.layer.cornerRadius = cell.count.frame.size.width / 2
-            cell.count.clipsToBounds = true
-            cell.count.backgroundColor = UIColor.init(colorLiteralRed: 1, green: 0, blue: 0, alpha: 0.5)
+            if achievement.amount > 1 {
+                cell.count.text = String(achievement.amount)
+                cell.count.layer.cornerRadius = cell.count.frame.size.width / 2
+                cell.count.clipsToBounds = true
+                cell.count.layer.borderWidth = 1;
+                cell.count.layer.borderColor = UIColor.white.cgColor
+            }
         }
         
         

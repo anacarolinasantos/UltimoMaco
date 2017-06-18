@@ -31,6 +31,7 @@ class MainTabBarController: UITabBarController {
             if let popUp = self.storyboard?.instantiateViewController(withIdentifier: "popUp") as? AchievementPopUpViewController {
                 popUp.achievement = all[index]
                 popUp.isLastPopUpView = index == 0
+                popUp.modalTransitionStyle = .crossDissolve
                 present(popUp, animated: true, completion: nil)
             }
         }
