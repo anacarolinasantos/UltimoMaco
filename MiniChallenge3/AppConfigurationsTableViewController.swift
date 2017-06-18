@@ -25,7 +25,7 @@ class AppConfigurationsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 1{
+        if indexPath.row == 2{
             pickerCell.isHidden = !pickerCell.isHidden
         }
     }
@@ -35,9 +35,19 @@ class AppConfigurationsTableViewController: UITableViewController {
     // -- SWITCH DID CHANGE VALUE
     @IBAction func notificationSwitchChangeValue(_ sender: UISwitch) {
         // -- NOTIFICAÇÃO LEMBRETE
+     
+        if sender.isOn {
+            NotificationController.prepareAll(daysFromToday: LineChartData().getDaysUntilTheZeroPoint())
+        }else{
+            NotificationController.center.removeAllPendingNotificationRequests()
+            let hour = Int((hourLabel.text?.substring(to: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 2))!))!)
+            let minute = Int((hourLabel.text?.substring(from: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 3))!))!)
+
+            NotificationController.sendNotificationDaily(["lembreteNoturno","Boa noite!",
+                                                          "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
+                                                         Calendar.current.date(bySettingHour: hour!, minute: minute!, second: 0, of: Date())!)
+        }
         
-        // this atribute is a boolean and returns the switch state
-        print(sender.isOn)
     }
 
     @IBAction func informativeNotificationDidChangeValue(_ sender: UISwitch){
@@ -46,9 +56,16 @@ class AppConfigurationsTableViewController: UITableViewController {
     }
     @IBAction func pickerDidChangeValue(_ sender: UIDatePicker) {
         
+        NotificationController.getPendingNotifications()
+        
         let datePicker = Calendar.current.dateComponents([.hour,.minute,.second,], from:sender.date)
         
-        hourLabel.text = "\(datePicker.hour!):\(datePicker.minute!)"
+        if datePicker.minute! < 10{
+            hourLabel.text = "\(datePicker.hour!):0\(datePicker.minute!)"
+        }else{
+            hourLabel.text = "\(datePicker.hour!):\(datePicker.minute!)"
+        }
+        
         
         NotificationController.sendNotificationDaily(["lembreteNoturno","Boa noite!","Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."], Calendar.current.date(bySettingHour:datePicker.hour!, minute: datePicker.minute!, second: 0, of: Date())!)
     }

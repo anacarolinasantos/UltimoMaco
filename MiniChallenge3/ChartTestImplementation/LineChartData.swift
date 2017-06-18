@@ -130,4 +130,13 @@ class LineChartData {
         return -1
     }
     
+    func getDaysUntilTheZeroPoint() -> Int{
+        for i in 1..<points.count{
+            if Calendar.current.dateComponents([.month,.day], from: Date()) == Calendar.current.dateComponents([.month,.day], from: points[i].day as Date){
+                return points.count-i
+            }
+        }
+        return -1
+    }
+    
 }
