@@ -50,6 +50,7 @@ public class AchievementsController {
             if var entries = (try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as? [CigaretteEntry]) {
                 
                 entries = entries.sorted(by: { ($0.date! as Date) < ($1.date! as Date) })
+                entries.filter({ Calendar.current.isDateInToday($0.date! as Date) }).first?.cigaretteNumber = -1
                 
                 switch a.assetIdentifier! {
                 case "threeDaysInARow.png":
