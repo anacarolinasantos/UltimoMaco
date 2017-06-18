@@ -33,7 +33,7 @@ class ViewControllerTeste: UITableViewController {
         smokingLoadLabel.text = String(UserDefaults.standard.integer(forKey: "smokingLoad"))
         picker.delegate = self
         
-        userImage.layer.cornerRadius = 20
+        userImage.layer.cornerRadius = 120
         userImage.clipsToBounds = true
         userImage.isUserInteractionEnabled = true
         
@@ -120,6 +120,8 @@ class ViewControllerTeste: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 1
+        } else if section == 1 {
+            return CGFloat(0.0)
         }
         return self.tableView.sectionHeaderHeight
     }
