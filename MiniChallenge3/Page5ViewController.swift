@@ -63,7 +63,6 @@ class Page5ViewController: PageModelViewController {
                                                           "Boa noite!",
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
                                                          Calendar.current.date(bySettingHour: 21, minute: 0, second: 0, of: Date())!)
-            NotificationController.getPendingNotifications()
             
             UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
             UserDefaults.standard.set(cigsDaily / 20 * cigsYears, forKey: "smokingLoad")
