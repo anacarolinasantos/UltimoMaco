@@ -306,10 +306,10 @@ obrigatória</string>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-s6-zi3">
-                                <rect key="frame" x="117" y="407" width="141" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUn-s6-zi3">
+                                <rect key="frame" x="70" y="415" width="234" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Permitir notificações"/>
+                                <state key="normal" image="allowNotificationsButton"/>
                                 <connections>
                                     <action selector="startUsingApp:" destination="G2c-ED-olJ" eventType="touchUpInside" id="FZx-A1-GiW"/>
                                 </connections>
@@ -445,6 +445,7 @@ obrigatória</string>
         </scene>
     </scenes>
     <resources>
+        <image name="allowNotificationsButton" width="250" height="49"/>
         <image name="calendarIcon" width="315" height="321"/>
         <image name="fourlWeeksButton" width="150" height="150"/>
         <image name="lungIcon" width="315" height="321"/>
