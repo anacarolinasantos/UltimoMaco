@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationsDB {
+public class NotificationsDatabase {
                                                      // -- Hábitos
     static let notifications: [NotificationModel] = [NotificationModel.init(identifier: "Habitos1", title: "Hábitos", message: "A prática de atividades físicas ajuda a conter a fissura!"),
                                                      NotificationModel.init(identifier: "Habitos2", title: "Hábitos", message: "Mude seus hábitos! A maioria dos gatilhos do cigarro estão relacionados ao seu cotidiano."),
@@ -61,7 +61,7 @@ class NotificationsDB {
         NotificationModel.init(identifier: "Fissur1", title: "Fissura", message: "Sentiu vontade de fumar? Tome um copo d’água!"),
         NotificationModel.init(identifier: "Fissur2", title: "Fissura", message: "Procure algo para se distrair sempre que quiser fumar!")]
     
-    static func getRandomNotification() -> [String]{
+    public static func getRandomNotification() -> [String]{
         
         //Gets a random notification
         let randNotification = notifications[Int(arc4random_uniform(UInt32(notifications.count)))]

@@ -31,7 +31,7 @@ public class NotificationController{
     
     //Use this method to schedule a notification that will not be repeated
     //The first parameter must be a string vector containing, respectively, the unique identifier of the notification, the title, and the message
-    public static func sendNotification(_ textContent:[String],_ when:Date) -> Bool{
+    public static func sendNotification(_ textContent:[String],_ when:Date){
         
         var validationOfAuthorization = validateAuthorization()
         
@@ -54,14 +54,12 @@ public class NotificationController{
                 }
             })
         }
-        
-        return validationOfAuthorization
-        
+ 
     }
     
     //Use this method to create a notification that will be repeated daily
     //The first parameter must be a string vector containing, respectively, the unique identifier of the notification, the title, and the message
-    public static func sendNotificationDaily(_ textContent:[String],_ when:Date) -> Bool{
+    public static func sendNotificationDaily(_ textContent:[String],_ when:Date){
         
         var validationOfAuthorization = validateAuthorization()
         
@@ -86,8 +84,6 @@ public class NotificationController{
             })
         }
         
-        return validationOfAuthorization
-        
     }
     
     //Prints pending notifications in the console
@@ -103,8 +99,24 @@ public class NotificationController{
         })
     }
     
-    public static func prepareAll(_ date: Date){
-        
+    public static func prepareAll(daysFromToday: Int){
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if granted {
+                for dayIndex in 0...daysFromToday{
+                    var day = Calendar.current.date(byAdding: .day, value: dayIndex, to: Date())!
+                    day = Calendar.current.date(bySettingHour: 8, minute: 0, second: 0, of: day)!
+                    var notificationInfo = NotificationsDatabase.getRandomNotification()
+                    sendNotification(notificationInfo, day)
+                    
+                    day = Calendar.current.date(bySettingHour: 18, minute: 0, second: 0, of: day)!
+                    var newNotificationInfo = NotificationsDatabase.getRandomNotification()
+                    while newNotificationInfo[0] == notificationInfo[0]{
+                        newNotificationInfo = NotificationsDatabase.getRandomNotification()
+                    }
+                    notificationInfo = NotificationsDatabase.getRandomNotification()
+                    sendNotification(newNotificationInfo, day)
+                }
+            }
+        }
     }
-    
 }

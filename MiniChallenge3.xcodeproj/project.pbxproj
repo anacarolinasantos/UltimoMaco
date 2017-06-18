@@ -24,6 +24,8 @@
 		493118AA1EEB12F200D2694C /* PersonalProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493118A11EEB12F200D2694C /* PersonalProgressViewController.swift */; };
 		494EEE701EF06D3200465D6B /* HistoricTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */; };
 		494EEE721EF06D7A00465D6B /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */; };
+		49A7D2811EF6CF94005587CE /* NotificationsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606195A31EF1E0B200249D81 /* NotificationsDatabase.swift */; };
+		49A7D2821EF6CFF2005587CE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606195A41EF1E0B200249D81 /* NotificationModel.swift */; };
 		49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */; };
 		49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */; };
 		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
@@ -777,6 +779,8 @@
 				60D1E0661EF4D9840048FE2C /* AchievementsController.swift in Sources */,
 				60D1E05C1EF4D9730048FE2C /* Motivation+CoreDataClass.swift in Sources */,
 				60D1E06B1EF4D9840048FE2C /* ProfileMotivationTableViewController.swift in Sources */,
+				49A7D2821EF6CFF2005587CE /* NotificationModel.swift in Sources */,
+				49A7D2811EF6CF94005587CE /* NotificationsDatabase.swift in Sources */,
 				60D1E0551EF4D9490048FE2C /* HistoricTableViewController.swift in Sources */,
 				60D1E0621EF4D9840048FE2C /* MainTabBarController.swift in Sources */,
 				60D1E05D1EF4D9730048FE2C /* Motivation+CoreDataProperties.swift in Sources */,
