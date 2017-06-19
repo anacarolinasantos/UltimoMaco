@@ -46,9 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-        if ((self.window?.rootViewController as? UITabBarController)?.selectedViewController as? PersonalProgressViewController) != nil{
-            let personalProgressViewControllerInstance = (self.window?.rootViewController as! UITabBarController).selectedViewController as! PersonalProgressViewController
-            personalProgressViewControllerInstance.updateChart()
+        NotificationController.center.getDeliveredNotifications { (notifications) in
+            
+                UIApplication.shared.applicationIconBadgeNumber = notifications.count
+            
         }
         
     }

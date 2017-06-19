@@ -33,7 +33,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         //Update main atributes
         viewWillAppear(false)
         stepperOutlet.value = Double(LineChartData().getCigarettesOfSomeDay(Date()))
-        //Timer that calls updateCigarettesNumberLabel each 0.01 second to keep it updated with NSUserDefaults
 
         for view in self.view.subviews{
             if let thisView = view as? LineChart{
@@ -57,7 +56,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         todayCigarettesNumber = Int(sender.value)
         stepperOutlet.value = Double(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
-        chart.pointData.updateSomePoint(Date(), todayCigarettesNumber)
+        LineChartData().updateSomePoint(Date(), todayCigarettesNumber)
         updateChart()
     }
     
