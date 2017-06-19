@@ -60,6 +60,7 @@ class LineChart: UIView {
             let rect = CGRect(origin: point, size: CGSize(width: 60, height: 30))
             let label = UILabel(frame: rect)
             label.font = UIFont(name: "Myanmar Sangam MN", size: CGFloat(10.0))
+            label.textColor = #colorLiteral(red: 0.3746306896, green: 0.3785866797, blue: 0.3705399632, alpha: 1)
             label.text = p.getFormattedDate()
             self.addSubview(label)
         }
@@ -89,7 +90,7 @@ class LineChart: UIView {
             let label = UILabel(frame: rect)
             label.font = font
             label.textAlignment = .right
-            
+            label.textColor = #colorLiteral(red: 0.3746306896, green: 0.3785866797, blue: 0.3705399632, alpha: 1)
             label.text = String(describing: i)
             self.addSubview(label)
         }
