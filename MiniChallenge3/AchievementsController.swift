@@ -50,7 +50,6 @@ public class AchievementsController {
             if var entries = (try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as? [CigaretteEntry]) {
                 
                 entries = entries.sorted(by: { ($0.date! as Date) < ($1.date! as Date) })
-                entries.filter({ Calendar.current.isDateInToday($0.date! as Date) }).first?.cigaretteNumber = -1
                 
                 switch a.assetIdentifier! {
                 case "threeDaysInARow.png":
@@ -70,7 +69,8 @@ public class AchievementsController {
                     }
                     return r > 0
                 case "remainedUnderGoal.png":
-                    let numberOfUnderGoalEntries = entries.filter({ checkIfUnderGoal($0, entries) }).count
+                    let numberOfUnderGoalEntries = entries.filter({ checkIfUnderGoal($0, entries) &&
+                    !Calendar.current.isDateInToday($0.date! as Date) }).count
                     let r = numberOfUnderGoalEntries - Int(a.amount)
                     if r > 0 {
                         a.amount = a.amount + Int16(r)
@@ -78,7 +78,8 @@ public class AchievementsController {
                     }
                     return r > 0
                 case "noSmokeForToday.png":
-                    let numberofnonsmokeddays = entries.filter({ $0.cigaretteNumber == 0 }).count
+                    let numberofnonsmokeddays = entries.filter({ $0.cigaretteNumber == 0 &&
+                    !Calendar.current.isDateInToday($0.date! as Date)}).count
                     let r = numberofnonsmokeddays - Int(a.amount)
                     if r > 0 {
                         a.amount = a.amount + Int16(r)
@@ -87,7 +88,8 @@ public class AchievementsController {
                     return r > 0
                 case "halfCigarretes.png":
                     if !a.hasAchievement {
-                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber == entries[0].cigaretteNumber / 2 }).count
+                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber == entries[0].cigaretteNumber / 2 &&
+                        !Calendar.current.isDateInToday($0.date! as Date)}).count
                         if anyEntryIsHalf > 0 {
                             a.hasAchievement = true
                             return true
@@ -96,7 +98,7 @@ public class AchievementsController {
                     return false
                 case "reducedFirstCiggarret.png":
                     if !a.hasAchievement {
-                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber != -1 && $0.cigaretteNumber < entries[0].cigaretteNumber - 1 }).count
+                        let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber != -1 && $0.cigaretteNumber < entries[0].cigaretteNumber - 1 && !Calendar.current.isDateInToday($0.date! as Date)}).count
                         if anyEntryIsHalf > 0 {
                             a.hasAchievement = true
                             return true
@@ -105,7 +107,7 @@ public class AchievementsController {
                     return false
                 case "lastPackOfCigarretes.png":
                     if !a.hasAchievement {
-                        let aheadEntries = entries.filter({ ($0.date as Date!) > Date() })
+                        let aheadEntries = entries.filter({ ($0.date as Date!) > Date() && !Calendar.current.isDateInToday($0.date! as Date)})
                         var sum = 0
                         for e in aheadEntries {
                             sum += checkGoalCigarrets(entry: e, allEntries: entries)
