@@ -86,11 +86,12 @@ extension Page1ViewController: UIImagePickerControllerDelegate, UINavigationCont
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         picker.modalPresentationStyle = .popover
+        picker.allowsEditing = true
         present(picker,animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             userPhoto.layer.cornerRadius = userPhoto.frame.size.width / 2
             userPhoto.clipsToBounds = true
             userPhoto.image = image
