@@ -86,7 +86,7 @@ de acordar você fuma o primeiro cigarro?</string>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="nYC-Ny-NAh" firstAttribute="centerX" secondItem="CB5-8C-4pA" secondAttribute="centerX" id="713-lA-00B"/>
                             <constraint firstItem="pOd-7r-HcG" firstAttribute="leading" secondItem="qXg-6Z-Fyu" secondAttribute="leadingMargin" constant="114" id="9wu-ry-rRg"/>
@@ -166,7 +166,7 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="22Q-ms-De0" firstAttribute="centerX" secondItem="A5h-Ev-5lX" secondAttribute="centerX" id="CQ9-gG-im8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uu5-7Q-pEa" secondAttribute="trailing" constant="117" id="I7O-ft-7AS"/>
@@ -240,7 +240,7 @@ mais satisfação?</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="n33-7U-qNS" secondAttribute="trailing" constant="117" id="5oj-pD-JA2"/>
                             <constraint firstItem="n33-7U-qNS" firstAttribute="leading" secondItem="ena-ez-PMI" secondAttribute="leadingMargin" constant="116" id="8YI-9Z-SaJ"/>
@@ -314,7 +314,7 @@ primeiras horas do dia?</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="thm-S4-uja" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="Ed4-d6-r6A"/>
                             <constraint firstItem="44Y-56-Wc6" firstAttribute="leading" secondItem="GOM-DQ-0zb" secondAttribute="leadingMargin" constant="116" id="HS4-ob-94Y"/>
@@ -386,7 +386,7 @@ primeiras horas do dia?</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KoC-dQ-Gnb" firstAttribute="leading" secondItem="AYr-wQ-WTH" secondAttribute="leadingMargin" constant="116" id="28O-Ik-A6A"/>
                             <constraint firstItem="1ee-FN-R7c" firstAttribute="top" secondItem="KoC-dQ-Gnb" secondAttribute="bottom" constant="12" id="6b3-Oe-ECh"/>
@@ -420,31 +420,24 @@ primeiras horas do dia?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultados:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-LZ-eAC">
-                                <rect key="frame" x="0.0" y="126" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pontos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-tQ-Jtq">
                                 <rect key="frame" x="0.0" y="202" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grau de dependência:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-FS-2lM">
                                 <rect key="frame" x="0.0" y="350" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A33-5T-e3s">
                                 <rect key="frame" x="0.0" y="231" width="375" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="57"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -455,16 +448,16 @@ primeiras horas do dia?</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-9N-NTj">
-                                <rect key="frame" x="113" y="468" width="149" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-9N-NTj">
+                                <rect key="frame" x="86" y="484" width="202" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Finalizar questionário"/>
+                                <state key="normal" image="finishButton"/>
                                 <connections>
                                     <action selector="end:" destination="Zzj-FK-hTo" eventType="touchUpInside" id="mOS-om-zdb"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="points" destination="A33-5T-e3s" id="uG2-3A-Zbx"/>
@@ -510,6 +503,7 @@ primeiras horas do dia?</string>
         <image name="between30and60Button" width="442" height="97"/>
         <image name="between5and30Button" width="442" height="97"/>
         <image name="clockIcon" width="262" height="267"/>
+        <image name="finishButton" width="417" height="82"/>
         <image name="lessThan5Button" width="442" height="97"/>
         <image name="moreThan60Button" width="442" height="97"/>
         <image name="noButton" width="442" height="142"/>
