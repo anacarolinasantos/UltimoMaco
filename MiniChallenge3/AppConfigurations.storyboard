@@ -161,6 +161,7 @@ ao longo do dia</string>
                     </tableView>
                     <connections>
                         <outlet property="datePickerOutlet" destination="4ox-MU-AEs" id="Mwj-xh-QN8"/>
+                        <outlet property="hourCell" destination="YZB-30-HMr" id="nBF-5m-JWR"/>
                         <outlet property="hourLabel" destination="Gpx-Ih-Pwg" id="ftu-4D-om5"/>
                         <outlet property="pickerCell" destination="c9h-8y-MsZ" id="vfY-bQ-0gx"/>
                     </connections>

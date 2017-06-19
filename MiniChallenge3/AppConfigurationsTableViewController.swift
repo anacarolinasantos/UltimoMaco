@@ -11,6 +11,7 @@ import UIKit
 class AppConfigurationsTableViewController: UITableViewController {
 
     //MARK: - Outlets
+    @IBOutlet weak var hourCell: UITableViewCell!
     @IBOutlet weak var pickerCell: UITableViewCell!
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
     @IBOutlet weak var hourLabel: UILabel!
@@ -38,6 +39,7 @@ class AppConfigurationsTableViewController: UITableViewController {
      
         if sender.isOn {
             NotificationController.prepareAll(daysFromToday: LineChartData().getDaysUntilTheZeroPoint())
+            hourCell.isHidden = false
         }else{
             NotificationController.center.removeAllPendingNotificationRequests()
             let hour = Int((hourLabel.text?.substring(to: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 2))!))!)
@@ -46,6 +48,7 @@ class AppConfigurationsTableViewController: UITableViewController {
             NotificationController.sendNotificationDaily(["lembreteNoturno","Boa noite!",
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
                                                          Calendar.current.date(bySettingHour: hour!, minute: minute!, second: 0, of: Date())!)
+            hourCell.isHidden = true
         }
         
     }
