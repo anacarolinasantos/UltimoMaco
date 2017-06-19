@@ -30,7 +30,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // -- SETUP
         todayCigarettesNumber = getTodayCigarettesNumberFromCoreData()
         stepperOutlet.value = Double(todayCigarettesNumber)
-        cigarettesNumberLabel.text = String(todayCigarettesNumber)
+        cigarettesNumberLabel.text = todayCigarettesNumber == -1 ? "Sem dados" : String(todayCigarettesNumber)
         
     }
 
