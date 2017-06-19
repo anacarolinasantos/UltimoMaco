@@ -42,7 +42,7 @@ class LineChart: UIView {
     }
     
     func drawAxes(context: CGContext, pointData: LineChartData) {
-        context.setStrokeColor(UIColor.gray.cgColor)
+        context.setStrokeColor(#colorLiteral(red: 0.3746306896, green: 0.3785866797, blue: 0.3705399632, alpha: 1).cgColor)
         context.setLineWidth(2.5)
         
         //X Axis
@@ -59,7 +59,8 @@ class LineChart: UIView {
             point.x = point.x - (p.getDay() / 10 > 0 ? 10.2 : 5)
             let rect = CGRect(origin: point, size: CGSize(width: 60, height: 30))
             let label = UILabel(frame: rect)
-            label.font = UIFont(name: "Helvetica", size: CGFloat(10.0))
+            label.font = UIFont(name: "Myanmar Sangam MN", size: CGFloat(10.0))
+            label.textColor = #colorLiteral(red: 0.3746306896, green: 0.3785866797, blue: 0.3705399632, alpha: 1)
             label.text = p.getFormattedDate()
             self.addSubview(label)
         }
@@ -71,7 +72,7 @@ class LineChart: UIView {
         context.strokePath()
         let fontSize:CGFloat = 10.0
         //let fontSize = distance(scale(unitX: 1, unitY: 1), scale(unitX: 1, unitY: (pointData.maxUnitY))) / CGFloat((pointData.maxUnitY) / 5)
-        let font = UIFont(name: "Helvetica", size: fontSize)
+        let font = UIFont(name: "Myanmar Sangam MN", size: fontSize)
         
         //Y labels
         var yStep: Int!
@@ -89,7 +90,7 @@ class LineChart: UIView {
             let label = UILabel(frame: rect)
             label.font = font
             label.textAlignment = .right
-            
+            label.textColor = #colorLiteral(red: 0.3746306896, green: 0.3785866797, blue: 0.3705399632, alpha: 1)
             label.text = String(describing: i)
             self.addSubview(label)
         }
@@ -114,7 +115,7 @@ class LineChart: UIView {
     }
     
     func drawPerformance(context: CGContext, pointData: LineChartData) {
-        context.setStrokeColor(UIColor.green.cgColor)
+        context.setStrokeColor(#colorLiteral(red: 0.5894871354, green: 0.6807213426, blue: 0.4393018484, alpha: 1).cgColor)
         context.setLineWidth(3)
         context.setLineCap(.butt)
         
@@ -153,22 +154,26 @@ class LineChart: UIView {
         for i in 1...pointData.totalDays {
             let p = (pointData.points[i])
             let point = scale(unitX: i, unitY: p.cigarettes)
+            let arcColor: CGColor
+            
             if p.cigarettes > 0 {
                 if p.cigarettes <= pointData.getTargetOfConsumption(pointData.points[i].day){
-                    context.setStrokeColor(UIColor.yellow.cgColor)
+                    arcColor = #colorLiteral(red: 0.04786989838, green: 0.4943832755, blue: 0.6755262017, alpha: 1).cgColor
+                    context.setStrokeColor(arcColor)
                 }else{
-                    context.setStrokeColor(UIColor.red.cgColor)
+                    arcColor = #colorLiteral(red: 0.880710423, green: 0.4652218223, blue: 0.4508337379, alpha: 1).cgColor
+                    context.setStrokeColor(arcColor)
                 }
                 if i == pointData.getLastValidPointIndex() {
                     
                     context.addArc(center: point, radius: 4, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
                     context.strokePath()
-                    context.setFillColor(UIColor.white.cgColor)
-                    context.addArc(center: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+                    context.setFillColor(arcColor)
+                    context.addArc(center: point, radius: 3, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
                 } else {
                     context.addArc(center: point, radius: 2, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
                     context.strokePath()
-                    context.setFillColor(UIColor.white.cgColor)
+                    context.setFillColor(arcColor)
                     context.addArc(center: point, radius: 1, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
                 }
                 context.fillPath()

@@ -156,14 +156,14 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-Hs-ihL">
                                 <rect key="frame" x="9.5" y="74.5" width="356" height="546"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bRh-Hs-ihL" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.88" id="5CV-pS-p1i"/>
                             <constraint firstItem="8fn-X1-As4" firstAttribute="top" secondItem="bRh-Hs-ihL" secondAttribute="bottom" id="C4J-A9-ndP"/>

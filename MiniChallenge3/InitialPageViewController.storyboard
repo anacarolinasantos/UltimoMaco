@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSm-9I-p01">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSm-9I-p01">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -126,7 +126,7 @@ obrigatória</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gOm-PP-QPE" firstAttribute="top" secondItem="mIb-0E-gXI" secondAttribute="bottom" constant="91" id="04j-c3-d7x"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DdM-nW-xaf" secondAttribute="trailing" constant="26" id="1KZ-My-c6F"/>
@@ -199,7 +199,7 @@ obrigatória</string>
                                 </constraints>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bBT-tg-br7" firstAttribute="top" secondItem="AR3-JI-pJe" secondAttribute="bottom" constant="12" id="B1b-yb-Rtz"/>
                             <constraint firstItem="bBT-tg-br7" firstAttribute="centerX" secondItem="AR3-JI-pJe" secondAttribute="centerX" id="EK9-fI-vuU"/>
@@ -258,7 +258,7 @@ obrigatória</string>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="td0-u7-MWv" secondAttribute="trailing" constant="117" id="470-zR-StU"/>
                             <constraint firstItem="td0-u7-MWv" firstAttribute="top" secondItem="dAH-KK-5b4" secondAttribute="bottom" constant="91" id="7sQ-7F-CvF"/>
@@ -318,7 +318,7 @@ obrigatória</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="9uH-pv-fEp" secondAttribute="trailing" constant="117" id="1t5-f5-bu4"/>
                             <constraint firstItem="Qke-aZ-HRz" firstAttribute="top" secondItem="9uH-pv-fEp" secondAttribute="bottom" constant="12" id="6sn-ZR-ZXs"/>
@@ -413,7 +413,7 @@ obrigatória</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4f4-I7-d2U" firstAttribute="leading" secondItem="mKd-6A-yxe" secondAttribute="leading" constant="132" id="11l-vS-LpV"/>
                             <constraint firstItem="KiY-xo-4HR" firstAttribute="leading" secondItem="4PC-BA-1OI" secondAttribute="trailing" constant="41" id="2yV-Pi-RcQ"/>
