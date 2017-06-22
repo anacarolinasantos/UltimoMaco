@@ -45,7 +45,7 @@ class AppConfigurationsTableViewController: UITableViewController {
             let hour = Int((hourLabel.text?.substring(to: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 2))!))!)
             let minute = Int((hourLabel.text?.substring(from: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 3))!))!)
 
-            NotificationController.sendNotificationDaily(["lembreteNoturno","Boa noite!",
+            NotificationController.sendNotificationDaily(["lembreteNoturno",messageFrom(hour: hour!),
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
                                                          Calendar.current.date(bySettingHour: hour!, minute: minute!, second: 0, of: Date())!)
             hourCell.isHidden = true
@@ -70,6 +70,15 @@ class AppConfigurationsTableViewController: UITableViewController {
         }
         
         
-        NotificationController.sendNotificationDaily(["lembreteNoturno","Boa noite!","Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."], Calendar.current.date(bySettingHour:datePicker.hour!, minute: datePicker.minute!, second: 0, of: Date())!)
+        NotificationController.sendNotificationDaily(["lembreteNoturno", messageFrom(date: datePicker.date!),"Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."], Calendar.current.date(bySettingHour:datePicker.hour!, minute: datePicker.minute!, second: 0, of: Date())!)
+    }
+    
+    private func messageFrom(date: Date) -> String {
+        let hour = Calendar.current.component(.hour, from: date)
+        return hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite"
+    }
+    
+    private func messageFrom(hour: Int) -> String {
+        return hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite"
     }
 }
