@@ -77,7 +77,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-PP-QPE">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="userPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-PP-QPE">
                                 <rect key="frame" x="133" y="111" width="110" height="110"/>
                                 <color key="tintColor" red="0.6551201343536377" green="0.78095388412475586" blue="0.77751189470291138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
