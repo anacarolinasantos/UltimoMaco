@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,35 +43,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x2d-s1-b2H">
-                                <rect key="frame" x="66" y="181" width="242" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2d-s1-b2H">
+                                <rect key="frame" x="65.5" y="167" width="243.5" height="333.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnl-og-mdg">
-                                        <rect key="frame" x="8" y="279" width="226" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnl-og-mdg">
+                                        <rect key="frame" x="-0.5" y="283.5" width="243.5" height="50"/>
                                         <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                         <state key="normal" title="Próxima"/>
                                         <connections>
                                             <action selector="didClickToCancel:" destination="keO-bm-cGt" eventType="touchUpInside" id="ajj-kb-eAe"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parabéns você obteve uma conquista!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1i-zk-Va0">
-                                        <rect key="frame" x="8" y="8" width="226" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns você obteve uma conquista!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1i-zk-Va0">
+                                        <rect key="frame" x="-0.5" y="5" width="243.5" height="50"/>
                                         <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="threeDaysInARow" translatesAutoresizingMaskIntoConstraints="NO" id="Oo6-jq-UlV">
-                                        <rect key="frame" x="27" y="63" width="189" height="208"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="threeDaysInARow" translatesAutoresizingMaskIntoConstraints="NO" id="Oo6-jq-UlV">
+                                        <rect key="frame" x="30.5" y="75" width="182.5" height="200.5"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="o1i-zk-Va0" firstAttribute="top" secondItem="x2d-s1-b2H" secondAttribute="top" constant="5" id="18D-fo-ths"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cnl-og-mdg" secondAttribute="bottom" id="1cd-Sn-BTH"/>
+                                    <constraint firstItem="Cnl-og-mdg" firstAttribute="height" secondItem="x2d-s1-b2H" secondAttribute="height" multiplier="0.15" id="Ax2-yi-rQ6"/>
+                                    <constraint firstItem="o1i-zk-Va0" firstAttribute="centerX" secondItem="x2d-s1-b2H" secondAttribute="centerX" id="F8b-1o-gw0"/>
+                                    <constraint firstItem="Cnl-og-mdg" firstAttribute="width" secondItem="x2d-s1-b2H" secondAttribute="width" id="KMm-0Y-ZwE"/>
+                                    <constraint firstItem="Oo6-jq-UlV" firstAttribute="centerX" secondItem="x2d-s1-b2H" secondAttribute="centerX" id="O6I-jG-efN"/>
+                                    <constraint firstItem="o1i-zk-Va0" firstAttribute="height" secondItem="x2d-s1-b2H" secondAttribute="height" multiplier="0.15" id="QrW-oM-PjT"/>
+                                    <constraint firstItem="Oo6-jq-UlV" firstAttribute="width" secondItem="x2d-s1-b2H" secondAttribute="width" multiplier="0.75" id="RvE-6D-geE"/>
+                                    <constraint firstItem="Oo6-jq-UlV" firstAttribute="centerY" secondItem="x2d-s1-b2H" secondAttribute="centerY" multiplier="1.05" id="UH2-4g-yck"/>
+                                    <constraint firstItem="Oo6-jq-UlV" firstAttribute="height" secondItem="x2d-s1-b2H" secondAttribute="height" multiplier="0.6" id="WEn-KJ-GVx"/>
+                                    <constraint firstItem="Cnl-og-mdg" firstAttribute="centerX" secondItem="x2d-s1-b2H" secondAttribute="centerX" id="fNw-bT-14Y"/>
+                                    <constraint firstItem="o1i-zk-Va0" firstAttribute="width" secondItem="x2d-s1-b2H" secondAttribute="width" id="ukA-p3-doo"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.3029216609589041" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x2d-s1-b2H" firstAttribute="height" secondItem="olj-d1-tFg" secondAttribute="height" multiplier="0.5" id="8mr-we-JsY"/>
+                            <constraint firstItem="x2d-s1-b2H" firstAttribute="centerX" secondItem="olj-d1-tFg" secondAttribute="centerX" id="M4c-gV-wuc"/>
+                            <constraint firstItem="x2d-s1-b2H" firstAttribute="centerY" secondItem="olj-d1-tFg" secondAttribute="centerY" id="Ri6-uK-gOQ"/>
+                            <constraint firstItem="x2d-s1-b2H" firstAttribute="width" secondItem="olj-d1-tFg" secondAttribute="width" multiplier="0.65" id="Vn2-zr-Mef"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="achievementAsset" destination="Oo6-jq-UlV" id="SLp-C7-KKk"/>
