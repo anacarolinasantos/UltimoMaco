@@ -46,6 +46,7 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
 
         descriptionTextView?.layer.borderWidth = 0.5
         descriptionTextView?.layer.borderColor = UIColor(red: 216/255, green: 215/255, blue: 220/255, alpha: 1).cgColor
+        descriptionTextView?.layer.cornerRadius = 5
     }
 
     // MARK: - Table view data source
