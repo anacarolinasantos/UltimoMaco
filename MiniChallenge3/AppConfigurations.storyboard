@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QXC-Xy-0ng">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                                 <connections>
                                     <segue destination="Y6Q-Ms-vUa" kind="embed" id="Nlw-EA-dfD"/>
                                 </connections>
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QXC-Xy-0ng" firstAttribute="centerX" secondItem="GMs-0B-HFq" secondAttribute="centerX" id="2Mc-LR-sYk"/>
-                            <constraint firstItem="QXC-Xy-0ng" firstAttribute="height" secondItem="GMs-0B-HFq" secondAttribute="height" multiplier="0.93" id="UfL-6l-gT0"/>
+                            <constraint firstItem="QXC-Xy-0ng" firstAttribute="height" secondItem="GMs-0B-HFq" secondAttribute="height" multiplier="0.925" id="UfL-6l-gT0"/>
                             <constraint firstItem="QXC-Xy-0ng" firstAttribute="top" secondItem="GMs-0B-HFq" secondAttribute="top" id="VRW-Gy-lG5"/>
                             <constraint firstItem="QXC-Xy-0ng" firstAttribute="width" secondItem="GMs-0B-HFq" secondAttribute="width" id="vbO-3V-hTW"/>
                         </constraints>
@@ -50,7 +50,7 @@
             <objects>
                 <tableViewController id="Y6Q-Ms-vUa" customClass="AppConfigurationsTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="18" sectionFooterHeight="18" id="mPl-dg-b9H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.65512013440000005" green="0.7809538841" blue="0.77751189470000004" alpha="0.2324486301" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
