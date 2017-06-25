@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,12 +57,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omz-OY-jsL">
-                                <rect key="frame" x="215" y="114" width="100" height="100"/>
+                                <rect key="frame" x="225" y="114" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="health"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="QJz-rN-ROX"/>
-                                    <constraint firstAttribute="width" constant="100" id="abs-jf-Gvi"/>
-                                </constraints>
                                 <state key="normal" image="healthButton"/>
                                 <state key="highlighted" image="healthButton"/>
                                 <connections>
@@ -70,12 +66,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auN-2B-Ota">
-                                <rect key="frame" x="215" y="264" width="100" height="100"/>
+                                <rect key="frame" x="225" y="275.5" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tips"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="5jB-Ij-9nx"/>
-                                    <constraint firstAttribute="height" constant="100" id="nO9-Cf-PpO"/>
-                                </constraints>
                                 <state key="normal" image="tipsButton"/>
                                 <state key="highlighted" image="tipsButton"/>
                                 <connections>
@@ -83,12 +75,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-c9-0cc">
-                                <rect key="frame" x="137.5" y="414" width="100" height="100"/>
+                                <rect key="frame" x="131" y="437" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="fissure"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1Qr-9s-uew"/>
-                                    <constraint firstAttribute="width" constant="100" id="aPK-El-w56"/>
-                                </constraints>
                                 <state key="normal" image="fissuraButton"/>
                                 <state key="highlighted" image="fissuraButton"/>
                                 <connections>
@@ -96,12 +84,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unz-LP-btK">
-                                <rect key="frame" x="60" y="264" width="100" height="100"/>
+                                <rect key="frame" x="37.5" y="275.5" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="habits"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="SIW-SX-fng"/>
-                                    <constraint firstAttribute="height" constant="100" id="dPO-Mn-dyJ"/>
-                                </constraints>
                                 <state key="normal" image="habitsButton"/>
                                 <state key="highlighted" image="habitsButton"/>
                                 <connections>
@@ -109,12 +93,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifq-B5-lZu">
-                                <rect key="frame" x="60" y="114" width="100" height="100"/>
+                                <rect key="frame" x="37.5" y="114" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="help"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8Dd-aR-w5m"/>
-                                    <constraint firstAttribute="width" constant="100" id="Wnm-bj-Gg9"/>
-                                </constraints>
                                 <state key="normal" image="helpButton"/>
                                 <state key="highlighted" image="helpButton"/>
                                 <connections>
@@ -124,16 +104,26 @@
                         </subviews>
                         <color key="backgroundColor" red="0.65490196078431373" green="0.7803921568627451" blue="0.77647058823529413" alpha="0.2324486301" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ifq-B5-lZu" firstAttribute="leading" secondItem="FJb-sz-0Rq" secondAttribute="leading" constant="60" id="0Py-JS-XgM"/>
-                            <constraint firstItem="unz-LP-btK" firstAttribute="centerX" secondItem="ifq-B5-lZu" secondAttribute="centerX" id="96d-HB-x6O"/>
-                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="centerX" secondItem="FJb-sz-0Rq" secondAttribute="centerX" id="BoA-ZP-lFC"/>
-                            <constraint firstItem="ifq-B5-lZu" firstAttribute="top" secondItem="e0P-aF-4qF" secondAttribute="bottom" constant="50" id="Lfn-xJ-qBd"/>
-                            <constraint firstItem="unz-LP-btK" firstAttribute="top" secondItem="ifq-B5-lZu" secondAttribute="bottom" constant="50" id="VxR-U0-VUe"/>
-                            <constraint firstItem="auN-2B-Ota" firstAttribute="centerY" secondItem="unz-LP-btK" secondAttribute="centerY" id="e0d-1j-LIH"/>
-                            <constraint firstItem="ifq-B5-lZu" firstAttribute="centerY" secondItem="omz-OY-jsL" secondAttribute="centerY" id="r8x-Pj-ygO"/>
-                            <constraint firstAttribute="trailing" secondItem="omz-OY-jsL" secondAttribute="trailing" constant="60" id="tmO-Fw-7A8"/>
-                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="top" secondItem="unz-LP-btK" secondAttribute="bottom" constant="50" id="tna-p4-ma3"/>
-                            <constraint firstItem="auN-2B-Ota" firstAttribute="centerX" secondItem="omz-OY-jsL" secondAttribute="centerX" id="vkW-23-v5f"/>
+                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="centerX" secondItem="FJb-sz-0Rq" secondAttribute="centerX" id="0t6-JE-Jrz"/>
+                            <constraint firstItem="ifq-B5-lZu" firstAttribute="centerX" secondItem="FJb-sz-0Rq" secondAttribute="centerX" multiplier="0.5" id="17o-Ky-8uZ"/>
+                            <constraint firstItem="omz-OY-jsL" firstAttribute="top" secondItem="ifq-B5-lZu" secondAttribute="top" id="5ns-19-9z2"/>
+                            <constraint firstItem="auN-2B-Ota" firstAttribute="centerX" secondItem="omz-OY-jsL" secondAttribute="centerX" id="6XP-yZ-oFO"/>
+                            <constraint firstItem="omz-OY-jsL" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="6hk-RK-HvB"/>
+                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="top" secondItem="unz-LP-btK" secondAttribute="bottom" constant="50" id="9Fy-Uz-aHP"/>
+                            <constraint firstItem="omz-OY-jsL" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="ES4-zg-8Tl"/>
+                            <constraint firstItem="unz-LP-btK" firstAttribute="top" secondItem="ifq-B5-lZu" secondAttribute="bottom" constant="50" id="Gxi-cf-88x"/>
+                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="IDK-Cb-NT3"/>
+                            <constraint firstItem="unz-LP-btK" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="PoN-YK-jGz"/>
+                            <constraint firstItem="unz-LP-btK" firstAttribute="centerX" secondItem="ifq-B5-lZu" secondAttribute="centerX" id="RCn-mh-vpG"/>
+                            <constraint firstItem="omz-OY-jsL" firstAttribute="centerX" secondItem="FJb-sz-0Rq" secondAttribute="centerX" multiplier="1.5" id="RfP-db-H72"/>
+                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="SCD-2f-koq"/>
+                            <constraint firstItem="auN-2B-Ota" firstAttribute="top" secondItem="unz-LP-btK" secondAttribute="top" id="VKX-0G-R1q"/>
+                            <constraint firstItem="unz-LP-btK" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="WjE-Bg-mHf"/>
+                            <constraint firstItem="ifq-B5-lZu" firstAttribute="height" secondItem="FJb-sz-0Rq" secondAttribute="height" multiplier="0.18" id="afl-Bf-2gU"/>
+                            <constraint firstItem="ifq-B5-lZu" firstAttribute="top" secondItem="e0P-aF-4qF" secondAttribute="bottom" constant="50" id="eLM-v4-42X"/>
+                            <constraint firstItem="auN-2B-Ota" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="g4H-3c-8Jc"/>
+                            <constraint firstItem="ifq-B5-lZu" firstAttribute="width" secondItem="FJb-sz-0Rq" secondAttribute="width" multiplier="0.3" id="pvg-ql-XTJ"/>
+                            <constraint firstItem="auN-2B-Ota" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="xqD-eT-ZSy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dicas" id="QW8-mt-3zY"/>
