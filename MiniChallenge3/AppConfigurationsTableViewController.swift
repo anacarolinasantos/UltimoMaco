@@ -11,38 +11,30 @@ import UIKit
 class AppConfigurationsTableViewController: UITableViewController {
 
     //MARK: - Outlets
-    @IBOutlet weak var hourCell: UITableViewCell!
-    @IBOutlet weak var pickerCell: UITableViewCell!
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
-    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var dailyNotificationsSwitch: UISwitch!
+    @IBOutlet weak var infoNotificationSwitch: UISwitch!
     
     //MARK: - Atributes
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // -- SETUP
-        pickerCell.isHidden = true
         datePickerOutlet.datePickerMode = .time
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationController.getPendingNotifications()
+        
+        infoNotificationSwitch.isOn = UserDefaults.standard.bool(forKey: "isEnabledInfoNotification")
+        
+        datePickerOutlet.isEnabled = UserDefaults.standard.bool(forKey: "isEnabledDailyReminder")
+        dailyNotificationsSwitch.isOn = UserDefaults.standard.bool(forKey: "isEnabledDailyReminder")
+        
         if let date = UserDefaults.standard.object(forKey: "reminderHour") as? Date {
-            let hour = Calendar.current.component(.hour, from: date)
-            let minute = Calendar.current.component(.minute, from: date)
-            if minute < 10{
-                hourLabel.text = "\(hour):0\(minute)"
-            } else {
-                hourLabel.text = "\(hour):\(minute)"
-            }
+            datePickerOutlet.date = date
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 2{
-            pickerCell.isHidden = !pickerCell.isHidden
-        }
+
     }
     
     //MARK: - Actions
@@ -61,17 +53,20 @@ class AppConfigurationsTableViewController: UITableViewController {
                 minute = Calendar.current.component(.minute, from: date)
             }
             
-            UserDefaults.standard.set(at(hour: hour, minute: minute),
-                                      forKey: "reminderHour")
+            UserDefaults.standard.set(at(hour: hour, minute: minute), forKey: "reminderHour")
+            UserDefaults.standard.set(true, forKey: "isEnabledDailyReminder")
+            UserDefaults.standard.synchronize()
             
             NotificationController.sendNotificationDaily(["lembreteNoturno",
                                                           messageBy(hour: hour),
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
                                                           at(hour: hour, minute: minute))
-            
-            hourCell.isHidden = false
+            datePickerOutlet.isEnabled = true
         } else {
-            hourCell.isHidden = true
+            datePickerOutlet.isEnabled = false
+            UserDefaults.standard.set(false,
+                                      forKey: "isEnabledDailyReminder")
+            UserDefaults.standard.synchronize()
             NotificationController.center.removePendingNotificationRequests(withIdentifiers: ["lembreteNoturno"])
         }
         
@@ -86,6 +81,8 @@ class AppConfigurationsTableViewController: UITableViewController {
             let notifications = NotificationsDatabase.notifications.map({ $0.identifier })
             NotificationController.center.removePendingNotificationRequests(withIdentifiers: notifications)
         }
+        UserDefaults.standard.set(sender.isOn, forKey: "isEnabledInfoNotification")
+        UserDefaults.standard.synchronize()
     }
     @IBAction func pickerDidChangeValue(_ sender: UIDatePicker) {
         
@@ -93,14 +90,8 @@ class AppConfigurationsTableViewController: UITableViewController {
         
         let datePicker = Calendar.current.dateComponents([.hour,.minute,.second,], from:sender.date)
         
-        if datePicker.minute! < 10 {
-            hourLabel.text = "\(datePicker.hour!):0\(datePicker.minute!)"
-        } else {
-            hourLabel.text = "\(datePicker.hour!):\(datePicker.minute!)"
-        }
-        
-        UserDefaults.standard.set(at(hour: datePicker.hour!, minute: datePicker.minute!),
-                                  forKey: "reminderHour")
+        UserDefaults.standard.set(at(hour: datePicker.hour!, minute: datePicker.minute!), forKey: "reminderHour")
+        UserDefaults.standard.synchronize()
         
         
         NotificationController.sendNotificationDaily(["lembreteNoturno",

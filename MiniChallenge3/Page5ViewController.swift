@@ -66,6 +66,9 @@ class Page5ViewController: PageModelViewController {
             
             UserDefaults.standard.set(false, forKey: "isFirstTimeInApp")
             UserDefaults.standard.set(cigsDaily / 20 * cigsYears, forKey: "smokingLoad")
+            UserDefaults.standard.set(true, forKey: "isEnabledDailyReminder")
+            UserDefaults.standard.set(true, forKey: "isEnabledInfoNotification")
+            UserDefaults.standard.set(Calendar.current.date(bySettingHour: 21, minute: 0, second: 0, of: Date())!, forKey: "reminderHour")
             UserDefaults.standard.synchronize()
             
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
