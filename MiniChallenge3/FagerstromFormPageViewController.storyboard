@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQe-eE-WVe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQe-eE-WVe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -456,11 +456,20 @@ primeiras horas do dia?</string>
                                     <action selector="end:" destination="Zzj-FK-hTo" eventType="touchUpInside" id="mOS-om-zdb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-5W-Gbn">
+                                <rect key="frame" x="86" y="559" width="202" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="redoQuestionnaire"/>
+                                <connections>
+                                    <action selector="redo:" destination="Zzj-FK-hTo" eventType="touchUpInside" id="JQQ-DM-TcH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="points" destination="A33-5T-e3s" id="uG2-3A-Zbx"/>
+                        <outlet property="redoQuiz" destination="cA1-5W-Gbn" id="aKI-SM-t1b"/>
                         <outlet property="resultLabel" destination="wtq-aE-j3K" id="DC7-Db-W0b"/>
                     </connections>
                 </viewController>
@@ -508,6 +517,7 @@ primeiras horas do dia?</string>
         <image name="moreThan60Button" width="442" height="97"/>
         <image name="noButton" width="442" height="142"/>
         <image name="prohibitedIcon" width="260" height="267"/>
+        <image name="redoQuestionnaire" width="835" height="159"/>
         <image name="selectedBigBackground" width="437" height="92"/>
         <image name="sunIcon" width="262" height="267"/>
         <image name="termometerIcon" width="262" height="267"/>

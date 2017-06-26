@@ -14,13 +14,16 @@ class FagerstromPage6: PageModelViewController{
     //MARK: - Outlets
     @IBOutlet weak var points: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var redoQuiz: UIButton!
     
     //MARK: - Atributes
     var pressed = false
+    var redo = false
     
     //MARK: - ViewController Life Cicle
     override func viewWillAppear(_ animated: Bool) {
         var test: FagerstromTest?
+        var sum = 0
         
         do {
             var tests = try DatabaseController.persistentContainer.viewContext.fetch(FagerstromTest.fetchRequest())
@@ -28,6 +31,7 @@ class FagerstromPage6: PageModelViewController{
                 test = NSEntityDescription.insertNewObject(forEntityName: "FagerstromTest", into: DatabaseController.persistentContainer.viewContext) as? FagerstromTest
             } else {
                 test = tests[0] as? FagerstromTest
+                sum = Int((test?.cigarreteRestriction)! + (test?.cigQtyFirstHours)! + (test?.firstCigarrete)! + (test?.morningCigarrete)! + (test?.sickSmoking)!)
             }
             
         } catch _ as NSError {
@@ -40,16 +44,25 @@ class FagerstromPage6: PageModelViewController{
         var dependencyLevel = ""
         var color = UIColor.black
         
-        let p1 = (vcs[0] as! FagerstromPage1).points
-        test?.cigarreteRestriction = Int16(p1!)
-        let p2 = (vcs[1] as! FagerstromPage2).points
-        test?.cigQtyFirstHours = Int16(p2!)
-        let p3 = (vcs[2] as! FagerstromPage3).points
-        test?.firstCigarrete = Int16(p3!)
-        let p4 = (vcs[3] as! FagerstromPage4).points
-        test?.morningCigarrete = Int16(p4!)
-        let p5 = (vcs[4] as! FagerstromPage5).points
-        test?.sickSmoking = Int16(p5!)
+        //If vcs[0] is FagerstromPage1 that means this is not only to show result, is to calculate the whole test thingy thingy
+        if vcs[0] is FagerstromPage1 {
+            redoQuiz.isHidden = true
+            
+            let p1 = (vcs[0] as! FagerstromPage1).points
+            test?.cigarreteRestriction = Int16(p1!)
+            let p2 = (vcs[1] as! FagerstromPage2).points
+            test?.cigQtyFirstHours = Int16(p2!)
+            let p3 = (vcs[2] as! FagerstromPage3).points
+            test?.firstCigarrete = Int16(p3!)
+            let p4 = (vcs[3] as! FagerstromPage4).points
+            test?.morningCigarrete = Int16(p4!)
+            let p5 = (vcs[4] as! FagerstromPage5).points
+            test?.sickSmoking = Int16(p5!)
+            
+            sum = p1! + p2! + p3! + p4! + p5!
+        } else {
+            redoQuiz.isHidden = false
+        }
         
         var p6 = 0
         do {
@@ -69,7 +82,7 @@ class FagerstromPage6: PageModelViewController{
             
         } catch _ as NSError { print("Error") }
         
-        let sum = p1! + p2! + p3! + p4! + p5! + p6
+        sum += p6
         
         if sum < 2 {
             dependencyLevel = "Muito baixo"
@@ -100,6 +113,9 @@ class FagerstromPage6: PageModelViewController{
     }
     
     //MARK: - Actions
+    @IBAction func redo(_ sender: UIButton) {
+        redo = true
+    }
     @IBAction func end(_ sender: Any) {
         pressed = true
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class FagerstromViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
@@ -16,7 +17,7 @@ class FagerstromViewController: UIViewController, UIPageViewControllerDataSource
     
     //MARK: - Atributes
     var isAbleToContinue = true
-    var timer = Timer()
+    public var timer = Timer()
     var forward = false
     var backward = false
     // The UIPageViewController
@@ -35,9 +36,15 @@ class FagerstromViewController: UIViewController, UIPageViewControllerDataSource
         // Setup the pages
         let storyboard = UIStoryboard(name: "FagerstromFormPageViewController", bundle: nil)
         
-        for i in 1...6 {
-            FagerstromViewController.pages.append(storyboard.instantiateViewController(withIdentifier: "Fargerstrom\(i)") as! PageModelViewController)
-            FagerstromViewController.pages[i-1].index = i-1
+        
+        if !fagestromTestHasAlreadyBeenMade() {
+            for i in 1...6 {
+                FagerstromViewController.pages.append(storyboard.instantiateViewController(withIdentifier: "Fargerstrom\(i)") as! PageModelViewController)
+                FagerstromViewController.pages[i-1].index = i-1
+            }
+        } else {
+            FagerstromViewController.pages.append(storyboard.instantiateViewController(withIdentifier: "Fargerstrom6") as! PageModelViewController)
+            FagerstromViewController.pages[0].index = 0
         }
         
         // Create the page container
@@ -133,10 +140,39 @@ class FagerstromViewController: UIViewController, UIPageViewControllerDataSource
                 timer.invalidate()
                 FagerstromViewController.pages.removeAll()
                 self.dismiss(animated: true, completion: nil)
+            } else if page6.redo {
+                FagerstromViewController.pages.removeAll()
+                reSetAll()
             }
         }
         
         isAbleToContinue = true
     }
     
+    private func fagestromTestHasAlreadyBeenMade() -> Bool {
+        var ft: [FagerstromTest] = []
+        do {
+            ft = try DatabaseController.persistentContainer.viewContext.fetch(FagerstromTest.fetchRequest()) as! [FagerstromTest]
+        } catch _ as NSError { print("Error") }
+        return ft.count != 0
+    }
+    
+    private func reSetAll() {
+        pageContainer.dataSource = nil
+        pageContainer.delegate = nil
+
+        let storyboard = UIStoryboard(name: "FagerstromFormPageViewController", bundle: nil)
+        for i in 1...6 {
+            FagerstromViewController.pages.append(storyboard.instantiateViewController(withIdentifier: "Fargerstrom\(i)") as! PageModelViewController)
+            FagerstromViewController.pages[i-1].index = i-1
+        }
+        pageContainer = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        pageContainer.delegate = self
+        pageContainer.dataSource = self
+        pageContainer.setViewControllers([FagerstromViewController.pages.first!], direction: .forward, animated: false, completion: nil)
+        view.addSubview(pageContainer.view)
+        view.bringSubview(toFront: pageControl)
+        pageControl.numberOfPages = FagerstromViewController.pages.count
+        pageControl.currentPage = 0
+    }
 }
