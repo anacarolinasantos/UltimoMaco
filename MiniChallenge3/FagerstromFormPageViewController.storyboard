@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQe-eE-WVe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uQe-eE-WVe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,17 +25,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-7r-HcG">
-                                <rect key="frame" x="130" y="119" width="110" height="110"/>
+                                <rect key="frame" x="131.5" y="110.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pOd-7r-HcG" secondAttribute="height" multiplier="1:1" id="TnZ-hy-pie"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6U-Ku-PTz">
-                                <rect key="frame" x="51" y="388" width="268" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="hDa-lT-fWj"/>
-                                    <constraint firstAttribute="height" constant="63" id="qPq-hm-Ulm"/>
-                                </constraints>
+                                <rect key="frame" x="53" y="393.5" width="270" height="66.5"/>
                                 <state key="normal" image="between30and60Button"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -42,11 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-8C-4pA">
-                                <rect key="frame" x="51" y="461" width="268" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="EbK-Hx-hrW"/>
-                                    <constraint firstAttribute="width" constant="268" id="hcP-e6-MSc"/>
-                                </constraints>
+                                <rect key="frame" x="53" y="470" width="270" height="66.5"/>
                                 <state key="normal" image="between5and30Button"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -54,11 +47,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-Ny-NAh">
-                                <rect key="frame" x="51" y="534" width="268" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="ij5-jz-TDO"/>
-                                    <constraint firstAttribute="height" constant="63" id="ju5-yk-fxl"/>
-                                </constraints>
+                                <rect key="frame" x="53" y="546.5" width="270" height="66.5"/>
                                 <state key="normal" image="lessThan5Button"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -66,21 +55,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-5w-5BJ">
-                                <rect key="frame" x="51" y="315" width="268" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="268" id="qm3-xb-EcA"/>
-                                    <constraint firstAttribute="height" constant="63" id="vTI-4M-3eb"/>
-                                </constraints>
+                                <rect key="frame" x="53" y="317" width="270" height="66.5"/>
                                 <state key="normal" image="moreThan60Button"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
                                     <action selector="moreThan60Tap:" destination="ohs-VI-Rr0" eventType="touchUpInside" id="0bp-Ir-Is5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
-                                <rect key="frame" x="31" y="241" width="308" height="46"/>
-                                <string key="text">Quanto tempo depois 
-de acordar você fuma o primeiro cigarro?</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quanto tempo depois de acordar você fuma o primeiro cigarro?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-jC-sN9">
+                                <rect key="frame" x="38" y="233" width="300" height="46"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
@@ -88,19 +71,28 @@ de acordar você fuma o primeiro cigarro?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="centerX" secondItem="CB5-8C-4pA" secondAttribute="centerX" id="713-lA-00B"/>
-                            <constraint firstItem="pOd-7r-HcG" firstAttribute="leading" secondItem="qXg-6Z-Fyu" secondAttribute="leadingMargin" constant="114" id="9wu-ry-rRg"/>
-                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="centerX" secondItem="0a3-5w-5BJ" secondAttribute="centerX" id="I1b-t4-Qsg"/>
-                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="top" secondItem="RLw-jC-sN9" secondAttribute="bottom" constant="28" id="IoW-bW-cYN"/>
-                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="top" secondItem="0a3-5w-5BJ" secondAttribute="bottom" constant="10" id="RZS-Hb-L7c"/>
-                            <constraint firstItem="pOd-7r-HcG" firstAttribute="top" secondItem="U5s-S9-0BW" secondAttribute="bottom" constant="99" id="aKQ-xJ-JBb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pOd-7r-HcG" secondAttribute="trailing" constant="119" id="b4m-hQ-793"/>
-                            <constraint firstItem="CB5-8C-4pA" firstAttribute="top" secondItem="R6U-Ku-PTz" secondAttribute="bottom" constant="10" id="b7X-1m-40G"/>
-                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="top" secondItem="CB5-8C-4pA" secondAttribute="bottom" constant="10" id="j9k-Oi-7KG"/>
-                            <constraint firstItem="RLw-jC-sN9" firstAttribute="centerX" secondItem="pOd-7r-HcG" secondAttribute="centerX" id="lX9-tp-eGA"/>
-                            <constraint firstItem="CB5-8C-4pA" firstAttribute="centerX" secondItem="R6U-Ku-PTz" secondAttribute="centerX" id="lqV-tD-YFf"/>
-                            <constraint firstItem="RLw-jC-sN9" firstAttribute="top" secondItem="pOd-7r-HcG" secondAttribute="bottom" constant="12" id="mDg-JK-VUb"/>
-                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="centerX" secondItem="pOd-7r-HcG" secondAttribute="centerX" id="tWM-yM-I2d"/>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="centerX" secondItem="CB5-8C-4pA" secondAttribute="centerX" id="EJq-8D-lAg"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="height" secondItem="qXg-6Z-Fyu" secondAttribute="height" multiplier="0.1" id="FzV-r3-8Zq"/>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="height" secondItem="CB5-8C-4pA" secondAttribute="height" id="GLC-49-Q1P"/>
+                            <constraint firstItem="RLw-jC-sN9" firstAttribute="centerX" secondItem="pOd-7r-HcG" secondAttribute="centerX" id="HO5-L5-uTu"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="width" secondItem="0a3-5w-5BJ" secondAttribute="width" id="JwR-H0-rGK"/>
+                            <constraint firstItem="pOd-7r-HcG" firstAttribute="centerX" secondItem="qXg-6Z-Fyu" secondAttribute="centerX" id="NNI-VU-r4q"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="centerX" secondItem="0a3-5w-5BJ" secondAttribute="centerX" id="NZ4-JK-V9y"/>
+                            <constraint firstItem="pOd-7r-HcG" firstAttribute="width" secondItem="qXg-6Z-Fyu" secondAttribute="width" multiplier="0.3" id="RLe-PI-Kyj"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="top" secondItem="R6U-Ku-PTz" secondAttribute="baseline" constant="10" id="RZG-u1-pVF"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="top" secondItem="RLw-jC-sN9" secondAttribute="baseline" constant="45" id="UEh-8I-6Nd"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="centerX" secondItem="R6U-Ku-PTz" secondAttribute="centerX" id="V6w-Uc-0sl"/>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="top" secondItem="CB5-8C-4pA" secondAttribute="baseline" constant="10" id="Ycr-Zm-D3T"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="top" secondItem="0a3-5w-5BJ" secondAttribute="baseline" constant="10" id="ZUN-IY-EML"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="centerX" secondItem="RLw-jC-sN9" secondAttribute="centerX" id="bEu-pj-YDh"/>
+                            <constraint firstItem="nYC-Ny-NAh" firstAttribute="width" secondItem="CB5-8C-4pA" secondAttribute="width" id="g2d-i3-xvM"/>
+                            <constraint firstItem="RLw-jC-sN9" firstAttribute="top" secondItem="pOd-7r-HcG" secondAttribute="baseline" constant="10" id="iZR-OB-5XV"/>
+                            <constraint firstItem="pOd-7r-HcG" firstAttribute="centerY" secondItem="qXg-6Z-Fyu" secondAttribute="centerY" multiplier="0.5" id="k52-Ar-umE"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="height" secondItem="R6U-Ku-PTz" secondAttribute="height" id="tub-NQ-q9K"/>
+                            <constraint firstItem="0a3-5w-5BJ" firstAttribute="width" secondItem="qXg-6Z-Fyu" secondAttribute="width" multiplier="0.72" id="uri-wi-a8y"/>
+                            <constraint firstItem="RLw-jC-sN9" firstAttribute="width" secondItem="qXg-6Z-Fyu" secondAttribute="width" multiplier="0.8" id="vVM-7Y-yfH"/>
+                            <constraint firstItem="CB5-8C-4pA" firstAttribute="width" secondItem="R6U-Ku-PTz" secondAttribute="width" id="whe-uq-sQI"/>
+                            <constraint firstItem="R6U-Ku-PTz" firstAttribute="height" secondItem="0a3-5w-5BJ" secondAttribute="height" id="xCZ-xS-E2y"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,7 +104,7 @@ de acordar você fuma o primeiro cigarro?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPV-V6-Inj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1943.2" y="1002.5487256371815"/>
+            <point key="canvasLocation" x="-1940" y="1015"/>
         </scene>
         <!--Fagerstrom Page2-->
         <scene sceneID="tt6-Yx-Nsr">
@@ -127,26 +119,19 @@ de acordar você fuma o primeiro cigarro?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prohibitedIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Uu5-7Q-pEa">
-                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <rect key="frame" x="131" y="110.5" width="112.5" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Uu5-7Q-pEa" secondAttribute="height" multiplier="1:1" id="qWx-7l-kFS"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
-                                <rect key="frame" x="97.5" y="241" width="179" height="69"/>
-                                <string key="text">Você tem dificuldade de
- ficar sem fumar em
- locais proibidos?</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você tem dificuldade de ficar sem fumar em locais proibidos?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-pd-n4F">
+                                <rect key="frame" x="38" y="233.5" width="300" height="46"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5h-Ev-5lX">
-                                <rect key="frame" x="87" y="368" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="ngL-cj-dBq"/>
-                                    <constraint firstAttribute="height" constant="63" id="wOs-BZ-CCa"/>
-                                </constraints>
+                                <rect key="frame" x="84.5" y="372.5" width="206.5" height="66.5"/>
                                 <state key="normal" image="yesButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -154,11 +139,7 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22Q-ms-De0">
-                                <rect key="frame" x="87" y="446" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="J5n-E9-cbE"/>
-                                    <constraint firstAttribute="width" constant="201" id="K5a-SF-bpS"/>
-                                </constraints>
+                                <rect key="frame" x="84.5" y="449" width="206.5" height="66.5"/>
                                 <state key="normal" image="noButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -168,15 +149,20 @@ de acordar você fuma o primeiro cigarro?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="22Q-ms-De0" firstAttribute="centerX" secondItem="A5h-Ev-5lX" secondAttribute="centerX" id="CQ9-gG-im8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Uu5-7Q-pEa" secondAttribute="trailing" constant="117" id="I7O-ft-7AS"/>
-                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="centerX" secondItem="Uu5-7Q-pEa" secondAttribute="centerX" id="JZJ-OO-c94"/>
-                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="top" secondItem="Uu5-7Q-pEa" secondAttribute="bottom" constant="12" id="PvQ-ce-0IC"/>
-                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="top" secondItem="T3k-BO-MDi" secondAttribute="bottom" constant="99" id="V7E-XP-a67"/>
-                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="top" secondItem="Tc6-pd-n4F" secondAttribute="bottom" constant="58" id="cYs-CL-4HV"/>
-                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="centerX" secondItem="Uu5-7Q-pEa" secondAttribute="centerX" id="dD2-YP-Ocj"/>
-                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="leading" secondItem="m3Q-xi-fta" secondAttribute="leadingMargin" constant="116" id="dzX-V2-OLf"/>
-                            <constraint firstItem="22Q-ms-De0" firstAttribute="top" secondItem="A5h-Ev-5lX" secondAttribute="bottom" constant="15" id="eRm-bs-vwD"/>
+                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="centerX" secondItem="m3Q-xi-fta" secondAttribute="centerX" id="Axj-6p-bCk"/>
+                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="width" secondItem="m3Q-xi-fta" secondAttribute="width" multiplier="0.8" id="C22-f9-jC4"/>
+                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="centerX" secondItem="Uu5-7Q-pEa" secondAttribute="centerX" id="FgX-XV-n5b"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="width" secondItem="m3Q-xi-fta" secondAttribute="width" multiplier="0.55" id="Jq8-jX-G36"/>
+                            <constraint firstItem="Tc6-pd-n4F" firstAttribute="top" secondItem="Uu5-7Q-pEa" secondAttribute="baseline" constant="10" id="MCC-bs-C9I"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="top" secondItem="Tc6-pd-n4F" secondAttribute="baseline" constant="100" id="Pvx-xH-GAA"/>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="height" secondItem="A5h-Ev-5lX" secondAttribute="height" id="ckI-NJ-Ij6"/>
+                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="centerY" secondItem="m3Q-xi-fta" secondAttribute="centerY" multiplier="0.5" id="d0m-bj-rOX"/>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="width" secondItem="A5h-Ev-5lX" secondAttribute="width" id="eZx-Z7-7CR"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="height" secondItem="m3Q-xi-fta" secondAttribute="height" multiplier="0.1" id="g0p-Xt-8Zt"/>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="top" secondItem="A5h-Ev-5lX" secondAttribute="baseline" constant="10" id="g9P-gE-EiL"/>
+                            <constraint firstItem="Uu5-7Q-pEa" firstAttribute="width" secondItem="m3Q-xi-fta" secondAttribute="width" multiplier="0.3" id="hiL-TZ-ESQ"/>
+                            <constraint firstItem="22Q-ms-De0" firstAttribute="centerX" secondItem="A5h-Ev-5lX" secondAttribute="centerX" id="irl-W5-GB4"/>
+                            <constraint firstItem="A5h-Ev-5lX" firstAttribute="centerX" secondItem="Tc6-pd-n4F" secondAttribute="centerX" id="ssA-ZZ-Vrx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -201,11 +187,7 @@ de acordar você fuma o primeiro cigarro?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8A-Df-Wiz">
-                                <rect key="frame" x="87" y="368" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="FbX-8j-Ovy"/>
-                                    <constraint firstAttribute="height" constant="63" id="hIA-iZ-qpb"/>
-                                </constraints>
+                                <rect key="frame" x="84.5" y="372" width="206" height="66.5"/>
                                 <state key="normal" image="yesButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -213,26 +195,19 @@ de acordar você fuma o primeiro cigarro?</string>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunIcon" translatesAutoresizingMaskIntoConstraints="NO" id="n33-7U-qNS">
-                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <rect key="frame" x="131" y="110.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="n33-7U-qNS" secondAttribute="height" multiplier="1:1" id="V7i-JI-303"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
-                                <rect key="frame" x="106" y="241" width="162" height="69"/>
-                                <string key="text">O primeiro cigarro da 
-manhã é o que traz 
-mais satisfação?</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O primeiro cigarro da manhã é o que traz mais satisfação?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yz-gX-COf">
+                                <rect key="frame" x="37.5" y="233" width="300" height="46"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-ja-zVC">
-                                <rect key="frame" x="87" y="446" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="AZu-kF-2Cl"/>
-                                    <constraint firstAttribute="height" constant="63" id="ely-KS-Hr5"/>
-                                </constraints>
+                                <rect key="frame" x="84.5" y="448.5" width="206" height="66.5"/>
                                 <state key="normal" image="noButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -242,16 +217,20 @@ mais satisfação?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="n33-7U-qNS" secondAttribute="trailing" constant="117" id="5oj-pD-JA2"/>
-                            <constraint firstItem="n33-7U-qNS" firstAttribute="leading" secondItem="ena-ez-PMI" secondAttribute="leadingMargin" constant="116" id="8YI-9Z-SaJ"/>
-                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="top" secondItem="0Yz-gX-COf" secondAttribute="bottom" constant="58" id="9cc-RE-bVa"/>
-                            <constraint firstItem="n33-7U-qNS" firstAttribute="top" secondItem="PpU-hx-A65" secondAttribute="bottom" constant="99" id="Ahf-uH-olu"/>
-                            <constraint firstItem="0Yz-gX-COf" firstAttribute="centerX" secondItem="n33-7U-qNS" secondAttribute="centerX" id="Bsp-ij-21W"/>
-                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="centerX" secondItem="n33-7U-qNS" secondAttribute="centerX" id="EHt-v6-YRB"/>
-                            <constraint firstItem="jAa-ja-zVC" firstAttribute="top" secondItem="q8A-Df-Wiz" secondAttribute="bottom" constant="15" id="Hqw-sG-m9m"/>
-                            <constraint firstItem="jAa-ja-zVC" firstAttribute="centerX" secondItem="q8A-Df-Wiz" secondAttribute="centerX" id="LME-u7-U3T"/>
-                            <constraint firstItem="0Yz-gX-COf" firstAttribute="top" secondItem="n33-7U-qNS" secondAttribute="bottom" constant="12" id="NwN-91-QjH"/>
-                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="top" secondItem="0Yz-gX-COf" secondAttribute="bottom" constant="58" id="uHS-wJ-6FT"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="top" secondItem="q8A-Df-Wiz" secondAttribute="baseline" constant="10" id="FHQ-GC-Xpp"/>
+                            <constraint firstItem="n33-7U-qNS" firstAttribute="centerY" secondItem="ena-ez-PMI" secondAttribute="centerY" multiplier="0.5" id="JGB-Dh-niH"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="width" secondItem="ena-ez-PMI" secondAttribute="width" multiplier="0.55" id="Lur-eW-BWz"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="centerX" secondItem="0Yz-gX-COf" secondAttribute="centerX" id="P6M-wz-Shb"/>
+                            <constraint firstItem="0Yz-gX-COf" firstAttribute="centerX" secondItem="n33-7U-qNS" secondAttribute="centerX" id="PQa-7G-yWn"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="centerX" secondItem="q8A-Df-Wiz" secondAttribute="centerX" id="b1n-R5-HUN"/>
+                            <constraint firstItem="0Yz-gX-COf" firstAttribute="width" secondItem="ena-ez-PMI" secondAttribute="width" multiplier="0.8" id="dgS-Te-SAc"/>
+                            <constraint firstItem="n33-7U-qNS" firstAttribute="centerX" secondItem="ena-ez-PMI" secondAttribute="centerX" id="e2r-O4-eDR"/>
+                            <constraint firstItem="n33-7U-qNS" firstAttribute="width" secondItem="ena-ez-PMI" secondAttribute="width" multiplier="0.3" id="gkH-BH-Snv"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="height" secondItem="q8A-Df-Wiz" secondAttribute="height" id="j2D-Vt-3Ui"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="top" secondItem="0Yz-gX-COf" secondAttribute="baseline" constant="100" id="p1J-S5-hu4"/>
+                            <constraint firstItem="jAa-ja-zVC" firstAttribute="width" secondItem="q8A-Df-Wiz" secondAttribute="width" id="pXr-2s-7SQ"/>
+                            <constraint firstItem="0Yz-gX-COf" firstAttribute="top" secondItem="n33-7U-qNS" secondAttribute="baseline" constant="10" id="ubr-C4-ZAq"/>
+                            <constraint firstItem="q8A-Df-Wiz" firstAttribute="height" secondItem="ena-ez-PMI" secondAttribute="height" multiplier="0.1" id="vcZ-VH-m2Q"/>
                         </constraints>
                     </view>
                     <connections>
@@ -261,7 +240,7 @@ mais satisfação?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eyP-wI-aMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-348" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="-402" y="1015"/>
         </scene>
         <!--Fagerstrom Page4-->
         <scene sceneID="gSn-l3-MK8">
@@ -276,25 +255,21 @@ mais satisfação?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thm-S4-uja">
-                                <rect key="frame" x="100.5" y="241" width="173.5" height="46"/>
-                                <string key="text">Você fuma mais nas 
-primeiras horas do dia?</string>
+                                <rect key="frame" x="38" y="233" width="300" height="46"/>
+                                <string key="text">Você fuma mais nas primeiras
+ horas do dia?</string>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarmIcon" translatesAutoresizingMaskIntoConstraints="NO" id="44Y-56-Wc6">
-                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <rect key="frame" x="131" y="110.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="44Y-56-Wc6" secondAttribute="height" multiplier="1:1" id="GYa-qz-nVj"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-K4-cwa">
-                                <rect key="frame" x="86.5" y="368" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="koU-0s-tuG"/>
-                                    <constraint firstAttribute="height" constant="63" id="lLX-do-Ucp"/>
-                                </constraints>
+                                <rect key="frame" x="85" y="372" width="206" height="66.5"/>
                                 <state key="normal" image="yesButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -302,11 +277,7 @@ primeiras horas do dia?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DM-JI-3wR">
-                                <rect key="frame" x="86.5" y="446" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="JdU-JY-lsH"/>
-                                    <constraint firstAttribute="height" constant="63" id="Uz3-Qi-JFp"/>
-                                </constraints>
+                                <rect key="frame" x="85" y="448.5" width="206" height="66.5"/>
                                 <state key="normal" image="noButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -316,15 +287,20 @@ primeiras horas do dia?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="thm-S4-uja" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="Ed4-d6-r6A"/>
-                            <constraint firstItem="44Y-56-Wc6" firstAttribute="leading" secondItem="GOM-DQ-0zb" secondAttribute="leadingMargin" constant="116" id="HS4-ob-94Y"/>
-                            <constraint firstItem="44Y-56-Wc6" firstAttribute="top" secondItem="HxQ-8M-kmP" secondAttribute="bottom" constant="99" id="I4D-ng-PXg"/>
-                            <constraint firstItem="thm-S4-uja" firstAttribute="top" secondItem="44Y-56-Wc6" secondAttribute="bottom" constant="12" id="Ovn-l4-IMt"/>
-                            <constraint firstItem="5qv-K4-cwa" firstAttribute="top" secondItem="thm-S4-uja" secondAttribute="bottom" constant="81" id="VlM-R3-Ps6"/>
-                            <constraint firstItem="3DM-JI-3wR" firstAttribute="top" secondItem="5qv-K4-cwa" secondAttribute="bottom" constant="15" id="i3e-Yw-r2b"/>
-                            <constraint firstItem="5qv-K4-cwa" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="iPV-MW-zw3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="44Y-56-Wc6" secondAttribute="trailing" constant="117" id="p2z-cf-eBT"/>
-                            <constraint firstItem="3DM-JI-3wR" firstAttribute="centerX" secondItem="5qv-K4-cwa" secondAttribute="centerX" id="rh0-EA-Ag8"/>
+                            <constraint firstItem="44Y-56-Wc6" firstAttribute="width" secondItem="GOM-DQ-0zb" secondAttribute="width" multiplier="0.3" id="02h-L2-NGY"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="centerX" secondItem="5qv-K4-cwa" secondAttribute="centerX" id="3bw-AK-LeN"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="top" secondItem="5qv-K4-cwa" secondAttribute="baseline" constant="10" id="DFe-oL-dIS"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="top" secondItem="thm-S4-uja" secondAttribute="baseline" constant="100" id="ECU-W4-qdG"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="width" secondItem="GOM-DQ-0zb" secondAttribute="width" multiplier="0.55" id="Eqt-5e-sp3"/>
+                            <constraint firstItem="thm-S4-uja" firstAttribute="centerX" secondItem="44Y-56-Wc6" secondAttribute="centerX" id="GDI-Xw-KYn"/>
+                            <constraint firstItem="thm-S4-uja" firstAttribute="width" secondItem="GOM-DQ-0zb" secondAttribute="width" multiplier="0.8" id="OqN-wU-eoJ"/>
+                            <constraint firstItem="thm-S4-uja" firstAttribute="top" secondItem="44Y-56-Wc6" secondAttribute="baseline" constant="10" id="QD7-dk-FDY"/>
+                            <constraint firstItem="44Y-56-Wc6" firstAttribute="centerX" secondItem="GOM-DQ-0zb" secondAttribute="centerX" id="RcM-2D-qJO"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="centerX" secondItem="thm-S4-uja" secondAttribute="centerX" id="TjJ-vl-6Qa"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="height" secondItem="5qv-K4-cwa" secondAttribute="height" id="h17-VP-2h9"/>
+                            <constraint firstItem="44Y-56-Wc6" firstAttribute="centerY" secondItem="GOM-DQ-0zb" secondAttribute="centerY" multiplier="0.5" id="jh1-Xb-G9e"/>
+                            <constraint firstItem="3DM-JI-3wR" firstAttribute="width" secondItem="5qv-K4-cwa" secondAttribute="width" id="wdI-7Q-1Ff"/>
+                            <constraint firstItem="5qv-K4-cwa" firstAttribute="height" secondItem="GOM-DQ-0zb" secondAttribute="height" multiplier="0.1" id="yU5-qA-kiG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -334,7 +310,7 @@ primeiras horas do dia?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fak-Oq-vrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="442" y="1015"/>
         </scene>
         <!--Fagerstrom Page5-->
         <scene sceneID="1Q5-Ub-Gr8">
@@ -349,23 +325,19 @@ primeiras horas do dia?</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fuma mesmo doente?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ee-FN-R7c">
-                                <rect key="frame" x="85" y="241" width="204" height="23"/>
+                                <rect key="frame" x="37" y="233" width="300" height="23"/>
                                 <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termometerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="KoC-dQ-Gnb">
-                                <rect key="frame" x="132" y="119" width="110" height="110"/>
+                                <rect key="frame" x="131" y="110.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KoC-dQ-Gnb" secondAttribute="height" multiplier="1:1" id="dWJ-13-eAe"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbK-2J-4cB">
-                                <rect key="frame" x="86.5" y="368" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="201" id="eRw-Y1-y5A"/>
-                                    <constraint firstAttribute="height" constant="63" id="j8W-Uz-TSi"/>
-                                </constraints>
+                                <rect key="frame" x="84" y="369" width="206" height="66.5"/>
                                 <state key="normal" image="yesButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -374,11 +346,7 @@ primeiras horas do dia?</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-3k-DCk">
-                                <rect key="frame" x="86.5" y="446" width="201" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="Hce-sj-Rbm"/>
-                                    <constraint firstAttribute="width" constant="201" id="Piz-qh-fHS"/>
-                                </constraints>
+                                <rect key="frame" x="84" y="445.5" width="206" height="66.5"/>
                                 <state key="normal" image="noButton"/>
                                 <state key="selected" backgroundImage="selectedBigBackground"/>
                                 <connections>
@@ -388,15 +356,20 @@ primeiras horas do dia?</string>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="leading" secondItem="AYr-wQ-WTH" secondAttribute="leadingMargin" constant="116" id="28O-Ik-A6A"/>
-                            <constraint firstItem="1ee-FN-R7c" firstAttribute="top" secondItem="KoC-dQ-Gnb" secondAttribute="bottom" constant="12" id="6b3-Oe-ECh"/>
-                            <constraint firstItem="P5L-3k-DCk" firstAttribute="centerX" secondItem="kbK-2J-4cB" secondAttribute="centerX" id="OdC-f4-bcF"/>
-                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="top" secondItem="Gdi-xq-nMW" secondAttribute="bottom" constant="99" id="Syc-It-IqX"/>
-                            <constraint firstItem="kbK-2J-4cB" firstAttribute="top" secondItem="1ee-FN-R7c" secondAttribute="bottom" constant="104" id="VF3-a8-u4u"/>
-                            <constraint firstItem="kbK-2J-4cB" firstAttribute="centerX" secondItem="KoC-dQ-Gnb" secondAttribute="centerX" id="WRz-mM-bhs"/>
-                            <constraint firstItem="P5L-3k-DCk" firstAttribute="top" secondItem="kbK-2J-4cB" secondAttribute="bottom" constant="15" id="dql-Cy-TMT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KoC-dQ-Gnb" secondAttribute="trailing" constant="117" id="e9f-lL-Y59"/>
-                            <constraint firstItem="1ee-FN-R7c" firstAttribute="centerX" secondItem="KoC-dQ-Gnb" secondAttribute="centerX" id="eUJ-wK-coI"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="top" secondItem="1ee-FN-R7c" secondAttribute="baseline" constant="120" id="0lI-77-c0b"/>
+                            <constraint firstItem="1ee-FN-R7c" firstAttribute="width" secondItem="AYr-wQ-WTH" secondAttribute="width" multiplier="0.8" id="11q-fj-bNm"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="height" secondItem="kbK-2J-4cB" secondAttribute="height" id="JNQ-LL-4qu"/>
+                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="width" secondItem="AYr-wQ-WTH" secondAttribute="width" multiplier="0.3" id="LYn-IX-mSh"/>
+                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="centerX" secondItem="AYr-wQ-WTH" secondAttribute="centerX" id="RdN-Zn-UVb"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="width" secondItem="AYr-wQ-WTH" secondAttribute="width" multiplier="0.55" id="puZ-K2-Hzv"/>
+                            <constraint firstItem="1ee-FN-R7c" firstAttribute="top" secondItem="KoC-dQ-Gnb" secondAttribute="baseline" constant="10" id="rLu-IE-SW3"/>
+                            <constraint firstItem="1ee-FN-R7c" firstAttribute="centerX" secondItem="KoC-dQ-Gnb" secondAttribute="centerX" id="sFs-SV-c9u"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="width" secondItem="kbK-2J-4cB" secondAttribute="width" id="sbc-WA-M8P"/>
+                            <constraint firstItem="KoC-dQ-Gnb" firstAttribute="centerY" secondItem="AYr-wQ-WTH" secondAttribute="centerY" multiplier="0.5" id="wA0-0C-Hv9"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="centerX" secondItem="kbK-2J-4cB" secondAttribute="centerX" id="x3S-K4-ALr"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="centerX" secondItem="1ee-FN-R7c" secondAttribute="centerX" id="x3s-SI-xmQ"/>
+                            <constraint firstItem="P5L-3k-DCk" firstAttribute="top" secondItem="kbK-2J-4cB" secondAttribute="baseline" constant="10" id="xKX-nO-q7R"/>
+                            <constraint firstItem="kbK-2J-4cB" firstAttribute="height" secondItem="AYr-wQ-WTH" secondAttribute="height" multiplier="0.1" id="xnZ-69-t1E"/>
                         </constraints>
                     </view>
                     <connections>
@@ -406,7 +379,7 @@ primeiras horas do dia?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-44-W15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="1005"/>
+            <point key="canvasLocation" x="1273" y="1015"/>
         </scene>
         <!--Fagerstrom Page6-->
         <scene sceneID="SaV-f8-O18">
@@ -420,45 +393,39 @@ primeiras horas do dia?</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pontos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-tQ-Jtq">
-                                <rect key="frame" x="0.0" y="202" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontos:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-tQ-Jtq">
+                                <rect key="frame" x="161" y="137.5" width="53.5" height="21"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grau de dependência:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-FS-2lM">
-                                <rect key="frame" x="0.0" y="350" width="375" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grau de dependência:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJA-FS-2lM">
+                                <rect key="frame" x="106.5" y="321.5" width="162" height="21"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A33-5T-e3s">
-                                <rect key="frame" x="0.0" y="231" width="375" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A33-5T-e3s">
+                                <rect key="frame" x="0.0" y="167" width="375" height="66.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="57"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moderado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-aE-j3K">
-                                <rect key="frame" x="0.0" y="395" width="375" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtq-aE-j3K">
+                                <rect key="frame" x="148.5" y="356" width="78.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-9N-NTj">
-                                <rect key="frame" x="86" y="484" width="202" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiC-9N-NTj">
+                                <rect key="frame" x="84" y="472" width="206.5" height="46.5"/>
                                 <state key="normal" image="finishButton"/>
                                 <connections>
                                     <action selector="end:" destination="Zzj-FK-hTo" eventType="touchUpInside" id="mOS-om-zdb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-5W-Gbn">
-                                <rect key="frame" x="86" y="559" width="202" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-5W-Gbn">
+                                <rect key="frame" x="84" y="548.5" width="206.5" height="46.5"/>
                                 <state key="normal" title="Button" image="redoQuestionnaire"/>
                                 <connections>
                                     <action selector="redo:" destination="Zzj-FK-hTo" eventType="touchUpInside" id="JQQ-DM-TcH"/>
@@ -466,6 +433,26 @@ primeiras horas do dia?</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A33-5T-e3s" firstAttribute="centerY" secondItem="VsF-2X-Mjg" secondAttribute="centerY" multiplier="0.6" id="2Q3-Z1-05h"/>
+                            <constraint firstItem="A33-5T-e3s" firstAttribute="top" secondItem="aKc-tQ-Jtq" secondAttribute="baseline" constant="15" id="6cD-nK-gY4"/>
+                            <constraint firstItem="A33-5T-e3s" firstAttribute="height" secondItem="VsF-2X-Mjg" secondAttribute="height" multiplier="0.1" id="8cW-t7-YjM"/>
+                            <constraint firstItem="cA1-5W-Gbn" firstAttribute="centerX" secondItem="tiC-9N-NTj" secondAttribute="centerX" id="AxP-Xe-GSd"/>
+                            <constraint firstItem="wtq-aE-j3K" firstAttribute="top" secondItem="JJA-FS-2lM" secondAttribute="baseline" constant="20" id="Hny-Bq-t9Y"/>
+                            <constraint firstItem="tiC-9N-NTj" firstAttribute="height" secondItem="VsF-2X-Mjg" secondAttribute="height" multiplier="0.07" id="IkP-Nk-lkp"/>
+                            <constraint firstItem="cA1-5W-Gbn" firstAttribute="width" secondItem="tiC-9N-NTj" secondAttribute="width" id="LDf-KJ-M2V"/>
+                            <constraint firstItem="A33-5T-e3s" firstAttribute="width" secondItem="VsF-2X-Mjg" secondAttribute="width" id="MsL-eD-1MJ"/>
+                            <constraint firstItem="tiC-9N-NTj" firstAttribute="centerX" secondItem="wtq-aE-j3K" secondAttribute="centerX" id="YUo-kH-GQX"/>
+                            <constraint firstItem="wtq-aE-j3K" firstAttribute="centerX" secondItem="JJA-FS-2lM" secondAttribute="centerX" id="ZVh-G9-eoC"/>
+                            <constraint firstItem="tiC-9N-NTj" firstAttribute="width" secondItem="VsF-2X-Mjg" secondAttribute="width" multiplier="0.55" id="abH-C0-nPn"/>
+                            <constraint firstItem="cA1-5W-Gbn" firstAttribute="top" secondItem="tiC-9N-NTj" secondAttribute="baseline" constant="30" id="kIW-tr-xlf"/>
+                            <constraint firstItem="tiC-9N-NTj" firstAttribute="top" secondItem="wtq-aE-j3K" secondAttribute="baseline" constant="100" id="lZ3-Hx-Fcr"/>
+                            <constraint firstItem="JJA-FS-2lM" firstAttribute="top" secondItem="A33-5T-e3s" secondAttribute="baseline" constant="100" id="mol-BK-zQ9"/>
+                            <constraint firstItem="JJA-FS-2lM" firstAttribute="centerX" secondItem="A33-5T-e3s" secondAttribute="centerX" id="mxg-SQ-Dmp"/>
+                            <constraint firstItem="aKc-tQ-Jtq" firstAttribute="centerX" secondItem="A33-5T-e3s" secondAttribute="centerX" id="oNW-xA-fos"/>
+                            <constraint firstItem="cA1-5W-Gbn" firstAttribute="height" secondItem="tiC-9N-NTj" secondAttribute="height" id="tRK-ps-W4t"/>
+                            <constraint firstItem="A33-5T-e3s" firstAttribute="centerX" secondItem="VsF-2X-Mjg" secondAttribute="centerX" id="wW3-aI-mDr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="points" destination="A33-5T-e3s" id="uG2-3A-Zbx"/>
@@ -475,7 +462,7 @@ primeiras horas do dia?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cy-6Q-xXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068" y="1002.5487256371815"/>
+            <point key="canvasLocation" x="2087" y="1015"/>
         </scene>
         <!--Fagerstrom View Controller-->
         <scene sceneID="Bih-A1-drn">
