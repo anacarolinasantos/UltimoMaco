@@ -58,7 +58,7 @@ class Page5ViewController: PageModelViewController {
             
             DatabaseController.saveContext()
             
-            NotificationController.prepareAll(daysFromToday: weeksStop!*7)
+            NotificationController.prepareAll(daysFromToday: weeksStop! * 7)
             NotificationController.sendNotificationDaily(["lembreteNoturno",
                                                           "Boa noite!",
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],

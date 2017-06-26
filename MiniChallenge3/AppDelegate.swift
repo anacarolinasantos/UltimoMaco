@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if UIApplication.shared.applicationIconBadgeNumber > 0 {
             UIApplication.shared.applicationIconBadgeNumber = 0
+            NotificationController.center.removeAllDeliveredNotifications()
         }
         
         guard let isFirstTimeInApp = UserDefaults.standard.object(forKey: "isFirstTimeInApp") as? Bool else {

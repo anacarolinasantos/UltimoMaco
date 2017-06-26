@@ -25,6 +25,20 @@ class AppConfigurationsTableViewController: UITableViewController {
         datePickerOutlet.datePickerMode = .time
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationController.getPendingNotifications()
+        if let date = UserDefaults.standard.object(forKey: "reminderHour") as? Date {
+            let hour = Calendar.current.component(.hour, from: date)
+            let minute = Calendar.current.component(.minute, from: date)
+            if minute < 10{
+                hourLabel.text = "\(hour):0\(minute)"
+            } else {
+                hourLabel.text = "\(hour):\(minute)"
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 2{
             pickerCell.isHidden = !pickerCell.isHidden
@@ -36,26 +50,42 @@ class AppConfigurationsTableViewController: UITableViewController {
     // -- SWITCH DID CHANGE VALUE
     @IBAction func notificationSwitchChangeValue(_ sender: UISwitch) {
         // -- NOTIFICAÇÃO LEMBRETE
-     
+        
         if sender.isOn {
-            NotificationController.prepareAll(daysFromToday: LineChartData().getDaysUntilTheZeroPoint())
-            hourCell.isHidden = false
-        }else{
-            NotificationController.center.removeAllPendingNotificationRequests()
-            let hour = Int((hourLabel.text?.substring(to: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 2))!))!)
-            let minute = Int((hourLabel.text?.substring(from: (hourLabel.text?.index((hourLabel.text?.startIndex)!, offsetBy: 3))!))!)
-
-            NotificationController.sendNotificationDaily(["lembreteNoturno",messageFrom(hour: hour!),
+            
+            var hour = 21
+            var minute = 0
+            
+            if let date = UserDefaults.standard.object(forKey: "reminderHour") as? Date {
+                hour = Calendar.current.component(.hour, from: date)
+                minute = Calendar.current.component(.minute, from: date)
+            }
+            
+            UserDefaults.standard.set(at(hour: hour, minute: minute),
+                                      forKey: "reminderHour")
+            
+            NotificationController.sendNotificationDaily(["lembreteNoturno",
+                                                          messageBy(hour: hour),
                                                           "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
-                                                         Calendar.current.date(bySettingHour: hour!, minute: minute!, second: 0, of: Date())!)
+                                                          at(hour: hour, minute: minute))
+            
+            hourCell.isHidden = false
+        } else {
             hourCell.isHidden = true
+            NotificationController.center.removePendingNotificationRequests(withIdentifiers: ["lembreteNoturno"])
         }
         
     }
 
     @IBAction func informativeNotificationDidChangeValue(_ sender: UISwitch){
         // -- NOTIFICAÇÕES INFORMATIVAS
-        
+
+        if sender.isOn {
+            NotificationController.prepareAll(daysFromToday: LineChartData().getDaysUntilTheZeroPoint())
+        } else {
+            let notifications = NotificationsDatabase.notifications.map({ $0.identifier })
+            NotificationController.center.removePendingNotificationRequests(withIdentifiers: notifications)
+        }
     }
     @IBAction func pickerDidChangeValue(_ sender: UIDatePicker) {
         
@@ -63,22 +93,27 @@ class AppConfigurationsTableViewController: UITableViewController {
         
         let datePicker = Calendar.current.dateComponents([.hour,.minute,.second,], from:sender.date)
         
-        if datePicker.minute! < 10{
+        if datePicker.minute! < 10 {
             hourLabel.text = "\(datePicker.hour!):0\(datePicker.minute!)"
-        }else{
+        } else {
             hourLabel.text = "\(datePicker.hour!):\(datePicker.minute!)"
         }
         
+        UserDefaults.standard.set(at(hour: datePicker.hour!, minute: datePicker.minute!),
+                                  forKey: "reminderHour")
         
-        NotificationController.sendNotificationDaily(["lembreteNoturno", messageFrom(date: datePicker.date!),"Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."], Calendar.current.date(bySettingHour:datePicker.hour!, minute: datePicker.minute!, second: 0, of: Date())!)
+        
+        NotificationController.sendNotificationDaily(["lembreteNoturno",
+                                                      messageBy(hour: datePicker.hour!),
+                                                      "Não se esqueça de inserir toda a quantia de cigarros que você consumiu hoje."],
+                                                      at(hour: datePicker.hour!, minute: datePicker.minute!))
     }
     
-    private func messageFrom(date: Date) -> String {
-        let hour = Calendar.current.component(.hour, from: date)
+    private func messageBy(hour: Int) -> String {
         return hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite"
     }
     
-    private func messageFrom(hour: Int) -> String {
-        return hour < 12 ? "Bom dia" : hour < 18 ? "Boa tarde" : "Boa noite"
+    private func at(hour: Int, minute: Int) -> Date {
+        return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: Date())!
     }
 }
