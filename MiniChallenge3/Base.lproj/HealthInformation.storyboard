@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yr0-56-9Zl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ4-c9-0cc">
-                                <rect key="frame" x="131" y="437" width="113" height="111.5"/>
+                                <rect key="frame" x="131" y="459" width="113" height="111.5"/>
                                 <accessibility key="accessibilityConfiguration" identifier="fissure"/>
                                 <state key="normal" image="fissuraButton"/>
                                 <state key="highlighted" image="fissuraButton"/>
@@ -109,7 +109,6 @@
                             <constraint firstItem="omz-OY-jsL" firstAttribute="top" secondItem="ifq-B5-lZu" secondAttribute="top" id="5ns-19-9z2"/>
                             <constraint firstItem="auN-2B-Ota" firstAttribute="centerX" secondItem="omz-OY-jsL" secondAttribute="centerX" id="6XP-yZ-oFO"/>
                             <constraint firstItem="omz-OY-jsL" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="6hk-RK-HvB"/>
-                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="top" secondItem="unz-LP-btK" secondAttribute="bottom" constant="50" id="9Fy-Uz-aHP"/>
                             <constraint firstItem="omz-OY-jsL" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="ES4-zg-8Tl"/>
                             <constraint firstItem="unz-LP-btK" firstAttribute="top" secondItem="ifq-B5-lZu" secondAttribute="bottom" constant="50" id="Gxi-cf-88x"/>
                             <constraint firstItem="uQ4-c9-0cc" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="IDK-Cb-NT3"/>
@@ -122,6 +121,7 @@
                             <constraint firstItem="ifq-B5-lZu" firstAttribute="height" secondItem="FJb-sz-0Rq" secondAttribute="height" multiplier="0.18" id="afl-Bf-2gU"/>
                             <constraint firstItem="ifq-B5-lZu" firstAttribute="top" secondItem="e0P-aF-4qF" secondAttribute="bottom" constant="50" id="eLM-v4-42X"/>
                             <constraint firstItem="auN-2B-Ota" firstAttribute="height" secondItem="ifq-B5-lZu" secondAttribute="height" id="g4H-3c-8Jc"/>
+                            <constraint firstItem="uQ4-c9-0cc" firstAttribute="bottom" secondItem="FJb-sz-0Rq" secondAttribute="bottom" constant="-50" id="mTe-mF-AEI"/>
                             <constraint firstItem="ifq-B5-lZu" firstAttribute="width" secondItem="FJb-sz-0Rq" secondAttribute="width" multiplier="0.3" id="pvg-ql-XTJ"/>
                             <constraint firstItem="auN-2B-Ota" firstAttribute="width" secondItem="ifq-B5-lZu" secondAttribute="width" id="xqD-eT-ZSy"/>
                         </constraints>

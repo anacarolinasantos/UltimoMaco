@@ -73,15 +73,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-F6-2Na">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lWe-F6-2Na">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="Y6Q-Ms-vUa" kind="embed" id="9Sf-2R-5Zx"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lWe-F6-2Na" firstAttribute="width" secondItem="2u4-ZK-8Wa" secondAttribute="width" id="DJB-7h-cBQ"/>
+                            <constraint firstItem="lWe-F6-2Na" firstAttribute="centerY" secondItem="2u4-ZK-8Wa" secondAttribute="centerY" id="OzP-gL-1cr"/>
+                            <constraint firstItem="lWe-F6-2Na" firstAttribute="centerX" secondItem="2u4-ZK-8Wa" secondAttribute="centerX" id="jBs-gb-aQ7"/>
+                            <constraint firstItem="lWe-F6-2Na" firstAttribute="height" secondItem="2u4-ZK-8Wa" secondAttribute="height" id="jUW-Au-EXv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Configurações" id="gy1-xS-Q5B"/>
                 </viewController>
@@ -107,7 +112,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aw-Vi-NBZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6aw-Vi-NBZ">
                                                     <rect key="frame" x="18" y="0.0" width="281.5" height="59.5"/>
                                                     <string key="text">Receber notificações informativas
 ao longo do dia</string>

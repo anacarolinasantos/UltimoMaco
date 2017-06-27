@@ -224,15 +224,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F42-J9-j53">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F42-J9-j53">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="N2M-Ff-hTN" kind="embed" id="tgf-uB-aav"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F42-J9-j53" firstAttribute="height" secondItem="p9b-JU-TRc" secondAttribute="height" id="8vI-bQ-PqP"/>
+                            <constraint firstItem="F42-J9-j53" firstAttribute="width" secondItem="p9b-JU-TRc" secondAttribute="width" id="AoZ-Lm-sF9"/>
+                            <constraint firstItem="F42-J9-j53" firstAttribute="centerY" secondItem="p9b-JU-TRc" secondAttribute="centerY" id="KAp-ny-fIT"/>
+                            <constraint firstItem="F42-J9-j53" firstAttribute="centerX" secondItem="p9b-JU-TRc" secondAttribute="centerX" id="wem-MQ-6OI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="5Yq-YB-did"/>
                 </viewController>

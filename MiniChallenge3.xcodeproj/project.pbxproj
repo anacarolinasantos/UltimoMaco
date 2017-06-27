@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */; };
+		45750EA91EEF24AF003526F4 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */; };
 		45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */; };
 		45750EAD1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */; };
 		45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */; };
@@ -74,7 +74,7 @@
 		60D1E0671EF4D9840048FE2C /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
 		60D1E0681EF4D9840048FE2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F141EE9B8E6003E65AB /* ViewController.swift */; };
 		60D1E0691EF4D9840048FE2C /* PageModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */; };
-		60D1E06A1EF4D9840048FE2C /* ViewControllerTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */; };
+		60D1E06A1EF4D9840048FE2C /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */; };
 		60D1E06B1EF4D9840048FE2C /* ProfileMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */; };
 		60D1E06C1EF4D9840048FE2C /* MotivationTypeOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */; };
 		60D1E06D1EF4D9840048FE2C /* MotivationTypeTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */; };
@@ -160,7 +160,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTeste.swift; sourceTree = "<group>"; };
+		45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMotivationTableViewController.swift; sourceTree = "<group>"; };
 		45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeOneTableViewCell.swift; sourceTree = "<group>"; };
 		45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeTwoTableViewCell.swift; sourceTree = "<group>"; };
@@ -349,6 +349,50 @@
 			name = AppConfigurations;
 			sourceTree = "<group>";
 		};
+		BD5007921F0324E20091769B /* PersonalProfile */ = {
+			isa = PBXGroup;
+			children = (
+				45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */,
+				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
+			);
+			name = PersonalProfile;
+			sourceTree = "<group>";
+		};
+		BD5007931F0325020091769B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BDC1DA3D1EF301EF00070139 /* MainTabBarController.swift */,
+				BDC1DA3B1EF2FF9C00070139 /* AchievementPopUpViewController.swift */,
+				BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */,
+				BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */,
+				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		BD5007941F0325330091769B /* Motivations */ = {
+			isa = PBXGroup;
+			children = (
+				45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */,
+				45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */,
+				45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */,
+				45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */,
+				45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */,
+				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
+			);
+			name = Motivations;
+			sourceTree = "<group>";
+		};
+		BD5007951F0325510091769B /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				45EA0E2C1EF5971800718832 /* HealthInformationViewController.swift */,
+				45EA0E2E1EF59B1800718832 /* HealthInformationMainViewController.swift */,
+				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
+			);
+			name = Health;
+			sourceTree = "<group>";
+		};
 		BDC32F061EE9B8E6003E65AB = {
 			isa = PBXGroup;
 			children = (
@@ -375,12 +419,10 @@
 		BDC32F111EE9B8E6003E65AB /* MiniChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
-				BDC32F7C1EE9FA7B003E65AB /* MiniChallenge3.entitlements */,
 				BDC32F491EE9BD9F003E65AB /* Other files */,
 				BDC32F431EE9BC7F003E65AB /* Swift Files */,
-				BDC32F461EE9BD57003E65AB /* Controllers */,
-				BDC32F481EE9BD94003E65AB /* Storyboards */,
-				604EC0361EECA76600C1EA59 /* Extensions.swift */,
+				BDC32F461EE9BD57003E65AB /* ControllersExtras */,
+				BDC32F481EE9BD94003E65AB /* ViewControllersStoryboards */,
 				BDC32F471EE9BD6C003E65AB /* Database Files */,
 			);
 			path = MiniChallenge3;
@@ -413,31 +455,20 @@
 				606195A41EF1E0B200249D81 /* NotificationModel.swift */,
 				45C54A401EF2E1C700E1FCBD /* HealthInformationModel.swift */,
 				45C54A421EF2E1D800E1FCBD /* HealthInformationDatabase.swift */,
+				BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */,
+				BDA3AF801EEEFE770087F71A /* NotificationController.swift */,
+				604EC0361EECA76600C1EA59 /* Extensions.swift */,
 			);
 			name = "Swift Files";
 			sourceTree = "<group>";
 		};
-		BDC32F461EE9BD57003E65AB /* Controllers */ = {
+		BDC32F461EE9BD57003E65AB /* ControllersExtras */ = {
 			isa = PBXGroup;
 			children = (
-				BDC1DA3D1EF301EF00070139 /* MainTabBarController.swift */,
-				BDC1DA3B1EF2FF9C00070139 /* AchievementPopUpViewController.swift */,
-				BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */,
-				BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */,
-				BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */,
-				BDA3AF801EEEFE770087F71A /* NotificationController.swift */,
 				BDC32F141EE9B8E6003E65AB /* ViewController.swift */,
 				60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */,
-				45750EA81EEF24AF003526F4 /* ViewControllerTeste.swift */,
-				45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */,
-				45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */,
-				45750EAE1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift */,
-				45750EB01EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift */,
-				45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */,
-				45EA0E2C1EF5971800718832 /* HealthInformationViewController.swift */,
-				45EA0E2E1EF59B1800718832 /* HealthInformationMainViewController.swift */,
 			);
-			name = Controllers;
+			name = ControllersExtras;
 			sourceTree = "<group>";
 		};
 		BDC32F471EE9BD6C003E65AB /* Database Files */ = {
@@ -458,25 +489,26 @@
 			name = "Database Files";
 			sourceTree = "<group>";
 		};
-		BDC32F481EE9BD94003E65AB /* Storyboards */ = {
+		BDC32F481EE9BD94003E65AB /* ViewControllersStoryboards */ = {
 			isa = PBXGroup;
 			children = (
 				BDC32F1E1EE9B8E6003E65AB /* LaunchScreen.storyboard */,
-				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
+				BD5007931F0325020091769B /* Main */,
 				493118961EEB12F200D2694C /* PersonalProgress */,
-				BDC32F741EE9C585003E65AB /* HealthInformation.storyboard */,
+				BD5007951F0325510091769B /* Health */,
 				60D1E0731EF57D6A0048FE2C /* AppConfigurations */,
-				BDC32F6F1EE9C54E003E65AB /* PersonalProfile.storyboard */,
+				BD5007921F0324E20091769B /* PersonalProfile */,
 				60C7F12D1EEB25390007D583 /* InitialPageViewController */,
 				604EC03A1EEDA57500C1EA59 /* FagerstromFormPageViewController */,
-				BDC32F641EE9C1ED003E65AB /* PersonalMotivations.storyboard */,
+				BD5007941F0325330091769B /* Motivations */,
 			);
-			name = Storyboards;
+			name = ViewControllersStoryboards;
 			sourceTree = "<group>";
 		};
 		BDC32F491EE9BD9F003E65AB /* Other files */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32F7C1EE9FA7B003E65AB /* MiniChallenge3.entitlements */,
 				BDC32F1C1EE9B8E6003E65AB /* Assets.xcassets */,
 				BDC32F211EE9B8E6003E65AB /* Info.plist */,
 			);
@@ -705,7 +737,7 @@
 				60C7F1351EECA1330007D583 /* Page2ViewController.swift in Sources */,
 				60D1E04C1EF499420048FE2C /* InitialViewController.swift in Sources */,
 				604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */,
-				45750EA91EEF24AF003526F4 /* ViewControllerTeste.swift in Sources */,
+				45750EA91EEF24AF003526F4 /* PersonalProfileViewController.swift in Sources */,
 				45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */,
 				45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */,
 				BDC1DA3E1EF301EF00070139 /* MainTabBarController.swift in Sources */,
@@ -787,7 +819,7 @@
 				60D1E0671EF4D9840048FE2C /* NotificationController.swift in Sources */,
 				60D1E0691EF4D9840048FE2C /* PageModelViewController.swift in Sources */,
 				60D1E0701EF4D9AB0048FE2C /* Extensions.swift in Sources */,
-				60D1E06A1EF4D9840048FE2C /* ViewControllerTeste.swift in Sources */,
+				60D1E06A1EF4D9840048FE2C /* PersonalProfileViewController.swift in Sources */,
 				606195A71EF1E0B700249D81 /* DatabaseController.swift in Sources */,
 				60D1E06E1EF4D9840048FE2C /* MotivationTypeThreeTableViewCell.swift in Sources */,
 				60D1E0651EF4D9840048FE2C /* AchievementCollectionViewCell.swift in Sources */,
@@ -985,6 +1017,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1000,6 +1033,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
