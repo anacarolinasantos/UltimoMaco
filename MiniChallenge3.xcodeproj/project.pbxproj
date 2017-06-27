@@ -1017,7 +1017,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1033,7 +1033,7 @@
 				CODE_SIGN_ENTITLEMENTS = MiniChallenge3/MiniChallenge3.entitlements;
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
