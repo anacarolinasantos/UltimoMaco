@@ -54,7 +54,7 @@ class Page5ViewController: PageModelViewController {
                 }
             }
             
-            AchievementsController.generateAchievements()
+            AchievementsController.generateAchievements(firstCigarreteIsGreaterThan20: cigsDaily > 20)
             
             DatabaseController.saveContext()
             
