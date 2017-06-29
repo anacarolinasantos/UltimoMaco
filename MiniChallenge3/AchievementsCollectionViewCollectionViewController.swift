@@ -11,10 +11,12 @@ import CoreData
 
 private let reuseIdentifier = "achievementCell"
 
-class AchievementsCollectionViewCollectionViewController: UICollectionViewController {
+class AchievementsCollectionViewCollectionViewController: UICollectionViewController, UIGestureRecognizerDelegate {
     
+    //MARK: - Atributes
     var achievements: [Achievement] = []
 
+    //MARK: - UIViewController life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Conquistas"
@@ -53,6 +55,8 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
         if !achievement.hasAchievement {
             let achievementAsset = UIImage(named: "bw" + achievement.assetIdentifier!)
             cell.achievementId.image = achievementAsset
+            
+            cell.achievementId.isUserInteractionEnabled = false
         } else {
             let achievementAsset = UIImage(named: achievement.assetIdentifier!)
             cell.achievementId.image = achievementAsset
@@ -63,10 +67,32 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
                 cell.count.layer.borderWidth = 1;
                 cell.count.layer.borderColor = UIColor.white.cgColor
             }
+            
+            cell.achievementId.restorationIdentifier = achievement.assetIdentifier
+            
+            cell.achievementId.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(AchievementsCollectionViewCollectionViewController.handleLongPress(recognizer:))))
+            cell.achievementId.isUserInteractionEnabled = true
         }
-        
-        
         return cell
     }
-
+    
+    //MARK: - Recognizer Function
+    func handleLongPress(recognizer: UILongPressGestureRecognizer) {
+        
+        // set up activity view controller
+        if let image = (recognizer.view as? UIImageView) {
+            
+            let imageToShare = UIImage(named: "share" + image.restorationIdentifier!)
+            
+            let activityViewController = UIActivityViewController(activityItems: [imageToShare as Any, "Conquista desbloqueada via Último Maço!" ], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+            
+            // present the view controller
+            self.present(activityViewController, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    
 }
