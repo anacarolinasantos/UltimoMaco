@@ -19,16 +19,14 @@ public class AchievementsController {
         a.hasAchievement = false
     }
     
-    static public func generateAchievements(firstCigarreteIsGreaterThan20: Bool) {
+    static public func generateAchievements() {
         instanceOfAchievement("threeDaysInARow.png")
         instanceOfAchievement("sevenDaysInARow.png")
         instanceOfAchievement("noSmokeForToday.png")
         instanceOfAchievement("remainedUnderGoal.png")
         instanceOfAchievement("halfCigarretes.png")
         instanceOfAchievement("reducedFirstCiggarret.png")
-        if firstCigarreteIsGreaterThan20 {
-            instanceOfAchievement("lastPackOfCigarretes.png")
-        }
+        instanceOfAchievement("lastPackOfCigarretes.png")
         instanceOfAchievement("stoppedSmoking.png")
         
     }
@@ -95,7 +93,7 @@ public class AchievementsController {
             return r > 0
         case "halfCigarretes.png":
             if !achievement.hasAchievement {
-                let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber == entries[0].cigaretteNumber / 2 }).count
+                let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber == self.allEntries[0].cigaretteNumber / 2 }).count
                 if anyEntryIsHalf > 0 {
                     achievement.hasAchievement = true
                     return true
@@ -113,8 +111,9 @@ public class AchievementsController {
             return false
         case "lastPackOfCigarretes.png":
             if !achievement.hasAchievement {
-                let aheadEntries = entries.filter({ ($0.date as Date!) > Date() })
-                let sum = aheadEntries.map({ checkGoalCigarrets(entry: $0) }).reduce(0, +)
+                let aheadEntries = self.allEntries.filter({ ($0.date as Date!) > Date() })
+                let allAheadGoals = aheadEntries.map({ checkGoalCigarrets(entry: $0) })
+                let sum = allAheadGoals.reduce(0, +)
                 if sum <= 20 {
                     achievement.hasAchievement = true
                     return true
@@ -123,7 +122,7 @@ public class AchievementsController {
             return false
         case "stoppedSmoking.png":
             if !achievement.hasAchievement {
-                let lastDay = entries.last
+                let lastDay = self.allEntries.last
                 if Calendar.current.isDateInToday(lastDay?.date as Date!) && lastDay?.cigaretteNumber == 0 {
                     achievement.hasAchievement = true
                     return true
@@ -195,36 +194,6 @@ public class AchievementsController {
             }
         }
         return count
-    }
-    
-    static public func test() {
-        for i in 0...(4 * 7) {
-            let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
-            cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
-            if i == 1 {
-                cigEntry.cigaretteNumber = Int32(30)
-            } else {
-                cigEntry.cigaretteNumber = -1
-            }
-        }
-        DatabaseController.saveContext()
-        AchievementsController.generateAchievements(firstCigarreteIsGreaterThan20: true)
-        DatabaseController.saveContext()
-        do {
-            if var entries = try(DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as? [CigaretteEntry]) {
-                entries = entries.sorted(by: { ($0.date! as Date) < ($1.date! as Date) })
-                for e in entries {
-                    let i = checkGoalCigarrets(entry: e)
-                    if entries.index(of: e) != 0 {
-                        e.cigaretteNumber = Int32(i)
-                    }
-                    print(i)
-                }
-                _ = checkAllAchievements()
-            }
-        } catch _ as NSError {
-            print("Error")
-        }
     }
     
 }
