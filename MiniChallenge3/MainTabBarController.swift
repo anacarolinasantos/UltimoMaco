@@ -12,28 +12,25 @@ class MainTabBarController: UITabBarController {
     
     var obtainedAchievements: [Achievement] = []
     
-    var index: Int = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         obtainedAchievements = AchievementsController.checkAllAchievements()
-        index = obtainedAchievements.count
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        index -= 1
-        showAchievementsPopUp(all: obtainedAchievements, index: index)
+        if obtainedAchievements.count > 0 {
+            showAchievementsPopUp()
+        }
     }
     
-    private func showAchievementsPopUp(all: [Achievement], index: Int) {
-        if index >= 0 {
-            if let popUp = self.storyboard?.instantiateViewController(withIdentifier: "popUp") as? AchievementPopUpViewController {
-                popUp.achievement = all[index]
-                popUp.isLastPopUpView = index == 0
-                popUp.modalTransitionStyle = .crossDissolve
-                present(popUp, animated: true, completion: nil)
-            }
+    private func showAchievementsPopUp() {
+        if let popUp = self.storyboard?.instantiateViewController(withIdentifier: "popUp") as? AchievementPopUpViewController {
+            popUp.achievement = obtainedAchievements[obtainedAchievements.count - 1]
+            popUp.isLastPopUpView = obtainedAchievements.count == 1
+            popUp.modalTransitionStyle = .crossDissolve
+            present(popUp, animated: true, completion: nil)
+            _ = obtainedAchievements.popLast()
         }
     }
 

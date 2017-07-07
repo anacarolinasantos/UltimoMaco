@@ -132,10 +132,10 @@
             </objects>
             <point key="canvasLocation" x="2316" y="1025.9370314842579"/>
         </scene>
-        <!--Health Information View Controller-->
+        <!--Dica-->
         <scene sceneID="eUC-jR-hcX">
             <objects>
-                <viewController id="pwl-mt-cAo" customClass="HealthInformationViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dica" id="pwl-mt-cAo" customClass="HealthInformationViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kHM-Pi-Qt3"/>
                         <viewControllerLayoutGuide type="bottom" id="8fn-X1-As4"/>
@@ -144,8 +144,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="620.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-Hs-ihL">
-                                <rect key="frame" x="9.5" y="74.5" width="356" height="546"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRh-Hs-ihL">
+                                <rect key="frame" x="12" y="248" width="352.5" height="360"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
@@ -153,22 +153,29 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fissuraButton" translatesAutoresizingMaskIntoConstraints="NO" id="i0m-5q-Bct">
+                                <rect key="frame" x="0.0" y="80.5" width="375" height="150"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.88" id="5CV-pS-p1i"/>
-                            <constraint firstItem="8fn-X1-As4" firstAttribute="top" secondItem="bRh-Hs-ihL" secondAttribute="bottom" id="C4J-A9-ndP"/>
-                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="swQ-Lm-14j"/>
-                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" multiplier="0.95" id="vo5-Gz-Tkr"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="top" secondItem="i0m-5q-Bct" secondAttribute="bottom" constant="17.5" id="1D4-xE-WEG"/>
+                            <constraint firstItem="i0m-5q-Bct" firstAttribute="top" secondItem="kHM-Pi-Qt3" secondAttribute="bottom" constant="16" id="Cqq-Fy-90C"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="Iwq-5f-iWa"/>
+                            <constraint firstItem="i0m-5q-Bct" firstAttribute="centerX" secondItem="aag-PN-qTI" secondAttribute="centerX" id="OSa-4j-62X"/>
+                            <constraint firstItem="i0m-5q-Bct" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" id="eVc-2x-3Lc"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="height" secondItem="aag-PN-qTI" secondAttribute="height" multiplier="0.58" id="kcE-Nt-GX6"/>
+                            <constraint firstItem="bRh-Hs-ihL" firstAttribute="width" secondItem="aag-PN-qTI" secondAttribute="width" multiplier="0.94" id="lhN-ae-1Aa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="informationImageView" destination="i0m-5q-Bct" id="pjL-pB-3b3"/>
                         <outlet property="informationTextView" destination="bRh-Hs-ihL" id="E6n-36-H1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6k-xw-WvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="1026"/>
+            <point key="canvasLocation" x="3213.5999999999999" y="1025.9370314842579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NYb-WE-3qr">

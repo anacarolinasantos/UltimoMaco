@@ -18,7 +18,7 @@ class AchievementPopUpViewController: UIViewController {
     
     var achievement: Achievement?
     
-    var isLastPopUpView = false
+    var isLastPopUpView: Bool?
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -27,10 +27,10 @@ class AchievementPopUpViewController: UIViewController {
         if let a = achievement {
             achievementAsset.image = UIImage(named: a.assetIdentifier!)
         }
-        if isLastPopUpView {
-            end.titleLabel?.text = "Ok"
+        if isLastPopUpView! {
+            end.setTitle("Ok", for: .normal)
         } else {
-            end.titleLabel?.text = "Próxima"
+            end.setTitle("Próxima", for: .normal)
         }
     }
     

@@ -20,9 +20,22 @@ class HealthInformationModel {
     
     let category: HealthInformationCategory
     let information: String
+    let image: String
     
     init(category: HealthInformationCategory, information: String) {
         self.category = category
         self.information = information
+        switch category {
+        case .habits:
+            self.image = "habitosButton.png"
+        case .fissure:
+            self.image = "fissuraButton.png"
+        case .health:
+            self.image = "healthButton.png"
+        case .help:
+            self.image = "helpButton.png"
+        case .tips:
+            self.image = "tipsButton.png"
+        }
     }
 }

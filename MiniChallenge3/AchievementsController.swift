@@ -93,7 +93,7 @@ public class AchievementsController {
             return r > 0
         case "halfCigarretes.png":
             if !achievement.hasAchievement {
-                let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber == self.allEntries[0].cigaretteNumber / 2 }).count
+                let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber <= self.allEntries[0].cigaretteNumber / 2 }).count
                 if anyEntryIsHalf > 0 {
                     achievement.hasAchievement = true
                     return true
@@ -102,8 +102,8 @@ public class AchievementsController {
             return false
         case "reducedFirstCiggarret.png":
             if !achievement.hasAchievement {
-                let anyEntryIsHalf = entries.filter({ $0.cigaretteNumber < entries[0].cigaretteNumber - 1 }).count
-                if anyEntryIsHalf > 0 {
+                let anyEntryIsLessThanTheFirst = entries.filter({ $0.cigaretteNumber < entries[0].cigaretteNumber - 1 }).count
+                if anyEntryIsLessThanTheFirst > 0 {
                     achievement.hasAchievement = true
                     return true
                 }
@@ -141,11 +141,11 @@ public class AchievementsController {
     }
     
     static private func checkIfWasInGoal(_ entry: CigaretteEntry) -> Bool {
-        return checkGoalCigarrets(entry: entry) <= Int(entry.cigaretteNumber)
+        return checkGoalCigarrets(entry: entry) >= Int(entry.cigaretteNumber)
     }
     
     static private func checkIfUnderGoal(_ entry: CigaretteEntry) -> Bool {
-        return checkGoalCigarrets(entry: entry) < Int(entry.cigaretteNumber)
+        return checkGoalCigarrets(entry: entry) > Int(entry.cigaretteNumber)
     }
     
     static private func checkForThreeDaysInARow(_ entries: [CigaretteEntry]) -> Int {
@@ -194,6 +194,12 @@ public class AchievementsController {
             }
         }
         return count
+    }
+    
+    static public func test() {
+        
+        
+        
     }
     
 }

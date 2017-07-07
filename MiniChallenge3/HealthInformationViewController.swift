@@ -12,6 +12,7 @@ class HealthInformationViewController: UIViewController {
 
     //MARK: - Outlets
     @IBOutlet weak var informationTextView: UITextView!
+    @IBOutlet weak var informationImageView: UIImageView!
     
     //MARK: - Atributes
     var informations: [HealthInformationModel]?
@@ -23,6 +24,9 @@ class HealthInformationViewController: UIViewController {
         for information in informations! {
             informationTextView.text?.append(information.information)
             informationTextView.text?.append("\n\n")
+        }
+        if let informationImage = informations?[0].image {
+            informationImageView.image = UIImage(named: informationImage)
         }
     }
 
