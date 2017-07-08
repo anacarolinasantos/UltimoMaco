@@ -196,10 +196,4 @@ public class AchievementsController {
         return count
     }
     
-    static public func test() {
-        
-        
-        
-    }
-    
 }

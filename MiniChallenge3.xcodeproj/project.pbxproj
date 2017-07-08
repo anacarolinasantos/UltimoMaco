@@ -209,8 +209,8 @@
 		BDC1DA271EF0492D00070139 /* FagerstromTest+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDC1DA281EF0492D00070139 /* FagerstromTest+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FagerstromTest+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsController.swift; sourceTree = "<group>"; };
-		BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsCollectionViewCollectionViewController.swift; sourceTree = "<group>"; };
-		BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AchievementsCollectionViewCollectionViewController.swift; path = ../AchievementsCollectionViewCollectionViewController.swift; sourceTree = "<group>"; };
+		BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AchievementCollectionViewCell.swift; path = ../AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC1DA391EF29F7900070139 /* AchievementsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
 		BDC1DA3B1EF2FF9C00070139 /* AchievementPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementPopUpViewController.swift; sourceTree = "<group>"; };
 		BDC1DA3D1EF301EF00070139 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -283,6 +283,8 @@
 				4931189B1EEB12F200D2694C /* PersonalProgress.storyboard */,
 				49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */,
 				BDC1DA391EF29F7900070139 /* AchievementsViewController.swift */,
+				BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */,
+				BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */,
 				494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */,
 				494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */,
 				49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */,
@@ -363,8 +365,6 @@
 			children = (
 				BDC1DA3D1EF301EF00070139 /* MainTabBarController.swift */,
 				BDC1DA3B1EF2FF9C00070139 /* AchievementPopUpViewController.swift */,
-				BDC1DA351EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift */,
-				BDC1DA371EF1F02600070139 /* AchievementCollectionViewCell.swift */,
 				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
 			);
 			name = Main;
