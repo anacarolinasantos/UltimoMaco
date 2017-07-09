@@ -49,6 +49,30 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
     }
     
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateChart()
+        
+        var allEntries: [CigaretteEntry] = []
+        
+        do {
+            allEntries = try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as! [CigaretteEntry]
+        } catch _ as NSError { print("Error") }
+        
+        allEntries = allEntries.sorted(by: { ($0.date as Date!) < ($1.date as Date!) } )
+        
+        let cigarretsOfToday = LineChartData().getTargetOfConsumption(Date())
+        today.text = "\(cigarretsOfToday)"
+        
+        let cigarettesNumber = LineChartData().getCigarettesOfSomeDay(Date())
+        if cigarettesNumber != -1 {
+            cigarettesNumberLabel.text = String(cigarettesNumber)
+        } else {
+            cigarettesNumberLabel.text = "Sem dados"
+        }
+        
+    }
+    
     //MARK: Actions
     
     @IBAction func stepperTap(_ sender: UIStepper) {
@@ -67,30 +91,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     
     func handleTap(recognizer: UITapGestureRecognizer){
         performSegue(withIdentifier: "showHistoric", sender: nil)
-    }
-    
-    override public func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateChart()
-        
-        var allEntries: [CigaretteEntry] = []
-        
-        do {
-            allEntries = try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as! [CigaretteEntry]
-        } catch _ as NSError { print("Error") }
-        
-        allEntries = allEntries.sorted(by: { ($0.date as Date!) < ($1.date as Date!) } )
-        
-        let cigarretsOfToday = LineChartData().getTargetOfConsumption(Date())
-        today.text = "\(cigarretsOfToday)"
-        
-        let cigarettesNumber = LineChartData().getCigarettesOfSomeDay(Date())
-        if cigarettesNumber != -1 {
-        cigarettesNumberLabel.text = String(cigarettesNumber)
-        } else{
-            cigarettesNumberLabel.text = "Sem dados"
-        }
-        
     }
     
     func appWillEnterForeground(){
