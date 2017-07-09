@@ -37,6 +37,7 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
                 descriptionTextView?.text = motivation?.desMotivation
             }
             removeTableViewCell.isHidden = false
+            self.title = "Editar motivação"
         } else {
             motivation = NSEntityDescription.insertNewObject(forEntityName: "Motivation", into: DatabaseController.persistentContainer.viewContext) as? Motivation
         }

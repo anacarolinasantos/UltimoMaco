@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="944.79999999999995" y="805.54722638680664"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller3-->
         <scene sceneID="Baa-YA-k1y">
             <objects>
-                <viewController id="kaT-0Q-Lyj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialPage3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kaT-0Q-Lyj" customClass="TutorialViewController3" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tEG-xm-Sp4"/>
                         <viewControllerLayoutGuide type="bottom" id="XiQ-QO-vmz"/>
@@ -197,28 +197,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você pode compartilhar suas conquistas tocando e segurando nas que você obteve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-Wk-img">
-                                <rect key="frame" x="0.0" y="516" width="375" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você pode compartilhar suas conquistas tocando e segurando nas que você obteve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-Wk-img">
+                                <rect key="frame" x="19" y="550.5" width="337.5" height="100"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="progTut0" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-Ld-eFu" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19" y="28" width="337.5" height="467"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progTut2" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-Ld-eFu" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="19" y="17" width="337.5" height="500"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="1.8" id="2aE-Cl-p79"/>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="3YN-69-5bh"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="IAV-HO-XUT"/>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.15" id="LBX-bY-6z9"/>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="SjN-7N-M3Q"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.75" id="fyn-pT-lh6"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="krt-79-UYF"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="0.8" id="lIt-Wn-g0f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slideShow" destination="3U1-Ld-eFu" id="fuZ-fc-ZJG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvx-Bf-FO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1749.5999999999999" y="805.54722638680664"/>
         </scene>
+        <!--Tutorial View Controller4-->
+        <scene sceneID="A0B-jz-HAh">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z6M-WX-rtY" customClass="TutorialViewController4" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yDy-7F-opE"/>
+                        <viewControllerLayoutGuide type="bottom" id="cl7-nl-qd1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NU8-lp-gHh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de informações, aprenda mais sobre como o fumo afeta a saúde e o que você pode fazer para evitá-lo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-Yb-cYI">
+                                <rect key="frame" x="0.5" y="16.5" width="375" height="167"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoTut0" translatesAutoresizingMaskIntoConstraints="NO" id="9lb-rC-Vqh" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="19.5" y="183.5" width="337.5" height="467"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.3" id="6m1-iS-3YN"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" multiplier="0.9" id="8nq-XL-i88"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="1.25" id="G93-gf-DCe"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.7" id="LX7-Xi-q8X"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.25" id="N4W-pO-727"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" id="P7M-O1-7KL"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerX" secondItem="NU8-lp-gHh" secondAttribute="centerX" id="d6b-3J-oRh"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerX" secondItem="NU8-lp-gHh" secondAttribute="centerX" id="nVJ-3A-shk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slideShow" destination="9lb-rC-Vqh" id="Ngn-2p-94P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBV-aD-f0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2600.8000000000002" y="805.54722638680664"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="infoTut0" width="750" height="1334"/>
         <image name="launchScreenAppIcon" width="330" height="339"/>
         <image name="progTut0" width="750" height="1334"/>
+        <image name="progTut2" width="750" height="1334"/>
     </resources>
 </document>

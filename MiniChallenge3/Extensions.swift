@@ -83,14 +83,14 @@ class SlideShowEffect: UIImageView {
     
     private var slideShowCount = 0
     
-    private var duration = 1
+    private var duration = 1.0
     
-    private var delay = 1
+    private var delay = 1.0
     
     private var imageNames: [String] = []
     
     
-    func setUpSlideShow(imageNames: [String], timeBetweenImages: Int, transitionDuration: Int) {
+    func setUpSlideShow(imageNames: [String], timeBetweenImages: Double, transitionDuration: Double) {
         self.imageNames = imageNames
         self.delay = timeBetweenImages
         self.duration = transitionDuration

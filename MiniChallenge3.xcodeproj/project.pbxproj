@@ -86,6 +86,8 @@
 		BD726D281F117CC3004E0DF9 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD726D271F117CC3004E0DF9 /* TutorialPageViewController.swift */; };
 		BD726D2A1F117D65004E0DF9 /* TutorialViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD726D291F117D65004E0DF9 /* TutorialViewController1.swift */; };
 		BD909C2F1F12C21C00C5CB7B /* TutorialViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */; };
+		BD909C331F12F45700C5CB7B /* TutorialViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */; };
+		BD909C351F12F59E00C5CB7B /* TutorialViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -205,6 +207,8 @@
 		BD726D271F117CC3004E0DF9 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		BD726D291F117D65004E0DF9 /* TutorialViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController1.swift; sourceTree = "<group>"; };
 		BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController2.swift; sourceTree = "<group>"; };
+		BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController4.swift; sourceTree = "<group>"; };
+		BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController3.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -417,6 +421,8 @@
 			children = (
 				BD726D291F117D65004E0DF9 /* TutorialViewController1.swift */,
 				BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */,
+				BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */,
+				BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -788,6 +794,7 @@
 				BDC1DA261EF048C800070139 /* Achievement+CoreDataProperties.swift in Sources */,
 				494EEE721EF06D7A00465D6B /* HistoricTableViewCell.swift in Sources */,
 				BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */,
+				BD909C351F12F59E00C5CB7B /* TutorialViewController3.swift in Sources */,
 				606195A51EF1E0B200249D81 /* NotificationsDatabase.swift in Sources */,
 				BDC1DA361EF1F00700070139 /* AchievementsCollectionViewCollectionViewController.swift in Sources */,
 				494EEE701EF06D3200465D6B /* HistoricTableViewController.swift in Sources */,
@@ -795,6 +802,7 @@
 				BD909C2F1F12C21C00C5CB7B /* TutorialViewController2.swift in Sources */,
 				BDC32F131EE9B8E6003E65AB /* AppDelegate.swift in Sources */,
 				60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */,
+				BD909C331F12F45700C5CB7B /* TutorialViewController4.swift in Sources */,
 				BDC1DA3C1EF2FF9C00070139 /* AchievementPopUpViewController.swift in Sources */,
 				604EC0461EEDABB300C1EA59 /* FagerstromPage5.swift in Sources */,
 				45EA0E2D1EF5971800718832 /* HealthInformationViewController.swift in Sources */,

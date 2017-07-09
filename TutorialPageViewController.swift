@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate {
+class TutorialPageViewController: UIViewController {
     
     @IBOutlet weak var pageDotsController: UIPageControl!
     
@@ -20,7 +20,7 @@ class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate
         super.viewDidLoad()
         
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        for i in 1...2 {
+        for i in 1...4 {
             tutorialPages.append((self.storyboard?.instantiateViewController(withIdentifier: "tutorialPage\(i)"))!)
         }
         pageViewController.setViewControllers([tutorialPages.first!], direction: .forward, animated: true, completion: nil)
@@ -48,6 +48,19 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
             return currentIndex == tutorialPages.count - 1 ? nil : tutorialPages[currentIndex + 1]
         }
         return nil
+    }
+}
+
+extension TutorialPageViewController: UIPageViewControllerDelegate {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            if let lastViewController = previousViewControllers.last {
+                if let index = tutorialPages.index(of: lastViewController) {
+                    pageDotsController.currentPage = index + 1
+                }
+            }
+        }
     }
     
 }
