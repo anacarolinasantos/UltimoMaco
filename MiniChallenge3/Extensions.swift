@@ -78,3 +78,37 @@ extension UIPageViewController {
     }
     
 }
+
+class SlideShowEffect: UIImageView {
+    
+    private var slideShowCount = 0
+    
+    private var duration = 1
+    
+    private var delay = 1
+    
+    private var imageNames: [String] = []
+    
+    
+    func setUpSlideShow(imageNames: [String], timeBetweenImages: Int, transitionDuration: Int) {
+        self.imageNames = imageNames
+        self.delay = timeBetweenImages
+        self.duration = transitionDuration
+        self.image = UIImage(named: imageNames[0])        
+    }
+    
+    func slideShow() {
+        UIView.animate(withDuration: TimeInterval(duration), delay: TimeInterval(delay), options: .allowUserInteraction, animations: {
+            self.alpha = 0
+        }, completion: { _ in
+            self.slideShowCount = self.slideShowCount + 1 < self.imageNames.count ? self.slideShowCount + 1 : 0
+            self.image = UIImage(named: self.imageNames[self.slideShowCount])
+            UIView.animate(withDuration: TimeInterval(self.duration), delay: 0, options: .allowUserInteraction, animations: {
+                self.alpha = 1
+            }, completion: { _ in
+                self.slideShow()
+            })
+        })
+    }
+    
+}

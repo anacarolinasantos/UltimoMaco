@@ -131,8 +131,94 @@
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="805.54722638680664"/>
         </scene>
+        <!--Tutorial View Controller2-->
+        <scene sceneID="q8i-jT-jWl">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OIY-av-Agp" customClass="TutorialViewController2" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dy4-BH-gvC"/>
+                        <viewControllerLayoutGuide type="bottom" id="JcI-tg-4FC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kUG-P3-LaK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5X-7w-PUI">
+                                <rect key="frame" x="18.5" y="133.5" width="337.5" height="467"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progTut0" translatesAutoresizingMaskIntoConstraints="NO" id="xjB-gN-sUG" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                        <rect key="frame" x="-0.5" y="0.0" width="337.5" height="467"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xjB-gN-sUG" firstAttribute="centerY" secondItem="O5X-7w-PUI" secondAttribute="centerY" id="4UR-gT-Ocp"/>
+                                    <constraint firstItem="xjB-gN-sUG" firstAttribute="centerX" secondItem="O5X-7w-PUI" secondAttribute="centerX" id="4vi-Sb-lh6"/>
+                                    <constraint firstItem="xjB-gN-sUG" firstAttribute="height" secondItem="O5X-7w-PUI" secondAttribute="height" id="BiO-ZP-VUZ"/>
+                                    <constraint firstItem="xjB-gN-sUG" firstAttribute="width" secondItem="O5X-7w-PUI" secondAttribute="width" id="XyO-0D-Gkp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de progresso, toque no gráfico para ver e editar seu histórico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Zu-Q8s">
+                                <rect key="frame" x="0.5" y="6.5" width="375" height="120"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O5X-7w-PUI" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.7" id="4d7-q9-nkC"/>
+                            <constraint firstItem="O5X-7w-PUI" firstAttribute="width" secondItem="kUG-P3-LaK" secondAttribute="width" multiplier="0.9" id="5qt-Oc-kXB"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.18" id="Ji3-Sw-ppP"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="centerX" secondItem="kUG-P3-LaK" secondAttribute="centerX" id="LYl-TN-aFI"/>
+                            <constraint firstItem="O5X-7w-PUI" firstAttribute="centerX" secondItem="kUG-P3-LaK" secondAttribute="centerX" id="MOX-44-vc6"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="centerY" secondItem="kUG-P3-LaK" secondAttribute="centerY" multiplier="0.2" id="eso-mj-KGZ"/>
+                            <constraint firstItem="O5X-7w-PUI" firstAttribute="centerY" secondItem="kUG-P3-LaK" secondAttribute="centerY" multiplier="1.1" id="qJp-1S-ncU"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="width" secondItem="kUG-P3-LaK" secondAttribute="width" id="qRS-9w-W5s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="xjB-gN-sUG" id="8Q0-K7-aHK"/>
+                        <outlet property="mainImageView" destination="O5X-7w-PUI" id="i9I-Lw-OqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6se-98-JM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.79999999999995" y="805.54722638680664"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Baa-YA-k1y">
+            <objects>
+                <viewController id="kaT-0Q-Lyj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tEG-xm-Sp4"/>
+                        <viewControllerLayoutGuide type="bottom" id="XiQ-QO-vmz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUM-Ds-hta">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Você pode compartilhar suas conquistas tocando e segurando nas que você obteve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-Wk-img">
+                                <rect key="frame" x="0.0" y="516" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="progTut0" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-Ld-eFu" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="19" y="28" width="337.5" height="467"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xvx-Bf-FO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="805.54722638680664"/>
+        </scene>
     </scenes>
     <resources>
         <image name="launchScreenAppIcon" width="330" height="339"/>
+        <image name="progTut0" width="750" height="1334"/>
     </resources>
 </document>

@@ -20,7 +20,7 @@ class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate
         super.viewDidLoad()
         
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        for i in 1...1 {
+        for i in 1...2 {
             tutorialPages.append((self.storyboard?.instantiateViewController(withIdentifier: "tutorialPage\(i)"))!)
         }
         pageViewController.setViewControllers([tutorialPages.first!], direction: .forward, animated: true, completion: nil)
