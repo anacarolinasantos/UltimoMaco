@@ -82,7 +82,7 @@
 		60D1E06F1EF4D9840048FE2C /* NewMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EB21EF0640E003526F4 /* NewMotivationTableViewController.swift */; };
 		60D1E0701EF4D9AB0048FE2C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
 		60D1E0721EF57D070048FE2C /* AppConfigurationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */; };
-		BD726D261F1179F1004E0DF9 /* TutorialPageViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD726D251F1179F1004E0DF9 /* TutorialPageViewStoryboard.storyboard */; };
+		BD726D261F1179F1004E0DF9 /* TutorialPageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD726D251F1179F1004E0DF9 /* TutorialPageView.storyboard */; };
 		BD726D281F117CC3004E0DF9 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD726D271F117CC3004E0DF9 /* TutorialPageViewController.swift */; };
 		BD726D2A1F117D65004E0DF9 /* TutorialViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD726D291F117D65004E0DF9 /* TutorialViewController1.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
@@ -200,7 +200,7 @@
 		60D1E0491EF4357A0048FE2C /* FagerstromViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromViewController.swift; sourceTree = "<group>"; };
 		60D1E04B1EF499420048FE2C /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		60D1E0711EF57D070048FE2C /* AppConfigurationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurationsTableViewController.swift; sourceTree = "<group>"; };
-		BD726D251F1179F1004E0DF9 /* TutorialPageViewStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialPageViewStoryboard.storyboard; sourceTree = "<group>"; };
+		BD726D251F1179F1004E0DF9 /* TutorialPageView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorialPageView.storyboard; sourceTree = "<group>"; };
 		BD726D271F117CC3004E0DF9 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		BD726D291F117D65004E0DF9 /* TutorialViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController1.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -402,7 +402,7 @@
 		BD726D221F1176BD004E0DF9 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				BD726D251F1179F1004E0DF9 /* TutorialPageViewStoryboard.storyboard */,
+				BD726D251F1179F1004E0DF9 /* TutorialPageView.storyboard */,
 				BD726D271F117CC3004E0DF9 /* TutorialPageViewController.swift */,
 				BD726D2B1F1291A8004E0DF9 /* Pages */,
 			);
@@ -713,7 +713,7 @@
 				BDC32F651EE9C1ED003E65AB /* PersonalMotivations.storyboard in Resources */,
 				493118A51EEB12F200D2694C /* PersonalProgress.storyboard in Resources */,
 				BDC32F711EE9C54E003E65AB /* PersonalProfile.storyboard in Resources */,
-				BD726D261F1179F1004E0DF9 /* TutorialPageViewStoryboard.storyboard in Resources */,
+				BD726D261F1179F1004E0DF9 /* TutorialPageView.storyboard in Resources */,
 				BDC32F181EE9B8E6003E65AB /* Main.storyboard in Resources */,
 				BDC32F731EE9C56C003E65AB /* AppConfigurations.storyboard in Resources */,
 			);

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mYb-J9-piR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorial Page View Controller-->
+        <scene sceneID="B6C-dg-1Yv">
+            <objects>
+                <viewController id="mYb-J9-piR" customClass="TutorialPageViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zdg-X2-jsy"/>
+                        <viewControllerLayoutGuide type="bottom" id="NQo-Du-ZGR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aAO-9H-M23">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="UBJ-xC-uET">
+                                <rect key="frame" x="168" y="615" width="39" height="37"/>
+                            </pageControl>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-d5-cY3">
+                                <rect key="frame" x="168" y="615" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.40000000000000002" alpha="1" colorSpace="deviceCMYK"/>
+                                <color key="currentPageIndicatorTintColor" red="0.071403793990000006" green="0.41595143080000002" blue="0.61131823060000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UBJ-xC-uET" firstAttribute="centerY" secondItem="aAO-9H-M23" secondAttribute="centerY" multiplier="1.9" id="BXQ-0y-xzd"/>
+                            <constraint firstItem="Kfp-d5-cY3" firstAttribute="centerY" secondItem="aAO-9H-M23" secondAttribute="centerY" multiplier="1.9" id="jCr-x2-fjN"/>
+                            <constraint firstItem="UBJ-xC-uET" firstAttribute="centerX" secondItem="aAO-9H-M23" secondAttribute="centerX" id="ncW-gg-47B"/>
+                            <constraint firstItem="Kfp-d5-cY3" firstAttribute="centerX" secondItem="aAO-9H-M23" secondAttribute="centerX" id="oh5-9I-tDY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageDotsController" destination="Kfp-d5-cY3" id="2Dr-Na-UlO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oLi-IA-ql2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="122.78860569715144"/>
+        </scene>
+        <!--tutorialPage1-->
+        <scene sceneID="JHR-Mz-TcF">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage1" title="tutorialPage1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ONc-t3-ACF" customClass="TutorialViewController1" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n7t-cR-GXY"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTd-2i-JFQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ROo-RD-a83">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zrA-Cz-vSZ">
+                                <rect key="frame" x="56.5" y="200" width="262.5" height="266.5"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nk4-I0-Loo" appends="YES" id="mGp-uu-Nh0"/>
+                                </connections>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYa-Bs-bXa" userLabel="top">
+                                <rect key="frame" x="-0.5" y="16.5" width="375.5" height="100.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo ao seu Último maço!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBh-HI-FHm">
+                                        <rect key="frame" x="1" y="-0.5" width="375" height="100.5"/>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                        <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rBh-HI-FHm" firstAttribute="height" secondItem="QYa-Bs-bXa" secondAttribute="height" id="DxT-cV-XeN"/>
+                                    <constraint firstItem="rBh-HI-FHm" firstAttribute="width" secondItem="QYa-Bs-bXa" secondAttribute="width" id="Vwk-MV-HjT"/>
+                                    <constraint firstItem="rBh-HI-FHm" firstAttribute="centerX" secondItem="QYa-Bs-bXa" secondAttribute="centerX" id="aQs-Pw-Dlj"/>
+                                    <constraint firstItem="rBh-HI-FHm" firstAttribute="centerY" secondItem="QYa-Bs-bXa" secondAttribute="centerY" id="ga1-ab-JeY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mI8-Fy-UQP" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="517" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vamos nos preparar para esta importante jornada?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Cl-hG-PdF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                        <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Cl-hG-PdF" firstAttribute="centerY" secondItem="mI8-Fy-UQP" secondAttribute="centerY" id="0M5-K0-MUF"/>
+                                    <constraint firstItem="6Cl-hG-PdF" firstAttribute="centerX" secondItem="mI8-Fy-UQP" secondAttribute="centerX" id="8Ej-Rc-RcG"/>
+                                    <constraint firstItem="6Cl-hG-PdF" firstAttribute="width" secondItem="mI8-Fy-UQP" secondAttribute="width" id="Ndk-f0-k1c"/>
+                                    <constraint firstItem="6Cl-hG-PdF" firstAttribute="height" secondItem="mI8-Fy-UQP" secondAttribute="height" id="Xwe-6j-8MX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zrA-Cz-vSZ" firstAttribute="height" secondItem="ROo-RD-a83" secondAttribute="height" multiplier="0.4" id="GZY-ch-8yU"/>
+                            <constraint firstItem="QYa-Bs-bXa" firstAttribute="width" secondItem="ROo-RD-a83" secondAttribute="width" id="HdJ-8b-WQ4"/>
+                            <constraint firstItem="zrA-Cz-vSZ" firstAttribute="width" secondItem="ROo-RD-a83" secondAttribute="width" multiplier="0.7" id="IeG-WS-UOQ"/>
+                            <constraint firstItem="zrA-Cz-vSZ" firstAttribute="centerX" secondItem="ROo-RD-a83" secondAttribute="centerX" id="MFA-5v-YQD"/>
+                            <constraint firstItem="mI8-Fy-UQP" firstAttribute="centerX" secondItem="ROo-RD-a83" secondAttribute="centerX" id="MyZ-Iq-WnS"/>
+                            <constraint firstItem="mI8-Fy-UQP" firstAttribute="height" secondItem="ROo-RD-a83" secondAttribute="height" multiplier="0.15" id="R5e-zU-z92"/>
+                            <constraint firstItem="mI8-Fy-UQP" firstAttribute="centerY" secondItem="ROo-RD-a83" secondAttribute="centerY" multiplier="1.7" id="cOo-jt-bWq"/>
+                            <constraint firstItem="mI8-Fy-UQP" firstAttribute="width" secondItem="ROo-RD-a83" secondAttribute="width" id="fU9-Pc-7gD"/>
+                            <constraint firstItem="QYa-Bs-bXa" firstAttribute="height" secondItem="ROo-RD-a83" secondAttribute="height" multiplier="0.15" id="hby-C6-PdR"/>
+                            <constraint firstItem="zrA-Cz-vSZ" firstAttribute="centerY" secondItem="ROo-RD-a83" secondAttribute="centerY" id="sIU-UL-1FK"/>
+                            <constraint firstItem="QYa-Bs-bXa" firstAttribute="centerY" secondItem="ROo-RD-a83" secondAttribute="centerY" multiplier="0.2" id="uRg-1k-MH2"/>
+                            <constraint firstItem="QYa-Bs-bXa" firstAttribute="centerX" secondItem="ROo-RD-a83" secondAttribute="centerX" id="ulK-cv-7Ag"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottom" destination="mI8-Fy-UQP" id="ibF-vE-Gzg"/>
+                        <outlet property="center" destination="zrA-Cz-vSZ" id="zsk-Qq-cnx"/>
+                        <outlet property="top" destination="QYa-Bs-bXa" id="5Y7-JR-xE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQD-xh-MIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Nk4-I0-Loo">
+                    <connections>
+                        <action selector="touch:" destination="ONc-t3-ACF" id="NBP-h5-DZc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="805.54722638680664"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchScreenAppIcon" width="330" height="339"/>
+    </resources>
+</document>

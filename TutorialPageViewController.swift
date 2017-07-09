@@ -8,18 +8,19 @@
 
 import UIKit
 
-class TutorialPageViewController: UIPageViewController, UIPageViewControllerDelegate {
+class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate {
     
-    @IBOutlet weak var pageControlDisplay: UIPageControl!
-
+    @IBOutlet weak var pageDotsController: UIPageControl!
+    
     var pageViewController: UIPageViewController!
+    
     var tutorialPages: [UIViewController] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        for i in 0...5 {
+        for i in 1...1 {
             tutorialPages.append((self.storyboard?.instantiateViewController(withIdentifier: "tutorialPage\(i)"))!)
         }
         pageViewController.setViewControllers([tutorialPages.first!], direction: .forward, animated: true, completion: nil)
@@ -27,9 +28,9 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerDele
         pageViewController.dataSource = self
         view.addSubview(pageViewController.view)
         
-        pageControlDisplay.numberOfPages = tutorialPages.count
-        pageControlDisplay.currentPage = 0
-        view.bringSubview(toFront: pageControlDisplay)
+        view.bringSubview(toFront: pageDotsController)
+        pageDotsController.numberOfPages = tutorialPages.count
+        pageDotsController.currentPage = 0
     }
 }
 
@@ -44,7 +45,7 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if let currentIndex = tutorialPages.index(of: viewController) {
-            return currentIndex == tutorialPages.count ? nil : tutorialPages[currentIndex + 1]
+            return currentIndex == tutorialPages.count - 1 ? nil : tutorialPages[currentIndex + 1]
         }
         return nil
     }
