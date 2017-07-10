@@ -15,10 +15,6 @@ class TutorialViewController3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         slideShow.setUpSlideShow(imageNames: ["progTut0.png", "progTut2.png", "progTut3.png"], timeBetweenImages: 0.5, transitionDuration: 1)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         slideShow.slideShow()
     }
 

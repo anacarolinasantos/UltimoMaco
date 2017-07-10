@@ -24,8 +24,8 @@ class TutorialViewController1: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if !hasAlreadyAppeared {
-            super.viewDidAppear(animated)
             UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 100, initialSpringVelocity: 15, options: .curveLinear, animations: {
                 var point = CGPoint(x: self.top.frame.origin.x, y: 700)
                 var size = self.top.frame.size

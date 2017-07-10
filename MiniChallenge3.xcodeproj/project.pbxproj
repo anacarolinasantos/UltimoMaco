@@ -88,6 +88,9 @@
 		BD909C2F1F12C21C00C5CB7B /* TutorialViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */; };
 		BD909C331F12F45700C5CB7B /* TutorialViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */; };
 		BD909C351F12F59E00C5CB7B /* TutorialViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */; };
+		BD909C391F13131A00C5CB7B /* TutorialViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C381F13131A00C5CB7B /* TutorialViewController6.swift */; };
+		BD909C3B1F13148800C5CB7B /* TutorialViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */; };
+		BD909C3D1F13D1C700C5CB7B /* TutorialViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -209,6 +212,9 @@
 		BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController2.swift; sourceTree = "<group>"; };
 		BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController4.swift; sourceTree = "<group>"; };
 		BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController3.swift; sourceTree = "<group>"; };
+		BD909C381F13131A00C5CB7B /* TutorialViewController6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController6.swift; sourceTree = "<group>"; };
+		BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController5.swift; sourceTree = "<group>"; };
+		BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController7.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -423,6 +429,9 @@
 				BD909C2E1F12C21C00C5CB7B /* TutorialViewController2.swift */,
 				BD909C341F12F59E00C5CB7B /* TutorialViewController3.swift */,
 				BD909C321F12F45700C5CB7B /* TutorialViewController4.swift */,
+				BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */,
+				BD909C381F13131A00C5CB7B /* TutorialViewController6.swift */,
+				BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -780,6 +789,7 @@
 				BDC1DA3E1EF301EF00070139 /* MainTabBarController.swift in Sources */,
 				45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */,
 				BD726D2A1F117D65004E0DF9 /* TutorialViewController1.swift in Sources */,
+				BD909C3B1F13148800C5CB7B /* TutorialViewController5.swift in Sources */,
 				BDC1DA241EF048C800070139 /* Motivation+CoreDataProperties.swift in Sources */,
 				45750EAF1EF063BF003526F4 /* MotivationTypeTwoTableViewCell.swift in Sources */,
 				BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */,
@@ -804,9 +814,11 @@
 				60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */,
 				BD909C331F12F45700C5CB7B /* TutorialViewController4.swift in Sources */,
 				BDC1DA3C1EF2FF9C00070139 /* AchievementPopUpViewController.swift in Sources */,
+				BD909C391F13131A00C5CB7B /* TutorialViewController6.swift in Sources */,
 				604EC0461EEDABB300C1EA59 /* FagerstromPage5.swift in Sources */,
 				45EA0E2D1EF5971800718832 /* HealthInformationViewController.swift in Sources */,
 				493118A91EEB12F200D2694C /* LineChartData.swift in Sources */,
+				BD909C3D1F13D1C700C5CB7B /* TutorialViewController7.swift in Sources */,
 				606195A61EF1E0B200249D81 /* NotificationModel.swift in Sources */,
 				604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */,
 				49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */,

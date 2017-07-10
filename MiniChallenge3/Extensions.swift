@@ -79,6 +79,30 @@ extension UIPageViewController {
     
 }
 
+extension CGRect {
+    
+    mutating func changeOrigin(toX: CGFloat, andYTo: CGFloat) {
+        let point = CGPoint(x: toX, y: andYTo)
+        let size = self.size
+        let newFrame = CGRect(origin: point, size: size)
+        self = newFrame
+    }
+    
+    mutating func changeOriginX(to: CGFloat) {
+        let point = CGPoint(x: to, y: self.origin.y)
+        let size = self.size
+        let newFrame = CGRect(origin: point, size: size)
+        self = newFrame
+    }
+    
+    mutating func changeOriginY(to: CGFloat) {
+        let point = CGPoint(x: self.origin.x, y: to)
+        let size = self.size
+        let newFrame = CGRect(origin: point, size: size)
+        self = newFrame
+    }
+}
+
 class SlideShowEffect: UIImageView {
     
     private var slideShowCount = 0
@@ -89,12 +113,13 @@ class SlideShowEffect: UIImageView {
     
     private var imageNames: [String] = []
     
+    private var hasAlreadyPlayed = false
     
     func setUpSlideShow(imageNames: [String], timeBetweenImages: Double, transitionDuration: Double) {
         self.imageNames = imageNames
         self.delay = timeBetweenImages
         self.duration = transitionDuration
-        self.image = UIImage(named: imageNames[0])        
+        self.image = UIImage(named: imageNames[0])
     }
     
     func slideShow() {

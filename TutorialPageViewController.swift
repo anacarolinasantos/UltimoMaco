@@ -20,7 +20,7 @@ class TutorialPageViewController: UIViewController {
         super.viewDidLoad()
         
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        for i in 1...4 {
+        for i in 1...7 {
             tutorialPages.append((self.storyboard?.instantiateViewController(withIdentifier: "tutorialPage\(i)"))!)
         }
         pageViewController.setViewControllers([tutorialPages.first!], direction: .forward, animated: true, completion: nil)
@@ -37,6 +37,7 @@ class TutorialPageViewController: UIViewController {
 extension TutorialPageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
         if let currentIndex = tutorialPages.index(of: viewController) {
             return currentIndex == 0 ? nil : tutorialPages[currentIndex - 1]
         }
@@ -44,6 +45,7 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
         if let currentIndex = tutorialPages.index(of: viewController) {
             return currentIndex == tutorialPages.count - 1 ? nil : tutorialPages[currentIndex + 1]
         }

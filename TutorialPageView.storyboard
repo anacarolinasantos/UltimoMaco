@@ -198,25 +198,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você pode compartilhar suas conquistas tocando e segurando nas que você obteve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-Wk-img">
-                                <rect key="frame" x="19" y="550.5" width="337.5" height="100"/>
+                                <rect key="frame" x="19" y="483.5" width="337.5" height="100"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progTut2" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-Ld-eFu" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19" y="17" width="337.5" height="500"/>
+                                <rect key="frame" x="19" y="33" width="337.5" height="400.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="1.8" id="2aE-Cl-p79"/>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="1.6" id="2aE-Cl-p79"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="3YN-69-5bh"/>
                             <constraint firstItem="3U1-Ld-eFu" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="IAV-HO-XUT"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.15" id="LBX-bY-6z9"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="SjN-7N-M3Q"/>
-                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.75" id="fyn-pT-lh6"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.6" id="fyn-pT-lh6"/>
                             <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="krt-79-UYF"/>
-                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="0.8" id="lIt-Wn-g0f"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="0.7" id="lIt-Wn-g0f"/>
                         </constraints>
                     </view>
                     <connections>
@@ -239,23 +239,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de informações, aprenda mais sobre como o fumo afeta a saúde e o que você pode fazer para evitá-lo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-Yb-cYI">
-                                <rect key="frame" x="0.5" y="16.5" width="375" height="167"/>
-                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de informações, aprenda mais sobre como o fumo afeta a saúde e o que você pode fazer para evitá-lo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-Yb-cYI">
+                                <rect key="frame" x="0.5" y="16.5" width="375" height="100"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="18"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoTut0" translatesAutoresizingMaskIntoConstraints="NO" id="9lb-rC-Vqh" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="183.5" width="337.5" height="467"/>
+                                <rect key="frame" x="19.5" y="123.5" width="337.5" height="400"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.3" id="6m1-iS-3YN"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.2" id="6m1-iS-3YN"/>
                             <constraint firstItem="9lb-rC-Vqh" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" multiplier="0.9" id="8nq-XL-i88"/>
-                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="1.25" id="G93-gf-DCe"/>
-                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.7" id="LX7-Xi-q8X"/>
-                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.25" id="N4W-pO-727"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.97" id="G93-gf-DCe"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.6" id="LX7-Xi-q8X"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.15" id="N4W-pO-727"/>
                             <constraint firstItem="Rdd-Yb-cYI" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" id="P7M-O1-7KL"/>
                             <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerX" secondItem="NU8-lp-gHh" secondAttribute="centerX" id="d6b-3J-oRh"/>
                             <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerX" secondItem="NU8-lp-gHh" secondAttribute="centerX" id="nVJ-3A-shk"/>
@@ -269,10 +269,177 @@
             </objects>
             <point key="canvasLocation" x="2600.8000000000002" y="805.54722638680664"/>
         </scene>
+        <!--Tutorial View Controller5-->
+        <scene sceneID="pVl-if-ndV">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="46v-hv-mCe" customClass="TutorialViewController5" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ktr-q1-CEe"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGD-xe-MMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pPh-ov-tYA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No seu perfil toque na foto para alterá-la" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTy-XS-oVa">
+                                <rect key="frame" x="10" y="67" width="168.5" height="200.5"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça um teste para saber o seu nível de dependência da nicotina" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgF-Mg-ymx">
+                                <rect key="frame" x="206.5" y="400.5" width="150" height="200"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-IR-xaY" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="-19" y="350.5" width="225.5" height="300"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="QOI-Ov-24w" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="169" y="33" width="225" height="300.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2mU-IR-xaY" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.45" id="1Yf-Za-rfM"/>
+                            <constraint firstItem="kTy-XS-oVa" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.45" id="8js-0K-0Nk"/>
+                            <constraint firstItem="QOI-Ov-24w" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.6" id="9iE-l0-AWu"/>
+                            <constraint firstItem="MgF-Mg-ymx" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.3" id="BiJ-5y-NrH"/>
+                            <constraint firstItem="2mU-IR-xaY" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="0.5" id="ELY-ZC-Eog"/>
+                            <constraint firstItem="QOI-Ov-24w" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="1.5" id="PGe-it-5ju"/>
+                            <constraint firstItem="kTy-XS-oVa" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="0.5" id="TVo-vK-Wak"/>
+                            <constraint firstItem="QOI-Ov-24w" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="0.55" id="UuA-tS-DS4"/>
+                            <constraint firstItem="QOI-Ov-24w" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.45" id="XeH-uP-MEG"/>
+                            <constraint firstItem="MgF-Mg-ymx" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="1.5" id="Zqk-vt-v5F"/>
+                            <constraint firstItem="kTy-XS-oVa" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="0.5" id="dWl-ib-HDl"/>
+                            <constraint firstItem="MgF-Mg-ymx" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="1.5" id="dZe-ox-t7G"/>
+                            <constraint firstItem="2mU-IR-xaY" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="1.5" id="jqV-cf-FNg"/>
+                            <constraint firstItem="2mU-IR-xaY" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.6" id="qMl-ml-ZrC"/>
+                            <constraint firstItem="kTy-XS-oVa" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.3" id="tdG-kz-Avh"/>
+                            <constraint firstItem="MgF-Mg-ymx" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.4" id="uvn-RY-fxH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slideShow" destination="QOI-Ov-24w" id="UTi-VR-llz"/>
+                        <outlet property="slideShow0" destination="2mU-IR-xaY" id="pWn-dL-xBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaM-D1-rat" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3381.5999999999999" y="805.54722638680664"/>
+        </scene>
+        <!--Tutorial View Controller6-->
+        <scene sceneID="IFj-W4-On0">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage6" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ugq-n5-oIO" customClass="TutorialViewController6" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WcR-ZM-zwb"/>
+                        <viewControllerLayoutGuide type="bottom" id="3wl-Jh-3ef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lV7-KM-ued">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No seu perfil você pode adicionar motivações para ajudar no seu processo " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-fX-4uV">
+                                <rect key="frame" x="19" y="33" width="337.5" height="67"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="18"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Lb-wL-pY9">
+                                <rect key="frame" x="19" y="517" width="337.5" height="100"/>
+                                <string key="text">Toque no + para adicionar uma nova, coloque um título, uma foto, uma descrição como quiser. Para editar toque novamente a motivação</string>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-OC-0BQ" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
+                                <rect key="frame" x="19" y="100" width="337.5" height="400.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="0.9" id="2Jx-FR-9QA"/>
+                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.6" id="IQJ-KP-x3b"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="0.2" id="NNY-uh-0Su"/>
+                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="UVf-Us-4Hc"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="Xrp-HW-Qzs"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.15" id="ZNY-7d-a5Q"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="a8M-Ec-vys"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.1" id="aVe-LP-wdo"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="gLz-rx-iz6"/>
+                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="mxl-yK-rXP"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="1.7" id="x9x-Pa-6hs"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="zGk-a6-L5o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slideShow" destination="PZF-OC-0BQ" id="jCg-rd-aRY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5U-Fm-bQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4197.6000000000004" y="805.54722638680664"/>
+        </scene>
+        <!--Tutorial View Controller7-->
+        <scene sceneID="oOF-Wv-W4q">
+            <objects>
+                <viewController storyboardIdentifier="tutorialPage7" useStoryboardIdentifierAsRestorationIdentifier="YES" id="64h-3g-wbW" customClass="TutorialViewController7" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4xZ-68-1yz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZqH-12-JYW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Mk-tw-lOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bom, por enquanto é só! Vamos começar essa jornada? Em breve você sentirá os benéficios para a saúde que parar de fumar traz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkl-zn-PKa">
+                                <rect key="frame" x="0.0" y="26.5" width="375" height="147"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="20"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GW8-tm-mgP">
+                                <rect key="frame" x="0.0" y="200.5" width="375" height="266.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-ie-lLe">
+                                <rect key="frame" x="56.5" y="533.5" width="262.5" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Vamos lá!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tkl-zn-PKa" firstAttribute="centerX" secondItem="3Mk-tw-lOB" secondAttribute="centerX" id="EqE-oE-DiP"/>
+                            <constraint firstItem="tkl-zn-PKa" firstAttribute="height" secondItem="3Mk-tw-lOB" secondAttribute="height" multiplier="0.22" id="I43-Zg-aOj"/>
+                            <constraint firstItem="GW8-tm-mgP" firstAttribute="centerX" secondItem="3Mk-tw-lOB" secondAttribute="centerX" id="Kcv-If-h29"/>
+                            <constraint firstItem="FnI-ie-lLe" firstAttribute="width" secondItem="3Mk-tw-lOB" secondAttribute="width" multiplier="0.7" id="MJ8-on-L20"/>
+                            <constraint firstItem="GW8-tm-mgP" firstAttribute="centerY" secondItem="3Mk-tw-lOB" secondAttribute="centerY" id="YIn-Rq-61p"/>
+                            <constraint firstItem="FnI-ie-lLe" firstAttribute="height" secondItem="3Mk-tw-lOB" secondAttribute="height" multiplier="0.1" id="dcg-f3-zaK"/>
+                            <constraint firstItem="GW8-tm-mgP" firstAttribute="width" secondItem="3Mk-tw-lOB" secondAttribute="width" id="eLW-rC-9hS"/>
+                            <constraint firstItem="FnI-ie-lLe" firstAttribute="centerY" secondItem="3Mk-tw-lOB" secondAttribute="centerY" multiplier="1.7" id="kk7-g9-bBq"/>
+                            <constraint firstItem="tkl-zn-PKa" firstAttribute="centerY" secondItem="3Mk-tw-lOB" secondAttribute="centerY" multiplier="0.3" id="o7z-Qx-MO6"/>
+                            <constraint firstItem="tkl-zn-PKa" firstAttribute="width" secondItem="3Mk-tw-lOB" secondAttribute="width" id="q8B-Da-Ks5"/>
+                            <constraint firstItem="GW8-tm-mgP" firstAttribute="height" secondItem="3Mk-tw-lOB" secondAttribute="height" multiplier="0.4" id="tCJ-6e-MGp"/>
+                            <constraint firstItem="FnI-ie-lLe" firstAttribute="centerX" secondItem="3Mk-tw-lOB" secondAttribute="centerX" id="v4g-9F-4VJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="finish" destination="FnI-ie-lLe" id="Xnv-O2-Pyb"/>
+                        <outlet property="img" destination="GW8-tm-mgP" id="6pg-jW-4zC"/>
+                        <outlet property="text" destination="tkl-zn-PKa" id="o8u-7E-z77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xs0-TL-Giy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5008.8000000000002" y="805.54722638680664"/>
+        </scene>
     </scenes>
     <resources>
         <image name="infoTut0" width="750" height="1334"/>
         <image name="launchScreenAppIcon" width="330" height="339"/>
+        <image name="profTut0" width="750" height="1334"/>
         <image name="progTut0" width="750" height="1334"/>
         <image name="progTut2" width="750" height="1334"/>
     </resources>
