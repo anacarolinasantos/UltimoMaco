@@ -144,10 +144,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5X-7w-PUI">
-                                <rect key="frame" x="18.5" y="133.5" width="337.5" height="467"/>
+                                <rect key="frame" x="18.5" y="167" width="337.5" height="400"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progTut0" translatesAutoresizingMaskIntoConstraints="NO" id="xjB-gN-sUG" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                        <rect key="frame" x="-0.5" y="0.0" width="337.5" height="467"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="337.5" height="400"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -158,20 +158,20 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de progresso, toque no gráfico para ver e editar seu histórico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Zu-Q8s">
-                                <rect key="frame" x="0.5" y="6.5" width="375" height="120"/>
-                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                <rect key="frame" x="0.5" y="56.5" width="375" height="87"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="18"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="O5X-7w-PUI" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.7" id="4d7-q9-nkC"/>
+                            <constraint firstItem="O5X-7w-PUI" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.6" id="4d7-q9-nkC"/>
                             <constraint firstItem="O5X-7w-PUI" firstAttribute="width" secondItem="kUG-P3-LaK" secondAttribute="width" multiplier="0.9" id="5qt-Oc-kXB"/>
-                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.18" id="Ji3-Sw-ppP"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="height" secondItem="kUG-P3-LaK" secondAttribute="height" multiplier="0.13" id="Ji3-Sw-ppP"/>
                             <constraint firstItem="yQn-Zu-Q8s" firstAttribute="centerX" secondItem="kUG-P3-LaK" secondAttribute="centerX" id="LYl-TN-aFI"/>
                             <constraint firstItem="O5X-7w-PUI" firstAttribute="centerX" secondItem="kUG-P3-LaK" secondAttribute="centerX" id="MOX-44-vc6"/>
-                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="centerY" secondItem="kUG-P3-LaK" secondAttribute="centerY" multiplier="0.2" id="eso-mj-KGZ"/>
+                            <constraint firstItem="yQn-Zu-Q8s" firstAttribute="centerY" secondItem="kUG-P3-LaK" secondAttribute="centerY" multiplier="0.3" id="eso-mj-KGZ"/>
                             <constraint firstItem="O5X-7w-PUI" firstAttribute="centerY" secondItem="kUG-P3-LaK" secondAttribute="centerY" multiplier="1.1" id="qJp-1S-ncU"/>
                             <constraint firstItem="yQn-Zu-Q8s" firstAttribute="width" secondItem="kUG-P3-LaK" secondAttribute="width" id="qRS-9w-W5s"/>
                         </constraints>
@@ -198,25 +198,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você pode compartilhar suas conquistas tocando e segurando nas que você obteve" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrD-Wk-img">
-                                <rect key="frame" x="19" y="483.5" width="337.5" height="100"/>
-                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="24"/>
+                                <rect key="frame" x="19" y="517" width="337.5" height="100"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="19"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progTut2" translatesAutoresizingMaskIntoConstraints="NO" id="3U1-Ld-eFu" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19" y="33" width="337.5" height="400.5"/>
+                                <rect key="frame" x="19" y="100" width="337.5" height="400.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="1.6" id="2aE-Cl-p79"/>
+                            <constraint firstItem="UrD-Wk-img" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="1.7" id="2aE-Cl-p79"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="3YN-69-5bh"/>
                             <constraint firstItem="3U1-Ld-eFu" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="IAV-HO-XUT"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.15" id="LBX-bY-6z9"/>
                             <constraint firstItem="UrD-Wk-img" firstAttribute="width" secondItem="HUM-Ds-hta" secondAttribute="width" multiplier="0.9" id="SjN-7N-M3Q"/>
                             <constraint firstItem="3U1-Ld-eFu" firstAttribute="height" secondItem="HUM-Ds-hta" secondAttribute="height" multiplier="0.6" id="fyn-pT-lh6"/>
                             <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerX" secondItem="HUM-Ds-hta" secondAttribute="centerX" id="krt-79-UYF"/>
-                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="0.7" id="lIt-Wn-g0f"/>
+                            <constraint firstItem="3U1-Ld-eFu" firstAttribute="centerY" secondItem="HUM-Ds-hta" secondAttribute="centerY" multiplier="0.9" id="lIt-Wn-g0f"/>
                         </constraints>
                     </view>
                     <connections>
@@ -240,20 +240,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Na tela de informações, aprenda mais sobre como o fumo afeta a saúde e o que você pode fazer para evitá-lo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdd-Yb-cYI">
-                                <rect key="frame" x="0.5" y="16.5" width="375" height="100"/>
+                                <rect key="frame" x="0.5" y="66.5" width="375" height="100"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="18"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="infoTut0" translatesAutoresizingMaskIntoConstraints="NO" id="9lb-rC-Vqh" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19.5" y="123.5" width="337.5" height="400"/>
+                                <rect key="frame" x="19.5" y="167" width="337.5" height="400"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.2" id="6m1-iS-3YN"/>
+                            <constraint firstItem="Rdd-Yb-cYI" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.35" id="6m1-iS-3YN"/>
                             <constraint firstItem="9lb-rC-Vqh" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" multiplier="0.9" id="8nq-XL-i88"/>
-                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="0.97" id="G93-gf-DCe"/>
+                            <constraint firstItem="9lb-rC-Vqh" firstAttribute="centerY" secondItem="NU8-lp-gHh" secondAttribute="centerY" multiplier="1.1" id="G93-gf-DCe"/>
                             <constraint firstItem="9lb-rC-Vqh" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.6" id="LX7-Xi-q8X"/>
                             <constraint firstItem="Rdd-Yb-cYI" firstAttribute="height" secondItem="NU8-lp-gHh" secondAttribute="height" multiplier="0.15" id="N4W-pO-727"/>
                             <constraint firstItem="Rdd-Yb-cYI" firstAttribute="width" secondItem="NU8-lp-gHh" secondAttribute="width" id="P7M-O1-7KL"/>
@@ -294,10 +294,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-IR-xaY" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="-19" y="350.5" width="225.5" height="300"/>
+                                <rect key="frame" x="-19" y="300" width="225.5" height="300"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="QOI-Ov-24w" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="169" y="33" width="225" height="300.5"/>
+                                <rect key="frame" x="169" y="66.5" width="225" height="300.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -309,12 +309,12 @@
                             <constraint firstItem="2mU-IR-xaY" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="0.5" id="ELY-ZC-Eog"/>
                             <constraint firstItem="QOI-Ov-24w" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="1.5" id="PGe-it-5ju"/>
                             <constraint firstItem="kTy-XS-oVa" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="0.5" id="TVo-vK-Wak"/>
-                            <constraint firstItem="QOI-Ov-24w" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="0.55" id="UuA-tS-DS4"/>
+                            <constraint firstItem="QOI-Ov-24w" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="0.65" id="UuA-tS-DS4"/>
                             <constraint firstItem="QOI-Ov-24w" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.45" id="XeH-uP-MEG"/>
                             <constraint firstItem="MgF-Mg-ymx" firstAttribute="centerX" secondItem="pPh-ov-tYA" secondAttribute="centerX" multiplier="1.5" id="Zqk-vt-v5F"/>
                             <constraint firstItem="kTy-XS-oVa" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="0.5" id="dWl-ib-HDl"/>
                             <constraint firstItem="MgF-Mg-ymx" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="1.5" id="dZe-ox-t7G"/>
-                            <constraint firstItem="2mU-IR-xaY" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="1.5" id="jqV-cf-FNg"/>
+                            <constraint firstItem="2mU-IR-xaY" firstAttribute="centerY" secondItem="pPh-ov-tYA" secondAttribute="centerY" multiplier="1.35" id="jqV-cf-FNg"/>
                             <constraint firstItem="2mU-IR-xaY" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.6" id="qMl-ml-ZrC"/>
                             <constraint firstItem="kTy-XS-oVa" firstAttribute="height" secondItem="pPh-ov-tYA" secondAttribute="height" multiplier="0.3" id="tdG-kz-Avh"/>
                             <constraint firstItem="MgF-Mg-ymx" firstAttribute="width" secondItem="pPh-ov-tYA" secondAttribute="width" multiplier="0.4" id="uvn-RY-fxH"/>
@@ -342,35 +342,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No seu perfil você pode adicionar motivações para ajudar no seu processo " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-fX-4uV">
-                                <rect key="frame" x="19" y="33" width="337.5" height="67"/>
+                                <rect key="frame" x="19" y="70" width="337.5" height="60"/>
                                 <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="18"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Lb-wL-pY9">
-                                <rect key="frame" x="19" y="517" width="337.5" height="100"/>
+                                <rect key="frame" x="19" y="547" width="337.5" height="73"/>
                                 <string key="text">Toque no + para adicionar uma nova, coloque um título, uma foto, uma descrição como quiser. Para editar toque novamente a motivação</string>
-                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="15"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profTut0" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-OC-0BQ" customClass="SlideShowEffect" customModule="MiniChallenge3" customModuleProvider="target">
-                                <rect key="frame" x="19" y="100" width="337.5" height="400.5"/>
+                                <rect key="frame" x="19" y="133.5" width="337.5" height="400.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="0.9" id="2Jx-FR-9QA"/>
+                            <constraint firstItem="PZF-OC-0BQ" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" id="2Jx-FR-9QA"/>
                             <constraint firstItem="PZF-OC-0BQ" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.6" id="IQJ-KP-x3b"/>
-                            <constraint firstItem="XA7-fX-4uV" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="0.2" id="NNY-uh-0Su"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="0.3" id="NNY-uh-0Su"/>
                             <constraint firstItem="PZF-OC-0BQ" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="UVf-Us-4Hc"/>
                             <constraint firstItem="XA7-fX-4uV" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="Xrp-HW-Qzs"/>
-                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.15" id="ZNY-7d-a5Q"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.11" id="ZNY-7d-a5Q"/>
                             <constraint firstItem="2Lb-wL-pY9" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="a8M-Ec-vys"/>
-                            <constraint firstItem="XA7-fX-4uV" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.1" id="aVe-LP-wdo"/>
+                            <constraint firstItem="XA7-fX-4uV" firstAttribute="height" secondItem="lV7-KM-ued" secondAttribute="height" multiplier="0.09" id="aVe-LP-wdo"/>
                             <constraint firstItem="XA7-fX-4uV" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="gLz-rx-iz6"/>
                             <constraint firstItem="PZF-OC-0BQ" firstAttribute="width" secondItem="lV7-KM-ued" secondAttribute="width" multiplier="0.9" id="mxl-yK-rXP"/>
-                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="1.7" id="x9x-Pa-6hs"/>
+                            <constraint firstItem="2Lb-wL-pY9" firstAttribute="centerY" secondItem="lV7-KM-ued" secondAttribute="centerY" multiplier="1.75" id="x9x-Pa-6hs"/>
                             <constraint firstItem="2Lb-wL-pY9" firstAttribute="centerX" secondItem="lV7-KM-ued" secondAttribute="centerX" id="zGk-a6-L5o"/>
                         </constraints>
                     </view>

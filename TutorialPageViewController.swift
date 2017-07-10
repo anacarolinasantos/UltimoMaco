@@ -8,14 +8,32 @@
 
 import UIKit
 
-class TutorialPageViewController: UIViewController {
+class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate {
     
     @IBOutlet weak var pageDotsController: UIPageControl!
     
     var pageViewController: UIPageViewController!
     
     var tutorialPages: [UIViewController] = []
-
+    
+    var _viewControllerDotIndex = -1
+    
+    var viewControllerDotIndex: Int {
+        get {
+            return _viewControllerDotIndex
+        }
+        set (newValue) {
+            if newValue < 0 {
+                _viewControllerDotIndex = 0
+            } else if newValue > tutorialPages.count {
+                _viewControllerDotIndex = tutorialPages.count
+            } else {
+                _viewControllerDotIndex = newValue
+            }
+            pageDotsController.currentPage = _viewControllerDotIndex
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +50,7 @@ class TutorialPageViewController: UIViewController {
         pageDotsController.numberOfPages = tutorialPages.count
         pageDotsController.currentPage = 0
     }
+    
 }
 
 extension TutorialPageViewController: UIPageViewControllerDataSource {
@@ -39,30 +58,18 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         if let currentIndex = tutorialPages.index(of: viewController) {
+            viewControllerDotIndex = viewControllerDotIndex - 1
             return currentIndex == 0 ? nil : tutorialPages[currentIndex - 1]
         }
         return nil
     }
-
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         if let currentIndex = tutorialPages.index(of: viewController) {
+            viewControllerDotIndex = viewControllerDotIndex + 1
             return currentIndex == tutorialPages.count - 1 ? nil : tutorialPages[currentIndex + 1]
         }
         return nil
     }
-}
-
-extension TutorialPageViewController: UIPageViewControllerDelegate {
-    
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if completed {
-            if let lastViewController = previousViewControllers.last {
-                if let index = tutorialPages.index(of: lastViewController) {
-                    pageDotsController.currentPage = index + 1
-                }
-            }
-        }
-    }
-    
 }
