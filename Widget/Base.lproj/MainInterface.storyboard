@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,23 +24,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uix-gT-V3h">
-                                <rect key="frame" x="0.0" y="42" width="202" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="53" width="202" height="24"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="20"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="999" translatesAutoresizingMaskIntoConstraints="NO" id="53U-T7-jL8">
-                                <rect key="frame" x="210" y="38" width="94" height="29"/>
+                                <rect key="frame" x="210" y="50" width="94" height="29"/>
                                 <color key="tintColor" red="0.031852170825004578" green="0.61443829536437988" blue="0.73605388402938843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="stepperTap:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="W6j-sm-wUr"/>
                                 </connections>
                             </stepper>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8BD-QB-bCD">
+                                <rect key="frame" x="70.5" y="29.5" width="61" height="72"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cigarros de hoje" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcG-no-Htl">
+                                <rect key="frame" x="1" y="0.0" width="320" height="33"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="19"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.80000000000000004" alpha="1" colorSpace="deviceCMYK"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="8BD-QB-bCD" firstAttribute="centerX" secondItem="uix-gT-V3h" secondAttribute="centerX" id="8ts-5d-h97"/>
                             <constraint firstItem="uix-gT-V3h" firstAttribute="centerY" secondItem="53U-T7-jL8" secondAttribute="centerY" id="DEK-ud-5e4"/>
-                            <constraint firstItem="53U-T7-jL8" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="38" id="Y5h-Oj-33o"/>
+                            <constraint firstItem="8BD-QB-bCD" firstAttribute="centerY" secondItem="uix-gT-V3h" secondAttribute="centerY" id="P6Y-qy-93p"/>
+                            <constraint firstItem="8BD-QB-bCD" firstAttribute="height" secondItem="uix-gT-V3h" secondAttribute="height" multiplier="3" id="Q0l-MX-YLL"/>
+                            <constraint firstItem="53U-T7-jL8" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="50" id="Y5h-Oj-33o"/>
+                            <constraint firstItem="8BD-QB-bCD" firstAttribute="width" secondItem="uix-gT-V3h" secondAttribute="width" multiplier="0.3" id="ZMA-ax-Ycb"/>
+                            <constraint firstItem="bcG-no-Htl" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="bTo-V6-CbB"/>
+                            <constraint firstItem="bcG-no-Htl" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" constant="1" id="d8F-Is-O19"/>
                             <constraint firstItem="uix-gT-V3h" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="f8l-Ao-dpL"/>
+                            <constraint firstItem="bcG-no-Htl" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" multiplier="0.3" id="ff6-aF-fru"/>
+                            <constraint firstItem="bcG-no-Htl" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" multiplier="0.3" id="gfk-Af-Fxe"/>
                             <constraint firstItem="53U-T7-jL8" firstAttribute="leading" secondItem="uix-gT-V3h" secondAttribute="trailing" constant="8" symbolic="YES" id="lvK-7i-6gb"/>
                             <constraint firstItem="53U-T7-jL8" firstAttribute="trailing" secondItem="S3S-Oj-5AN" secondAttribute="trailingMargin" id="ptH-Dt-JVg"/>
                         </constraints>
@@ -52,6 +70,7 @@
                     <size key="freeformSize" width="320" height="110"/>
                     <connections>
                         <outlet property="cigarettesNumberLabel" destination="uix-gT-V3h" id="Q9l-mM-ILM"/>
+                        <outlet property="circle" destination="8BD-QB-bCD" id="deX-K2-m7Y"/>
                         <outlet property="stepperOutlet" destination="53U-T7-jL8" id="Hi2-6x-NSq"/>
                     </connections>
                 </viewController>
