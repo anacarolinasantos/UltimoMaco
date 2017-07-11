@@ -59,6 +59,12 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        InitialViewController.pages = []
+    }
+    
+    
     // MARK: - UIPageViewController delegates
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

@@ -22,6 +22,8 @@ class HistoricTableViewController: UITableViewController, CustomCellUpdater {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         let c = chartData.points.filter({ $0.day <= Date() }).count - 1
+//        Uncomment the folowing line to test with filled Database
+//        let c = chartData.points.count - 1
         cellIdentifiers = Array(repeating: "cell", count: c)
     }
     

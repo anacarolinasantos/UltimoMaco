@@ -115,10 +115,11 @@ class AppConfigurationsTableViewController: UITableViewController {
                                               message: nil,
                                               preferredStyle: .alert)
                 
-                let cancelAction = UIAlertAction(title: NSLocalizedString("Não", comment: "default"),
+                let cancelAction = UIAlertAction(title: "Não",
                                                  style: .default)
                 
-                let confirmAction = UIAlertAction(title: NSLocalizedString("Sim", comment: "default"), style: .default) {
+                let confirmAction = UIAlertAction(title: "Sim",
+                                                  style: .default) {
                     _ in
                     if let t = UIStoryboard(name: "TutorialPageView", bundle: nil).instantiateInitialViewController() {
                         self.present(t, animated: true, completion: nil)
@@ -130,7 +131,21 @@ class AppConfigurationsTableViewController: UITableViewController {
                 
                 self.present(alert, animated: true)
             } else if indexPath.row == 1 {
+                let alert = UIAlertController(title: "Você tem certeza que deseja reiniciar o aplicativo?",
+                                              message: "Esta função destina-se aos que necessitam colocar uma nova meta, apagar o progresso feito, zerar as entradas, iniciar novamente o processo, etc. Isto fará com que seu progresso seja zerado! Não há como voltar atrás!",
+                                              preferredStyle: .alert)
                 
+                let cancelAction = UIAlertAction(title: "Não tenho certeza",
+                                                 style: .default)
+                
+                let confirmAction = UIAlertAction(title: "Sim, tenho certeza", style: .destructive) { _ in
+                    ApplicationDatabaseSetUp.nukeEverything(view: self.tabBarController!)
+                }
+                
+                alert.addAction(confirmAction)
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true)
             }
         }
     }

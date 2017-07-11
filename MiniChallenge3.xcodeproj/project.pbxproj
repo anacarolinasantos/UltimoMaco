@@ -91,6 +91,7 @@
 		BD909C391F13131A00C5CB7B /* TutorialViewController6.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C381F13131A00C5CB7B /* TutorialViewController6.swift */; };
 		BD909C3B1F13148800C5CB7B /* TutorialViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */; };
 		BD909C3D1F13D1C700C5CB7B /* TutorialViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */; };
+		BD909C3F1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3E1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -215,6 +216,7 @@
 		BD909C381F13131A00C5CB7B /* TutorialViewController6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController6.swift; sourceTree = "<group>"; };
 		BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController5.swift; sourceTree = "<group>"; };
 		BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController7.swift; sourceTree = "<group>"; };
+		BD909C3E1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationDatabaseSetUp.swift; path = ../ApplicationDatabaseSetUp.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 				BDC1DA311EF1E1DC00070139 /* AchievementsController.swift */,
 				BDA3AF801EEEFE770087F71A /* NotificationController.swift */,
 				604EC0361EECA76600C1EA59 /* Extensions.swift */,
+				BD909C3E1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift */,
 			);
 			name = "Swift Files";
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */,
 				BDC1DA291EF0492D00070139 /* FagerstromTest+CoreDataClass.swift in Sources */,
 				493118A81EEB12F200D2694C /* LineChart.swift in Sources */,
+				BD909C3F1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift in Sources */,
 				BDC1DA261EF048C800070139 /* Achievement+CoreDataProperties.swift in Sources */,
 				494EEE721EF06D7A00465D6B /* HistoricTableViewCell.swift in Sources */,
 				BDC32F681EE9C268003E65AB /* TodayViewController.swift in Sources */,

@@ -77,14 +77,15 @@ class Page5ViewController: PageModelViewController {
                                               message: "Gostaria de ver um tutorial sobre as principais funções do aplicativo?",
                                               preferredStyle: .alert)
                 
-                let cancelAction = UIAlertAction(title: NSLocalizedString("Não", comment: "default"),
+                let cancelAction = UIAlertAction(title: "Não",
                                                  style: .default)
                 
-                let confirmAction = UIAlertAction(title: NSLocalizedString("Sim", comment: "default"), style: .default) {
-                    _ in
-                    if let t = UIStoryboard(name: "TutorialPageView", bundle: nil).instantiateInitialViewController() {
-                        vc?.present(t, animated: true, completion: nil)
-                    }
+                let confirmAction = UIAlertAction(title: "Sim",
+                                                  style: .default) {
+                                                    _ in
+                                                    if let t = UIStoryboard(name: "TutorialPageView", bundle: nil).instantiateInitialViewController() {
+                                                        vc?.present(t, animated: true, completion: nil)
+                                                    }
                 }
                 
                 alert.addAction(cancelAction)
@@ -92,7 +93,6 @@ class Page5ViewController: PageModelViewController {
                 
                 vc?.present(alert, animated: true)
             })
-            
         })
     }
 }
