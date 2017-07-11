@@ -24,6 +24,8 @@ class TutorialViewController7: UIViewController {
     
     var fY: CGFloat?
     
+    var mainViewController: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -53,5 +55,8 @@ class TutorialViewController7: UIViewController {
                 })
             })
         }
+    }
+    @IBAction func end(_ sender: Any) {
+        mainViewController?.dismiss(animated: true, completion: nil)
     }
 }

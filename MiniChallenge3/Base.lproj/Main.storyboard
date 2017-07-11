@@ -10,6 +10,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="s6A-pg-g3d">
+            <objects>
+                <viewController storyboardIdentifier="lastPopUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ly7-Uf-8TT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4rD-vk-s91"/>
+                        <viewControllerLayoutGuide type="bottom" id="VIn-em-YoU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WpX-cE-unt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em2-3w-fST">
+                                <rect key="frame" x="75.5" y="250" width="225" height="166.5"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="height" secondItem="WpX-cE-unt" secondAttribute="height" multiplier="0.25" id="8Tw-pD-iFz"/>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="centerY" secondItem="WpX-cE-unt" secondAttribute="centerY" id="CBX-fg-aC3"/>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="width" secondItem="WpX-cE-unt" secondAttribute="width" multiplier="0.6" id="Fcb-9d-vuZ"/>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="centerX" secondItem="WpX-cE-unt" secondAttribute="centerX" id="iih-S4-vSl"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Di4-Zs-aJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.19999999999999" y="-457.42128935532236"/>
+        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="bnt-wv-Hhk">
             <objects>
@@ -64,7 +94,7 @@
                                         <rect key="frame" x="30.5" y="75" width="182.5" height="200.5"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="o1i-zk-Va0" firstAttribute="top" secondItem="x2d-s1-b2H" secondAttribute="top" constant="5" id="18D-fo-ths"/>
                                     <constraint firstAttribute="bottom" secondItem="Cnl-og-mdg" secondAttribute="bottom" id="1cd-Sn-BTH"/>

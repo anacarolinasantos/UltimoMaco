@@ -107,4 +107,32 @@ class AppConfigurationsTableViewController: UITableViewController {
     private func at(hour: Int, minute: Int) -> Date {
         return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: Date())!
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            if indexPath.row == 0 {
+                let alert = UIAlertController(title: "Gostaria de ver um tutorial sobre as principais funções do aplicativo?",
+                                              message: nil,
+                                              preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: NSLocalizedString("Não", comment: "default"),
+                                                 style: .default)
+                
+                let confirmAction = UIAlertAction(title: NSLocalizedString("Sim", comment: "default"), style: .default) {
+                    _ in
+                    if let t = UIStoryboard(name: "TutorialPageView", bundle: nil).instantiateInitialViewController() {
+                        self.present(t, animated: true, completion: nil)
+                    }
+                }
+                
+                alert.addAction(cancelAction)
+                alert.addAction(confirmAction)
+                
+                self.present(alert, animated: true)
+            } else if indexPath.row == 1 {
+                
+            }
+        }
+    }
+    
 }

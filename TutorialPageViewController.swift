@@ -40,6 +40,11 @@ class TutorialPageViewController: UIViewController, UIPageViewControllerDelegate
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         for i in 1...7 {
             tutorialPages.append((self.storyboard?.instantiateViewController(withIdentifier: "tutorialPage\(i)"))!)
+            if i == 7 {
+                if let vc = tutorialPages[6] as? TutorialViewController7 {
+                    vc.mainViewController = self
+                }
+            }
         }
         pageViewController.setViewControllers([tutorialPages.first!], direction: .forward, animated: true, completion: nil)
         pageViewController.delegate = self

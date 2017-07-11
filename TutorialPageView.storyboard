@@ -407,6 +407,9 @@
                                 <rect key="frame" x="56.5" y="533.5" width="262.5" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Vamos lá!"/>
+                                <connections>
+                                    <action selector="end:" destination="64h-3g-wbW" eventType="touchUpInside" id="rtn-fq-RfW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

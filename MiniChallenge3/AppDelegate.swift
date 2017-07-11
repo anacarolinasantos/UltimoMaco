@@ -21,22 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NotificationController.center.removeAllDeliveredNotifications()
         }
         
-//        guard let isFirstTimeInApp = UserDefaults.standard.object(forKey: "isFirstTimeInApp") as? Bool else {
-//            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
-//            
-//            if let viewControllerDirected = UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() {
-//                self.window = UIWindow(frame: UIScreen.main.bounds)
-//                self.window?.rootViewController = viewControllerDirected
-//                self.window?.makeKeyAndVisible()
-//            }
-//            return true
-//        }
-//        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() :
-//                                                           UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = viewControllerDirected
-//            self.window?.makeKeyAndVisible()
-//        }
+        guard let isFirstTimeInApp = UserDefaults.standard.object(forKey: "isFirstTimeInApp") as? Bool else {
+            UserDefaults.standard.set(true, forKey: "isFirstTimeInApp")
+            
+            if let viewControllerDirected = UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() {
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = viewControllerDirected
+                self.window?.makeKeyAndVisible()
+            }
+            return true
+        }
+        if let viewControllerDirected = isFirstTimeInApp ? UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() :
+                                                           UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = viewControllerDirected
+            self.window?.makeKeyAndVisible()
+        }
         return true
     }
 

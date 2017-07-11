@@ -72,7 +72,26 @@ class Page5ViewController: PageModelViewController {
             UserDefaults.standard.synchronize()
             
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-            self.present(vc!, animated: true, completion: nil)
+            self.present(vc!, animated: true, completion: {
+                let alert = UIAlertController(title: "Seja bem vindo!",
+                                              message: "Gostaria de ver um tutorial sobre as principais funções do aplicativo?",
+                                              preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: NSLocalizedString("Não", comment: "default"),
+                                                 style: .default)
+                
+                let confirmAction = UIAlertAction(title: NSLocalizedString("Sim", comment: "default"), style: .default) {
+                    _ in
+                    if let t = UIStoryboard(name: "TutorialPageView", bundle: nil).instantiateInitialViewController() {
+                        vc?.present(t, animated: true, completion: nil)
+                    }
+                }
+                
+                alert.addAction(cancelAction)
+                alert.addAction(confirmAction)
+                
+                vc?.present(alert, animated: true)
+            })
             
         })
     }

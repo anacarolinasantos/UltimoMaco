@@ -59,7 +59,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7s-he-oR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2050" y="916"/>
+            <point key="canvasLocation" x="2084" y="939"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="Rcq-gs-gk4">
@@ -99,7 +99,7 @@
             <objects>
                 <tableViewController id="Y6Q-Ms-vUa" customClass="AppConfigurationsTableViewController" customModule="MiniChallenge3" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="16" sectionFooterHeight="18" id="mPl-dg-b9H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.65512013440000005" green="0.7809538841" blue="0.77751189470000004" alpha="0.2324486301" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -208,27 +208,73 @@ ao longo do dia</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Desenvolvedores" id="KYA-od-Rdq">
+                            <tableViewSection headerTitle="Outros" id="KYA-od-Rdq" userLabel="Outros">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="49l-Sm-iCZ" detailTextLabel="zHf-1h-7Tp" imageView="sNd-AL-bSI" style="IBUITableViewCellStyleSubtitle" id="4mg-Si-Jvi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Oe0-vz-KC0" style="IBUITableViewCellStyleDefault" id="M9P-Oa-WbC">
                                         <rect key="frame" x="0.0" y="376.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="4mg-Si-Jvi" id="Ag0-aB-qU2">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M9P-Oa-WbC" id="BFi-eL-sbk">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tutorial do aplicativo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Oe0-vz-KC0">
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="jFf-LI-pnh" detailTextLabel="yiQ-ei-0a3" style="IBUITableViewCellStyleSubtitle" id="leL-Wm-DFk">
+                                        <rect key="frame" x="0.0" y="436.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="leL-Wm-DFk" id="K8R-3H-p6f">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Reiniciar aplicativo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jFf-LI-pnh">
+                                                    <rect key="frame" x="15" y="8" width="114" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="14"/>
+                                                    <color key="textColor" red="1" green="0.23620562833553271" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yiQ-ei-0a3">
+                                                    <rect key="frame" x="15" y="25" width="325" height="26.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <string key="text">Esta função destina-se aos que necessitam voltar ao estado inicial do aplicativo, definir uma nova meta, apagar o progresso, etc.</string>
+                                                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Desenvolvedores" id="lvE-Ih-zx1">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BsX-a2-v8W" detailTextLabel="aN2-mN-22O" imageView="UBg-ye-Chz" style="IBUITableViewCellStyleSubtitle" id="dBB-NE-8EG">
+                                        <rect key="frame" x="0.0" y="552.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="dBB-NE-8EG" id="SyM-Ft-zVa">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ana Carolina Santos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="49l-Sm-iCZ">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ana Carolina Santos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BsX-a2-v8W">
                                                     <rect key="frame" x="72" y="13" width="154" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="anaCarolinaSantos" id="sNd-AL-bSI">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="anaCarolinaSantos" id="UBg-ye-Chz">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zHf-1h-7Tp">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aN2-mN-22O">
                                                     <rect key="frame" x="72" y="33.5" width="81" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -238,25 +284,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="vp2-ip-j83" detailTextLabel="iEd-sf-3Yb" imageView="sQQ-di-fj5" style="IBUITableViewCellStyleSubtitle" id="CwD-IF-meW">
-                                        <rect key="frame" x="0.0" y="436.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Q72-Xd-8SU" detailTextLabel="muA-8b-beN" imageView="65o-uu-SsS" style="IBUITableViewCellStyleSubtitle" id="5vW-LX-bGc">
+                                        <rect key="frame" x="0.0" y="612.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="CwD-IF-meW" id="K5P-nr-MXl">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="5vW-LX-bGc" id="AAN-k6-vqo">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Antônio Júnior Pacheco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vp2-ip-j83">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Antônio Júnior Pacheco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q72-Xd-8SU">
                                                     <rect key="frame" x="72" y="13" width="181.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="antônioJúniorPacheco" id="sQQ-di-fj5">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="antônioJúniorPacheco" id="65o-uu-SsS">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iEd-sf-3Yb">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="muA-8b-beN">
                                                     <rect key="frame" x="72" y="33.5" width="75.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -266,25 +312,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="G5z-Tj-m9m" detailTextLabel="x36-OC-FXl" imageView="Oah-wI-TCg" style="IBUITableViewCellStyleSubtitle" id="Vzs-Kx-cqU">
-                                        <rect key="frame" x="0.0" y="496.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="VxK-FE-NyW" detailTextLabel="HZD-kR-5uJ" imageView="4fm-q0-fPV" style="IBUITableViewCellStyleSubtitle" id="MvC-52-LBk">
+                                        <rect key="frame" x="0.0" y="672.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="Vzs-Kx-cqU" id="xan-xP-IIX">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="MvC-52-LBk" id="Bhi-xP-mh8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erick Borges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5z-Tj-m9m">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Erick Borges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VxK-FE-NyW">
                                                     <rect key="frame" x="72" y="13" width="96.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="erickBorges" id="Oah-wI-TCg">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="erickBorges" id="4fm-q0-fPV">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x36-OC-FXl">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HZD-kR-5uJ">
                                                     <rect key="frame" x="72" y="33.5" width="81" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -294,25 +340,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3JL-8P-bBI" detailTextLabel="lSy-vE-QJU" imageView="5Ue-CX-vOe" style="IBUITableViewCellStyleSubtitle" id="Eek-sg-eQv">
-                                        <rect key="frame" x="0.0" y="556.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="eLy-8f-cb6" detailTextLabel="BkD-cY-XbB" imageView="GVb-kU-B9Q" style="IBUITableViewCellStyleSubtitle" id="rys-oj-tyl">
+                                        <rect key="frame" x="0.0" y="732.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="Eek-sg-eQv" id="UNC-td-BRv">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="rys-oj-tyl" id="6Ur-yL-eqP">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Guilherme Paciulli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3JL-8P-bBI">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Guilherme Paciulli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eLy-8f-cb6">
                                                     <rect key="frame" x="72" y="13" width="136.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="guilhermePaciulli" id="5Ue-CX-vOe">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="guilhermePaciulli" id="GVb-kU-B9Q">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lSy-vE-QJU">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BkD-cY-XbB">
                                                     <rect key="frame" x="72" y="33.5" width="81" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -322,25 +368,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="mYi-tf-TgD" detailTextLabel="zdt-qB-9lc" imageView="Kar-Tx-GBm" style="IBUITableViewCellStyleSubtitle" id="FY7-9d-2Wx">
-                                        <rect key="frame" x="0.0" y="616.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="RyG-ZH-Y12" detailTextLabel="M9Q-AZ-u3M" imageView="NLn-hA-fhv" style="IBUITableViewCellStyleSubtitle" id="lSQ-kH-huN">
+                                        <rect key="frame" x="0.0" y="792.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="FY7-9d-2Wx" id="qqF-y0-a7H">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="lSQ-kH-huN" id="Plm-3T-Mvu">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Luiza Gonzalez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mYi-tf-TgD">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Luiza Gonzalez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RyG-ZH-Y12">
                                                     <rect key="frame" x="72" y="13" width="116.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="luizaGonzallez" id="Kar-Tx-GBm">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="luizaGonzallez" id="NLn-hA-fhv">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zdt-qB-9lc">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9Q-AZ-u3M">
                                                     <rect key="frame" x="72" y="33.5" width="75.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -350,25 +396,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="fYb-Sd-Psb" detailTextLabel="riQ-Fs-wni" imageView="gWA-Bn-Vuk" style="IBUITableViewCellStyleSubtitle" id="g0T-A6-XPu">
-                                        <rect key="frame" x="0.0" y="676.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Ygh-M6-lGF" detailTextLabel="Yn2-kZ-N9R" imageView="Gln-JW-kDb" style="IBUITableViewCellStyleSubtitle" id="Lpf-yZ-27m">
+                                        <rect key="frame" x="0.0" y="852.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="g0T-A6-XPu" id="6zc-dA-zOc">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="Lpf-yZ-27m" id="uFg-rW-gJE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Marcella Blotta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fYb-Sd-Psb">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Marcella Blotta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ygh-M6-lGF">
                                                     <rect key="frame" x="81" y="13" width="114" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="marcellaBlotta" id="gWA-Bn-Vuk">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="marcellaBlotta" id="Gln-JW-kDb">
                                                     <rect key="frame" x="15" y="0.0" width="51" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="riQ-Fs-wni">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="App designer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yn2-kZ-N9R">
                                                     <rect key="frame" x="81" y="33.5" width="75.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -378,25 +424,25 @@ ao longo do dia</string>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Avl-zi-eGr" detailTextLabel="kMe-zc-92z" imageView="f3s-pY-Rdh" style="IBUITableViewCellStyleSubtitle" id="TAP-Dc-Qg8">
-                                        <rect key="frame" x="0.0" y="736.5" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3NX-g3-Qzw" detailTextLabel="cGU-wp-hto" imageView="RbI-pj-BVD" style="IBUITableViewCellStyleSubtitle" id="7aW-bN-5u8">
+                                        <rect key="frame" x="0.0" y="912.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="TAP-Dc-Qg8" id="SL9-5F-yKF">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" tableViewCell="7aW-bN-5u8" id="ZfM-ND-SeY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Osniel Teixeira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Avl-zi-eGr">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Osniel Teixeira" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3NX-g3-Qzw">
                                                     <rect key="frame" x="72" y="13" width="111" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="osnielTeixeira" id="f3s-pY-Rdh">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="osnielTeixeira" id="RbI-pj-BVD">
                                                     <rect key="frame" x="15" y="0.0" width="42" height="59.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kMe-zc-92z">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="iOS Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cGU-wp-hto">
                                                     <rect key="frame" x="72" y="33.5" width="81" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -414,6 +460,8 @@ ao longo do dia</string>
                             <outlet property="delegate" destination="Y6Q-Ms-vUa" id="7Qh-lf-QVq"/>
                         </connections>
                     </tableView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="dailyNotificationsSwitch" destination="KQF-3o-A7E" id="sOZ-fv-PYf"/>
                         <outlet property="datePickerOutlet" destination="4ox-MU-AEs" id="Mwj-xh-QN8"/>
