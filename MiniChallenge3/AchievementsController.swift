@@ -19,14 +19,14 @@ public class AchievementsController {
         a.hasAchievement = false
     }
     
-    static public func generateAchievements() {
+    static public func generateAchievements(canObtainLastPackOfCigsAchievement: Bool) {
         instanceOfAchievement("threeDaysInARow.png")
         instanceOfAchievement("sevenDaysInARow.png")
         instanceOfAchievement("noSmokeForToday.png")
         instanceOfAchievement("remainedUnderGoal.png")
         instanceOfAchievement("halfCigarretes.png")
         instanceOfAchievement("reducedFirstCiggarret.png")
-        instanceOfAchievement("lastPackOfCigarretes.png")
+        if canObtainLastPackOfCigsAchievement { instanceOfAchievement("lastPackOfCigarretes.png") }
         instanceOfAchievement("stoppedSmoking.png")
         
     }

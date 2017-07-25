@@ -44,6 +44,8 @@ class Page5ViewController: PageModelViewController {
             user.achievementNotifier = true
             user.reminderTime = reminderTime as NSDate?
             
+            var allEntries: [CigaretteEntry] = []
+            
             for i in 0...(weeksStop! * 7)+1 {
                 let cigEntry = NSEntityDescription.insertNewObject(forEntityName: "CigaretteEntry", into: DatabaseController.persistentContainer.viewContext) as! CigaretteEntry
                 cigEntry.date = Calendar.current.date(byAdding: .day, value: i - 1, to: Date())! as NSDate
@@ -52,9 +54,12 @@ class Page5ViewController: PageModelViewController {
                 } else {
                     cigEntry.cigaretteNumber = -1
                 }
+                allEntries.append(cigEntry)
             }
             
-            AchievementsController.generateAchievements()
+            let sum = (allEntries.map({ self.checkGoalCigarrets(entry: $0, allEntries: allEntries) })).reduce(0, +)
+            
+            AchievementsController.generateAchievements(canObtainLastPackOfCigsAchievement: sum > 20)
             
             DatabaseController.saveContext()
             
@@ -94,5 +99,11 @@ class Page5ViewController: PageModelViewController {
                 vc?.present(alert, animated: true)
             })
         })
+    }
+    
+    public func checkGoalCigarrets(entry: CigaretteEntry, allEntries: [CigaretteEntry]) -> Int {
+        let i = allEntries.index(of: entry)
+        if i == allEntries.count - 1 { return 0 }
+        return -(Int(Double(allEntries[0].cigaretteNumber)/Double(allEntries.count - 1) * Double(i!))) + Int(allEntries[0].cigaretteNumber)
     }
 }

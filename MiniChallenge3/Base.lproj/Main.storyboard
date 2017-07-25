@@ -23,15 +23,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em2-3w-fST">
-                                <rect key="frame" x="75.5" y="250" width="225" height="166.5"/>
+                                <rect key="frame" x="19.5" y="66.5" width="337.5" height="533.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você chegou no final!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-ZU-BvQ">
+                                        <rect key="frame" x="0.0" y="5.5" width="338" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="23"/>
+                                        <color key="textColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chegada" translatesAutoresizingMaskIntoConstraints="NO" id="CY9-r6-x2V">
+                                        <rect key="frame" x="0.5" y="40" width="337.5" height="213.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-mo-i6t">
+                                        <rect key="frame" x="0.0" y="266.5" width="338" height="213.5"/>
+                                        <string key="text">A jornada foi longa mas acabou. Conseguiu chegar ao seu Último Maço? Parabéns! Isso é uma vitória e tanto, continue assim! Experimente jogar fora tudo que te lembra o cigarro: cinzeiro, isqueiro, etc a presença dessas coisas ajuda a voltar a fumar. Não conseguiu? Que pena, mas não desista! Vá a seção de configurações e reinicie o aplicativo, você pode começar do zero e tentar de novo.</string>
+                                        <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-hR-UbS">
+                                        <rect key="frame" x="-0.5" y="499" width="337" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="17"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.29803921570000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="CY9-r6-x2V" firstAttribute="height" secondItem="em2-3w-fST" secondAttribute="height" multiplier="0.4" id="ADk-Q6-J0L"/>
+                                    <constraint firstItem="4iR-mo-i6t" firstAttribute="centerY" secondItem="em2-3w-fST" secondAttribute="centerY" multiplier="1.4" id="EQF-Xz-UYJ"/>
+                                    <constraint firstItem="TBg-hR-UbS" firstAttribute="centerY" secondItem="em2-3w-fST" secondAttribute="centerY" multiplier="1.92" id="GZT-J2-GUY"/>
+                                    <constraint firstItem="CY9-r6-x2V" firstAttribute="centerX" secondItem="em2-3w-fST" secondAttribute="centerX" id="GcQ-rr-2zw"/>
+                                    <constraint firstItem="TBg-hR-UbS" firstAttribute="width" secondItem="em2-3w-fST" secondAttribute="width" id="KMG-C8-AQj"/>
+                                    <constraint firstItem="4iR-mo-i6t" firstAttribute="width" secondItem="em2-3w-fST" secondAttribute="width" id="Nss-X0-ffG"/>
+                                    <constraint firstItem="CY9-r6-x2V" firstAttribute="centerY" secondItem="em2-3w-fST" secondAttribute="centerY" multiplier="0.55" id="UqS-nM-oC4"/>
+                                    <constraint firstItem="TBg-hR-UbS" firstAttribute="centerX" secondItem="em2-3w-fST" secondAttribute="centerX" id="We3-Nw-D3K"/>
+                                    <constraint firstItem="CY9-r6-x2V" firstAttribute="width" secondItem="em2-3w-fST" secondAttribute="width" id="am1-tQ-deH"/>
+                                    <constraint firstItem="dqP-ZU-BvQ" firstAttribute="width" secondItem="em2-3w-fST" secondAttribute="width" id="fdg-Mx-owc"/>
+                                    <constraint firstItem="4iR-mo-i6t" firstAttribute="centerX" secondItem="em2-3w-fST" secondAttribute="centerX" id="krb-nM-kuB"/>
+                                    <constraint firstItem="dqP-ZU-BvQ" firstAttribute="height" secondItem="em2-3w-fST" secondAttribute="height" multiplier="0.05" id="lsU-OP-buy"/>
+                                    <constraint firstItem="TBg-hR-UbS" firstAttribute="height" secondItem="em2-3w-fST" secondAttribute="height" multiplier="0.05" id="tI8-91-MkH"/>
+                                    <constraint firstItem="dqP-ZU-BvQ" firstAttribute="centerY" secondItem="em2-3w-fST" secondAttribute="centerY" multiplier="0.07" id="urC-QI-m92"/>
+                                    <constraint firstItem="dqP-ZU-BvQ" firstAttribute="centerX" secondItem="em2-3w-fST" secondAttribute="centerX" id="xyN-bB-qc4"/>
+                                    <constraint firstItem="4iR-mo-i6t" firstAttribute="height" secondItem="em2-3w-fST" secondAttribute="height" multiplier="0.4" id="z4D-hW-ltS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="em2-3w-fST" firstAttribute="height" secondItem="WpX-cE-unt" secondAttribute="height" multiplier="0.25" id="8Tw-pD-iFz"/>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="height" secondItem="WpX-cE-unt" secondAttribute="height" multiplier="0.8" id="8Tw-pD-iFz"/>
                             <constraint firstItem="em2-3w-fST" firstAttribute="centerY" secondItem="WpX-cE-unt" secondAttribute="centerY" id="CBX-fg-aC3"/>
-                            <constraint firstItem="em2-3w-fST" firstAttribute="width" secondItem="WpX-cE-unt" secondAttribute="width" multiplier="0.6" id="Fcb-9d-vuZ"/>
+                            <constraint firstItem="em2-3w-fST" firstAttribute="width" secondItem="WpX-cE-unt" secondAttribute="width" multiplier="0.9" id="Fcb-9d-vuZ"/>
                             <constraint firstItem="em2-3w-fST" firstAttribute="centerX" secondItem="WpX-cE-unt" secondAttribute="centerX" id="iih-S4-vSl"/>
                         </constraints>
                     </view>
@@ -171,6 +214,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chegada" width="636" height="487"/>
         <image name="threeDaysInARow" width="534" height="591"/>
     </resources>
 </document>

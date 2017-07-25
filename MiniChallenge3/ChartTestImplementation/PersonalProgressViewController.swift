@@ -51,6 +51,8 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
         updateChart()
         
         var allEntries: [CigaretteEntry] = []
@@ -69,6 +71,12 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
             cigarettesNumberLabel.text = String(cigarettesNumber)
         } else {
             cigarettesNumberLabel.text = "Sem dados"
+        }
+        
+        if (allEntries.last!.date! as Date) < Date() {
+            self.cigarettesNumberLabel.text = "-"
+            self.today.text = "-"
+            self.stepperOutlet.isEnabled = false
         }
         
     }

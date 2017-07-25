@@ -14,6 +14,7 @@ class HistoricTableViewController: UITableViewController, CustomCellUpdater {
     @IBOutlet var theTableView: UITableView!
     var chartData = LineChartData()
     var cellIdentifiers: [String]!
+    var canChangeValue = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +22,12 @@ class HistoricTableViewController: UITableViewController, CustomCellUpdater {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        canChangeValue = (chartData.points.last!.day as Date) > Date()
+        
         let c = chartData.points.filter({ $0.day <= Date() }).count - 1
-//        Uncomment the folowing line to test with filled Database
-//        let c = chartData.points.count - 1
+        //        Uncomment the folowing line to test with filled Database
+        //        let c = chartData.points.count - 1
         cellIdentifiers = Array(repeating: "cell", count: c)
     }
     
@@ -84,42 +88,44 @@ class HistoricTableViewController: UITableViewController, CustomCellUpdater {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.beginUpdates()
-        var touchedRow = indexPath.row
-        var i = 0
-        while i<cellIdentifiers.count{
-            if cellIdentifiers[i] == "picker" && i != indexPath.row + 1{
-                cellIdentifiers.remove(at: i)
-                let newIndexPath = IndexPath(row: i, section: 0)
-                tableView.deleteRows(at: [newIndexPath], with: .top)
-                if i < touchedRow{
-                    touchedRow -= 1
+        if canChangeValue {
+            tableView.beginUpdates()
+            var touchedRow = indexPath.row
+            var i = 0
+            while i<cellIdentifiers.count{
+                if cellIdentifiers[i] == "picker" && i != indexPath.row + 1{
+                    cellIdentifiers.remove(at: i)
+                    let newIndexPath = IndexPath(row: i, section: 0)
+                    tableView.deleteRows(at: [newIndexPath], with: .top)
+                    if i < touchedRow{
+                        touchedRow -= 1
+                    }
+                }else{
+                    i+=1
                 }
-            }else{
-                i+=1
             }
-        }
-        
-        if touchedRow != cellIdentifiers.count-1{
-            if cellIdentifiers[touchedRow + 1] == "picker"{
-                cellIdentifiers.remove(at: touchedRow + 1)
-                let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
-                tableView.deleteRows(at: [newIndexPath], with: .top)
+            
+            if touchedRow != cellIdentifiers.count-1{
+                if cellIdentifiers[touchedRow + 1] == "picker"{
+                    cellIdentifiers.remove(at: touchedRow + 1)
+                    let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+                    tableView.deleteRows(at: [newIndexPath], with: .top)
+                }else{
+                    cellIdentifiers.insert("picker", at: touchedRow + 1)
+                    let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
+                    tableView.insertRows(at: [newIndexPath], with: .bottom)
+                }
+                
             }else{
                 cellIdentifiers.insert("picker", at: touchedRow + 1)
                 let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
-                tableView.insertRows(at: [newIndexPath], with: .bottom)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+                tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                
             }
             
-        }else{
-            cellIdentifiers.insert("picker", at: touchedRow + 1)
-            let newIndexPath = IndexPath(row: touchedRow + 1, section: 0)
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-            
+            tableView.endUpdates()
         }
-        
-        tableView.endUpdates()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

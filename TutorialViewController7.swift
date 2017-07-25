@@ -28,6 +28,11 @@ class TutorialViewController7: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.finish.layer.cornerRadius = self.finish.frame.size.width / 10
+        self.finish.clipsToBounds = true
+        self.finish.layer.borderWidth = 1.5
+        self.finish.layer.borderColor = #colorLiteral(red: 0.3008416891, green: 0.3039609194, blue: 0.2998201549, alpha: 1).cgColor
     }
     
     override func viewDidLayoutSubviews() {
