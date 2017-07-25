@@ -92,6 +92,7 @@
 		BD909C3B1F13148800C5CB7B /* TutorialViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */; };
 		BD909C3D1F13D1C700C5CB7B /* TutorialViewController7.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */; };
 		BD909C3F1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C3E1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift */; };
+		BD909C411F27897600C5CB7B /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD909C401F27897600C5CB7B /* EndViewController.swift */; };
 		BDA3AF7E1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		BDA3AF7F1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
 		BDA3AF811EEEFE770087F71A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF801EEEFE770087F71A /* NotificationController.swift */; };
@@ -217,6 +218,7 @@
 		BD909C3A1F13148800C5CB7B /* TutorialViewController5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController5.swift; sourceTree = "<group>"; };
 		BD909C3C1F13D1C700C5CB7B /* TutorialViewController7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController7.swift; sourceTree = "<group>"; };
 		BD909C3E1F1522AC00C5CB7B /* ApplicationDatabaseSetUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationDatabaseSetUp.swift; path = ../ApplicationDatabaseSetUp.swift; sourceTree = "<group>"; };
+		BD909C401F27897600C5CB7B /* EndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CigaretteEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDA3AF801EEEFE770087F71A /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				BDC1DA3D1EF301EF00070139 /* MainTabBarController.swift */,
 				BDC1DA3B1EF2FF9C00070139 /* AchievementPopUpViewController.swift */,
 				BDC32F161EE9B8E6003E65AB /* Main.storyboard */,
+				BD909C401F27897600C5CB7B /* EndViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				45750EA91EEF24AF003526F4 /* PersonalProfileViewController.swift in Sources */,
 				45C54A431EF2E1D800E1FCBD /* HealthInformationDatabase.swift in Sources */,
 				45750EB11EF063DF003526F4 /* MotivationTypeThreeTableViewCell.swift in Sources */,
+				BD909C411F27897600C5CB7B /* EndViewController.swift in Sources */,
 				BDC1DA3E1EF301EF00070139 /* MainTabBarController.swift in Sources */,
 				45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */,
 				BD726D2A1F117D65004E0DF9 /* TutorialViewController1.swift in Sources */,

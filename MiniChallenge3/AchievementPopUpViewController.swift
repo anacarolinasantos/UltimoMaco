@@ -22,7 +22,7 @@ class AchievementPopUpViewController: UIViewController {
         
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        popUpView.layer.cornerRadius = 10
+        popUpView.layer.cornerRadius = popUpView.frame.width / 10
         popUpView.clipsToBounds = true
         if let a = achievement {
             achievementAsset.image = UIImage(named: a.assetIdentifier!)
