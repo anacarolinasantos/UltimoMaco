@@ -23,6 +23,7 @@ class MainTabBarController: UITabBarController {
             var entries: [CigaretteEntry] = []
             do {
                 entries = try DatabaseController.persistentContainer.viewContext.fetch(NSFetchRequest(entityName: "CigaretteEntry"))
+                entries.sort(by: { ($0.date! as Date) < ($1.date! as Date) })
                 if (entries.last!.date! as Date) < Date() {
                     showEnd = true
                 } else {
