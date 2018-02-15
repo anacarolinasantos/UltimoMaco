@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MalayalamSangamMN.ttc">
+            <string>MalayalamSangamMN</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController storyboardIdentifier="compactChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ObA-dk-sSI" customClass="MessagesViewController" customModule="UltimoMacoMessages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="019-sc-dx0">
+                                <rect key="frame" x="1" y="0.0" width="320" height="229"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="26"/>
+                                <state key="normal" title="Compartilhar!">
+                                    <color key="titleColor" red="0.031372549020000001" green="0.61568627450000002" blue="0.73725490199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareChartButtonClicked:" destination="ObA-dk-sSI" eventType="touchUpInside" id="Rn6-oP-B7u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="019-sc-dx0" firstAttribute="centerY" secondItem="LDy-ih-0nr" secondAttribute="centerY" id="Glg-w6-MWx"/>
+                            <constraint firstItem="019-sc-dx0" firstAttribute="height" secondItem="zMn-AG-sqS" secondAttribute="height" id="PPU-1y-Jju"/>
+                            <constraint firstItem="019-sc-dx0" firstAttribute="width" secondItem="zMn-AG-sqS" secondAttribute="width" id="fbp-ww-A5E"/>
+                            <constraint firstItem="019-sc-dx0" firstAttribute="centerX" secondItem="LDy-ih-0nr" secondAttribute="centerX" id="mLZ-xf-NZe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="229"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1454.4000000000001" y="226.23688155922042"/>
+        </scene>
+        <!--Expanded Chart View Controller-->
+        <scene sceneID="zPh-7T-RRC">
+            <objects>
+                <viewController storyboardIdentifier="expandedChartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KiK-hy-xCP" customClass="ExpandedChartViewController" customModule="UltimoMacoMessages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RmM-fC-edt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lH5-pN-Zcp" customClass="LineChart" customModule="UltimoMacoMessages" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="91" width="300" height="267"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lH5-pN-Zcp" secondAttribute="height" multiplier="337:300" id="aK9-wU-7Ya"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42g-5T-xZ1">
+                                <rect key="frame" x="94" y="408" width="187.5" height="48"/>
+                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="26"/>
+                                <state key="normal" title="Compartilhar!">
+                                    <color key="titleColor" red="0.031372549019607843" green="0.61568627450980395" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="KiK-hy-xCP" eventType="touchUpInside" id="KmU-5A-ysJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="42g-5T-xZ1" firstAttribute="width" secondItem="RmM-fC-edt" secondAttribute="width" multiplier="0.5" id="2Mx-O4-kKs"/>
+                            <constraint firstItem="42g-5T-xZ1" firstAttribute="height" secondItem="RmM-fC-edt" secondAttribute="height" multiplier="0.09" id="7vo-gq-ZVK"/>
+                            <constraint firstItem="lH5-pN-Zcp" firstAttribute="centerX" secondItem="RmM-fC-edt" secondAttribute="centerX" id="8KL-Mu-O4X"/>
+                            <constraint firstItem="lH5-pN-Zcp" firstAttribute="centerY" secondItem="RmM-fC-edt" secondAttribute="centerY" multiplier="0.85" id="gi3-ZJ-hSF"/>
+                            <constraint firstItem="42g-5T-xZ1" firstAttribute="centerX" secondItem="W1x-FH-lre" secondAttribute="centerX" id="h8K-Y8-gcD"/>
+                            <constraint firstItem="lH5-pN-Zcp" firstAttribute="width" secondItem="RmM-fC-edt" secondAttribute="width" multiplier="0.8" id="hSH-eZ-GKZ"/>
+                            <constraint firstItem="42g-5T-xZ1" firstAttribute="top" secondItem="lH5-pN-Zcp" secondAttribute="bottom" constant="50" id="yoe-Vg-iIy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W1x-FH-lre"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="528"/>
+                    <connections>
+                        <outlet property="chart" destination="lH5-pN-Zcp" id="yCW-NF-efD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Oe-xW-Cfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-786.39999999999998" y="360.71964017991007"/>
+        </scene>
+    </scenes>
+</document>
