@@ -45,6 +45,7 @@ public class AchievementsController {
                         self.allEntries = entries
                         entries = entries.filter({ $0.cigaretteNumber != -1 && !Calendar.current.isDateInToday($0.date! as Date)})
                         won = all.filter({ check(achievement: $0, entries: entries) })
+                        SLManager.shared.setSpotlightIndexes(forAchievements: won)
                     }
                 } catch _ as NSError {
                     print("Error")

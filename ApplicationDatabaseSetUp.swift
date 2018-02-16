@@ -38,6 +38,7 @@ class ApplicationDatabaseSetUp {
         if let tutorialPageView = UIStoryboard(name: "InitialPageViewController", bundle: nil).instantiateInitialViewController() {
             view.present(tutorialPageView, animated: true, completion: nil)
         }
+        SLManager.shared.cleanIndexes()
     }
     
 }
