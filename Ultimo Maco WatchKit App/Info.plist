@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>br.gh.paciulli.MiniChallenge3</string>
+	<string>br.gh.paciulli.UltimoMaco</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
