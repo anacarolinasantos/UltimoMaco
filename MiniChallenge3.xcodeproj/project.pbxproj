@@ -28,6 +28,7 @@
 		49A7D2821EF6CFF2005587CE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606195A41EF1E0B200249D81 /* NotificationModel.swift */; };
 		49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */; };
 		49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */; };
+		49C5FF4E209A4807008B5C5E /* RingSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5FF4D209A4807008B5C5E /* RingSKNode.swift */; };
 		49EC457A209A29980071B045 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49EC4578209A29980071B045 /* Interface.storyboard */; };
 		49EC457C209A299B0071B045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49EC457B209A299B0071B045 /* Assets.xcassets */; };
 		49EC4583209A299C0071B045 /* Ultimo Maco WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 49EC4582209A299C0071B045 /* Ultimo Maco WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -36,6 +37,7 @@
 		49EC458C209A299C0071B045 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC458B209A299C0071B045 /* NotificationController.swift */; };
 		49EC458E209A299D0071B045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49EC458D209A299D0071B045 /* Assets.xcassets */; };
 		49EC4593209A299D0071B045 /* Ultimo Maco WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 49EC4576209A29980071B045 /* Ultimo Maco WatchKit App.app */; };
+		49EC45A1209A47060071B045 /* RingSCN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC459D209A46C80071B045 /* RingSCN.swift */; };
 		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
 		604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */; };
 		604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */; };
@@ -266,6 +268,7 @@
 		494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
 		49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
+		49C5FF4D209A4807008B5C5E /* RingSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSKNode.swift; sourceTree = "<group>"; };
 		49EC4576209A29980071B045 /* Ultimo Maco WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimo Maco WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49EC4579209A29980071B045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		49EC457B209A299B0071B045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -278,6 +281,7 @@
 		49EC458F209A299D0071B045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49EC4590209A299D0071B045 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		49EC459C209A29B30071B045 /* Ultimo Maco WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ultimo Maco WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
+		49EC459D209A46C80071B045 /* RingSCN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSCN.swift; sourceTree = "<group>"; };
 		604EC0361EECA76600C1EA59 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage1.swift; sourceTree = "<group>"; };
 		604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage2.swift; sourceTree = "<group>"; };
@@ -445,12 +449,14 @@
 			isa = PBXGroup;
 			children = (
 				49EC459C209A29B30071B045 /* Ultimo Maco WatchKit App Extension.entitlements */,
+				49EC459D209A46C80071B045 /* RingSCN.swift */,
 				49EC4587209A299C0071B045 /* InterfaceController.swift */,
 				49EC4589209A299C0071B045 /* ExtensionDelegate.swift */,
 				49EC458B209A299C0071B045 /* NotificationController.swift */,
 				49EC458D209A299D0071B045 /* Assets.xcassets */,
 				49EC458F209A299D0071B045 /* Info.plist */,
 				49EC4590209A299D0071B045 /* PushNotificationPayload.apns */,
+				49C5FF4D209A4807008B5C5E /* RingSKNode.swift */,
 			);
 			path = "Ultimo Maco WatchKit App Extension";
 			sourceTree = "<group>";
@@ -1038,9 +1044,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49EC45A1209A47060071B045 /* RingSCN.swift in Sources */,
 				49EC458C209A299C0071B045 /* NotificationController.swift in Sources */,
 				49EC458A209A299C0071B045 /* ExtensionDelegate.swift in Sources */,
 				49EC4588209A299C0071B045 /* InterfaceController.swift in Sources */,
+				49C5FF4E209A4807008B5C5E /* RingSKNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
