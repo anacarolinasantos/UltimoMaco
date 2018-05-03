@@ -16,6 +16,8 @@ class RingContainerSCN: WKInterfaceSKScene {
 class RingSCN: SKScene {
     
     var ring: RingSKNode!
+    var label: SKLabelNode!
+    
     public var isRotating = false {
         didSet {
             if isRotating == false {
@@ -32,19 +34,24 @@ class RingSCN: SKScene {
         self.ring.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         self.addChild(ring)
         
-        
+        self.label = SKLabelNode(text: "0")
+        self.label.position = CGPoint(x: self.frame.midX, y: self.frame.maxY)
+        self.addChild(label)
     }
     
     func didRotateCrown(with delta: Double) {
         isRotating = true
-        let aCigarret = 0.2
+        let aCigarret = 0.15
+        
         if delta > Double(addedCigarretes+1)*aCigarret {
             addedCigarretes += 1
             ring.arcEnd += CGFloat(aCigarret)
         }
-//        else if delta < Double(addedCigarretes+1)*aCigarret{
-//            addedCigarretes -= 1
-//            ring.arcEnd -= CGFloat(aCigarret)
-//        }
+        else if delta < Double(addedCigarretes-1)*aCigarret && delta < 0{
+            addedCigarretes -= 1
+            ring.arcEnd -= CGFloat(aCigarret)
+        }
+        
+//        print("Cigarros adicionados: \(addedCigarretes) - Delta: \(delta)")
     }
 }
