@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45530F78209B7D5200ADB6B7 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45530F77209B7D5200ADB6B7 /* ComplicationController.swift */; };
 		45750EA91EEF24AF003526F4 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */; };
 		45750EAB1EF06359003526F4 /* ProfileMotivationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */; };
 		45750EAD1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */; };
@@ -249,6 +250,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45530F77209B7D5200ADB6B7 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		45750EA81EEF24AF003526F4 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		45750EAA1EF06359003526F4 /* ProfileMotivationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMotivationTableViewController.swift; sourceTree = "<group>"; };
 		45750EAC1EF063A0003526F4 /* MotivationTypeOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotivationTypeOneTableViewCell.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				49EC458F209A299D0071B045 /* Info.plist */,
 				49EC4590209A299D0071B045 /* PushNotificationPayload.apns */,
 				49C5FF4D209A4807008B5C5E /* RingSKNode.swift */,
+				45530F77209B7D5200ADB6B7 /* ComplicationController.swift */,
 			);
 			path = "Ultimo Maco WatchKit App Extension";
 			sourceTree = "<group>";
@@ -893,7 +896,7 @@
 					};
 					49EC4581209A299C0071B045 = {
 						CreatedOnToolsVersion = 9.3;
-						DevelopmentTeam = 53BLZ9DZN8;
+						DevelopmentTeam = VLLH384AC4;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1049,6 +1052,7 @@
 				49EC458A209A299C0071B045 /* ExtensionDelegate.swift in Sources */,
 				49EC4588209A299C0071B045 /* InterfaceController.swift in Sources */,
 				49C5FF4E209A4807008B5C5E /* RingSKNode.swift in Sources */,
+				45530F78209B7D5200ADB6B7 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1340,7 +1344,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = Ultimo_Maco_WatchKit_App_Extension;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1372,7 +1376,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = Ultimo_Maco_WatchKit_App_Extension;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1399,11 +1403,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "Ultimo Maco WatchKit App Extension/Ultimo Maco WatchKit App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1430,11 +1434,11 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = "Ultimo Maco WatchKit App Extension/Ultimo Maco WatchKit App Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53BLZ9DZN8;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1548,7 +1552,7 @@
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1565,7 +1569,7 @@
 				INFOPLIST_FILE = MiniChallenge3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1636,7 +1640,7 @@
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1650,7 +1654,7 @@
 				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.Widget;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1677,7 +1681,7 @@
 				INFOPLIST_FILE = UltimoMacoMessages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.UltimoMacoMessages;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.UltimoMacoMessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1705,7 +1709,7 @@
 				INFOPLIST_FILE = UltimoMacoMessages/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.MiniChallenge3.UltimoMacoMessages;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.UltimoMacoMessages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
