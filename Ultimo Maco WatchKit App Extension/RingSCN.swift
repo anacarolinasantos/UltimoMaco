@@ -18,7 +18,11 @@ class RingSCN: SKScene {
     var ring: RingSKNode!
     var label: SKLabelNode!
     
-    var aCigarret = 0.025
+    var aCigarret: Float {
+        get {
+            return 1/Float(totalCigarretes)
+        }
+    }
     let totalCigarretes = 20
     var numberOfCigarretes = 0 {
         didSet {
@@ -59,19 +63,20 @@ class RingSCN: SKScene {
     //MARK: - Auxiliar Functions
     func didRotateCrown(with delta: Double) {
         isRotating = true
-        if delta > Double(addedCigarretes+1)*aCigarret && delta > 0 {
+        if delta > Double(addedCigarretes+1)*0.025 && delta > 0 {
 
             addedCigarretes += 1
             ring.arcEnd += CGFloat(aCigarret)
             numberOfCigarretes += 1
         }
-        else if delta < Double(addedCigarretes-1)*aCigarret && delta < 0{
+        else if delta < Double(addedCigarretes-1)*0.025 && delta < 0{
             if numberOfCigarretes != 0 {
                 addedCigarretes -= 1
                 ring.arcEnd -= CGFloat(aCigarret)
                 numberOfCigarretes -= 1
             }
         }
+
 
     }
     
