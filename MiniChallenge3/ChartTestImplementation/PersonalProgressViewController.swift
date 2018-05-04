@@ -97,11 +97,11 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         chart.setNeedsDisplay()
     }
     
-    func handleTap(recognizer: UITapGestureRecognizer){
+    @objc func handleTap(recognizer: UITapGestureRecognizer){
         performSegue(withIdentifier: "showHistoric", sender: nil)
     }
     
-    func appWillEnterForeground(){
+    @objc func appWillEnterForeground(){
         viewWillAppear(false)
     }
     

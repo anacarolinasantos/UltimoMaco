@@ -85,8 +85,8 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
         //Limit to 20 characters the motivation title
         let charLimit = 20
         
-        let startLength = textField.text?.characters.count ?? 0
-        let addLength = string.characters.count
+        let startLength = textField.text?.count ?? 0
+        let addLength = string.count
         let lengthReplace = range.length
         
         let newLength = startLength + addLength - lengthReplace
@@ -121,7 +121,7 @@ class NewMotivationTableViewController: UITableViewController, UIImagePickerCont
         
         //always check all the possibilities to allow or not the insertion on the text field
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
-        let numberOfChars = newText.characters.count
+        let numberOfChars = newText.count
         
         
         //If text length is smaller than 100, return true

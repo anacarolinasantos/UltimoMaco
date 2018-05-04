@@ -26,7 +26,7 @@ class ChartPoint {
         dateFormatter.locale = Locale(identifier: "pt_BR")
         var date = dateFormatter.string(from: self.day as Date)
         let index = date.index(date.startIndex, offsetBy: 5)
-        date = date.substring(to: index)
+        date = String(date[..<index])
         return date
     }
     
@@ -37,7 +37,7 @@ class ChartPoint {
         dateFormatter.locale = Locale(identifier: "pt_BR")
         var date = dateFormatter.string(from: self.day as Date)
         let index = date.index(date.startIndex, offsetBy: 9)
-        date = date.substring(to: index)
+        date = String(date[..<index])
         if date[date.index(before: date.endIndex)] == " "{
             date.remove(at: date.index(before: date.endIndex))
             date = "0"+date

@@ -75,7 +75,7 @@ class LineChartData {
         for entrie in entries{
             var dateFormated = dateFormatter.string(from: entrie.date! as Date)
             let index = dateFormated.index(dateFormated.startIndex, offsetBy: 5)
-            dateFormated = dateFormated.substring(to: index)
+            dateFormated = String(dateFormated[..<index])
             if date == dateFormated{
                 entrie.cigaretteNumber = Int32(cigarettNumber)
                 break

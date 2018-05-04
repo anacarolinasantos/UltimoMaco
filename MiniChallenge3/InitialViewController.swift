@@ -123,7 +123,7 @@ class InitialViewController: UIViewController, UIPageViewControllerDataSource, U
     }
     
     //MARK: - Auxiliary functions
-    func verify() {
+    @objc func verify() {
         if !isAbleToContinue {
             pageContainer.dataSource = nil
             pageContainer.dataSource = self

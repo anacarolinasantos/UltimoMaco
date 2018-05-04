@@ -121,7 +121,7 @@ class FagerstromViewController: UIViewController, UIPageViewControllerDataSource
     }
     
     //MARK: - Auxiliary functions
-    func verify() {
+    @objc func verify() {
         if !isAbleToContinue {
             pageContainer.dataSource = nil
             pageContainer.dataSource = self
