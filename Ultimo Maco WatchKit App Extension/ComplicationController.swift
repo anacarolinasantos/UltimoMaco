@@ -9,6 +9,12 @@
 import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
+    //MARK: - Properties
+    //FIXME: Put values from CoreData
+    let cigarettesSmoked = 5
+    let dailyGoal = 10
+    let daysToStop = 20
+    
     //MARK: - Timeline configuration
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.forward, .backward])
@@ -36,29 +42,43 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     //MARK: - Placeholder templates
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         var template: CLKComplicationTemplate? = nil
+        let textProvider = CLKSimpleTextProvider(text: cigarettesSmoked.description)
+        let fill = Float(cigarettesSmoked/dailyGoal)
         
         switch complication.family {
         case .modularLarge:
             break
         case .modularSmall:
-            break
+            let modularSmallTemplate = CLKComplicationTemplateModularSmallRingText()
+            modularSmallTemplate.textProvider = textProvider
+            modularSmallTemplate.fillFraction = fill
+            modularSmallTemplate.ringStyle = .closed
+            
+            template = modularSmallTemplate
         case .circularSmall:
             let circularSmallTemplate = CLKComplicationTemplateCircularSmallRingText()
-            
-            //TODO: - Modify text provider based on how many cigarettes the user smoked
-            circularSmallTemplate.textProvider = CLKSimpleTextProvider(text: "5")
-            //TODO: - Modify fill fraction based on (how many cigarettes smoked)/(daily goal)
-            circularSmallTemplate.fillFraction = 0.7
-            
+            circularSmallTemplate.textProvider = textProvider
+            circularSmallTemplate.fillFraction = fill
             circularSmallTemplate.ringStyle = .closed
+            
             template = circularSmallTemplate
         case .extraLarge:
-            break
+            let extraLargeTemplate = CLKComplicationTemplateExtraLargeRingText()
+            extraLargeTemplate.textProvider = textProvider
+            extraLargeTemplate.fillFraction = fill
+            extraLargeTemplate.ringStyle = .closed
+            
+            template = extraLargeTemplate
         case .utilitarianSmall:
-            break
-        case .utilitarianSmallFlat:
-            break
+            let utilitarianSmallTemplate = CLKComplicationTemplateUtilitarianSmallRingText()
+            utilitarianSmallTemplate.textProvider = textProvider
+            utilitarianSmallTemplate.fillFraction = fill
+            utilitarianSmallTemplate.ringStyle = .closed
+            
+            template = utilitarianSmallTemplate
         case .utilitarianLarge:
+            break
+        default:
             break
         }
         handler(template)
