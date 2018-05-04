@@ -47,6 +47,19 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
                                                name: NSNotification.Name.UIApplicationWillEnterForeground,
                                                object: nil)
         
+        // Watch
+        WSManager.shared.recievedMessage = { message in
+            if let smokedToday = message["NumberOfCigarettes"] as? Int {
+                self.todayCigarettesNumber = smokedToday
+                self.stepperOutlet.value = Double(self.todayCigarettesNumber)
+                DispatchQueue.main.async {
+                    self.cigarettesNumberLabel.text = String(self.todayCigarettesNumber)
+                    LineChartData().updateSomePoint(Date(), self.todayCigarettesNumber)
+                    self.updateChart()
+                }
+            }
+        }
+        
     }
     
     override public func viewWillAppear(_ animated: Bool) {
@@ -89,6 +102,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         stepperOutlet.value = Double(todayCigarettesNumber)
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
         LineChartData().updateSomePoint(Date(), todayCigarettesNumber)
+        WSManager.shared.sendNumberOfCigarettes(todayCigarettesNumber)
         updateChart()
     }
     

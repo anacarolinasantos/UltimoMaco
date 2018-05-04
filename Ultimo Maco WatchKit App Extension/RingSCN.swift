@@ -68,15 +68,16 @@ class RingSCN: SKScene {
             addedCigarretes += 1
             ring.arcEnd += CGFloat(aCigarret)
             numberOfCigarretes += 1
+            WSManager.shared.sendNumberOfCigarettes(self.numberOfCigarretes)
         }
         else if delta < Double(addedCigarretes-1)*0.025 && delta < 0{
             if numberOfCigarretes != 0 {
                 addedCigarretes -= 1
                 ring.arcEnd -= CGFloat(aCigarret)
                 numberOfCigarretes -= 1
+                WSManager.shared.sendNumberOfCigarettes(self.numberOfCigarretes)
             }
         }
-
 
     }
     

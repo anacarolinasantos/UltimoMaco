@@ -30,13 +30,17 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         self.scene = RingSCN(size: contentFrame.size)
         self.containerScene.presentScene(scene)
         
-//        let newLabel = label.copy() as! SKLabelNode
-//        newLabel.position = CGPoint(x: self.scene.frame.midX, y: self.scene.frame.midY)
-//        self.scene.addChild(newLabel)
-        
         self.scene.addLabel(l: label.copy() as! SKLabelNode)
         
         crownSequencer.delegate = self
+        
+        // SETUP
+        WSManager.shared.recievedMessage = { message in
+            if let smokedToday = message["NumberOfCigarettes"] as? Int {
+                self.scene.numberOfCigarretes = smokedToday
+                self.scene.ring.arcEnd = CGFloat(Float(smokedToday) * self.scene.aCigarret)
+            }
+        }
         
     }
     
