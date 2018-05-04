@@ -23,7 +23,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if complication.family == .circularSmall {
             let template = CLKComplicationTemplateCircularSmallRingText()
             template.textProvider = CLKSimpleTextProvider(text: "5")
-            template.fillFraction = Float(5) / 10.0
+            template.fillFraction = 5 / 10
             template.ringStyle = CLKComplicationRingStyle.closed
             
             let timelineEntry = CLKComplicationTimelineEntry(date: NSDate() as Date, complicationTemplate: template)
@@ -44,8 +44,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             break
         case .circularSmall:
             let circularSmallTemplate = CLKComplicationTemplateCircularSmallRingText()
+            
+            //TODO: - Modify text provider based on how many cigarettes the user smoked
             circularSmallTemplate.textProvider = CLKSimpleTextProvider(text: "5")
+            //TODO: - Modify fill fraction based on (how many cigarettes smoked)/(daily goal)
             circularSmallTemplate.fillFraction = 0.7
+            
             circularSmallTemplate.ringStyle = .closed
             template = circularSmallTemplate
         case .extraLarge:
