@@ -61,7 +61,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, CAAnimationDeleg
                                      startAngle: 0, endAngle: .pi * 2,
                                      clockwise: true)
             shapeLayer = CAShapeLayer()
-            shapeLayer?.fillColor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0).cgColor
+            shapeLayer?.fillColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0).cgColor
             shapeLayer?.strokeColor = #colorLiteral(red: 0.03185217083, green: 0.6144382954, blue: 0.736053884, alpha: 1).cgColor
             shapeLayer?.lineWidth = 7
             shapeLayer?.path = path.cgPath

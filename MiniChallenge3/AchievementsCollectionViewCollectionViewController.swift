@@ -77,7 +77,7 @@ class AchievementsCollectionViewCollectionViewController: UICollectionViewContro
     }
     
     //MARK: - Recognizer Function
-    func handleLongPress(recognizer: UILongPressGestureRecognizer) {
+    @objc func handleLongPress(recognizer: UILongPressGestureRecognizer) {
         
         // set up activity view controller
         if let image = (recognizer.view as? UIImageView) {

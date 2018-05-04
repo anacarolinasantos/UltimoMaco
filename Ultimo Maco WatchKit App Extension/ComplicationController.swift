@@ -20,6 +20,43 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     //MARK: - Timeline population
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        handler(nil)
+        if complication.family == .circularSmall {
+            let template = CLKComplicationTemplateCircularSmallRingText()
+            template.textProvider = CLKSimpleTextProvider(text: "5")
+            template.fillFraction = Float(5) / 10.0
+            template.ringStyle = CLKComplicationRingStyle.closed
+            
+            let timelineEntry = CLKComplicationTimelineEntry(date: NSDate() as Date, complicationTemplate: template)
+            handler(timelineEntry)
+        } else {
+            handler(nil)
+        }
+    }
+    
+    //MARK: - Placeholder templates
+    func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
+        var template: CLKComplicationTemplate? = nil
+        
+        switch complication.family {
+        case .modularLarge:
+            break
+        case .modularSmall:
+            break
+        case .circularSmall:
+            let circularSmallTemplate = CLKComplicationTemplateCircularSmallRingText()
+            circularSmallTemplate.textProvider = CLKSimpleTextProvider(text: "5")
+            circularSmallTemplate.fillFraction = 0.7
+            circularSmallTemplate.ringStyle = .closed
+            template = circularSmallTemplate
+        case .extraLarge:
+            break
+        case .utilitarianSmall:
+            break
+        case .utilitarianSmallFlat:
+            break
+        case .utilitarianLarge:
+            break
+        }
+        handler(template)
     }
 }
