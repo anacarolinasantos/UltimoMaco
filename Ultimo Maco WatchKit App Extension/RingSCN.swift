@@ -17,6 +17,7 @@ class RingSCN: SKScene {
 
     var ring: RingSKNode!
     var label: SKLabelNode!
+    
     var aCigarret = 0.025
     let totalCigarretes = 20
     var numberOfCigarretes = 0 {
@@ -49,12 +50,17 @@ class RingSCN: SKScene {
         self.ring.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         self.ring.zPosition = -1
         self.addChild(ring)
+        
+        self.label = SKLabelNode(text: "0")
+        self.label.position = CGPoint(x: self.frame.midX, y: self.frame.maxY)
+        self.addChild(label)
     }
     
     //MARK: - Auxiliar Functions
     func didRotateCrown(with delta: Double) {
         isRotating = true
         if delta > Double(addedCigarretes+1)*aCigarret && delta > 0 {
+
             addedCigarretes += 1
             ring.arcEnd += CGFloat(aCigarret)
             numberOfCigarretes += 1
@@ -73,5 +79,6 @@ class RingSCN: SKScene {
         l.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         self.addChild(l)
         self.label = l
+
     }
 }
