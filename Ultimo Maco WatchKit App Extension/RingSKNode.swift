@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import WatchKit
 
 class RingSKNode: SKNode {
     
@@ -21,7 +22,8 @@ class RingSKNode: SKNode {
     
     var arcEnd: CGFloat = 0 { // decimal percentage of circumference, usually 0...1
         didSet {
-            if arcEnd > 1 {
+            
+            if arcEnd > 1.0001 {
                 self.color = SKColor(cgColor: #colorLiteral(red: 0.8745098039, green: 0.4705882353, blue: 0.4588235294, alpha: 1))
             } else {
                 self.color = SKColor(cgColor: #colorLiteral(red: 0.1098039216, green: 0.6156862745, blue: 0.737254902, alpha: 1))

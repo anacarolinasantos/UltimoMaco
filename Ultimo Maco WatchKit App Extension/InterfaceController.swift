@@ -20,8 +20,21 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        guard let CENACOMLABEL = SKScene(fileNamed: "RingScene") else {
+            fatalError("impossible to get the scene")
+        }
+        guard let label = CENACOMLABEL.childNode(withName: "label") else {
+            fatalError("IMpossible to get the label")
+        }
+        
         self.scene = RingSCN(size: contentFrame.size)
         self.containerScene.presentScene(scene)
+        
+//        let newLabel = label.copy() as! SKLabelNode
+//        newLabel.position = CGPoint(x: self.scene.frame.midX, y: self.scene.frame.midY)
+//        self.scene.addChild(newLabel)
+        
+        self.scene.addLabel(l: label.copy() as! SKLabelNode)
         
         crownSequencer.delegate = self
         

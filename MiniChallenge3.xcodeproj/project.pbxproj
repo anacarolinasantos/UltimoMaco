@@ -27,6 +27,7 @@
 		494EEE721EF06D7A00465D6B /* HistoricTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */; };
 		49A7D2811EF6CF94005587CE /* NotificationsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606195A31EF1E0B200249D81 /* NotificationsDatabase.swift */; };
 		49A7D2821EF6CFF2005587CE /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606195A41EF1E0B200249D81 /* NotificationModel.swift */; };
+		49BF92D6209BA333001A49DC /* RingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49BF92D5209BA333001A49DC /* RingScene.sks */; };
 		49C03D6A1EF1DF8D00A96C1F /* HistoricViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */; };
 		49C03D6C1EF3145900A96C1F /* PickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */; };
 		49C5FF4E209A4807008B5C5E /* RingSKNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C5FF4D209A4807008B5C5E /* RingSKNode.swift */; };
@@ -268,6 +269,7 @@
 		493118A11EEB12F200D2694C /* PersonalProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalProgressViewController.swift; sourceTree = "<group>"; };
 		494EEE6F1EF06D3200465D6B /* HistoricTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricTableViewController.swift; sourceTree = "<group>"; };
 		494EEE711EF06D7A00465D6B /* HistoricTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricTableViewCell.swift; sourceTree = "<group>"; };
+		49BF92D5209BA333001A49DC /* RingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RingScene.sks; sourceTree = "<group>"; };
 		49C03D691EF1DF8D00A96C1F /* HistoricViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricViewController.swift; sourceTree = "<group>"; };
 		49C03D6B1EF3145900A96C1F /* PickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTableViewCell.swift; sourceTree = "<group>"; };
 		49C5FF4D209A4807008B5C5E /* RingSKNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingSKNode.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 			children = (
 				49EC459C209A29B30071B045 /* Ultimo Maco WatchKit App Extension.entitlements */,
 				49EC459D209A46C80071B045 /* RingSCN.swift */,
+				49BF92D5209BA333001A49DC /* RingScene.sks */,
 				49EC4587209A299C0071B045 /* InterfaceController.swift */,
 				49EC4589209A299C0071B045 /* ExtensionDelegate.swift */,
 				49EC458B209A299C0071B045 /* NotificationController.swift */,
@@ -986,6 +989,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BF92D6209BA333001A49DC /* RingScene.sks in Resources */,
 				49EC458E209A299D0071B045 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
