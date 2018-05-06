@@ -6,6 +6,7 @@
 //  Copyright © 2018 Guilherme Paciulli. All rights reserved.
 //
 
+import WatchKit
 import WatchConnectivity
 
 class WSManager: NSObject, WCSessionDelegate {
@@ -13,6 +14,10 @@ class WSManager: NSObject, WCSessionDelegate {
     public static let shared = WSManager()
     public var recievedNumberOfCigarettes: ((Int) -> Void)?
     public var recievedNumberOfCigarettesToday: ((Int) -> Void)?
+    
+    // Properties
+    public var numberOfCigarretesSmoked: Int = -1
+    public var numberOfCigarettesCanSmokeToday: Int = -1
     
     override private init() {
         super.init()
@@ -27,12 +32,23 @@ class WSManager: NSObject, WCSessionDelegate {
     // Recieve message
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let smokedToday = message["NumberOfCigarettes"] as? Int {
+            self.numberOfCigarretesSmoked = smokedToday
             if let recievedNumberOfCigarettes = self.recievedNumberOfCigarettes{
                 recievedNumberOfCigarettes(smokedToday)
             }
+            
+            if let complications = CLKComplicationServer.sharedInstance().activeComplications{
+                for complication in complications {
+                    CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
+                }
+            }
+            
+            
+            
         }
        
         if let canSmokedToday = message["NumberOfCigarettesToday"] as? Int{
+            self.numberOfCigarettesCanSmokeToday = canSmokedToday
             if let recievedNumberOfCigarettesToday = self.recievedNumberOfCigarettesToday{
                 recievedNumberOfCigarettesToday(canSmokedToday)
             }

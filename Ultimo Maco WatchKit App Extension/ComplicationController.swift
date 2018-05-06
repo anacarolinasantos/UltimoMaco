@@ -8,12 +8,12 @@
 
 import ClockKit
 
-class ComplicationController: NSObject, CLKComplicationDataSource {
+class ComplicationController: NSObject, CLKComplicationDataSource{
     //MARK: - Properties
     //FIXME: Put values from CoreData
-    let cigarettesSmoked = 5
-    let dailyGoal = 10
-    let daysToStop = 20
+    var cigarettesSmoked = WSManager.shared.numberOfCigarretesSmoked
+    var dailyGoal = WSManager.shared.numberOfCigarettesCanSmokeToday
+    var daysToStop = 20
     //FIXME: Put image icon with rigth size
     //    let iconImage = UIImage(named: "")
     
@@ -30,6 +30,10 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     //MARK: - Timeline population
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
+        self.cigarettesSmoked = WSManager.shared.numberOfCigarretesSmoked
+        self.dailyGoal = WSManager.shared.numberOfCigarettesCanSmokeToday
+        self.daysToStop = 20
+        
         let cigarettesSmokedString = String(format: "%02d", self.cigarettesSmoked)
         let dailyGoalString = String(format: "%02d", self.dailyGoal)
         let daysToStopString = String(format: "%02d", self.daysToStop)

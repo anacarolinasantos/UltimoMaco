@@ -34,16 +34,14 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         
         crownSequencer.delegate = self
         
-        // SETUP
+        // Recieved Messages Handlers
         WSManager.shared.recievedNumberOfCigarettes = { smokedToday in
             self.scene.numberOfCigarretes = smokedToday
             self.scene.ring.arcEnd = CGFloat(Float(smokedToday) * self.scene.aCigarret)
-            print("Has smoked \(smokedToday) cigarettes")
         }
         
         WSManager.shared.recievedNumberOfCigarettesToday = { canSmokedToday in
             self.scene.totalCigarretes = canSmokedToday
-            print("CanSmoke \(canSmokedToday) cigarettes")
         }
         
     }
