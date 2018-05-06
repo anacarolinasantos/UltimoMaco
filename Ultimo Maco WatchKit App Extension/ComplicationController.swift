@@ -42,7 +42,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .modularLarge:
             let modularLargeTemplate = CLKComplicationTemplateModularLargeStandardBody()
             //FIXME: Uncomment this line after set iconImage
-            //            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: iconImage)
+//            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: iconImage)
             modularLargeTemplate.headerTextProvider = CLKSimpleTextProvider(text: "Último Maço!")
             modularLargeTemplate.body1TextProvider = CLKSimpleTextProvider(text: "\(cigarettesSmokedString) cigarros de \(dailyGoalString)")
             modularLargeTemplate.body2TextProvider = CLKSimpleTextProvider(text: "\(daysToStopString) dias para parar!")
@@ -89,7 +89,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .utilitarianLarge:
             let utilitarianLargeTemplate = CLKComplicationTemplateUtilitarianLargeFlat()
             //FIXME: Uncomment this line after set iconImage
-            //            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
+//            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
             utilitarianLargeTemplate.textProvider = CLKSimpleTextProvider(text: "\(cigarettesSmokedString) cigarros de \(dailyGoalString)")
             utilitarianLargeTemplate.textProvider.tintColor = mainColor
             

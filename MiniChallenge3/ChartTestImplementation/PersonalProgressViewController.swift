@@ -103,6 +103,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         cigarettesNumberLabel.text = String(todayCigarettesNumber)
         LineChartData().updateSomePoint(Date(), todayCigarettesNumber)
         WSManager.shared.sendNumberOfCigarettes(todayCigarettesNumber)
+        WSManager.shared.sendNumberOfCigarettesToday(LineChartData().getTargetOfConsumption(Date()))
         updateChart()
     }
     

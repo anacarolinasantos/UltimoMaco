@@ -45,6 +45,13 @@ class WSManager: NSObject, WCSessionDelegate {
         }
     }
     
+    func sendNumberOfCigarettesToday(_ number: Int){
+        if WCSession.default.isReachable {
+            let message = ["NumberOfCigarettesToday": number]
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
+    }
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }

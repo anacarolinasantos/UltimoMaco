@@ -23,7 +23,7 @@ class RingSCN: SKScene {
             return 1/Float(totalCigarretes)
         }
     }
-    let totalCigarretes = 20
+    var totalCigarretes = 20
     var numberOfCigarretes = 0 {
         didSet {
             if numberOfCigarretes > totalCigarretes {

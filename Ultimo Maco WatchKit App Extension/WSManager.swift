@@ -11,7 +11,8 @@ import WatchConnectivity
 class WSManager: NSObject, WCSessionDelegate {
     
     public static let shared = WSManager()
-    public var recievedMessage: (([String : Any]) -> Void)?
+    public var recievedNumberOfCigarettes: ((Int) -> Void)?
+    public var recievedNumberOfCigarettesToday: ((Int) -> Void)?
     
     override private init() {
         super.init()
@@ -25,9 +26,18 @@ class WSManager: NSObject, WCSessionDelegate {
     
     // Recieve message
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        if let recievedMessage = self.recievedMessage {
-            recievedMessage(message)
+        if let smokedToday = message["NumberOfCigarettes"] as? Int {
+            if let recievedNumberOfCigarettes = self.recievedNumberOfCigarettes{
+                recievedNumberOfCigarettes(smokedToday)
+            }
         }
+       
+        if let canSmokedToday = message["NumberOfCigarettesToday"] as? Int{
+            if let recievedNumberOfCigarettesToday = self.recievedNumberOfCigarettesToday{
+                recievedNumberOfCigarettesToday(canSmokedToday)
+            }
+        }
+        
     }
     
     // send message
