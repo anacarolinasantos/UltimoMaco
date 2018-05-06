@@ -18,29 +18,19 @@
                     </items>
                     <connections>
                         <outlet property="containerScene" destination="2ye-lX-urT" id="af6-1C-a5Q"/>
-                        <segue destination="Kcj-Ou-coe" kind="relationship" relationship="nextPage" id="Q0m-s8-E7U"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="106" y="345"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="Dij-lX-9j4">
-            <objects>
-                <controller id="Kcj-Ou-coe">
-                    <items>
-                        <spriteKitScene alignment="left" id="cpd-j5-xli"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="452" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>

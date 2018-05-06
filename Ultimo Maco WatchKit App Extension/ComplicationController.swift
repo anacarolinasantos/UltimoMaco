@@ -15,7 +15,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     let dailyGoal = 10
     let daysToStop = 20
     //FIXME: Put image icon with rigth size
-//    let iconImage = UIImage(named: "")
+    //    let iconImage = UIImage(named: "")
     
     let mainColor = UIColor(red: 43/255, green: 144/255, blue: 166/255, alpha: 1)
     
@@ -163,7 +163,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .utilitarianLarge:
             let utilitarianLargeTemplate = CLKComplicationTemplateUtilitarianLargeFlat()
             //FIXME: Uncomment this line after set iconImage
-//            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
+            //            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
             utilitarianLargeTemplate.textProvider = CLKSimpleTextProvider(text: "05 cigarros de 15")
             utilitarianLargeTemplate.textProvider.tintColor = mainColor
             

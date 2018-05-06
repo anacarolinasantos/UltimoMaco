@@ -20,10 +20,27 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        guard let CENACOMLABEL = SKScene(fileNamed: "RingScene") else {
+            fatalError("impossible to get the scene")
+        }
+        guard let label = CENACOMLABEL.childNode(withName: "label") else {
+            fatalError("IMpossible to get the label")
+        }
+        
         self.scene = RingSCN(size: contentFrame.size)
         self.containerScene.presentScene(scene)
         
+        self.scene.addLabel(l: label.copy() as! SKLabelNode)
+        
         crownSequencer.delegate = self
+        
+        // SETUP
+        WSManager.shared.recievedMessage = { message in
+            if let smokedToday = message["NumberOfCigarettes"] as? Int {
+                self.scene.numberOfCigarretes = smokedToday
+                self.scene.ring.arcEnd = CGFloat(Float(smokedToday) * self.scene.aCigarret)
+            }
+        }
         
     }
     

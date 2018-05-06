@@ -39,6 +39,7 @@
 		49EC458E209A299D0071B045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49EC458D209A299D0071B045 /* Assets.xcassets */; };
 		49EC4593209A299D0071B045 /* Ultimo Maco WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 49EC4576209A29980071B045 /* Ultimo Maco WatchKit App.app */; };
 		49EC45A1209A47060071B045 /* RingSCN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC459D209A46C80071B045 /* RingSCN.swift */; };
+		600CB98F209FB93300FEE0E2 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2DCFC209CF40F0081C901 /* WSManager.swift */; };
 		604EC0371EECA76600C1EA59 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC0361EECA76600C1EA59 /* Extensions.swift */; };
 		604EC03E1EEDAB9F00C1EA59 /* FagerstromPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03D1EEDAB9F00C1EA59 /* FagerstromPage1.swift */; };
 		604EC0401EEDABA500C1EA59 /* FagerstromPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EC03F1EEDABA500C1EA59 /* FagerstromPage2.swift */; };
@@ -52,6 +53,9 @@
 		606195A81EF1E0EA00249D81 /* MiniChallenge3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F191EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld */; };
 		606195A91EF1E0ED00249D81 /* CigaretteEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7A1EEEDB080087F71A /* CigaretteEntry+CoreDataClass.swift */; };
 		606195AA1EF1E0ED00249D81 /* CigaretteEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AF7B1EEEDB080087F71A /* CigaretteEntry+CoreDataProperties.swift */; };
+		60C2DCFB209CF2130081C901 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2DCFA209CF2120081C901 /* WSManager.swift */; };
+		60C2DCFD209CF4100081C901 /* WSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C2DCFC209CF40F0081C901 /* WSManager.swift */; };
+		60C2DD04209CF5FE0081C901 /* RingScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 60C2DD03209CF5FE0081C901 /* RingScene.sks */; };
 		60C7F12F1EEB25A00007D583 /* PageModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */; };
 		60C7F1311EEB3CEB0007D583 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1301EEB3CEB0007D583 /* Page4ViewController.swift */; };
 		60C7F1331EECA1290007D583 /* Page1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7F1321EECA1290007D583 /* Page1ViewController.swift */; };
@@ -293,6 +297,9 @@
 		604EC0471EEDABB800C1EA59 /* FagerstromPage6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FagerstromPage6.swift; sourceTree = "<group>"; };
 		606195A31EF1E0B200249D81 /* NotificationsDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsDatabase.swift; sourceTree = "<group>"; };
 		606195A41EF1E0B200249D81 /* NotificationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
+		60C2DCFA209CF2120081C901 /* WSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
+		60C2DCFC209CF40F0081C901 /* WSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSManager.swift; sourceTree = "<group>"; };
+		60C2DD03209CF5FE0081C901 /* RingScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RingScene.sks; sourceTree = "<group>"; };
 		60C7F12E1EEB25A00007D583 /* PageModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModelViewController.swift; sourceTree = "<group>"; };
 		60C7F1301EEB3CEB0007D583 /* Page4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
 		60C7F1321EECA1290007D583 /* Page1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1ViewController.swift; sourceTree = "<group>"; };
@@ -452,6 +459,8 @@
 			children = (
 				49EC459C209A29B30071B045 /* Ultimo Maco WatchKit App Extension.entitlements */,
 				49EC459D209A46C80071B045 /* RingSCN.swift */,
+				60C2DD03209CF5FE0081C901 /* RingScene.sks */,
+				60C2DCFA209CF2120081C901 /* WSManager.swift */,
 				49EC4587209A299C0071B045 /* InterfaceController.swift */,
 				49EC4589209A299C0071B045 /* ExtensionDelegate.swift */,
 				49EC458B209A299C0071B045 /* NotificationController.swift */,
@@ -649,6 +658,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC32F121EE9B8E6003E65AB /* AppDelegate.swift */,
+				60C2DCFC209CF40F0081C901 /* WSManager.swift */,
 				BDC32F441EE9BCD5003E65AB /* DatabaseController.swift */,
 				606195A31EF1E0B200249D81 /* NotificationsDatabase.swift */,
 				606195A41EF1E0B200249D81 /* NotificationModel.swift */,
@@ -990,6 +1000,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C2DD04209CF5FE0081C901 /* RingScene.sks in Resources */,
 				49EC458E209A299D0071B045 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1052,6 +1063,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49EC45A1209A47060071B045 /* RingSCN.swift in Sources */,
+				60C2DCFB209CF2130081C901 /* WSManager.swift in Sources */,
 				49EC458C209A299C0071B045 /* NotificationController.swift in Sources */,
 				49EC458A209A299C0071B045 /* ExtensionDelegate.swift in Sources */,
 				49EC4588209A299C0071B045 /* InterfaceController.swift in Sources */,
@@ -1129,6 +1141,7 @@
 				45750EB31EF0640E003526F4 /* NewMotivationTableViewController.swift in Sources */,
 				604EC0481EEDABB800C1EA59 /* FagerstromPage6.swift in Sources */,
 				60DE39CA203738E400961DA3 /* SLManager.swift in Sources */,
+				60C2DCFD209CF4100081C901 /* WSManager.swift in Sources */,
 				BDC32F1B1EE9B8E6003E65AB /* MiniChallenge3.xcdatamodeld in Sources */,
 				45C54A411EF2E1C700E1FCBD /* HealthInformationModel.swift in Sources */,
 				604EC0441EEDABAF00C1EA59 /* FagerstromPage4.swift in Sources */,
@@ -1158,6 +1171,7 @@
 			files = (
 				60D1E06D1EF4D9840048FE2C /* MotivationTypeTwoTableViewCell.swift in Sources */,
 				60D1E0521EF4D9490048FE2C /* PickerTableViewCell.swift in Sources */,
+				600CB98F209FB93300FEE0E2 /* WSManager.swift in Sources */,
 				60D1E0561EF4D9490048FE2C /* HistoricViewController.swift in Sources */,
 				60D1E0541EF4D9490048FE2C /* HistoricTableViewCell.swift in Sources */,
 				60D1E0631EF4D9840048FE2C /* AchievementPopUpViewController.swift in Sources */,
@@ -1411,7 +1425,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1442,7 +1456,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Ultimo Maco WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.gh.paciulli.UltimoMaco.watchkitapp.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
