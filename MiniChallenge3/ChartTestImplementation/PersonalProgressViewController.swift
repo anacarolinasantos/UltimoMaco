@@ -22,6 +22,7 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
     var todayCigarettesNumber:Int = 0
     let appGroupName:String = "group.br.minichallenge.3"
     var synchronize = Timer()
+    var allEntries: [CigaretteEntry] = []
     
     //MARK: ViewController Life Cicle
     
@@ -68,8 +69,6 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         
         updateChart()
         
-        var allEntries: [CigaretteEntry] = []
-        
         do {
             allEntries = try DatabaseController.persistentContainer.viewContext.fetch(CigaretteEntry.fetchRequest()) as! [CigaretteEntry]
         } catch _ as NSError { print("Error") }
@@ -104,6 +103,8 @@ public class PersonalProgressViewController: UIViewController, UIGestureRecogniz
         LineChartData().updateSomePoint(Date(), todayCigarettesNumber)
         WSManager.shared.sendNumberOfCigarettes(todayCigarettesNumber)
         WSManager.shared.sendNumberOfCigarettesToday(LineChartData().getTargetOfConsumption(Date()))
+        let daysToEnd = Calendar.current.dateComponents([.day], from: Date(), to: allEntries.last!.date! as Date).day
+        WSManager.shared.sendDaysToEnd(daysToEnd!)
         updateChart()
     }
     

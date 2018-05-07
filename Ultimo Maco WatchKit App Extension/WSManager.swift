@@ -18,6 +18,7 @@ class WSManager: NSObject, WCSessionDelegate {
     // Properties
     public var numberOfCigarretesSmoked: Int = -1
     public var numberOfCigarettesCanSmokeToday: Int = -1
+    public var numberOfDaysToEnd: Int = -1
     
     override private init() {
         super.init()
@@ -42,16 +43,17 @@ class WSManager: NSObject, WCSessionDelegate {
                     CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
                 }
             }
-            
-            
-            
         }
        
-        if let canSmokedToday = message["NumberOfCigarettesToday"] as? Int{
+        if let canSmokedToday = message["NumberOfCigarettesToday"] as? Int {
             self.numberOfCigarettesCanSmokeToday = canSmokedToday
             if let recievedNumberOfCigarettesToday = self.recievedNumberOfCigarettesToday{
                 recievedNumberOfCigarettesToday(canSmokedToday)
             }
+        }
+        
+        if let daysToEnd = message["DaysToEnd"] as? Int {
+            self.numberOfDaysToEnd = daysToEnd
         }
         
     }

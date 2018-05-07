@@ -52,6 +52,13 @@ class WSManager: NSObject, WCSessionDelegate {
         }
     }
     
+    func sendDaysToEnd(_ number: Int){
+        if WCSession.default.isReachable {
+            let message = ["DaysToEnd": number]
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+        }
+    }
+    
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }

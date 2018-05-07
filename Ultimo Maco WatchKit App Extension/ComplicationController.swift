@@ -11,8 +11,8 @@ import ClockKit
 class ComplicationController: NSObject, CLKComplicationDataSource{
     //MARK: - Properties
     //FIXME: Put values from CoreData
-    var cigarettesSmoked = WSManager.shared.numberOfCigarretesSmoked
-    var dailyGoal = WSManager.shared.numberOfCigarettesCanSmokeToday
+    var cigarettesSmoked = 5
+    var dailyGoal = 20
     var daysToStop = 20
     //FIXME: Put image icon with rigth size
     //    let iconImage = UIImage(named: "")
@@ -32,7 +32,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         self.cigarettesSmoked = WSManager.shared.numberOfCigarretesSmoked
         self.dailyGoal = WSManager.shared.numberOfCigarettesCanSmokeToday
-        self.daysToStop = 20
+        self.daysToStop = WSManager.shared.numberOfDaysToEnd
         
         let cigarettesSmokedString = String(format: "%02d", self.cigarettesSmoked)
         let dailyGoalString = String(format: "%02d", self.dailyGoal)
@@ -40,7 +40,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
         
         var template: CLKComplicationTemplate? = nil
         let textProvider = CLKSimpleTextProvider(text: self.cigarettesSmoked.description)
-        let fill = Float(self.cigarettesSmoked/self.dailyGoal)
+        let fill = Float(self.cigarettesSmoked)/Float(self.dailyGoal)
         
         switch complication.family {
         case .modularLarge:
@@ -114,7 +114,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         var template: CLKComplicationTemplate? = nil
         let textProvider = CLKSimpleTextProvider(text: self.cigarettesSmoked.description)
-        let fill = Float(self.cigarettesSmoked/self.dailyGoal)
+        let fill = Float(self.cigarettesSmoked)/Float(self.dailyGoal)
         
         switch complication.family {
         case .modularLarge:
