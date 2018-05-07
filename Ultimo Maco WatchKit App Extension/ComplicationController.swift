@@ -10,14 +10,13 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource{
     //MARK: - Properties
-    //FIXME: Put values from CoreData
     var cigarettesSmoked = 5
     var dailyGoal = 20
     var daysToStop = 20
-    //FIXME: Put image icon with rigth size
-    //    let iconImage = UIImage(named: "")
+    let iconImage = UIImage(named: "complicationUtilitarianLargeAppIcon")
     
-    let mainColor = UIColor(red: 43/255, green: 144/255, blue: 166/255, alpha: 1)
+    let withinTheGoalColor = UIColor(red: 43/255, green: 144/255, blue: 166/255, alpha: 1)
+    let offTheGoalColor = UIColor(red: 223/255, green: 120/255, blue: 117/255, alpha: 1)
     
     //MARK: - Timeline configuration
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -42,16 +41,27 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
         let textProvider = CLKSimpleTextProvider(text: self.cigarettesSmoked.description)
         let fill = Float(self.cigarettesSmoked)/Float(self.dailyGoal)
         
+        var color:UIColor
+        
+        if fill > 1 {
+            color = offTheGoalColor
+        } else {
+            color = withinTheGoalColor
+        }
+        
         switch complication.family {
         case .modularLarge:
             let modularLargeTemplate = CLKComplicationTemplateModularLargeStandardBody()
-            //FIXME: Uncomment this line after set iconImage
-//            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: iconImage)
+            
+            if let image = self.iconImage {
+                modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: image)
+            }
+            
             modularLargeTemplate.headerTextProvider = CLKSimpleTextProvider(text: "Último Maço!")
             modularLargeTemplate.body1TextProvider = CLKSimpleTextProvider(text: "\(cigarettesSmokedString) cigarros de \(dailyGoalString)")
             modularLargeTemplate.body2TextProvider = CLKSimpleTextProvider(text: "\(daysToStopString) dias para parar!")
             
-            modularLargeTemplate.headerTextProvider.tintColor = mainColor
+            modularLargeTemplate.headerTextProvider.tintColor = color
             
             template = modularLargeTemplate
         case .modularSmall:
@@ -60,7 +70,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             modularSmallTemplate.fillFraction = fill
             modularSmallTemplate.ringStyle = .closed
             
-            modularSmallTemplate.tintColor = mainColor
+            modularSmallTemplate.tintColor = color
             
             template = modularSmallTemplate
         case .circularSmall:
@@ -69,7 +79,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             circularSmallTemplate.fillFraction = fill
             circularSmallTemplate.ringStyle = .closed
             
-            circularSmallTemplate.tintColor = mainColor
+            circularSmallTemplate.tintColor = color
             
             template = circularSmallTemplate
         case .extraLarge:
@@ -78,7 +88,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             extraLargeTemplate.fillFraction = fill
             extraLargeTemplate.ringStyle = .closed
             
-            extraLargeTemplate.tintColor = mainColor
+            extraLargeTemplate.tintColor = color
             
             template = extraLargeTemplate
         case .utilitarianSmall:
@@ -87,15 +97,18 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             utilitarianSmallTemplate.fillFraction = fill
             utilitarianSmallTemplate.ringStyle = .closed
             
-            utilitarianSmallTemplate.tintColor = mainColor
+            utilitarianSmallTemplate.tintColor = color
             
             template = utilitarianSmallTemplate
         case .utilitarianLarge:
             let utilitarianLargeTemplate = CLKComplicationTemplateUtilitarianLargeFlat()
-            //FIXME: Uncomment this line after set iconImage
-//            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
+            
+            if let image = self.iconImage {
+                utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: image)
+            }
+            
             utilitarianLargeTemplate.textProvider = CLKSimpleTextProvider(text: "\(cigarettesSmokedString) cigarros de \(dailyGoalString)")
-            utilitarianLargeTemplate.textProvider.tintColor = mainColor
+            utilitarianLargeTemplate.textProvider.tintColor = color
             
             template = utilitarianLargeTemplate
         default:
@@ -116,16 +129,27 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
         let textProvider = CLKSimpleTextProvider(text: self.cigarettesSmoked.description)
         let fill = Float(self.cigarettesSmoked)/Float(self.dailyGoal)
         
+        var color:UIColor
+        
+        if fill > 1 {
+            color = offTheGoalColor
+        } else {
+            color = withinTheGoalColor
+        }
+        
         switch complication.family {
         case .modularLarge:
             let modularLargeTemplate = CLKComplicationTemplateModularLargeStandardBody()
-            //FIXME: Uncomment this line after set iconImage
-//            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: iconImage)
+            
+            if let image = self.iconImage {
+                modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: image)
+            }
+            
             modularLargeTemplate.headerTextProvider = CLKSimpleTextProvider(text: "Último Maço!")
             modularLargeTemplate.body1TextProvider = CLKSimpleTextProvider(text: "05 cigarros de 15")
             modularLargeTemplate.body2TextProvider = CLKSimpleTextProvider(text: "20 dias para parar!")
             
-            modularLargeTemplate.headerTextProvider.tintColor = mainColor
+            modularLargeTemplate.headerTextProvider.tintColor = color
             
             template = modularLargeTemplate
         case .modularSmall:
@@ -134,7 +158,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             modularSmallTemplate.fillFraction = fill
             modularSmallTemplate.ringStyle = .closed
             
-            modularSmallTemplate.tintColor = mainColor
+            modularSmallTemplate.tintColor = color
             
             template = modularSmallTemplate
         case .circularSmall:
@@ -143,7 +167,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             circularSmallTemplate.fillFraction = 0.7
             circularSmallTemplate.ringStyle = .open
             
-            circularSmallTemplate.tintColor = mainColor
+            circularSmallTemplate.tintColor = color
             
             template = circularSmallTemplate
         case .extraLarge:
@@ -152,7 +176,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             extraLargeTemplate.fillFraction = fill
             extraLargeTemplate.ringStyle = .closed
             
-            extraLargeTemplate.tintColor = mainColor
+            extraLargeTemplate.tintColor = color
             
             template = extraLargeTemplate
         case .utilitarianSmall:
@@ -161,15 +185,18 @@ class ComplicationController: NSObject, CLKComplicationDataSource{
             utilitarianSmallTemplate.fillFraction = fill
             utilitarianSmallTemplate.ringStyle = .closed
             
-            utilitarianSmallTemplate.tintColor = mainColor
+            utilitarianSmallTemplate.tintColor = color
             
             template = utilitarianSmallTemplate
         case .utilitarianLarge:
             let utilitarianLargeTemplate = CLKComplicationTemplateUtilitarianLargeFlat()
-            //FIXME: Uncomment this line after set iconImage
-            //            utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: iconImage)
+            
+            if let image = self.iconImage {
+                utilitarianLargeTemplate.imageProvider = CLKImageProvider(onePieceImage: image)
+            }
+            
             utilitarianLargeTemplate.textProvider = CLKSimpleTextProvider(text: "05 cigarros de 15")
-            utilitarianLargeTemplate.textProvider.tintColor = mainColor
+            utilitarianLargeTemplate.textProvider.tintColor = color
             
             template = utilitarianLargeTemplate
         default:
